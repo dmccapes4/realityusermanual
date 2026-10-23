@@ -126,6 +126,51 @@ def _blank_page(canvas, doc):
     """Intentionally blank — no number, no head."""
     pass
 
+def _double_num_page(canvas, doc):
+    """Carries two page numbers: the ghost (unnumbered Merlin page) and real."""
+    canvas.saveState()
+    pn_raw = canvas.getPageNumber()
+    start  = _page_state.get("arabic_start", 1)
+    arabic = pn_raw - start + 1
+    ghost  = arabic - 1  # the page that wasn't numbered
+    canvas.setFont("Times-Italic", 9)
+    canvas.setFillColor(ACCENT)
+    canvas.drawCentredString(W / 2 - 0.3 * inch, 0.6 * inch, str(ghost))
+    canvas.drawCentredString(W / 2 + 0.3 * inch, 0.6 * inch, str(arabic))
+    canvas.setFont("Helvetica", 8)
+    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.restoreState()
+
+def _split_right_page(canvas, doc):
+    """Crisis page 2: normal number centre + ghost at far bottom right."""
+    canvas.saveState()
+    pn_raw = canvas.getPageNumber()
+    start  = _page_state.get("arabic_start", 1)
+    arabic = pn_raw - start + 1
+    ghost  = arabic - 2  # the Merlin ghost, two pages back
+    canvas.setFont("Times-Italic", 9)
+    canvas.setFillColor(ACCENT)
+    canvas.drawCentredString(W / 2, 0.6 * inch, str(arabic))
+    canvas.drawRightString(W - MARGIN_OUTER, 0.6 * inch, str(ghost))
+    canvas.setFont("Helvetica", 8)
+    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.restoreState()
+
+def _split_left_page(canvas, doc):
+    """Crisis page 3: ghost at far bottom left + normal number centre."""
+    canvas.saveState()
+    pn_raw = canvas.getPageNumber()
+    start  = _page_state.get("arabic_start", 1)
+    arabic = pn_raw - start + 1
+    ghost  = arabic - 3  # the Merlin ghost, three pages back
+    canvas.setFont("Times-Italic", 9)
+    canvas.setFillColor(ACCENT)
+    canvas.drawString(MARGIN_INNER, 0.6 * inch, str(ghost))
+    canvas.drawCentredString(W / 2, 0.6 * inch, str(arabic))
+    canvas.setFont("Helvetica", 8)
+    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.restoreState()
+
 def _poem_page(canvas, doc):
     """Poem pages: page number only, no running head."""
     canvas.saveState()
@@ -199,6 +244,10 @@ STYLES = {
     "toc_empty":S("toc_empty","Normal",fontName="Times-Italic", fontSize=11,
                   leading=17, alignment=TA_CENTER, textColor=ACCENT,
                   spaceBefore=0.5*inch),
+
+    "code":     S("code",   "Normal", fontName="Courier",       fontSize=8,
+                  leading=11, leftIndent=0.5*inch, spaceBefore=6,
+                  spaceAfter=6, alignment=TA_LEFT),
 }
 
 def P(text, style="body"):
@@ -231,12 +280,28 @@ def load_poem(path):
 
 # ── markdown-lite renderer ────────────────────────────────────────────────────
 def render_md(path):
-    """Render a simple markdown file to Flowables. Handles # ## | - ** `."""
+    """Render a simple markdown file to Flowables. Handles # ## | - ** ` and fenced code."""
+    from reportlab.platypus import Preformatted
     with open(path) as f:
         lines = f.readlines()
     flowables = []
     in_table = False
     table_rows = []
+    in_code = False
+    code_lines = []
+
+    def flush_code():
+        nonlocal code_lines, in_code
+        if code_lines:
+            # render each line as a code paragraph
+            flowables.append(Spacer(1, 4))
+            for cl in code_lines:
+                flowables.append(Paragraph(
+                    '<font name="Courier">' + cl.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</font>',
+                    STYLES["code"]))
+            flowables.append(Spacer(1, 4))
+        code_lines.clear()
+        in_code = False
 
     def flush_table():
         nonlocal table_rows, in_table
@@ -267,6 +332,19 @@ def render_md(path):
 
     for line in lines:
         line = line.rstrip("\n")
+
+        # fenced code blocks
+        if line.strip().startswith('```'):
+            if in_code:
+                flush_code()
+            else:
+                if in_table:
+                    flush_table()
+                in_code = True
+            continue
+        if in_code:
+            code_lines.append(line)
+            continue
 
         # table rows
         if '|' in line and line.strip().startswith('|'):
@@ -299,6 +377,8 @@ def render_md(path):
 
     if in_table:
         flush_table()
+    if in_code:
+        flush_code()
     return flowables
 
 def _md_inline(t):
@@ -335,10 +415,13 @@ def build():
     blank_frame = Frame(MARGIN_INNER, MARGIN_BOT, fw, fh, id="blank")
 
     templates = [
-        PageTemplate(id="Front",  frames=[front_frame], onPage=_front_page),
-        PageTemplate(id="Body",   frames=[body_frame],  onPage=_body_page),
-        PageTemplate(id="Poem",   frames=[poem_frame],  onPage=_poem_page),
-        PageTemplate(id="Blank",  frames=[blank_frame], onPage=_blank_page),
+        PageTemplate(id="Front",      frames=[front_frame], onPage=_front_page),
+        PageTemplate(id="Body",       frames=[body_frame],  onPage=_body_page),
+        PageTemplate(id="Poem",       frames=[poem_frame],  onPage=_poem_page),
+        PageTemplate(id="Blank",      frames=[blank_frame], onPage=_blank_page),
+        PageTemplate(id="DoubleNum",  frames=[body_frame],  onPage=_double_num_page),
+        PageTemplate(id="SplitRight", frames=[body_frame],  onPage=_split_right_page),
+        PageTemplate(id="SplitLeft",  frames=[body_frame],  onPage=_split_left_page),
     ]
     doc.addPageTemplates(templates)
 
@@ -440,10 +523,39 @@ def build():
         "04c_chapter_2.1_aslama.md",
         "04d_chapter_2.2_shav.md",
         "04e_chapter_2.3_na_bean.md",
-        "04_chapter_waldorf_abstraction.md",
-        "05_chapter_mother_earth.md",
+        # ch 3 + 4 inserted after Merlin/crisis pages below
     ]
     for ch in _chapters:
+        story.extend(render_md(os.path.join(SRC, ch)))
+        story.append(PageBreak())
+
+    # ── MERLIN SEED — unnumbered page (Blank: no number drawn) ───────────────
+    story.append(NextPageTemplate("Blank"))
+    story.append(Spacer(1, fh * 0.44))
+    story.append(P("<i>Merlin continued through the oak.</i>", "body_c"))
+    story.append(Spacer(1, 0.3 * inch))
+    story.append(P("<i>(This page is not numbered. We will return to Merlin later.</i>", "body_c"))
+    story.append(P("<i>For now this is a seed. The reason is not disclosed.)</i>", "body_c"))
+    story.append(PageBreak())
+
+    # ── CRISIS PAGE 1 — DoubleNum ─────────────────────────────────────────────
+    story.append(NextPageTemplate("DoubleNum"))
+    story.extend(render_md(os.path.join(SRC, "04g_crisis_page1.md")))
+    story.append(PageBreak())
+
+    # ── CRISIS PAGE 2 — SplitRight ────────────────────────────────────────────
+    story.append(NextPageTemplate("SplitRight"))
+    story.extend(render_md(os.path.join(SRC, "04h_crisis_page2.md")))
+    story.append(PageBreak())
+
+    # ── CRISIS PAGE 3 — SplitLeft ─────────────────────────────────────────────
+    story.append(NextPageTemplate("SplitLeft"))
+    story.extend(render_md(os.path.join(SRC, "04i_crisis_page3.md")))
+    story.append(NextPageTemplate("Body"))
+    story.append(PageBreak())
+
+    # ── REMAINING CHAPTERS ────────────────────────────────────────────────────
+    for ch in ["04_chapter_waldorf_abstraction.md", "05_chapter_mother_earth.md"]:
         story.extend(render_md(os.path.join(SRC, ch)))
         story.append(PageBreak())
 
