@@ -438,6 +438,7 @@ def build():
         "04a_chapter_1_lucifer_experiment.md",
         "04b_chapter_2_matthew_19.md",
         "04c_chapter_2.1_aslama.md",
+        "04d_chapter_2.2_shav.md",
         "04_chapter_waldorf_abstraction.md",
         "05_chapter_mother_earth.md",
     ]
