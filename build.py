@@ -554,6 +554,10 @@ def build():
     story.append(NextPageTemplate("Body"))
     story.append(PageBreak())
 
+    # ── EDITOR NOTE ───────────────────────────────────────────────────────────
+    story.extend(render_md(os.path.join(SRC, "04j_editor_note.md")))
+    story.append(PageBreak())
+
     # ── REMAINING CHAPTERS ────────────────────────────────────────────────────
     for ch in ["04_chapter_waldorf_abstraction.md", "05_chapter_mother_earth.md"]:
         story.extend(render_md(os.path.join(SRC, ch)))
