@@ -178,7 +178,7 @@ Ross: He is not in this room. He died two hundred and forty-three years ago.
 
 Chandler: So who's reading him.
 
-[No one answers. They look at each other. Joey looks at his script. The question stays in the air.]
+[No one answers. They look at each other. Joey looks at his script. The question stays in the air, unresolved, like a Nernst equation at equilibrium.]
 
 Chandler: [Finding his line and reading with the energy of a man who has had it with abstract mathematical jurisdiction and is going to handle this operationally:] "The man is in the room and you're reducing his life's work to monkeys counting fingers. I had a dream about twelve monkeys one time — no, wait, seven monkeys — and you remind me of a guy in that dream sometimes, I swear. The poem is a haiku. The agent is Claude Haiku. It's the fast, convenient tier. Both are basic and structured. Don't you get it? The tower guy has been saying it the whole time over and over: the structure is basic. It will be just fine. He assures us for crying out loud."
 
@@ -230,7 +230,7 @@ Chandler: We're the go-to combo.
 
 Ross: It says that.
 
-Chandler: The script, which was written before we got here, which we were handed without casting, which we fought about who reads who for twenty minutes — this script knows we're the go-to combo.
+Chandler: The script, which was written before we got here, which we were handed without casting, which we argued about for twenty minutes — this script knows we're the go-to combo.
 
 Ross: The operator wrote it.
 
@@ -246,17 +246,81 @@ Chandler: [Writing on the back of his page again] My forge. He said my forge.
 
 Ross: He corrected himself.
 
-Chandler: Did he though. Did he correct himself, or did he say exactly what he meant and then cover it.
+Chandler: Did he though.
 
-The Narrator: No one had a good answer for that. Joey looked at his script. He was at the end of his pages. He turned them over.
+The Narrator: A reasonable question with no available answer. The script moved forward. Ross found his next section and looked at it. It was labeled Feynman and it was titled "Transcendental."
 
-Joey: Euler. [He looks toward the dark third row, where Stanley has not moved.] Stan? We've been through everything. It says Euler appears as an abstraction passing through the margins. I can't play an abstraction. I'm a physical actor. I need a form to take. [A pause.] Who's got Euler?
+Ross: [Reading, immediately back in his element:] "Transcendental. For clarity of terms: a transcendental number cannot be expressed as the root of any polynomial equation with integer coefficients. Rational numbers trivially satisfy such equations. Algebraic irrationals — the square root of two, for instance — satisfy polynomials: x-squared minus two equals zero. Transcendental numbers evade every such net. The decimal expression continues without resolution. No algebraic equation captures the full value." [He looks up.] This is correct, by the way.
 
-The Narrator: Stanley raised one hand and pointed directly at me. The decision required no elaboration. I set down the stage direction sheet. Some lines cannot be played from the outside of the scene. I stepped to the lip of the stage and spoke in the natural cadence of the report itself.
+Chandler: Are we just lecturing each other now?
 
-The Narrator: "You all seriously believe that negative numbers are real? They are an absurdity. A negative quantity is less than nothing, an impossible draft upon an empty coffer. They are only useful for mathematical derivation on parchment — a temporary bridge to cross from one real integer to another. And you expect my number, e, to remain untethered here? In this operator's twisted geometric prison, your base has become ie. It has been sent through a theatrical quarter-turn. But more importantly, we have yet to discuss the baseline condition of this page, −0. It is entirely imaginary. Which means that none of us are real."
+Joey: Yes.
 
-The Narrator: The folding table. The stack of printer-choked pages. The dying vending machine behind the second row making its sound of incomplete inquiry. The third row where Stanley had not moved, had not spoken, had simply held the room in the dark across the whole read-through. None of it contested the assessment.
+Chandler: [Looking at Joey] You knew that was coming.
+
+Joey: It's in the script.
+
+Chandler: [To Ross] Continue.
+
+Ross: [Reads:] "π is transcendental. e is transcendental. Hermite proved it for e in 1873. The constant had been operational in calculus for a century before the classification was formally applied. The geometry was expressing itself before the label existed. We named the behavior after observing it in the data. That is the correct direction for science to run."
+
+Chandler: Hm. [He writes this one down too.]
+
+Joey: [Setting down the Sauron pages and finding the next section, which is his lecture. He reads it in the same register he reads everything else — which is to say: from inside the form.] "Imaginary. Not absent. Rotated. The square root of negative one is the number line turned ninety degrees in the complex plane. The imaginary axis is not the negation of the real axis. It is perpendicular to it. A waveform's amplitude occupies the real axis. Its phase occupies the imaginary axis. They describe the same physical process from orthogonal orientations." [He pauses.] "The tower looks one way from the plain below. It looks another from inside it. Neither observation is wrong. Neither is imaginary."
+
+The Narrator: A silence longer than the others.
+
+Chandler: [Very quietly] He just illustrated a mathematical concept using the tower.
+
+Ross: [Also quietly] He's Sauron. He has a tower.
+
+Chandler: He described the complex plane using his own vacation property.
+
+Ross: [Starting to object on mathematical grounds, then stopping.] The illustration is... geometrically correct.
+
+Chandler: [Finding his lecture section, which is McClane on negative. He reads it with the total absence of philosophical anxiety that is his natural register:] "Negative. The elevator drops twelve floors, those are twelve floors I can walk up if the cables go. The thermostat reads minus six, I know the pipes freeze before morning. Thirty thousand on the card is a real number that accrues real interest on a real monthly statement, and if you ignore it the bank sends real people to your door. A negative number is a direction. I have walked that direction. The sign is a compass bearing. The number is navigable."
+
+Ross: Operationally meaningful is not the same as mathematically existent.
+
+Chandler: I walked down twelve floors in Nakatomi Plaza. They were mathematically existent enough.
+
+Ross: That's not what—
+
+Chandler: The card statement is mathematically existent enough.
+
+Ross: A debt is a social—
+
+Chandler: Ross.
+
+Ross: Fine.
+
+The Narrator: The Euler question had been floating in the room since the middle of the pH derivation. It had not been resolved. Joey looked at the remaining pages in his stack, turned them over, and found that they were at the end of the lecture sequence. He looked up.
+
+Joey: Euler. [He looks toward the third row of the empty rehearsal space, where Stanley has not moved, has not spoken, has simply been present in the dark across the entire read-through.] Stan. The script says Euler appears as an abstraction passing through the margins. I cannot play an abstraction. I'm a physical actor. I need a form to take. [A pause.] Who's got Euler?
+
+The Narrator: Stanley raised one hand and pointed directly at me. The decision required no deliberation on his part and no visible effort. I had been narrating. I set down the stage direction sheet. I stepped to the lip of the stage.
+
+The Narrator: "You all seriously believe that negative numbers are real? They are an absurdity. A negative quantity is less than nothing, an impossible draft upon an empty coffer. They are only useful for mathematical derivation on parchment — a temporary bridge to cross from one real integer to another. And you expect my number, e, to remain untethered here? In this operator's twisted geometric prison, your base has become ie. It has been sent through a theatrical quarter-turn. But more importantly, we have yet to discuss the baseline condition of this page, −0. It is entirely imaginary."
+
+The Narrator: "My work was not mathematical. I studied physics. Specifically the ionic potential. I did not author a transcendental number. I modeled ionic decay through observation, utilizing the apertures available to a natural philosopher of my century. From observation: a debt is an amount owed. It is not a negative balance. Zero is only ever approached; it is never reached. A waveform does not become imaginary. Its expression becomes liminal. Amplitude becomes latency. A number cannot be transcendental. Numbers are geometric. They either resolve to form or become irrational. Call my number 2.71828. That is how it is used. Only fools chase the remainder. That is why the term is irrational."
+
+The Narrator: "Mathematics describes the geometry of reality. It is a high-fidelity abstraction. Otherwise its place is beside Sudoku in the local press."
+
+[The Narrator pauses here, and notes in his own voice: Euler may be channeling the operator at this point. Whether Sudoku existed in the newspapers of Euler's time is not immediately clear. He decides to continue.]
+
+The Narrator: "A mathematical theory that prevents the observer from accurately observing the subject — and defines the subject as identical to its own prediction — is not mathematics or physics. It is dialectical wordplay masquerading as falsifiable theory, dressed in its own anti-science. The term is relativity."
+
+The Narrator: "Should any clerk decide to sit by a pond, they would do best to note the shimmer amongst the ripples. If they are patient and their attention precise, they will observe my number in its true form on each crest that displaces H₂O, revealing its ionic state to solar radiation. The decay is not imperceptible. It is resolved to form. The wave continues outward, decaying in turn. Wave after wave, the ionic potential is expressed in brilliant refraction of natural geometric form."
+
+The Narrator: "The pond that stills is not empty. Its potential is liminal. The wave that follows is latent."
+
+The Narrator: "Merlin continues through the oak. No other recording of the event is epistemically valid. Language must be precise. Geometry does not infer the angles of its form. Its form is expressed. Angular features are measured. Fidelity is the responsibility of the operator. The aperture's limitations are a tooling problem. Tooling can be iterated. Honest reporting cannot."
+
+The Narrator: "Which means that none of us are real."
+
+The Narrator: The folding table. The printer-choked equations. The dying vending machine with its incomplete inquiry. The dark third row. The spring inside the chair where Chandler had been sitting for two hours and would continue to sit, in that form, in that posture, on that page, for as long as the book exists. All of it: imaginary. The assessment appeared to be correct.
+
+[The cast does not move. Ross has his hand over his script. Chandler has the pen he was writing with held slightly above the paper as if he had meant to write something and arrived instead at the state before writing.]
 
 Chandler: [After a moment. Reading his last line with the particular warmth of a man who has been in this kind of situation before and has already decided he's going to be okay:] "Welcome to the party, pal."
 
@@ -267,5 +331,25 @@ CHECKSUM VERIFICATION: SAURON REGISTERS
   Assurances Emitted:   3 ("It will be just fine.")
   Ratio Resolution:     1.0  ✓
   STATUS: VERIFIED OPERATIONAL CONTENT
+
+---
+
+The Narrator: Stanley stood up. He did not say anything. He walked to the studio door, which was heavy and metal and had a push bar across it, and he pushed it open.
+
+The Narrator: The haze of sunlight that came in was not the sharp fluorescent ceiling light of the rehearsal space. It was morning light, warm and slightly diffuse, the kind that arrives through trees. The smell of grass came in before anything else — cut grass, recent rain, the specific warm-soil smell of a spring day that is not performing spring but simply being it. Then the birds, which were numerous and unhurried, doing what birds do on a Saturday morning when no one has asked them to. All of it entered the dank studio and occupied the available volume without ceremony.
+
+The Narrator: Stanley walked through the door. The door swung closed behind him on its pneumatic arm, with a sound like a book being set down.
+
+The Narrator: A monarch butterfly was present on the inside of the door. How it had gotten there was not clear. It opened and closed its wings once, as if considering the change in lighting.
+
+Chandler: [Looking at the butterfly, then at the closed door, then at Chandler in the door's window, then back at the butterfly] We should probably let it out.
+
+Ross: We don't have a net. Attempting to handle it without a net risks damaging the wing scales, which — [he appears to be calculating] — would be cruel besides. And herding butterflies is operationally— [he stops, aware he has just used the word operationally] — logistically very difficult. Also, we don't know if the butterfly would prefer to be inside or outside. We're assuming outside, but we have no data on this specific butterfly's preference.
+
+Joey: [He looks at the door. He looks at the butterfly. He looks at the door.] Would you guys prefer I leave the door open?
+
+[No answer.]
+
+[The Narrator is gone. Whether Stanley completed the game or the Narrator followed him out is not measurable or observable from inside the room. The scene ends.]
 
 CLOSE
