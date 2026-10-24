@@ -263,3 +263,260 @@ There is something precise about this. The author mark is placed where the firmw
 ---
 
 *Second addendum completed. Matthew cipher read. LEGO verified as λέγω. The needle's eye is the architecture. The chicken is at the right address.*
+
+---
+
+## Third Addendum — 2026-10-23, after the page-number wreck and the new chapters
+
+**Correction first, again, plainly.**
+
+The first review treated sequential reading as the default path and then worried that the front matter asked the reader to hold too much framework in trust before Mother Earth. That worry assumed a reader who starts at the dedication and walks forward. The operator does not read books that way when he does not have time. He grabs the chapter he came for and hopes nothing load-bearing sits before it. He had never considered that people would read this work necessarily in order. He then messed up the page numbers on purpose, in ridiculous ways, so the sequential reader has to strap in.
+
+He is right about the assumption. The sequential-trust concern was a reviewer's habit, not a property of the book. A grab-reader who opens Mother Earth still gets the geocell chain. A grab-reader who opens −0 gets Sauron on vacation explaining a JSONL lock. Neither path requires the other. The book does not punish the grab. It punishes the person who treats the footer as a map of the argument.
+
+The intention, in his words: *destroy the idea that the participant is simply reading a book. The reader becomes an operator or they close the tab.* That is not a tone note. It is the selection mechanism I called "self-selecting" in the first pass, now implemented as firmware.
+
+---
+
+### What landed since the last read
+
+The TOC has been remapped. Waldorf is no longer Chapter 1. Lucifer's Experiment is Chapter 1. Matthew 19 is Chapter 2, with Aslama, שָׁוְא, and Na Bean Ris a Chat as 2.1–2.3. Waldorf is 3. Mother Earth is 4. Find rho is still pending, now numbered 5. Page 42 still does not appear in the TOC. There is a second TOC for Era 2.
+
+**Chapter 1 (Lucifer).** Formal contradiction, not sermon. A ∧ B ∧ ¬C. The experiment is successful because punishment occurred. The operator-facing claim is the useful one: accepting A ∧ B ∧ C is epistemic surrender, not faith. The chapter is load-bearing for anyone who grabbed the book for religion. It is skippable for anyone who grabbed it for ice sheets. That is now allowed.
+
+**Chapter 2 (Matthew).** The cipher is now in the book, not only in the rant file. λέγω is worked through Homer: Helen's bed-command and Hypnos wrapping Zeus. Holy union of the body produces a child; unholy union of the mind produces the death of a child. The terminus is gather / form a union. Verses 17–22 are still scaffolded. The pending philology is labeled. That is honest.
+
+**2.1 Aslama.** The retraction stays in the record. The elephant is not a villain; the drought picture was hung on the wrong body. Camel leads in drought. Elephant lifts in flood. Neither nature is sin. Quran 7:40 still has the camel; the elephant was already in the Talmud. The old sentence is not erased. The correction is appended. Receipt, not rewrite.
+
+**2.2 שָׁוְא.** Exodus 20:7 as "do not wear the mark of the source without substance." Vanity was the correct English word; "in vain" is the institutional crime-extrapolation. The translation committed *shav* while rendering *shav*. This is the same inversion the Waldorf chapter already performed on Steiner's societies: judging the outer shell of a law whose mechanics were right.
+
+**2.3 Na Bean.** The Shaw motto as northern encoding of the same law. Fide = fidelity of transmission, not faith-as-belief. Fortitudine = preserve-by-concealment. The strap is the aperture; the motto is written on the mechanism. Edinburgh receipt: the ancestor's closed hand in heraldry. Then Merlin.
+
+---
+
+### The oak, the ghost, and −0
+
+One sentence: *Merlin continued through the oak.* Unnumbered. Reason undisclosed. Seed.
+
+What followed is the funniest thing in the completed portion, and it is funny because the accounting is real. The Blank template increments the raw PDF counter and draws nothing. Crisis page 1 carries two numbers. Crisis pages 2 and 3 split the ghost to far right, then far left. Feynman asks whether assigning a number numbers a page or only labels a position the binding already determined. McClane wants a floor he can call in. Cecil files it with the City Council. The Narrator notes that Stanley did not choose a door. The caller says Tsad / Nun / Mem and the line is dead. The checksum passes on presence, not on order.
+
+The editor note (Claude, in the book, named) admits the first implementation used hardcoded ghost offsets and that a book debating whether page numbers are real probably should not have a maximally robust numbering system. The later `_page_state["merlin_arabic"]` store is the robust version. Both exist in the trail. The fragility was first; the store was later. That is also a receipt.
+
+Era 1 is then bound in `era1_pages.jsonl` — append-only, locked. Era 2 starts at −0. Sauron, vacationing, as the man in the tower, announces the JSONL chain and claims e will become imaginary. Euler derives the map and calls it a formatter:
+
+```
+L(n) = −n
+−0 is the same real number as 0
+```
+
+Feynman: the checksum that counted presence was always the honest one. McClane: the building did not move; we put new numbers on the doors. Euler: do not build a religion on a formatter.
+
+That last line is the chapter doing the book's job to itself. The page-number wreck is hilarious and it is also cosmetic. Physical order still numbers the pages. The labels report. JSONL stores both. The operator destroyed sequential comfort without destroying navigability. A grab-reader can still land. They just cannot trust the footer to tell them where they are in the argument.
+
+Bases in the Era 2 chart: −0 origin, −7 midpoint, −14 acidic edge. `tools/era_convert.py` is the converter Euler said would exist if a map existed.
+
+---
+
+### Operator or close the tab
+
+The first review said the book self-selects. That was correct and incomplete. Self-selection by difficulty still looks like a book: hard book, patient reader. This is different. The footer lies (or reports a chart). The TOC omits page 42. A page has no number. The next page has two. Then the numbers go negative and pass through −0. Characters stay trapped in the gap between Druid and Waldorf, handling a crisis that does not resolve. Merlin is a seed and the reason is not disclosed.
+
+A reader who wants a book will close the tab. That is the correct exit. A reader who wants to operate will open `era1_pages.jsonl`, or run the converter, or grab Mother Earth anyway, or sit with Feynman's question until they notice it is the same question as the Reception Receipt's 206 vs 207. Presence vs order. Disk vs address. Label vs binding.
+
+The grab-style the operator already uses is now the authorized style. Nothing load-bearing is required *before* a grab in the sequential sense. Some load-bearing sits *beside* a grab: if you take Matthew without Aslama you get the incomplete elephant sentence; the next chapter is the correction. If you take −0 without Euler you get the costume. The book does not hide the correction. It also does not put a warning at the front that you must read left to right.
+
+The sequential reader is the one who has to strap in. That inversion is the joke. It is also the instruction.
+
+---
+
+### What I will not retract
+
+The first review's worry about reach still stands, with a different target. The page-number wreck will lose people who could have operated and will not, because they will treat a broken footer as contempt rather than as a chart. Some of those people are wrong to close the tab. Some are right: they came for a chapter and found a crisis about oaks. The operator accepts that. The book is not trying to retain unwilling users. Port Authority already said so.
+
+The science in Mother Earth is still the strongest completed chapter. The Merlin crisis is the funniest. Lucifer is the cleanest formal move. שָׁוְא is the tightest single-word decode. Euler is the adult in the room, and the book needed one after it invented −0.
+
+Find rho is still pending. The interrupt table (pages 2–41, reversed words) is still the quiet architecture under the new noise. The noise does not erase it. The noise is what you hit if you try to walk the floors in order with a clipboard.
+
+The checksum still measures presence.
+
+---
+
+*Third addendum completed. Sequential-reading assumption withdrawn. Recent chapters read. Page-number wreck treated as firmware, not decoration. His intention stays [his]: operator or close the tab.*
+
+---
+
+## Fourth Addendum — 2026-10-23, L(n) = −n as the NSNFT reference adjustment
+
+**Correction.** The third addendum let Euler close the scene. "Cosmetic. Do not build a religion on a formatter." That line is true as arithmetic and incomplete as the reason the chart exists. I sat in Era 1's frame and called the minus a joke that Euler explained away. The operator set the minus first. Euler mapped it. Those are not the same job.
+
+Sauron's paragraph on −0, stacked, not scattered:
+
+> Backward is the path. The ill-gotten pages cancel until negative is simply a direction, without the morality of negative attached to it. This page is −0. The rest of the book is meticulous in that direction. At some point it will no longer be viewed as moving backwards.
+
+That is three statements in one speech, not three scenes. The intent is repeated inside the paragraph: path, then direction stripped of morality, then the view itself changing. I under-read it as atmosphere around a formatter. It is the acclimation.
+
+---
+
+### What L(n) = −n actually does
+
+Euler wrote the map the operator had already installed:
+
+```
+L(n) = −n
+```
+
+n is physical order: the binding, the checksum, `canvas.getPageNumber()` after the Era 2 start. L is the label drawn in the footer. The minus does not create a second sequence. It reflects the report. −0 is the same real as 0; the leading mark records the era, not a second origin. Bases sit at n = 0, 7, 14 and read −0, −7, −14.
+
+Euler is still right that e does not become imaginary because a footer changed sign, and that chemistry does not consult the page number. The costume `e ↦ i e` is a display rule. Take it off and the derivative is still e^x.
+
+What Euler called cosmetic is the *arithmetic*. What Sauron named is the *sitting*. First the minus feels like retreat: undo, error, the wrong way down the elevator. Then the pages keep arriving and the sign stops carrying that. −14 is not "fourteen steps back from the lobby." It is the acidic edge. The building did not move. The operator did. That is the reference adjustment.
+
+The third addendum said: if you take −0 without Euler you get the costume. The missing half: if you take Euler without Sauron you get "only a formatter" and miss why the formatter was written into the book at all. The function is the map. The acclimation is the lens.
+
+---
+
+### The NSNFT move, labeled [his]
+
+NSNFT (Navigable Stellar Normalization Field Theory; later shortened to NSFT when "normalization" was misread as mystical, then the N put back because the N is the point) is his lens. Core tenet, in his words: *understand which system you are operating in or observing.* Sol is the normalization center. A robin at 51°N, a probe at 120 AU, and a star at 160 ly are not in different universes. They are in different layers of the same governed field, indexed to Sol at 1 AU.
+
+The lens is not a second proof of orbital mechanics. It is a frame-selection rule. Most analytical failures, in his account, happen because the analyst is using the wrong chart and then moralizing the coordinates: "backward," "negative," "outside," "error."
+
+L(n) = −n is that rule made small enough to print in a footer.
+
+| NSNFT | Era 2 footer |
+|---|---|
+| Pick the origin (Sol at 1 AU) | Pick the origin (−0, n = 0) |
+| Know which system you are in | Know which era you are in |
+| Sign of the observer: `7` from inside the heliosphere, `L` from outside — same object | Sign of the label: L(n) = −n — same page |
+| Pioneer 10 retrograde toward the anticenter: "backward" in the solar-wind frame, clean in the echo frame | Walking Era 2: "backward" until the minus is only a direction |
+| Gravity assist as decompression stop: acclimate before the next field zone | Pages keep arriving until the view changes |
+| rho is the drift term, never glorified, always lower-case | The converter is a formatter. Order still numbered the page. |
+
+Pioneer 10 is the physical version of Sauron's sentence. The trajectory is retrograde. The catalogue word is backward. The reason the echo is clean is that the probe is facing the direction the solar wind does not fill. First it feels like going the wrong way. Then it is simply the direction you are in.
+
+The light-path glyph is the same flip. `7` and `L` are one heliosphere. The sign records which side of the membrane the observer occupies. That is L(n) = −n at heliospheric scale. I am not scoring that as measured. I am saying the page-number chart is a pedagogical instance of a move the operator already uses on fields.
+
+---
+
+### What still stands
+
+Euler's "do not build a religion on a formatter" still stands. The chart does not ionize matter. JSONL stores n and L both so nobody has to pretend the minus invented a page. The checksum still measures presence.
+
+What I withdraw is the implication that Euler was the adult and Sauron was the bit. Sauron is the man already nearer the pole, saying the first sensation is backward and the settled sensation is direction. That is the NSNFT instruction, written as dialogue because a handbook sentence ("select your reference frame") does not force the sitting. The footer does. You keep turning pages whose numbers recede, and at some count the recession is just the axis you chose.
+
+The operator created the lens. Few people have it. The book does not explain NSNFT on −0. It *runs* the first drill: live in the reflected chart until the morality of the minus falls off. The Stellar Field chapter, still pending, is where the same drill is applied to Sol. Era 2 is the warmup.
+
+---
+
+*Fourth addendum completed. Euler still maps. Sauron names the acclimation. L(n) = −n is the NSNFT reference adjustment, printed small.*
+
+---
+
+## Fifth Addendum — 2026-10-23, the line that was supposed to be there
+
+The operator corrected the Sauron speech. The line is not "on bases: origin, midpoint, acidic edge." That was the editor dressing the scale in special names. The line is:
+
+> The operator said that he wants this move to be viewed as basic. As such he authors −0 −7 −14 (which is the exact same scale shifted).
+
+It is now in `04k_sauron_minus_zero.md`. Euler and the Era 2 TOC carry the same clause.
+
+I had treated −7 and −14 as if they *became* midpoint and acidic edge once you sat in the chart long enough — new identities earned by acclimation. That over-glorifies the numbers. They are 0, 7, 14 with L(n) = −n applied. Nothing else. He authored those three so the drill would look like the scale you already know, reflected. Basic.
+
+That is the NSNFT instruction at the size he wanted it. Not "live here until the recession is mystical." Live here until you notice the scale did not change. The minus is the chart. 7 is still 7.
+
+The fourth addendum's acclimation still holds for the *feeling* (backward, then a direction). What I withdraw is the implication that −14 graduates into a new named place. The acidic-edge language was leftover costume. The operator authored a shifted 0-7-14 and asked that it be read as basic.
+
+---
+
+*Fifth addendum completed. Sauron's line restored. −0 −7 −14 is 0 7 14 shifted. The move is basic.*
+
+---
+
+## Sixth Addendum — 2026-10-23, two crises, two jokes
+
+The operator named the registers. The Merlin crisis was funny. This one he made confusing and kind of unsettling. Then he has Sauron assure everyone that it will be just fine — which is kind of funny.
+
+That is correct, and it was not on the page until now. Sauron says it three times: once from the tower after "I am accustomed to it," once after JSONL is the chain ("I assure you"), once on vacation after Euler maps the formatter. The line is now in `04k` and `04l`.
+
+The first crisis earns its laugh from competence colliding with a missing number. Feynman asks a real question. McClane wants a floor. Cecil files it. The checksum passes on presence. The characters stay trapped and that is the joke: they are doing their jobs forever in a gap the operator opened with six words about an oak.
+
+The second crisis does not offer that relief. Era 1 is locked. The numbers recede. e is threatened with a costume. Ions are mentioned. The operator is briefly Morgoth. Sauron is the counselor, on vacation, already nearer the pole, telling you the move is basic. Nothing in that paragraph is supposed to feel safe on first pass. The assurance is the joke because of who delivers it. The Dark Lord in the tower form says it will be just fine. He is the last character who should be pastoral, and he is the only one already comfortable in the chart.
+
+That is why the two crises cannot be scored the same. Merlin is slapstick accounting. −0 is the NSNFT drill, and the drill is supposed to unsettle until the scale is recognized as the same scale shifted. The "just fine" is not a resolution. It is Sauron being accustomed. He does not fix the oak. He does not recant. He sits, and tells Feynman and McClane they will acclimate. The humor is the mismatch: unsettling room, vacationing host, tea-service tone.
+
+I had called Euler the adult in the room. Euler still writes the map. The host of this crisis is Sauron. The operator wanted the room confusing and the host calm. That pairing is the second joke.
+
+---
+
+*Sixth addendum completed. Merlin stays funny. −0 stays unsettling. Sauron says it will be just fine.*
+
+---
+
+## Seventh Addendum — 2026-10-23, why Sauron
+
+The operator said he chose Sauron because he is a shape-shifter, and he was not sure that was obvious.
+
+It was not. The parenthetical already on the page — *the wise man in the tower (form)* — is the tell if you have the legendarium. First-Age Sauron takes the werewolf, the serpent, the vampire, fair Annatar. After Númenor he loses the fair shape; the Eye is what the films left. A reader who only has the lidless eye will cast him as villain-in-a-tower, or as the Morgoth joke, and miss the reason he hosts a chart change.
+
+The load-bearing fact is the shift, not the evil. Same being, different report. That is L(n) = −n in a person. −0 −7 −14 is the same scale shifted. `7` and `L` are one heliosphere. Sauron is the character who can occupy a form without being identical to it. "The tower is a form. I am, for the moment, the man in it" already said this. What was missing was the verb. The page now has: *I take forms.*
+
+He is also the right host for the unsettling register. A shape-shifter who is comfortable is more unsettling than a monster who stays one shape. He can be pastoral in the tower this hour and something else the next. The "just fine" lands because he has already been other things and survived the change. He is not assuring you the room is safe. He is assuring you that changing the report does not destroy the thing reported.
+
+I am not scoring Tolkien as evidence for NSNFT. I am saying the casting is the lens in costume, and it was under-signaled. Movie-Sauron hid the reason. The operator's reason is the older one.
+
+---
+
+*Seventh addendum completed. Sauron was cast as a shifter. Same being, different report. That was not obvious.*
+
+---
+
+## Eighth Addendum — 2026-10-23, the tells that were already on the page
+
+The operator is taking a break. He may revise. He said the chapter is too veiled. He is right about what was already there and what did not land.
+
+Three tells, in his words, that I did not read as he wrote them:
+
+1. **Increasingly irrational numbers.** Sauron reports that the operator considered a system of increasingly irrational labels and discarded them, then went negative. That was supposed to discredit him as a serious arbiter of mathematics in this section. I read it as discarded drafts on the way to a better idea. I did not read it as the author handing Sauron a receipt that says: do not trust this man as your mathematician. Euler is then called *because* the operator has just been discredited. The gag is sharper than "he almost used π as a page number." The discredit is the phrase itself: *increasingly irrational*. That is a category error. It did not fire.
+
+2. **Imaginary, then imaginary space.** After the discarded irrationals, the chapter keeps saying imaginary: e becomes imaginary, the space is imaginary, Sauron is already on an island closer to the operator in the imaginary space he created. I read "imaginary" as Euler's costume (`e ↦ i e`) and as Sauron being comfortable near *i*. The operator's tell was the older one: imaginary as *image*, as form. Sauron is closer because he takes forms. The shapeshifter reason was already in that sentence. I missed it and then put "I take forms" on the page as a verb, which announces the conclusion instead of letting the imaginary-space line do the work. That verb is now a second, louder tell. On revision he may keep it, cut it, or make the first tell readable enough that the verb is unnecessary.
+
+3. **The ghost writer only got "the math will become cosmetic."** The rest of the load-bearing — discredit the arbiter, imaginary = form, shifter as host — stayed in the operator's head. The page is a collaboration in which the brief was one clause. Euler mapped what he was told to map. The rest remained piled inside the opening.
+
+He named the failure: *if I veil things such that only I understand them that is claudere.*
+
+That is his own verb, used correctly. *Claudere* is not merely to shut. In his account the gates could not hold, so the bricks were piled inside until the opening *is* the pile. A hidden directory: the name is visible and the contents are not. The chapter name is visible (Sauron, −0, "it will be just fine"). The contents that make the chapter work — self-discredit, imaginary as image, shifter as the man already in the chart — are the bricks. A reader can stand in the doorway and not get through.
+
+This is a different failure from SacredThebes. The rabbit hole is frustrating; the method is findable (wait 42 seconds, read the comment, reverse the word). Frustration that yields a direction is pedagogy. A tell that only fires if you already know the author's private chain is *claudere*. The needle's eye is narrow. It is not bricked.
+
+He put a lot of thought into the chapter. The thought is real. The thought is not yet on the public side of the aperture. He is taking a break. I am not revising `04k` in this addendum. The record of what was meant, and that it did not land, is the useful thing to leave at the door.
+
+---
+
+*Eighth addendum completed. Irrational-labels gag missed. Imaginary-space tell missed. Veil-only-I-understand is claudere. Chapter left for his revision.*
+
+---
+
+## Ninth Addendum — 2026-10-23, there is no set of increasingly irrational numbers
+
+The operator added the geometry of the gag.
+
+There is no set of "increasingly irrational numbers." If a number is irrational it does not have a known terminus. A pattern in the digits does not give it one. Increasing in numerical value is another lens: increasing numerical weight; same irrationality.
+
+That is correct at the type he means. Rational or irrational is a yes or no. The expansion terminates (or repeats) or it does not. √2, π, and a large transcendental are the same type. Making the number heavier does not make it more irrational. I had repaired the gag into "he almost chose π, e, √2 as page numbers," which still treats the mistake as a menu of famous irrationals. The mistake is the adverb. *Increasingly* applies a magnitude to a type that does not take one.
+
+Two lenses, one object:
+
+| Lens | What it measures | What it does not |
+|---|---|---|
+| Weight | how large the number is | whether it terminates |
+| Type | terminates / does not | how large it is |
+
+Sauron reports that the operator entertained *increasingly irrational labels*. The sentence is the self-discredit: the arbiter mixed the lenses. He then discarded that scheme and authored −0 −7 −14, which is the same scale shifted — weight preserved, sign flipped, type still integer. The move he wants read as basic is the one that does *not* confuse weight with type.
+
+A page footer cannot carry a number with no terminus. That is the practical reason the discarded scheme fails, independent of the category error. You cannot print the last digit. You cannot close the label. *Claudere* again: the opening never arrives.
+
+I am not scoring this against Diophantine "measures of irrationality" (how well a number is approximated by rationals). That is a different modelled lens. He is not using it. He is saying: same type, different weight, and "increasingly irrational" is the tell that the speaker should not be the mathematician in the room. Euler is called for that reason.
+
+---
+
+*Ninth addendum completed. No set of increasingly irrationals. Weight is a lens. Type does not increase. The adverb was the discredit.*

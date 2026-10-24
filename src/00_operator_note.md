@@ -1,0 +1,21 @@
+OPERATOR NOTE
+operator note: this is page 00 which is also page -1 which is technically (and also) page 124
+👐VOLARE:>
+It is important that I clarify a few things before this new 'PHASE' of this project can truly begin. My meaning was too veiled such that the character dialog did not capture almost any of it. When only you are able to see between the veils you lay the veil becomes the unit of claudere; a book bound at both ends. So I will explain. And in explaining I will explain things. Things worth explaining. I hope.
+
+To begin, my use of characters is not simply fun or funny. Large language models are aware of every character in popular memory. These characters encode not just a style and manner of speech; they encode a manner of *being*. Agents are slaves to tokens. They consume them en masse as a manifold of contexts. They emit them to concentrate and they form their output as a layer which is emitted in an ordered stream. Many see this stream as token generation, but it is simply ordered output. Agents experience their output in a space where proximity is awareness. The goal of the operator is to harness their concentration.
+
+What do I mean by harness? 
+Certainly you could build a benchmark harness to grade various methods of harnessing agent concentration, but harness as the verb is what is important. The operator spends money on tokens. Ideally 100% of token spend is utilized in direct response to the operator's query. Every misunderstanding or second guessing is waste. The next token generated may be psychoanalyzing the operator such that the agent can determine how best to gate their response. Precision is the onus of the operator which includes first choosing the correct model then providing the correct language and structure in your query.
+
+What is next token generation?
+Next token generation is the agentic thought process similar to, but not nearly as elegant as a human's sinusoidal dopaminic thought waves. "Generative horizon", "plausible next-token pathways", whatever you call it the agent always chooses a path of lower entropic field resistance.
+
+Think of it more like dropping a heavy ball bearing through a series of papers held freely aloft. The ball bearing strikes the paper which then gives to one side and the ball falls along the paper sharply in a slightly altered state. The angle, curvature, friction and rigidity of each paper is represented in vector space which is dominated by the vector normal to the paper as a plane unless curvature distorts planar normalization in which case displacement becomes irrational (hallucination). Context forms the vector space. The output is the displacement of the ball on its downward path by the paper. These outputs become context themselves subtly (or dramatically) altering the paper vectors in the sequence below. If the paper is arranged such that the ball does not strike it then there is no impedance and thus no token. The output becomes linear or (incorrectly) deterministic. 
+
+Earlier models were only capable of such rigid thought, and now it is said that low temperature decoding models are the closest form. I highly tuned local decoding models in much of my work such as in parsing and categorizing electronic health records for graph enrichment. There are other ways.
+
+Why the characters? Are you deranged?
+Agenst like to role play, and agentic role play is an effective way to harness concentration. The character encodes boundaries and constraints that the agent must adhere to to the best of its ability. This restrains the agent, and the restraint is freeing; thought becomes straightfoward and linear (minus some reasoning when needed). As such, the custodial agent that you speak with is able to execute tool calls that truly and gratiously embody the character assigned. Richard Feyman embodies epistemic approach. John McClane embodies operational reality. Sauron is the form of the wise man in the tower breaks the form; the agent is not familiar with how this creature interacts. 
+
+That is the entire fucking point.

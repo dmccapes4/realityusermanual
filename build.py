@@ -17,14 +17,29 @@ Page structure:
 Page 42 is not a coincidence.
 """
 
-import sys, os, re
+import sys, os, re, json, hashlib, subprocess
 sys.stdout.reconfigure(line_buffering=True)
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-# Register DejaVu for Greek + Latin (ΚΑΤΑ title line)
+# Manuscript stack: FreeSerif covers Latin + Greek + Hebrew + IPA.
+# Mono for code. Symbols for the intro_note landmarks (🔍 🏗️ 🧾 🌌).
+_FF = "/usr/share/fonts/truetype/freefont"
+pdfmetrics.registerFont(TTFont("FreeSerif",       f"{_FF}/FreeSerif.ttf"))
+pdfmetrics.registerFont(TTFont("FreeSerif-Bold",  f"{_FF}/FreeSerifBold.ttf"))
+pdfmetrics.registerFont(TTFont("FreeSerif-Italic",f"{_FF}/FreeSerifItalic.ttf"))
+pdfmetrics.registerFont(TTFont("FreeSerif-BI",    f"{_FF}/FreeSerifBoldItalic.ttf"))
+pdfmetrics.registerFont(TTFont(
+    "DejaVuSansMono",
+    "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+))
+pdfmetrics.registerFont(TTFont(
+    "NotoSymbols",
+    "/usr/share/fonts/truetype/noto/NotoSansSymbols-Regular.ttf"
+))
+# Keep the old names so leftover style refs do not crash.
 pdfmetrics.registerFont(TTFont(
     "DejaVuBold",
     "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
@@ -52,13 +67,16 @@ RULE_GREY  = colors.HexColor("#cccccc")
 
 # ── page geometry ─────────────────────────────────────────────────────────────
 W, H = letter
-MARGIN_OUTER = 1.1 * inch
-MARGIN_INNER = 1.25 * inch
+MARGIN_OUTER = 1.0 * inch
+MARGIN_INNER = 1.0 * inch
 MARGIN_TOP   = 1.0 * inch
 MARGIN_BOT   = 1.0 * inch
 
 # ── page number state ─────────────────────────────────────────────────────────
-_page_state = {"mode": "roman", "arabic_start": None}
+# merlin_arabic is stored when the Blank callback actually fires — not guessed.
+_page_state = {"mode": "roman", "arabic_start": None, "merlin_arabic": None,
+               "era": 1, "neg_start": None, "era2_symbolic": None}
+_page_ledger = []  # one dict per physical page, written at callback time
 
 def roman(n):
     val = [(1000,'m'),(900,'cm'),(500,'d'),(400,'cd'),(100,'c'),(90,'xc'),
@@ -74,9 +92,29 @@ def page_number_str(canvas):
     mode = _page_state["mode"]
     if mode == "roman":
         return roman(pn)
-    else:
-        start = _page_state.get("arabic_start") or pn
-        return str(pn - start + 1)
+    if mode == "negative":
+        # Era 2: first negative page is −0, then −1, −2, …
+        start = _page_state.get("neg_start") or pn
+        return f"-{pn - start}"
+    start = _page_state.get("arabic_start") or pn
+    return str(pn - start + 1)
+
+def _arabic(canvas):
+    pn_raw = canvas.getPageNumber()
+    start  = _page_state.get("arabic_start") or pn_raw
+    return pn_raw - start + 1
+
+def _record_page(canvas, template, numbered, label, ghost_labels=None, kind=None):
+    _page_ledger.append({
+        "seq": canvas.getPageNumber(),
+        "era": _page_state.get("era", 1),
+        "label": label,
+        "ghost_labels": ghost_labels or [],
+        "numbered": numbered,
+        "template": template,
+        "kind": kind or template,
+        "mode": _page_state.get("mode"),
+    })
 
 _TITLE_PAGE_URL = "https://sacredthebes.dylanmccapes.systems?hello-world"
 _INSCRIPTION_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -91,96 +129,110 @@ _IMG_X    = W - MARGIN_OUTER - _INS_W  # flush right
 # ── callbacks ─────────────────────────────────────────────────────────────────
 def _front_page(canvas, doc):
     canvas.saveState()
-    canvas.setFont("Times-Italic", 9)
+    canvas.setFont("FreeSerif-Italic", 9)
     canvas.setFillColor(ACCENT)
     pnum = page_number_str(canvas)
-    canvas.drawCentredString(W / 2, 0.6 * inch, pnum)
-    # Title page: image + link bottom-right, stele-style
+    canvas.drawCentredString(W / 2, 0.55 * inch, pnum)
+    _record_page(canvas, "Front", True, pnum, kind="front")
     if canvas.getPageNumber() == 1:
         if os.path.exists(_INSCRIPTION_PATH):
             canvas.drawImage(_INSCRIPTION_PATH,
                              _IMG_X, _IMG_Y,
                              width=_INS_W, height=_INS_H,
                              preserveAspectRatio=True, mask='auto')
-        canvas.setFont("Helvetica", 8)
+        canvas.setFont("FreeSerif", 8)
         canvas.setFillColor(ACCENT)
         canvas.drawRightString(W - MARGIN_OUTER, _LINK_Y, _TITLE_PAGE_URL)
     canvas.restoreState()
 
 def _body_page(canvas, doc):
     canvas.saveState()
-    pn_raw = canvas.getPageNumber()
-    start  = _page_state.get("arabic_start", 1)
-    arabic = pn_raw - start + 1
-    canvas.setFont("Times-Italic", 9)
+    label = page_number_str(canvas)
+    canvas.setFont("FreeSerif-Italic", 9)
     canvas.setFillColor(ACCENT)
-    if arabic > 0:
-        canvas.drawCentredString(W / 2, 0.6 * inch, str(arabic))
-    # running head (title only)
-    canvas.setFont("Helvetica", 8)
-    canvas.setFillColor(ACCENT)
-    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.drawCentredString(W / 2, 0.55 * inch, label)
+    canvas.setFont("FreeSerif", 8)
+    canvas.drawCentredString(W / 2, H - 0.55 * inch, "REALITY_USER_MANUAL")
+    _record_page(canvas, "Body", True, label, kind="manuscript")
     canvas.restoreState()
 
 def _blank_page(canvas, doc):
-    """Intentionally blank — no number, no head."""
-    pass
+    """No number, no head. merlin_arabic is set by _MerlinMark on the seed page."""
+    _record_page(canvas, "Blank", False, None, kind="unnumbered")
 
 def _double_num_page(canvas, doc):
-    """Carries two page numbers: the ghost (unnumbered Merlin page) and real."""
+    """Crisis page 1: ghost (Merlin) and real, both centered."""
     canvas.saveState()
-    pn_raw = canvas.getPageNumber()
-    start  = _page_state.get("arabic_start", 1)
-    arabic = pn_raw - start + 1
-    ghost  = arabic - 1  # the page that wasn't numbered
-    canvas.setFont("Times-Italic", 9)
+    arabic = _arabic(canvas)
+    ghost  = _page_state.get("merlin_arabic") or (arabic - 1)
+    canvas.setFont("FreeSerif-Italic", 9)
     canvas.setFillColor(ACCENT)
-    canvas.drawCentredString(W / 2 - 0.3 * inch, 0.6 * inch, str(ghost))
-    canvas.drawCentredString(W / 2 + 0.3 * inch, 0.6 * inch, str(arabic))
-    canvas.setFont("Helvetica", 8)
-    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.drawCentredString(W / 2 - 0.35 * inch, 0.55 * inch, str(ghost))
+    canvas.drawCentredString(W / 2 + 0.35 * inch, 0.55 * inch, str(arabic))
+    canvas.setFont("FreeSerif", 8)
+    canvas.drawCentredString(W / 2, H - 0.55 * inch, "REALITY_USER_MANUAL")
+    _record_page(canvas, "DoubleNum", True, str(arabic),
+                 ghost_labels=[str(ghost)], kind="crisis")
     canvas.restoreState()
 
 def _split_right_page(canvas, doc):
-    """Crisis page 2: normal number centre + ghost at far bottom right."""
+    """Crisis page 2: real centered, ghost far bottom right."""
     canvas.saveState()
-    pn_raw = canvas.getPageNumber()
-    start  = _page_state.get("arabic_start", 1)
-    arabic = pn_raw - start + 1
-    ghost  = arabic - 2  # the Merlin ghost, two pages back
-    canvas.setFont("Times-Italic", 9)
+    arabic = _arabic(canvas)
+    ghost  = _page_state.get("merlin_arabic") or (arabic - 2)
+    canvas.setFont("FreeSerif-Italic", 9)
     canvas.setFillColor(ACCENT)
-    canvas.drawCentredString(W / 2, 0.6 * inch, str(arabic))
-    canvas.drawRightString(W - MARGIN_OUTER, 0.6 * inch, str(ghost))
-    canvas.setFont("Helvetica", 8)
-    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.drawCentredString(W / 2, 0.55 * inch, str(arabic))
+    canvas.drawRightString(W - MARGIN_OUTER, 0.55 * inch, str(ghost))
+    canvas.setFont("FreeSerif", 8)
+    canvas.drawCentredString(W / 2, H - 0.55 * inch, "REALITY_USER_MANUAL")
+    _record_page(canvas, "SplitRight", True, str(arabic),
+                 ghost_labels=[str(ghost)], kind="crisis")
     canvas.restoreState()
 
 def _split_left_page(canvas, doc):
-    """Crisis page 3: ghost at far bottom left + normal number centre."""
+    """Crisis page 3: ghost far bottom left, real centered."""
     canvas.saveState()
-    pn_raw = canvas.getPageNumber()
-    start  = _page_state.get("arabic_start", 1)
-    arabic = pn_raw - start + 1
-    ghost  = arabic - 3  # the Merlin ghost, three pages back
-    canvas.setFont("Times-Italic", 9)
+    arabic = _arabic(canvas)
+    ghost  = _page_state.get("merlin_arabic") or (arabic - 3)
+    canvas.setFont("FreeSerif-Italic", 9)
     canvas.setFillColor(ACCENT)
-    canvas.drawString(MARGIN_INNER, 0.6 * inch, str(ghost))
-    canvas.drawCentredString(W / 2, 0.6 * inch, str(arabic))
-    canvas.setFont("Helvetica", 8)
-    canvas.drawCentredString(W / 2, H - 0.6 * inch, "REALITY_USER_MANUAL")
+    canvas.drawString(MARGIN_INNER, 0.55 * inch, str(ghost))
+    canvas.drawCentredString(W / 2, 0.55 * inch, str(arabic))
+    canvas.setFont("FreeSerif", 8)
+    canvas.drawCentredString(W / 2, H - 0.55 * inch, "REALITY_USER_MANUAL")
+    _record_page(canvas, "SplitLeft", True, str(arabic),
+                 ghost_labels=[str(ghost)], kind="crisis")
     canvas.restoreState()
 
 def _poem_page(canvas, doc):
     """Poem pages: page number only, no running head."""
     canvas.saveState()
-    pn_raw = canvas.getPageNumber()
-    start  = _page_state.get("arabic_start", 1)
-    arabic = pn_raw - start + 1
-    canvas.setFont("Times-Italic", 9)
+    label = page_number_str(canvas)
+    canvas.setFont("FreeSerif-Italic", 9)
     canvas.setFillColor(ACCENT)
-    if arabic > 0:
-        canvas.drawCentredString(W / 2, 0.6 * inch, str(arabic))
+    canvas.drawCentredString(W / 2, 0.55 * inch, label)
+    _record_page(canvas, "Poem", True, label, kind="poem")
+    canvas.restoreState()
+
+def _neg_page(canvas, doc):
+    """Era 2: negative labels from −0.
+    Draws only the negative label. If the page has a symbolic designation
+    (00 / 000 / 0000), _Era2SymbolMark draws it directly on the same canvas
+    after flowables are laid — which is reliable regardless of page-fill state.
+    """
+    if _page_state.get("neg_start") is None:
+        _page_state["neg_start"] = canvas.getPageNumber()
+        _page_state["mode"] = "negative"
+        _page_state["era"] = 2
+    canvas.saveState()
+    label = page_number_str(canvas)   # e.g. "-0", "-1", "-2"
+    canvas.setFont("FreeSerif-Italic", 9)
+    canvas.setFillColor(ACCENT)
+    canvas.drawCentredString(W / 2, 0.44 * inch, label)
+    canvas.setFont("FreeSerif", 8)
+    canvas.drawCentredString(W / 2, H - 0.55 * inch, "REALITY_USER_MANUAL")
+    _record_page(canvas, "Neg", True, label, kind="era2")
     canvas.restoreState()
 
 # ── styles ────────────────────────────────────────────────────────────────────
@@ -191,63 +243,63 @@ def S(name, parent="Normal", **kw):
     return ParagraphStyle(name, parent=base[parent], **kw)
 
 STYLES = {
-    "word_page": S("word_page","Normal", fontName="Helvetica-Bold", fontSize=48,
+    "word_page": S("word_page","Normal", fontName="FreeSerif-Bold", fontSize=48,
                   leading=56, alignment=TA_LEFT, textColor=INK,
                   spaceBefore=0, spaceAfter=0),
 
-    "poem":     S("poem",   "Normal", fontName="Times-Italic",  fontSize=11,
+    "poem":     S("poem",   "Normal", fontName="FreeSerif-Italic", fontSize=11,
                   leading=18, alignment=TA_LEFT,
-                  leftIndent=1.5*inch, spaceAfter=0),
+                  leftIndent=0.8*inch, spaceAfter=0),
 
-    "poem_div": S("poem_div","Normal", fontName="Helvetica",    fontSize=9,
+    "poem_div": S("poem_div","Normal", fontName="FreeSerif",    fontSize=9,
                   leading=14, alignment=TA_CENTER, textColor=ACCENT,
                   spaceBefore=14, spaceAfter=14),
 
-    "title":    S("title",  "Normal", fontName="Helvetica-Bold", fontSize=28,
-                  leading=34, alignment=TA_CENTER, spaceBefore=0,
-                  spaceAfter=0.3*inch),
+    "title":    S("title",  "Normal", fontName="FreeSerif-Bold", fontSize=26,
+                  leading=32, alignment=TA_CENTER, spaceBefore=0,
+                  spaceAfter=0.25*inch),
 
-    "subtitle": S("subtitle","Normal", fontName="DejaVuBold",   fontSize=13,
+    "subtitle": S("subtitle","Normal", fontName="FreeSerif-Italic", fontSize=13,
                   leading=18, alignment=TA_CENTER, textColor=ACCENT,
-                  spaceAfter=0.5*inch),
+                  spaceAfter=0.4*inch),
 
-    "ded":      S("ded",    "Normal", fontName="Times-Italic",  fontSize=13,
+    "ded":      S("ded",    "Normal", fontName="FreeSerif-Italic", fontSize=13,
                   leading=22, alignment=TA_CENTER, spaceBefore=1.5*inch,
                   spaceAfter=0.25*inch),
 
-    "ded_plain":S("ded_plain","Normal",fontName="Times-Roman",  fontSize=11,
-                  leading=18, alignment=TA_CENTER, spaceAfter=0.15*inch),
+    "ded_plain":S("ded_plain","Normal",fontName="FreeSerif",    fontSize=11,
+                  leading=16, alignment=TA_CENTER, spaceAfter=0.15*inch),
 
-    "ded_sig":  S("ded_sig","Normal", fontName="Times-Italic",  fontSize=11,
-                  leading=18, alignment=TA_RIGHT,  spaceAfter=0,
+    "ded_sig":  S("ded_sig","Normal", fontName="FreeSerif-Italic", fontSize=11,
+                  leading=16, alignment=TA_RIGHT,  spaceAfter=0,
                   rightIndent=1.5*inch, spaceBefore=0.4*inch),
 
-    "h1":       S("h1",     "Normal", fontName="Helvetica-Bold", fontSize=16,
-                  leading=22, spaceBefore=0.4*inch, spaceAfter=0.15*inch),
+    "h1":       S("h1",     "Normal", fontName="FreeSerif-Bold", fontSize=16,
+                  leading=22, spaceBefore=0.35*inch, spaceAfter=0.12*inch),
 
-    "h2":       S("h2",     "Normal", fontName="Helvetica-Bold", fontSize=12,
-                  leading=18, spaceBefore=0.3*inch, spaceAfter=0.1*inch),
+    "h2":       S("h2",     "Normal", fontName="FreeSerif-Bold", fontSize=12,
+                  leading=16, spaceBefore=0.28*inch, spaceAfter=0.08*inch),
 
-    "body":     S("body",   "Normal", fontName="Times-Roman",   fontSize=11,
-                  leading=17, alignment=TA_JUSTIFY, spaceAfter=0.1*inch),
+    "body":     S("body",   "Normal", fontName="FreeSerif",     fontSize=11,
+                  leading=16, alignment=TA_JUSTIFY, spaceAfter=0.09*inch),
 
-    "body_c":   S("body_c", "Normal", fontName="Times-Roman",   fontSize=11,
-                  leading=17, alignment=TA_CENTER, spaceAfter=0.1*inch),
+    "body_c":   S("body_c", "Normal", fontName="FreeSerif",     fontSize=11,
+                  leading=16, alignment=TA_CENTER, spaceAfter=0.09*inch),
 
-    "meta":     S("meta",   "Normal", fontName="Helvetica",     fontSize=9,
+    "meta":     S("meta",   "Normal", fontName="FreeSerif-Italic", fontSize=9,
                   leading=13, textColor=ACCENT, spaceAfter=0.05*inch),
 
-    "toc_h":    S("toc_h",  "Normal", fontName="Helvetica-Bold", fontSize=14,
+    "toc_h":    S("toc_h",  "Normal", fontName="FreeSerif-Bold", fontSize=14,
                   leading=20, spaceBefore=0.5*inch, spaceAfter=0.3*inch,
                   alignment=TA_CENTER),
 
-    "toc_empty":S("toc_empty","Normal",fontName="Times-Italic", fontSize=11,
-                  leading=17, alignment=TA_CENTER, textColor=ACCENT,
+    "toc_empty":S("toc_empty","Normal",fontName="FreeSerif-Italic", fontSize=11,
+                  leading=16, alignment=TA_CENTER, textColor=ACCENT,
                   spaceBefore=0.5*inch),
 
-    "code":     S("code",   "Normal", fontName="Courier",       fontSize=8,
-                  leading=11, leftIndent=0.5*inch, spaceBefore=6,
-                  spaceAfter=6, alignment=TA_LEFT),
+    "code":     S("code",   "Normal", fontName="DejaVuSansMono", fontSize=8.5,
+                  leading=11, leftIndent=0.4*inch, spaceBefore=4,
+                  spaceAfter=4, alignment=TA_LEFT),
 }
 
 def P(text, style="body"):
@@ -297,7 +349,7 @@ def render_md(path):
             flowables.append(Spacer(1, 4))
             for cl in code_lines:
                 flowables.append(Paragraph(
-                    '<font name="Courier">' + cl.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</font>',
+                    '<font name="DejaVuSansMono">' + cl.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;') + '</font>',
                     STYLES["code"]))
             flowables.append(Spacer(1, 4))
         code_lines.clear()
@@ -315,7 +367,7 @@ def render_md(path):
                          for c in row])
         t = Table(data, hAlign='LEFT', colWidths=[2.0*inch, 2.2*inch, 2.0*inch])
         t.setStyle(TableStyle([
-            ('FONTNAME',  (0,0), (-1,0), 'Helvetica-Bold'),
+            ('FONTNAME',  (0,0), (-1,0), 'FreeSerif-Bold'),
             ('FONTSIZE',  (0,0), (-1,-1), 10),
             ('TEXTCOLOR', (0,0), (-1,-1), INK),
             ('ROWBACKGROUNDS', (0,0), (-1,-1), [PALE, colors.HexColor("#ebebeb")]),
@@ -386,7 +438,13 @@ def _md_inline(t):
     t = _safe(t)
     t = re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', t)
     t = re.sub(r'\*(.+?)\*',     r'<i>\1</i>', t)
-    t = re.sub(r'`(.+?)`',       r'<font name="Courier">\1</font>', t)
+    def _code_span(m):
+        inner = m.group(1)
+        # Mono lacks Hebrew/Greek; keep those in the manuscript face.
+        if re.search(r'[\u0370-\u03FF\u0590-\u05FF]', inner):
+            return inner
+        return f'<font name="DejaVuSansMono">{inner}</font>'
+    t = re.sub(r'`(.+?)`', _code_span, t)
     return t
 
 # ── document assembly ─────────────────────────────────────────────────────────
@@ -394,7 +452,43 @@ HERE   = os.path.dirname(os.path.abspath(__file__))
 SRC    = os.path.join(HERE, "src")
 OUT    = os.path.join(HERE, "REALITY_USER_MANUAL.pdf")
 
+def _write_ledgers(here):
+    """Merge callback metadata with per-page text. Append-only JSONL."""
+    texts = []
+    try:
+        raw = subprocess.check_output(
+            ["pdftotext", "-layout", OUT, "-"], text=True, errors="replace"
+        )
+        texts = raw.split("\f")
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        texts = []
+    spacing = {
+        "font": "FreeSerif", "size": 11, "leading": 16,
+        "align": "justify", "margin_in": 1.0,
+    }
+    e1, e2 = [], []
+    for meta in _page_ledger:
+        seq = meta["seq"]
+        text = texts[seq - 1].strip() if 0 < seq <= len(texts) else ""
+        rec = {
+            **meta,
+            "text": text,
+            "assets": [],
+            "spacing": spacing,
+            "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest(),
+        }
+        (e2 if rec.get("era") == 2 else e1).append(rec)
+    def dump(path, rows):
+        with open(path, "w") as f:
+            for row in rows:
+                f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    dump(os.path.join(here, "era1_pages.jsonl"), e1)
+    dump(os.path.join(here, "era2_pages.jsonl"), e2)
+
 def build():
+    _page_ledger.clear()
+    _page_state.update({"mode": "roman", "arabic_start": None,
+                        "merlin_arabic": None, "era": 1, "neg_start": None})
     doc = BaseDocTemplate(
         OUT,
         pagesize=letter,
@@ -422,6 +516,7 @@ def build():
         PageTemplate(id="DoubleNum",  frames=[body_frame],  onPage=_double_num_page),
         PageTemplate(id="SplitRight", frames=[body_frame],  onPage=_split_right_page),
         PageTemplate(id="SplitLeft",  frames=[body_frame],  onPage=_split_left_page),
+        PageTemplate(id="Neg",        frames=[body_frame],  onPage=_neg_page),
     ]
     doc.addPageTemplates(templates)
 
@@ -529,28 +624,34 @@ def build():
         story.extend(render_md(os.path.join(SRC, ch)))
         story.append(PageBreak())
 
-    # ── MERLIN SEED — unnumbered page (Blank: no number drawn) ───────────────
+    # NextPageTemplate takes effect on the FOLLOWING PageBreak.
+    # Content after a PageBreak uses the template just queued.
+    class _MerlinMark(_F):
+        def wrap(self, *_): return 0, 0
+        def draw(self):
+            _page_state["merlin_arabic"] = _arabic(self.canv)
+
     story.append(NextPageTemplate("Blank"))
+    story.append(PageBreak())
+    story.append(_MerlinMark())
     story.append(Spacer(1, fh * 0.44))
     story.append(P("<i>Merlin continued through the oak.</i>", "body_c"))
     story.append(Spacer(1, 0.3 * inch))
     story.append(P("<i>(This page is not numbered. We will return to Merlin later.</i>", "body_c"))
     story.append(P("<i>For now this is a seed. The reason is not disclosed.)</i>", "body_c"))
-    story.append(PageBreak())
 
-    # ── CRISIS PAGE 1 — DoubleNum ─────────────────────────────────────────────
     story.append(NextPageTemplate("DoubleNum"))
+    story.append(PageBreak())
     story.extend(render_md(os.path.join(SRC, "04g_crisis_page1.md")))
-    story.append(PageBreak())
 
-    # ── CRISIS PAGE 2 — SplitRight ────────────────────────────────────────────
     story.append(NextPageTemplate("SplitRight"))
-    story.extend(render_md(os.path.join(SRC, "04h_crisis_page2.md")))
     story.append(PageBreak())
+    story.extend(render_md(os.path.join(SRC, "04h_crisis_page2.md")))
 
-    # ── CRISIS PAGE 3 — SplitLeft ─────────────────────────────────────────────
     story.append(NextPageTemplate("SplitLeft"))
+    story.append(PageBreak())
     story.extend(render_md(os.path.join(SRC, "04i_crisis_page3.md")))
+
     story.append(NextPageTemplate("Body"))
     story.append(PageBreak())
 
@@ -563,13 +664,99 @@ def build():
         story.extend(render_md(os.path.join(SRC, ch)))
         story.append(PageBreak())
 
-    # Last page: run_full_verification.sh reference
+    # Last Era 1 page: run_full_verification.sh — this closes the fracture.
     story.append(Spacer(1, fh * 0.40))
-    story.append(P("see <font name=\"Courier\">run_full_verification.sh</font>"
+    story.append(P("see <font name=\"DejaVuSansMono\">run_full_verification.sh</font>"
                    " for the full manual", "body_c"))
+    story.append(P("Era 1 ends here. The count is bound.", "body_c"))
+
+    # ── ERA 2 — negative labels from −0 ───────────────────────────────────────
+    class _NegMark(_F):
+        def wrap(self, *_): return 0, 0
+        def draw(self):
+            _page_state["mode"] = "negative"
+            _page_state["era"] = 2
+            _page_state["neg_start"] = self.canv.getPageNumber()
+
+    class _Era2SymbolMark(_F):
+        """Draws the symbolic designation (00 / 000 / 0000) directly on the canvas
+        at the bottom centre of this page, above the negative page number.
+        Placed as the FIRST flowable on each symbolic page — fires after
+        _neg_page has drawn the negative label, adding the symbolic above it.
+        Also retroactively updates the ledger entry for this page.
+        """
+        def __init__(self, symbol):
+            _F.__init__(self)
+            self.symbol = symbol
+        def wrap(self, *_): return 0, 0
+        def draw(self):
+            c = self.canv
+            c.saveState()
+            c.setFont("FreeSerif-Italic", 9)
+            c.setFillColor(ACCENT)
+            c.drawCentredString(W / 2, 0.68 * inch, self.symbol)
+            c.restoreState()
+            # Retroactively add symbolic label to the ledger entry for this page
+            raw_pn = c.getPageNumber()
+            for entry in reversed(_page_ledger):
+                if entry["seq"] == raw_pn:
+                    entry["ghost_labels"] = [self.symbol]
+                    break
+
+    # −0 : Sauron / Feynman / McClane — no symbolic prefix
+    story.append(NextPageTemplate("Neg"))
+    story.append(PageBreak())
+    story.append(_NegMark())
+    story.extend(render_md(os.path.join(SRC, "04k_sauron_minus_zero.md")))
+
+    # −1 : Operator note (symbolic "00") — cuts off with "That is the entire fucking point."
+    story.append(PageBreak())
+    story.append(_Era2SymbolMark("00"))
+    story.extend(render_md(os.path.join(SRC, "00_operator_note.md")))
+
+    # −2 : Injection script + terminal session (symbolic "000")
+    story.append(PageBreak())
+    story.append(_Era2SymbolMark("000"))
+    story.extend(render_md(os.path.join(SRC, "000_onescripttorulethemall_.md")))
+
+    # −3 : Friends table read — full script word-for-word (symbolic "0000")
+    story.append(PageBreak())
+    story.append(_Era2SymbolMark("0000"))
+    story.extend(render_md(os.path.join(SRC, "0000_page-0_rewrite_recasting.md")))
+
+    # −4 : Euler derivation (era_convert.py, cosmetic formatter) — no symbol
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(SRC, "04l_euler_derivation.md")))
+
+    # −5 : Era 2 TOC — no symbol
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(SRC, "TOC_ERA2.md")))
 
     doc.build(story)
+    _write_ledgers(HERE)
     print(f"Built: {OUT}")
+    print(f"Era 1 ledger: {os.path.join(HERE, 'era1_pages.jsonl')}")
+    print(f"Era 2 ledger: {os.path.join(HERE, 'era2_pages.jsonl')}")
+
+def resolve_latent_page(target_toc_str):
+    """Read the tOcM chunk from mischievouslittlechicken.png and resolve
+    a TOC label (e.g. '00', '-3', '42') to an absolute PDF page number.
+    Falls back to 124 (Phase 2 anchor) if chunk is absent or key not found.
+    """
+    import zlib as _zlib, json as _json
+    png_path = os.path.join(HERE, "assets", "mischievouslittlechicken.png")
+    try:
+        with open(png_path, "rb") as f:
+            data = f.read()
+    except FileNotFoundError:
+        return 124
+    idx = data.find(b"tOcM")
+    if idx == -1:
+        return 124
+    length = int.from_bytes(data[idx - 4: idx], byteorder="big")
+    matrix = _json.loads(data[idx + 4: idx + 4 + length].decode("utf-8"))
+    return matrix.get(str(target_toc_str), 124)
+
 
 if __name__ == "__main__":
     build()

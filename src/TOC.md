@@ -14,7 +14,7 @@
 | 2.1 | Aslama | `04c_chapter_2.1_aslama.md` | ✓ |
 | 2.2 | שָׁוְא — Exodus 20:7 as Epistemological Law | `04d_chapter_2.2_shav.md` | ✓ |
 | 2.3 | Na Bean Ris a Chat! — The Shaw Clan Encoding | `04e_chapter_2.3_na_bean.md` | ✓ |
-| 3 | OnWaldorfPhilosophyAccurateInterpretation | `04_chapter_waldorf_abstraction.md` | ✓ |
+| 3 | Waldorf Philosophy Accurate Interpretation | `04_chapter_waldorf_abstraction.md` | ✓ exact essay |
 | 4 | Mother Earth | `05_chapter_mother_earth.md` | ✓ |
 | | | | |
 | | *chapters pending* | | |
