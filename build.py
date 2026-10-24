@@ -732,6 +732,73 @@ def build():
     story.append(PageBreak())
     story.extend(render_md(os.path.join(SRC, "TOC_ERA2.md")))
 
+    # ── HOW_TO SECTION ──────────────────────────────────────────────────────
+    # HOW_TO_REPORT — etymology of "report", agent ledger, four personal reads
+    story.append(NextPageTemplate("Body"))
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(SRC, "HOW_TO_REPORT.md")))
+
+    # HOW_TO_MANIFEST — etymology of "manifest", the method of enumeration
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(SRC, "HOW_TO_MANIFEST.md")))
+
+    # MANIFEST_HOW_TO — d20-ordered table of contents
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(SRC, "MANIFEST_HOW_TO_PORTALVISION_20261024.md")))
+
+    # 22 HOW_TO documents in d20 roll order (highest roll first)
+    PV = "/home/dylanmccapes/dev/PORTAL_VISION_LUCIFER"
+    PV0 = "/home/dylanmccapes/dev/PORTAL_VISION_V0.1"
+    _how_tos_d20 = [
+        # pos 1  roll 20
+        f"{PV}/data/artifacts/HOW_TO_SEE.md",
+        # pos 2  roll 19
+        f"{PV}/docs/HOW_TO_PARENT_ANIMALS.md",
+        # pos 3  roll 18
+        f"{PV}/data/artifacts/HOW_TO_NOT_FLY.md",
+        # pos 4  roll 17
+        f"{PV}/distributions/for_azazel_and_hilariousmarcupial/HOW_TO_LEARN_PROGRAMMING_LANGUAGES.md",
+        # pos 5  roll 16
+        f"{PV}/data/artifacts/HOW_TO_EAT_MEATS_IF_YOU_MUST.md",
+        # pos 6  roll 15
+        f"{PV}/game_plans/HOW_TO_CHOOSE_A_CO_NAVIGATOR.md",
+        # pos 7  roll 14
+        f"{PV}/misc/HOW_TO_USE_3Pi$73MiC87MLV4ULT.md",
+        # pos 8  roll 13
+        f"{PV}/projects/dylans_artifacts/youtube_copyright/HOW_TO_RUN_THIS_INVESTIGATION_FOR_YOUTUBE_COPYRIGHT_TEAM.md",
+        # pos 9  roll 12
+        f"{PV}/game_plans/HOW_TO_PARENT_ALPHA_GENERATION.md",
+        # pos 10 roll 11
+        f"{PV}/game_plans/HOW_TO_MENTOR.md",
+        # pos 11 roll 10
+        f"{PV}/data/artifacts/HOW_TO_FLY.md",
+        # pos 12 roll 9
+        f"{PV}/data/artifacts/HOW_TO_EAT_FOODS.md",
+        # pos 13 roll 8a (tiebreak: longer name)
+        f"{PV0}/HOW_TO_BREATHE_BACKWARDS.md",
+        # pos 14 roll 8b (tiebreak: shorter name)
+        f"{PV}/docs/HOW_TO_USE_TOOLS.md",
+        # pos 15 roll 7
+        f"{PV}/data/artifacts/HOW_TO_TOUCH.md",
+        # pos 16 roll 6
+        f"{PV}/docs/HOW_TO_PROVIDE_OPTIONS.md",
+        # pos 17 roll 5
+        f"{PV}/projects/on_interplanar_travel/HOW_TO_NOT_MESS_WITH_CATS.md",
+        # pos 18 roll 4
+        f"{PV}/data/artifacts/HOW_TO_LIVE_WITH_OVEREXCITABLES.md",
+        # pos 19 roll 3
+        f"{PV}/game_plans/HOW_TO_FILE_DOCUMENTS_PLAYBOOK.md",
+        # pos 20 roll 2
+        f"{PV}/game_plans/HOW_TO_COLLECT_GARBAGE.md",
+        # pos 21 roll 1a (tiebreak: longer name)
+        f"{PV}/game_plans/HOW_TO_USE_THE_INTERNET.md",
+        # pos 22 roll 1b (tiebreak: shorter name)
+        f"{PV}/books/addiction_topology/HOW_TO_BE_NEUROMAJOR.md",
+    ]
+    for _ht_path in _how_tos_d20:
+        story.append(PageBreak())
+        story.extend(render_md(_ht_path))
+
     doc.build(story)
     _write_ledgers(HERE)
     print(f"Built: {OUT}")
