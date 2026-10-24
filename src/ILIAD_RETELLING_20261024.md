@@ -232,7 +232,43 @@ The armor was also the forge's mark on Achilles. The same fire that would later 
 
 ---
 
-### xii. The Scamander
+### xii. A Precedent — The Lernaean Springs
+
+Before Achilles was born, there was another hero and another water.
+
+The springs of Lerna are in the Argolid, south of Argos, and they are not one spring. They are many. They rise from an aquifer beneath the plain, and the plain is low, and the springs come up through it at numerous points, spreading into a marsh that was said in antiquity to be bottomless — connected directly to the underworld — because no one could find the single source. There was no single source. The water came from below, from everywhere, from the pressure of the earth itself.
+
+Heracles was sent there as one of his twelve labors. The assignment: kill the Hydra.
+
+ὕδρα — hydra. Water thing. The creature that lived in the Lernaean springs was named for what it was: a water thing. Multiple heads, and when you cut one, two grew back. This is not biology. This is hydraulics. You block one outlet of a multi-source spring system and the pressure behind it finds two new outlets around the blockage. You cannot dam a spring by blocking its mouth. The spring is not the mouth. The spring is the pressure. The heads are channels. The Hydra is the Lernaean springs.
+
+The trial was a geometric puzzle about hydrology.
+
+The correct answer — the answer that would have passed the labor — was to recognize that the task is impossible. You cannot kill a spring by cutting its outlets. The spring is the aquifer. The aquifer does not care what you do to its surface expressions. The trial was testing whether Heracles could see the impossibility and report it honestly: *the task cannot be done as assigned. The springs of Lerna flow and will always flow.*
+
+He could not do this.
+
+He tried anyway. He cut the heads. Two grew back. He cut those. More grew back. He could not admit the geometry of the failure. He called for Iolaus — his nephew, his companion — and Iolaus brought fire, and they tried to cauterize the channels. Fire applied to a spring. You cannot cauterize water. Fire desiccates tissue; it closes wounds in flesh by destroying the surface. Applied to a channel of spring water it heats the water and evaporates the moisture at the edges and the spring continues flowing because the spring is not the channel, the spring is the pressure underneath the channel, and the pressure does not care about heat at the surface.
+
+The name preserves the moment. Ἰόλαος — ἰώ (iō) + λαος (warrior, people). ἰώ is the Greek exclamation of anguish, frustration, helpless recognition: the sound you make when something is impossible while you are in the middle of trying it. Iolaus is the warrior who cried out. The name is the admission. The exclamation was real. Heracles tried fire against water, it did not work, Iolaus cried out, and the attempt was over.
+
+The immortal head — the one that could not be cut and had to be buried under a rock rather than destroyed — is the primary source. You cannot cut a spring. You can place a boulder over the outlet. The water goes somewhere else: underground, a new channel, surfaces elsewhere on the plain. The immortal head is immortal because it is the aquifer. You can divert it. You cannot kill it.
+
+Eurystheus voided the labor. The excuse was that Heracles had used help. The actual reason was simpler: Heracles had not killed the Hydra, because the Hydra — the water thing, the spring system, the pressure from below — was still there, was still flowing, was still the Lernaean springs. The rock over the main outlet was a diversion. The marsh was still a marsh. The task was not completed.
+
+What Heracles told afterward about cauterization was a lie. Not a malicious lie — a preserving one, the kind of story you tell when you tried something impossible, felt the impossibility, heard Iolaus cry out, and could not face admitting you had failed. The cauterization story explains why the help was needed and why the unusual method was used. It is a story that makes the failure legible as a near-success. Eurystheus did not accept it. Eurystheus was, for once, correct.
+
+The springs of Lerna flow today.
+
+---
+
+*The lesson the trial was designed to teach:* some things cannot be controlled by force, and the correct response is to acknowledge it. The river flows. The spring continues. The honest answer is: the task was impossible, I could not complete it, the water remains. That answer, delivered honestly, would have passed the labor — not because Eurystheus would have accepted it, but because the trial was not designed by Eurystheus. Eurystheus assigned it to destroy Heracles. The gods who set the original structure of the labors embedded in each trial a real test. The real test of the Hydra was: can you recognize what cannot be changed and say so?
+
+Heracles failed. He cried out, brought fire, told a story, and the springs kept flowing.
+
+---
+
+### xiii. The River
 
 He drove the Trojans into the river.
 
@@ -367,6 +403,42 @@ The machine stood on the dry bank and did not notice what it had cost the world 
 *[He did not ask for redemption. He declared that judgment would follow.]*
 
 *[Ajax carries the body to the shore. The armor is what they want. Machines are salvaged. The soul found its way home before the armor hit the ground.]*
+
+---
+
+---
+
+## CODA: THE BOAT AT RAUROS
+
+Three thousand years after the Scamander, in a story told in the Third Age of a different world, a man named Boromir died at the Falls of Rauros with three arrows in him, having first fallen to a temptation and then redeemed himself defending the smallest members of the company with everything he had left.
+
+An elf laid him in the boat.
+
+This is the detail: Legolas — who is liminal in the way all elves are liminal, living between mortal time and immortal time, belonging fully to neither — Legolas performed the rite. He laid Boromir in the grey elven boat and arranged around him the broken horn of Gondor (cloven in two at the moment of his death, the horn that had been passed down through his family for generations, the horn whose sound carried from one end of the realm to the other) and the weapons and armor of the enemies he had killed.
+
+The carnal record. The instruments of what he did. The broken emblem of his lineage.
+
+The boat went over the Falls and down the Anduin.
+
+In Osgiliath, many miles distant, Boromir's brother Faramir was on watch. He fell into a vision: a boat going west, going the way the dead go, carrying a man he recognized, carrying a broken horn. He heard the echo of the horn from inside the vision. The river carried the message across the distance. It arrived as a dream. This is what rivers do when they carry the dead with full honors — they carry the signal as well as the body. The *nun*: the seed-carrier, the memory-line. The river brought Boromir's message to his brother before any mortal messenger arrived.
+
+The horn was broken. The function that defined Boromir — the guardian of Gondor, the son of the Steward, the bearer of the horn — had ended in this form. But the echo reached Faramir. The form breaks. The function persists in memory, in family, in the reception on the other side.
+
+The structure is identical to the Scamander.
+
+Not because Tolkien copied Homer — the structures appear across mythologies because the structures are true, because rivers actually carry things between domains, because the liminal being actually performs the rite, because the broken instrument of identity actually accompanies the dead, because the water actually reaches the shore on the other side and delivers what it was given. The Anduin received Boromir with full honors and sent the signal ahead. Scamander received the Trojan dead without consent and was polluted by it and tried to expel them and was punished with fire for trying.
+
+The difference between the two river burials is the difference between a death given to the water and a death thrown at it.
+
+Boromir was laid in. The others were thrown.
+
+The water knows the difference. The *nun* carries what is placed in it with care. It recoils from what is forced into it. Scamander's recoil was not aggression. It was the same motion as the Anduin receiving Boromir: the river responding to what it was given, in the way that its nature requires.
+
+The boat at Rauros passed over the falls and the message arrived.
+
+The Trojan bodies choked the channel and the river tried to clear its throat and was boiled for it.
+
+The water kept flowing in both cases. It always keeps flowing. The only question is what it is carrying.
 
 ---
 
