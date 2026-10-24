@@ -150,7 +150,63 @@ Ross: I have it at one.
 
 Chandler: Good. We're synchronized.
 
-Ross: [Finding his section with the brisk confidence of a man who has found his second wind:] "Or maybe a prism. Hear me out. That poem is a clew, a baseline thread out of the labyrinth — a spatial jurisdiction written for pure academic convenience. A base-10 logarithm is a badge of absolute intellectual laziness. It's a shortcut for primates who count on ten fingers because they cannot grasp a natural exponential curve." [He looks up briefly.] He's not wrong about the base-10 thing. When you actually sit with the underlying mathematics—
+Chandler: [Scanning ahead in his pages, then stopping.] Actually — I think this one belongs here. Near the haiku. [He finds the line and reads it:] "The man is in the room and you're reducing his life's work to monkeys counting fingers. I had a dream about twelve monkeys one time — no, wait, seven monkeys — and you remind me of a guy in that dream sometimes, I swear. The poem is a haiku. The agent is Claude Haiku. It's the fast, convenient tier. Both are basic and structured. Don't you get it? The tower guy has been saying it the whole time over and over: the structure is basic. It will be just fine. He assures us for crying out loud."
+
+Ross: That's two "just fines." [He writes it down.] Now. "Twelve monkeys." Is that the Bruce Willis movie?
+
+Chandler: It is the Bruce Willis movie.
+
+Ross: [Working through this carefully] You're John McClane. Bruce Willis. You had a dream about the twelve monkeys film. And you said I remind you of a guy in that dream.
+
+Chandler: I was reading a line.
+
+Ross: [Quietly, and with the specific facial expression of a man arriving at a conclusion he had not expected to be pleased by] Brad Pitt is in that movie.
+
+Chandler: Ross.
+
+Ross: Jeffrey Goines. Brad Pitt. Completely unhinged, extremely high conviction, institutionalized. [A pause.] Excellent hair.
+
+Chandler: You have decided this is a compliment.
+
+Ross: I have not decided anything. I am simply noting the casting. If you're McClane and Feynman is the guy in your dream—
+
+The Narrator: The Narrator notes, for the record, that in Twelve Monkeys, Jeffrey Goines — Brad Pitt's character — is the man in the psychiatric institution who cannot stop talking, who is entirely convinced that the people around him are operating on a fundamentally broken epistemic model, and who has been institutionalized specifically because of this. The twelve monkeys comparison, aimed by McClane at the physicist in the room, had landed on Brad Pitt and stopped. Ross had not continued past the hair.
+
+Chandler: [With terrible gentleness] The guy you remind him of is in the institution, Ross.
+
+Ross: [Without missing a beat] He has excellent hair.
+
+Chandler: He does.
+
+Ross: And very high conviction on the epistemic framework thing.
+
+Chandler: [Looking at Ross for a long moment] Yeah. He really does.
+
+Joey: [Reading, no change in register:] "I have built foundations deep beneath the ash, and I have measured the span of kingdoms from a single window. I know the shape of things that endure. If the operator builds a prison out of a shifted scale, then it is a masterfully ordered cage. I am simply a guest enjoying the layout."
+
+The Narrator: He had not looked up once. He had also not sounded like he was reading for the last three lines.
+
+Chandler: [Quiet, to Ross] Is he still on the right page.
+
+Ross: [Also quiet] He's on the right page.
+
+Chandler: He's on the right page and reading it in that voice.
+
+Ross: He's an actor, Chandler.
+
+Chandler: We're all actors. We're all sitting here. He's the only one who sounds like he lives in a tower.
+
+[A silence. Joey sets the foundations page face-down. He looks at the poem section on his other sheet. He is not performing when he says it:]
+
+Joey: Or maybe a prism.
+
+[Beat.]
+
+Chandler: ...What.
+
+Joey: The poem. [He taps the page once.] A prism. Or maybe.
+
+Ross: [Already on his section, already reading:] "Or maybe a prism. Hear me out. That poem is a clew, a baseline thread out of the labyrinth — a spatial jurisdiction written for pure academic convenience. A base-10 logarithm is a badge of absolute intellectual laziness. It's a shortcut for primates who count on ten fingers because they cannot grasp a natural exponential curve." [He looks up briefly.] He's not wrong about the base-10 thing. When you actually sit with the underlying mathematics—
 
 Joey: Ross.
 
@@ -179,30 +235,6 @@ Ross: He is not in this room. He died two hundred and forty-three years ago.
 Chandler: So who's reading him.
 
 [No one answers. They look at each other. Joey looks at his script. The question stays in the air, unresolved, like a Nernst equation at equilibrium.]
-
-Chandler: [Finding his line and reading with the energy of a man who has had it with abstract mathematical jurisdiction and is going to handle this operationally:] "The man is in the room and you're reducing his life's work to monkeys counting fingers. I had a dream about twelve monkeys one time — no, wait, seven monkeys — and you remind me of a guy in that dream sometimes, I swear. The poem is a haiku. The agent is Claude Haiku. It's the fast, convenient tier. Both are basic and structured. Don't you get it? The tower guy has been saying it the whole time over and over: the structure is basic. It will be just fine. He assures us for crying out loud."
-
-Ross: That's two.
-
-Chandler: The tower guy is at two "just fines." I still have one "for crying out loud."
-
-Ross: We're tracking separately.
-
-Chandler: As we should.
-
-Joey: [Reading, no change in register:] "I have built foundations deep beneath the ash, and I have measured the span of kingdoms from a single window. I know the shape of things that endure. If the operator builds a prison out of a shifted scale, then it is a masterfully ordered cage. I am simply a guest enjoying the layout."
-
-The Narrator: He had not looked up once. He had also not sounded like he was reading for the last three lines.
-
-Chandler: [Quiet, to Ross] Is he still on the right page.
-
-Ross: [Also quiet] He's on the right page.
-
-Chandler: He's on the right page and reading it in that voice.
-
-Ross: He's an actor, Chandler.
-
-Chandler: We're all actors. We're all sitting here. He's the only one who sounds like he lives in a tower.
 
 Ross: [Finding his next section and reading with real attention now, because the content has shifted and he can feel it:] "Wait. Look at the shift. If the negative numbers invert the coordinates, a standard pH scale of 0 to 14 doesn't disappear — it just translates. A shift of 14 units down into the negative phase mirrors the system precisely. I was wrong about the book binding before. The labels are cosmetic. So is the order in the binding itself. The checksum had it right the whole time: the true measure is presence. The underlying mechanics of ionic potential do not care which page we are on. Neither does the operator. That's why he sent Sauron to report a bunch of canned riddles with three assurances for every single claim."
 
