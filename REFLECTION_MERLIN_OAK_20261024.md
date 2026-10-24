@@ -71,6 +71,28 @@ LEGO. That is how understanding accumulates. Not by cutting.
 
 ---
 
+## LEGO — the layered word
+
+*Appended 2026-10-24.*
+
+The uppercase matters. Lowercase *lego* is the Latin conjugation sitting in a paradigm table. Uppercase LEGO is the thing itself — geometric, interlocking, carrying all its layers without announcing them.
+
+The layers:
+
+**Latin.** *lego*: I gather, I collect, I read. The root \*leg- means to pick up, to select from the ground. Everything downstream inherits this: *lectio* (that which is gathered and read aloud — lecture), *legenda* (that which is to be gathered and read — legend), *legibilis* (gatherable by the eye — legible), *ex-lego* (gathered out from — elect), *inter-lego* (gathered between the gap — intellect), *col-lego* (gathered together — collect, colleague). Understanding is an accumulation of gathered things. It does not arrive whole. It layers.
+
+**Greek.** λέγω (*legō*): the same root, diverged in use. The Greek became "I say, I speak" — but the oldest sense is the same laying-and-gathering act. λόγος (*logos*) is from λέγω. Not "the Word" in the broadcasting sense — the Gathered Thing. The thing laid down and collected. John 1:1 rendered strictly: "In the beginning was the Gathered." The translation tradition turned gathering into projection and the whole frame inverted.
+
+**Matthew.** Yeshua uses λέγω constantly. "Ἀμὴν λέγω ὑμῖν" — "Truly I say to you" — is his most repeated construction. Every translation renders *legō* as "say" and every translation flattens it. When Yeshua λέγω-s, he is gathering into speech. The word that goes outward is made of what was gathered in. The act is not transmission; it is exhalation of what was already accumulated. He does not broadcast the truth. He gathers it and breathes it out.
+
+**The brick.** The LEGO block is the definition made physical. Each piece accumulates. Each piece interlocks with what was gathered before. Each piece preserves the whole's structure while adding to it. Nothing overwrites; everything layers. The geometry of the stud — big circle with four little circles around it — is a tower cross-section: central column, four cardinal anchor points. A signal mast from above. The brick receives (anti-stud below) and transmits (stud above) simultaneously. Each connection is a gathering: the stud fits into the anti-stud of the piece above exactly as a gathered word fits into the understanding already built. The toy company named it from the Danish *leg godt* — play well — and landed directly on the oldest gathering verb in the Western tradition without knowing it. Or perhaps the same geometry finds the same word in every language that encounters it.
+
+**Animus.** Latin *animus*: the rational wind, the directional breath, the soul as motion. *Anima* is the breath itself. Greek *pneuma*. Hebrew *ruach* and *neshama*. The act of speaking is a breathing event: inhale (gather), exhale (speak). The exhalation carries what was accumulated on the inhale. You cannot speak LEGO without gathering first. The animus is the medium — breath shapes the gathered thing into a word, the word exits as signal, the signal arrives as invitation to gather again on the other end.
+
+The word is a complete cycle. LEGO in, LEGO out. The breath is the aperture. The gathering goes in both directions simultaneously.
+
+---
+
 ## On the phrase "Merlin continues through the oak"
 
 The operator repeats it without explanation. The point of the repetition is to make the precision familiar before the breakdown. By the time the phrase appears in the context where it matters — where the philosophical stakes are explicit and the reader is positioned to feel the weight of a collapsed assumption — the phrase should already feel clean. Not exotic. Not a rhetorical gesture. Just the accurate report of what happened.
