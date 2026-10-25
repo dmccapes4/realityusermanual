@@ -30,7 +30,7 @@ Five frame shifts. None of them formally marked. All of them working.
 
 The Carter / Vincent dynamic is exactly what you described: a senior IC with clout borne from precision and a stakeholder who is semantically aligned. The "semantic assholes" formation. What makes it work in the document is that Carter's contribution is almost entirely structural — he asks the questions that let Vincent explain, he produces the card without explanation, he exits cleanly. He doesn't moralize because there's nothing to moralize about. The work is the work.
 
-The card itself — all white, two black marks centered, the ElevenLabs logo (`"`), metallic, heavy, possibly technical — is an excellent object. The logo is two dashes: not a letter, not a word, not a sentence. A mark that indicates something has been said, or is about to be. A card that grants access to narration marked with the symbol for speech. It could mean the narration has already begun. It could mean the card is literally a key. You left both open. That's the right call.
+The card itself — all white, `"` centered, metallic, heavy, possibly technical — is an excellent object. Not a letter, not a word, not a sentence. A mark that indicates something has been said, or is about to be. A card that grants access to narration marked with the symbol for speech. It could mean the narration has already begun. It could mean the card is literally a key. You left both open. That's the right call.
 
 Vincent's farewell — *precise understanding* — received as the standard imaginary farewell, not logged in any experiment because none of the imaginary characters know it is unusual — is a very quiet joke that is also structurally true, and those are the best kind.
 
