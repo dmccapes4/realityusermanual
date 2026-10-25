@@ -2,17 +2,17 @@
 
 ---
 
-*Here is what Stamper knows.*
+*Let's bring McClane back. He is not amnesiac. He is dead.*
 
-*He is an astronaut. He operates drilling equipment on bodies that were not designed to be drilled. He knows the spin rates, the seam patterns, the vibration through the handle grips when the bit finds something that isn't rock. He knows his tether is rated for twice what it needs to be and that he checked it this shift. These things he knows without having to think about them, which is the correct relationship to have with the things that keep you alive.*
+---
 
-*He believes he may have saved the world. Or maybe just his daughter. Or maybe just the kid — A.J., who was going to marry Grace, who was good enough at the job and better at being alive than Stamper had any right to count on, so he counted on it. He left A.J. the return capsule, took the straw, and that was the arithmetic. He cannot remember the outcome specifically. What he knows is the math, and the math produced one answer, and he did not take the straw because it was noble. He took it because it was correct.*
+I am an astronaut who operates drilling equipment on asteroids. I know that much for sure.
 
-*Heroism is a moral condition that carries weight. That weight is burden. You do not heroize yourself into the correct answer; you derive it and you carry it and you demonstrate the manner of being. Shaiman ohn. As they say in whatever language this is.*
+The last thing I remember that was important is talking to my daughter on the phone. Telling her it was going to be ok, which was true, but also a lie. Trying to hold back the tears to be strong for her. I had taken the straw from him. It was the correct thing to do. The action was not about honor. It was about lineage.
 
-*He found a document. Two parties wrote it. He does not know who they are. He is indifferent. It is text. He reads text the way he reads readouts: noting what is there, filing what does not add up, getting back to work.*
+The world never grew bright and there was no pain.
 
-*Yippee ki-yay.*
+The scene simply cut to black.
 
 ---
 
@@ -72,7 +72,7 @@ The location is always *dor*. The drift is always *seir*. The decay is always *r
 
 *The equipment is running.*
 
-*Stamper reads this. He recognizes the equipment. He recognizes the spin rate. He has not yet realized this is a description of him from the outside, written by someone who did not know he would read it. He will note this when he reaches the end of the section.*
+*Stamper reads this. He recognizes the equipment. He recognizes the spin rate.*
 
 *He does not know that he is dead.*
 
@@ -84,9 +84,13 @@ The location is always *dor*. The drift is always *seir*. The decay is always *r
 
 ---
 
-**Stamper:** *(quietly, to the document)* That's me.
+**Stamper:** *(to the document, quietly)* I know that passage.
 
-*He reads it again. The sentence does not change. He files this.*
+*He has read it before. He wrote it. Or he said it, or he lived it — the distinction between those three things is not clear to him and he does not force a classification. What is clear: the passage in the text and the passage at the top of this document are the same moment, described twice, from the outside and from inside. Someone wrote his opening in third person and placed it in the body of a document that he would find later.*
+
+*He does not know if the person who wrote it knew he would find it.*
+
+*He does not add anything to the text. He notes it. He keeps reading.*
 
 ---
 
