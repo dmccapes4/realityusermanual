@@ -484,8 +484,73 @@ to get clear enough about it.
 
 *He stayed at the window for a while. The rain continued. He did not move.*
 
-*Stamper was reading.*
-*He did not know who had been talking.*
-*He noted that the derivation on the wall was correct.*
-*He noted that the galvanometer was at zero.*
-*He did not write any of this down.*
+*Then he turned around.*
+
+**Goines:** I like this. I like doing this.
+
+*He said it to no one. He said it the way a person says something when they have confirmed
+a fact about themselves and want to hear it in the room.*
+
+**Goines:** I'm getting out of here.
+
+*He walked to the door. Not toward it — to it. There was a difference. Toward implied
+uncertainty about arrival. He had no uncertainty about arrival. He walked the way a man
+walks when he knows exactly what he wants to do and is not spending any of his available
+processing on what anyone else might think about it, because no one else was in his
+processing at that moment. This was not rudeness. It was a clean allocation of attention.*
+
+*The exit door was where it had always been: out of the battery room, down the short hall,
+and to the left. He did not look back at the galvanometer. He did not look back at the
+wall. He pressed the bar.*
+
+*The door opened.*
+
+*It opened with the resistance appropriate to a heavy metal door in a mental institution —
+which is to say, considerable resistance in absolute terms, because the existential logic
+of a mental institution requires that its doors be heavy enough that the weight alone
+communicates something about the relationship between inside and outside. This door was
+heavy. It was also effortless, which are not contradictory properties in a door with
+properly functioning hydraulic arms. The arms were functioning correctly. Stamper looked
+at them. The pivot mounting was clean and the cylinder showed no corrosion and the
+adjustment screw was set to a tension that allowed the door to swing fully under a firm
+push and return to closed at a rate that was unhurried but not slow enough to let the cold
+in. This was the product of a maintenance organization that lubricated door hardware on a
+schedule rather than when the squeak became loud enough to constitute a complaint. Stamper
+respected this. He looked at the arm for a moment.*
+
+*The door was still closing.*
+
+*Goines was gone.*
+
+*He had walked through the door and continued walking. That much Stamper could confirm from
+direct observation. What he could not confirm, having been occupied with the hydraulic arm
+at the material moment, was the direction. He could not declare, without empirical data on
+Goines's subsequent position, that Goines had walked in a direction. He was aware that the
+alternative — that Goines had walked in no direction — was a worse classification problem,
+not a better one, and that introducing it into the field would damage his own accounting
+more than the uncertainty did. He therefore did not introduce it.*
+
+*What he could say: the terminus event for the observable episode of walking away was the
+corner at the end of the hall, where the corridor turned toward the opposite wing. If
+Goines had reached that corner and turned out of sight, that corner was the last position
+Stamper could have verified — had he been watching, which he had not been, because of the
+arm. From the corner forward, Goines's state would be:*
+
+```
+proximity:  away
+direction:  turned (corner terminus; subsequent heading unknown)
+walking:    presumed continuing, no evidence of cessation
+```
+
+*Stamper filed this and returned his attention to the room.*
+
+*The derivation was still on the wall. The galvanometer needle was still at zero. The door
+had returned to closed. The hydraulic arm had done this correctly, at the correct speed,
+without assistance.*
+
+*He noted, also, that the cricket walls in this corridor — the curved gypcrete transitions
+from wall to floor that directed runoff toward the central drains — described a clean
+continuous arc from vertical plane to horizontal. Someone had taken care with the radius.
+It was a beautiful form. He noted it. He did not know why he noted it.*
+
+*The rain was still outside.*
