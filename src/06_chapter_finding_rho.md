@@ -553,4 +553,21 @@ from wall to floor that directed runoff toward the central drains — described 
 continuous arc from vertical plane to horizontal. Someone had taken care with the radius.
 It was a beautiful form. He noted it. He did not know why he noted it.*
 
+*Cricket walls on a flat roof are a geometry problem. The problem has a correct answer. The
+answer requires two measurements and a calculator and a person who knows what they are
+solving for. Some crews arrive with four measurements, a square-cut 2×4, and a plan to
+guess the angle when they get to the installation site. They finish eventually. The cut is
+close enough that the material covers the gap, the flashing seats, and the water goes where
+it is meant to go — approximately. Other crews take two measurements, walk away, calculate
+the cut exactly, and return with a piece that seats without adjustment. The first method
+produces a cricket wall. The second method produces a form. The form on this wall was the
+second kind. Not because the builders had more time. Because they had the right two numbers
+and they knew what to do with them.*
+
+*The result, when it is done correctly, has the quality of a harmonica played at the
+register where it becomes a piano — the geometry is so exact that it stops reading as
+carpentry and starts reading as the thing the carpentry was always trying to approximate.
+Stamper had not built cricket walls. He recognized the form anyway. Some geometries
+announce themselves.*
+
 *The rain was still outside.*
