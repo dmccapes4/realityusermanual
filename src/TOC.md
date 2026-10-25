@@ -18,7 +18,7 @@
 | 4 | Mother Earth | `05_chapter_mother_earth.md` | ✓ |
 | | | | |
 | | *chapters pending* | | |
-| 5 | Find rho | — | pending |
+| 5 | finding rho | `06_chapter_finding_rho.md` | ✓ |
 | 6 | The Stellar Field | — | pending |
 | 7 | The Body | — | pending |
 | 8 | The Navigator | — | pending |
