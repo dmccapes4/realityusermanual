@@ -64,7 +64,7 @@ He looks at this for a moment in the way that you look at something when you are
 
 **Vincent:** Correct.
 
-*Carter reaches into his jacket. He produces a card. It is perfectly white with a black " in the middle — a single quotation mark, opening, centered — and it is metallic and heavy in a way that seems like a stylistic choice but may also carry technical capability. He places it on the desk beside the keyboard. He does not explain it.*
+*Carter reaches into his jacket. He produces a card. It is all white with two black marks centered — the ElevenLabs logo, two dashes, `"` — and it is metallic and heavy in a way that seems like a stylistic choice but may also carry technical capability. He places it on the desk beside the keyboard. He does not explain it.*
 
 **Vincent:** *(without picking it up)* Thank you.
 
