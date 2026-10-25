@@ -572,24 +572,6 @@ announce themselves.*
 
 *The rain was still outside.*
 
-*The battery assembly was still on the floor by the drain. The wires. The pen cap. The
-galvanometer needle at zero. The anklet — the one with the barcode — lying where Goines
-had set it down after reading it. The lightbulb coil, partially unwound. The residue of a
-working experiment, which is to say: a mess.*
-
-*Stamper was aware of the mess. He was the last person in proximity to it. He had not
-made it. He had also not addressed it, which was a different category of failure — not
-causation, but neglect. He held these two facts in parallel and did not resolve them in
-his favor. He was the last operator in the room. The room contained a mess. The
-maintenance crew of this institution, whose competence he had just noted with approval,
-would eventually enter the room and find it in a condition inconsistent with the standard
-that crew had otherwise maintained. This was on him.*
-
-*He did not clean it up. He noted that he did not clean it up. He noted that noting it was
-not the same as addressing it. He filed all of this accurately and left the room.*
-
-*The mess remained.*
-
 ---
 
 👐VOLARE:>
