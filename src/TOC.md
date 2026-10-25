@@ -6,7 +6,7 @@
 |---|---|---|---|
 | — | Dedication | *(title page)* | ✓ |
 | — | Page 1 (Velora) | `00_page1_velora.md` | ✓ |
-| i | Preface: How to Not Mess with Cats | `02_preface_i.md` | ✓ |
+| i | How to Not Mess with Cats | `02_preface_i.md` | ✓ |
 | 0 | Port Authority | `03a_chapter_0_intro_note.md` | ✓ |
 | 0.1 | Reception Receipt — `intro_note.txt` | `03b_chapter_0.1_reception.md` | ✓ |
 | 1 | Lucifer's Experiment | `04a_chapter_1_lucifer_experiment.md` | ✓ |

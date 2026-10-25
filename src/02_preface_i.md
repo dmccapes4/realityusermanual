@@ -1,4 +1,4 @@
-# Preface i: How to Not Mess with Cats
+# How to Not Mess with Cats
 
 **Status:** Cultural invariant + personal mnemonic
 **Scope:** Internet behavior, abstraction hygiene, respect across agency boundaries
