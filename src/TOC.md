@@ -19,6 +19,7 @@
 | | | | |
 | | *chapters pending* | | |
 | 5 | finding rho | `06_chapter_finding_rho.md` | ✓ |
+| — | Interlude: Chandler / Ross | `07_interlude_chandler_ross.md` | ✓ |
 | 6 | The Stellar Field | — | pending |
 | 7 | The Body | — | pending |
 | 8 | The Navigator | — | pending |
