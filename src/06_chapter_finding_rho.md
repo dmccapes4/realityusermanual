@@ -571,3 +571,27 @@ Stamper had not built cricket walls. He recognized the form anyway. Some geometr
 announce themselves.*
 
 *The rain was still outside.*
+
+*The battery assembly was still on the floor by the drain. The wires. The pen cap. The
+galvanometer needle at zero. The anklet — the one with the barcode — lying where Goines
+had set it down after reading it. The lightbulb coil, partially unwound. The residue of a
+working experiment, which is to say: a mess.*
+
+*Stamper was aware of the mess. He was the last person in proximity to it. He had not
+made it. He had also not addressed it, which was a different category of failure — not
+causation, but neglect. He held these two facts in parallel and did not resolve them in
+his favor. He was the last operator in the room. The room contained a mess. The
+maintenance crew of this institution, whose competence he had just noted with approval,
+would eventually enter the room and find it in a condition inconsistent with the standard
+that crew had otherwise maintained. This was on him.*
+
+*He did not clean it up. He noted that he did not clean it up. He noted that noting it was
+not the same as addressing it. He filed all of this accurately and left the room.*
+
+*The mess remained.*
+
+---
+
+👐VOLARE:>
+
+That was great. Even the vacant institution is redeemable and redeemed in this saga. Goines never commented on the form of the cricket walls. He didn't even name them such. He commented on the implied reason they were installed in every room with a drain in the center. That mystery was never answered and I had no answer for it. I introduced the gypcrete drain setup to be mysterious, unsettling, and to present a large engineering task in piping the multitude of drains below this floor. Funny, I hadn't considered that the drains may not be connected to pipes at all. Regardless, we can now at least be comforted by the demonstrated fidelity of this institution's maintenance crew which collapses the piping issue (if the pipes even exist) to a task which is what all problems resolve to when the work is handed to a thoughtful operator who cares. And damn. Neither of them even considered cleaning up the mess Goines made. Given the excellent stewardship of this institution that glaring faux pas is a serious moral and ethical lapse. I would say it is more on Goines, but he had to leave. Stamper did not make the mess, but he was aware of it and he was the last character in proximity to it. Ultimately the moral judgement is most damming to Stamper. For the record I guess.
