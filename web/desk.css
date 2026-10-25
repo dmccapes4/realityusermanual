@@ -1,0 +1,125 @@
+:root {
+  --ink: #1a1c1e;
+  --panel: #e8e2d4;
+  --seam: #c9c3b4;
+  --recess: #f4f0e6;
+  --paper: #f7f3ea;
+  --accent: #8c3a2a;
+  --slot: #d4cfc2;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%;
+  background:
+    linear-gradient(var(--seam) 1px, transparent 1px),
+    linear-gradient(90deg, var(--seam) 1px, transparent 1px),
+    var(--panel);
+  background-size: 48px 48px, 48px 48px, auto;
+  color: var(--ink);
+  font: 14px/1.45 "Futura", "Century Gothic", "Avenir Next", "Gill Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.02em;
+}
+header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 18px 28px 14px;
+  background: var(--recess);
+  border-bottom: 1px solid var(--seam);
+  box-shadow: inset 0 -8px 16px rgba(26, 28, 30, 0.04);
+}
+header::after {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: var(--accent);
+}
+body { position: relative; }
+header a {
+  color: var(--ink); text-decoration: none;
+  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+}
+header h1 {
+  margin: 6px 0 0;
+  font-size: 15px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+}
+header .stamp {
+  font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--accent);
+}
+.desk {
+  display: grid; grid-template-columns: 300px 1fr;
+  height: calc(100% - 68px);
+}
+nav {
+  overflow: auto;
+  background: var(--recess);
+  border-right: 1px solid var(--seam);
+  padding: 8px 0 32px;
+}
+.dir-name {
+  margin: 18px 22px 6px;
+  font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--accent);
+}
+.dir-name:not(:first-child) {
+  border-top: 1px solid var(--seam);
+  padding-top: 18px;
+}
+.file-item {
+  display: block; width: 100%; text-align: left; border: 0;
+  background: transparent; color: var(--ink);
+  padding: 7px 22px 7px 22px;
+  cursor: pointer; font: inherit; letter-spacing: 0.04em;
+}
+.file-item:hover { background: var(--slot); }
+.file-item.active {
+  background: var(--ink); color: var(--paper);
+}
+.file-item .meta { display: block; font-size: 10px; letter-spacing: 0.12em; opacity: 0.6; }
+main { display: flex; flex-direction: column; min-width: 0; background: var(--paper); }
+#viewer-label {
+  padding: 8px 22px;
+  border-bottom: 1px solid var(--seam);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #5a564c; background: var(--recess);
+}
+#viewer { flex: 1; min-height: 0; }
+#viewer object, #viewer iframe { width: 100%; height: 100%; border: 0; background: var(--slot); }
+#image-wrap { display: none; height: 100%; overflow: auto; padding: 24px; text-align: center; }
+#image-wrap img { max-width: 100%; background: var(--paper); }
+#text-view {
+  display: none; margin: 0; padding: 22px 28px; height: 100%; overflow: auto;
+  white-space: pre-wrap;
+  font: 12px/1.55 "Futura", "Century Gothic", "Gill Sans", sans-serif;
+  background: var(--paper);
+}
+.empty { padding: 48px 36px; color: #5a564c; max-width: 36em; letter-spacing: 0.06em; }
+.inbox { max-width: 38em; margin: 72px auto; padding: 0 28px; }
+.inbox h1 {
+  font-size: 18px; font-weight: 500;
+  letter-spacing: 0.34em; text-transform: uppercase;
+}
+.inbox .stamp {
+  color: var(--accent); font-size: 10px;
+  letter-spacing: 0.36em; text-transform: uppercase; margin: 0 0 10px;
+}
+.inbox p { color: #4a463e; max-width: 34em; }
+.card {
+  display: block; margin: 16px 0; padding: 16px 18px;
+  background: var(--recess);
+  border: 1px solid var(--seam);
+  color: inherit; text-decoration: none;
+  letter-spacing: 0.08em;
+}
+.card:hover { border-color: var(--ink); }
+.card strong {
+  display: block; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; font-size: 13px;
+}
+.card .target {
+  margin-top: 6px; font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: #5a564c;
+}
+.inbox .foot {
+  margin-top: 3em; font-size: 11px; letter-spacing: 0.12em; color: #5a564c;
+}
+.inbox .foot a { color: var(--ink); }

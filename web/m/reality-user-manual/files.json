@@ -1,0 +1,42 @@
+{
+  "id": "reality-user-manual",
+  "title": "REALITY_USER_MANUAL",
+  "author": "Dylan McCapes",
+  "target": "the book",
+  "received": "2026-10-25",
+  "station": "reality-user-manual",
+  "note": "Gattaca intake. The bound volume is the sequence.",
+  "open": "files/SEQUENCE/REALITY_USER_MANUAL.pdf",
+  "tree": [
+    {
+      "name": "SEQUENCE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "REALITY_USER_MANUAL.pdf",
+          "type": "pdf",
+          "url": "files/SEQUENCE/REALITY_USER_MANUAL.pdf",
+          "bytes": 987144
+        }
+      ]
+    },
+    {
+      "name": "DISTRIBUTIONS",
+      "type": "dir",
+      "children": [
+        {
+          "name": "How to Fly",
+          "type": "pdf",
+          "url": "/m/how-to-fly/files/SEQUENCE/Main_Manuscript_HOW_TO_FLY.pdf",
+          "label": "AJP submission"
+        },
+        {
+          "name": "Mother Earth as Governed Field",
+          "type": "pdf",
+          "url": "/m/glacial-cell/files/SEQUENCE/MANIFESTO_MOTHER_EARTH_GOVERNED_FIELD.pdf",
+          "label": "first true manuscript"
+        }
+      ]
+    }
+  ]
+}
