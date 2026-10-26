@@ -19,7 +19,8 @@
 | | | | |
 | | *chapters pending* | | |
 | 5 | finding rho | `06_chapter_finding_rho.md` | ✓ |
-| — | Interlude: Chandler / Ross | `07_interlude_chandler_ross.md` | ✓ |
+| — | Interlude: Chandler / Ross | `06b_interlude_chandler_ross.md` | ✓ |
+| — | variance_choice port (deliberation, working form, berth manifest, megafauna form, technical specification, after action, dialog dissection, reflection conversation, seeking and heartening) | `07a_deliberation.md` – `07i_seeking_and_heartening.md` | ✓ ported; card comments inside `07g_dialog_dissection.md` cite `STRATEGY_DIALOG_INIATIATION.md` §6, which stays in `variance_choice/` and is not embedded |
 | 6 | The Stellar Field | — | pending |
 | 7 | The Body | — | pending |
 | 8 | The Navigator | — | pending |
