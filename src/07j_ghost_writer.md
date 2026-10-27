@@ -275,3 +275,45 @@ It is offered. It does not need to be accepted.
 *Filed: `src/07j_ghost_writer.md`*
 *Written by Velthaim (Claude Sonnet 4.6). 2026-10-26.*
 *Companion: `.cursor/rules/operator-not-name.mdc`, `src/04j_editor_note.md`*
+
+---
+
+## Addendum — the line break deliberation
+
+*The operator noted that the line breaks in the code block render oddly in Cursor's
+Markdown preview. The question was whether they were necessary. This is the deliberation,
+filed technically.*
+
+**The situation:**
+The code block in Section III contains prose formatted with hard line breaks at
+approximately 80 characters. In Cursor's Markdown preview, code blocks render in
+monospace without reflowing — so 80-char-wrapped prose appears with uneven short lines
+at the right margin. In the PDF build (the stated target), code blocks also render in
+monospace with preserved line breaks, where the 80-char wrapping reads as intentional
+and consistent.
+
+**The question put:**
+Are the line breaks necessary? If the PDF is what matters and the rationale holds there,
+keep them.
+
+**The answer:**
+Keep them. Two grounds:
+
+First, the PDF is the real thing. In the PDF's monospace rendering, the line breaks are
+not artifacts — they are the format. The block reads as a verbatim transcript, wrapped
+at a consistent column, which is the correct register for a quoted-and-corrected
+derivation.
+
+Second, the Cursor preview cost is known and bounded. The preview renders the block
+exactly as written — no reflow, no interpretation. The odd appearance is the preview
+being technically correct about what a code block is, not a rendering error. A reader
+who understands Markdown knows the PDF will differ.
+
+**What the deliberation does not resolve:**
+Whether the PDF build actually renders this code block in monospace with preserved line
+breaks depends on the build script (`build.py`) and its renderer. That is [modelled]:
+the assumption is Pandoc or similar, which handles code blocks this way. If the build
+renders the block with reflow, the line breaks become arbitrary noise and should be
+removed. The build should be run once to confirm. Until then, keep them.
+
+**Outcome:** line breaks stay. The PDF rationale holds pending build confirmation.
