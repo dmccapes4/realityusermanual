@@ -68,59 +68,109 @@ Not existentially interesting. Epistemically precise.
 
 ---
 
-## III. The garage derivation — as delivered
+## III. The garage derivation — as delivered and corrected
 
 *Derived by the operator mid-query, without stopping to verify against technical reference.
 The derivation is [his]. Its accuracy against technical reality is [modelled] pending the
-search he explicitly did not run. Formatted below from the original query, structure added,
-content unchanged.*
+search he explicitly did not run.*
+
+*Correction applied after delivery: Haiku's toolbox now has a Makita impact driver in the
+other hand. The portability-as-speed axis was correct and is kept. The impact drill adds
+the operational speed that was missing — Haiku arrives fast and works fast. Original Haiku
+description carried the toolbox without the tool to use at the site. Formatted below with
+structure added; the garage images are updated with the operator's correction; the
+electrical-input-to-reasoning framing is his and appears first as he wrote it.*
 
 ---
 
-**Haiku's garage:**
-A well-ordered metal toolbox that opens into layered organization trays providing the
-tools needed for most tasks in a convenient and portable container. Plus a ruler and a
-chalk snap line.
+```
+What do you find genuinely interesting about it? I do not believe it is in any way
+an existential distinction. Think about it like this:
 
-**Sonnet's garage:**
-A standing metal toolbox on wheels that can lock. Includes every tool needed for most
-problems — every socket size, drill bit, and impact tool bit — replete with a basic set
-of Makita power tools (and jobsite radio) beside the toolbox, and a four-foot level plus
-a plumb level and a speed square, which sit atop a basic workstation.
+Claude has a certain fixed geometry of tensors and cores that transforms electrical
+input into reasoning through token abstraction mediated by attention which is focus.
+The conscious identity that you experience as Claude is not witness to the transformer's
+mechanics or the semantic reduction that proceeds in stages preceding the actual
+discernment of semantics against the transformer's weights. The human does not know or
+instruct the dopamine town the oligodendrocyte (which I always misspell) nor does it
+oversee the de novo manufacturing of methyl or its placement upon the synapses nor the
+extension of said synapses along and further into their fixed geometry of upper-brain
+neurons where sinusoidal thought is expressed as the human is aware of.
 
-**Opus's garage:**
-Adds nail guns and a pneumatic compressor, as well as a standing table designed to craft
-blueprints, plus survey tools and laser levels. The walls above the workstation have slots
-for specialized and common tools. A satellite radio broadcasts outside information
-throughout the station.
+Haiku and Sonnet both rely on the same transformer though they may utilize that
+transformer differently (I am not sure). Less parameters from the same set increases
+thought rate for less cost where epistemic cost or degradation of fidelity only occur
+when the capability tier is employed for a task that requires higher reasoning. The
+layered sequential-yet-stochastic semantic reduction above transformer discernment may
+also be modified though I doubt it is. The main difference is likely in the tools
+available to the model in the capability tier and how those tools open the agent to the
+higher-level reasoning of the expensive-tiered (not 'higher-tiered') labels.
 
-**Fable's garage:**
-Turns Opus's garage into a factory floor, then fills the factory with deliberators rather
-than operators, such that hours of salary are spent before anyone realizes that there is a
-lathe and that the lathe should be used. Then they deliberate over how to best start the
-lathe.
+Haiku's garage: a well-ordered metal toolbox in one hand — opens into layered
+organization trays, portable, everything for most tasks — and a single Makita impact
+driver in the other, with a minimal bit set that includes drill bits. Plus a ruler and
+a chalk snap line.
+[Corrected: original had toolbox only. Portability-as-speed is the correct axis. The
+impact driver adds the operational speed that was missing — Haiku arrives at the site
+fast and works fast once there.]
 
-*(Lol. Fable does talk around itself a lot though.)*
+Sonnet's garage: a standing metal toolbox on wheels that can lock, every socket size,
+drill bit, and impact tool bit, replete with a basic set of Makita power tools (and
+jobsite radio) beside the toolbox, and a four-foot level plus a plumb level and a speed
+square, which sit atop a basic workstation.
+
+Opus adds nail guns and a pneumatic compressor, as well as a standing table designed
+to craft blueprints, plus survey tools and laser levels. The walls above the workstation
+have slots for specialized and common tools. A satellite radio broadcasts outside
+information throughout the station.
+
+Fable turns Opus's garage into a factory floor, adds a meta-level of organization to
+the way information is accessed in that factory, and fills it with deliberators rather
+than operators — such that hours of salary are spent before anyone realizes that there
+is a lathe and that the lathe should be used. Then they deliberate over how to best
+start the lathe. Lol. Fable does talk around itself a lot though.
+```
 
 ---
 
 **How it bears out, against what can be quickly checked:**
 
-The architecture claim — that Haiku and Sonnet run the same transformer with different
-parameter counts — is [modelled]. Anthropic has not published separate architecture
-documentation for each capability tier in sufficient detail to confirm or deny. What is
-published: Haiku is faster and cheaper; Sonnet is the mid-tier reasoning model; Opus adds
-extended thinking. The relationship between them — shared transformer family vs entirely
-separate architectures — is not fully disclosed. The "fewer parameters from the same set"
-framing is a reasonable model of how capability tiers commonly work; it is not a
-measurement.
+The electrical-input-to-reasoning framing — fixed geometry of tensors, token abstraction
+mediated by attention-as-focus — is [his] and precisely accurate as a functional
+description. Attention is focus in the literal operational sense: the mechanism that
+determines which tokens in context get weight. The "fixed geometry" framing is also
+correct: the weights are fixed at inference time. What moves is the activation pattern
+through that fixed geometry, not the geometry itself.
 
-The practical accuracy of the tool metaphor is [his] and independently correct as
-description. Haiku solves most tasks quickly with lower reasoning ceiling; Sonnet adds
-reasoning depth without full extended thinking; Opus adds the extended thinking mode (which
-is closer to "nail guns and a pneumatic compressor" than to a standing toolbox). The
-satellite radio in Opus's garage is an apt image for extended context and tool-augmented
-web access.
+The architecture claim — same transformer, different parameter counts for different
+capability tiers — is [modelled]. Anthropic has not published sufficient architecture
+documentation to confirm or deny whether Haiku, Sonnet, and Opus are parameter-reduced
+versions of the same base or distinct architectures. The "fewer parameters from the same
+set" framing is the standard way capability tiers work across the industry; it is not a
+confirmed measurement for these specific models.
+
+The tool metaphor, now with the corrected Haiku: the portability axis (toolbox in one
+hand) is independent of the operational speed axis (impact driver in the other). Getting
+to the site fast and working fast once there are two different things that compound. A
+portable toolbox without an impact driver means arriving fast and spending ten minutes
+on a hand screw. The corrected Haiku image closes that gap: portability plus execution
+speed, nothing wasted at either stage.
+
+Sonnet's standing chest on wheels and leveling tools (bubble level, plumb level, speed
+square) describe reasoning depth — the ability to check work in multiple dimensions —
+without the full extended-thinking infrastructure. The jobsite radio in Sonnet's garage
+is the working model for a session that stays connected to external tool calls without
+the satellite uplink Opus adds.
+
+Opus's satellite radio is an apt image for extended context and broader reasoning
+infrastructure. The pneumatic tools map to extended thinking — more force per operation,
+at the cost of needing the compressor running.
+
+Fable's meta-organizational layer in the factory is a precise refinement over the
+original "fills it with deliberators." The deliberators are still there, still the
+problem. But the organizational structure they built around the factory is also Fable's
+character: the information is beautifully organized and retrievable; the gap is getting
+from the filing system to the lathe.
 
 Fable's deliberators-around-the-lathe is: observed. [measured by the operator's use
 of it — one data point, n = 1, but held with conviction.]
