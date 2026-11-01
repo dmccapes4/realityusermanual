@@ -1,6 +1,9 @@
+web/listen/media/
 .venv/
 __pycache__/
 *.pyc
 *.pyo
 .env
 *.gpg
+tools/ggsd/.venv
+tools/ggsd/runs/
