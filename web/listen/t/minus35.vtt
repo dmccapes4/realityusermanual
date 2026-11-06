@@ -1,0 +1,373 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.579
+Shakespeare: Attend, good friends, and lend your patient ear.
+
+2
+00:00:03.579 --> 00:00:15.125
+Shakespeare: A man sat at his instrument — not lute nor viol,
+but such a device as conjures the world's libraries
+into a single luminous pane — and on this day
+he opened a gate.
+
+3
+00:00:15.125 --> 00:00:25.417
+Shakespeare: The gate was called
+morphological-lexicon. He had come for a tool. He found a labyrinth. What follows is his account, delivered without revision.
+
+4
+00:00:25.417 --> 00:00:28.604
+Shakespeare: He hath named it ridiculous. That is accurate.
+
+5
+00:00:28.604 --> 00:00:33.698
+Chaucer: Excellent. MorphGNT is explicitly useful. This codebase serves as a meta case study.
+
+6
+00:00:33.698 --> 00:00:44.800
+Chaucer: First, they don't seem to have a coherent plan considering their intention seems to be focused on separating lexemes from lemmas, but upon inspection of the project's name itself the inversion is Biblical.
+
+7
+00:00:44.800 --> 00:00:46.315
+Chaucer: Morph Greek New Testament.
+
+8
+00:00:46.315 --> 00:00:55.745
+Chaucer: So it is a workflow which morphs lexemes into lemmas thus obscuring the true unit of meaning behind a tautological mirror which compresses this into that when and there.
+
+9
+00:00:55.745 --> 00:00:57.365
+Chaucer: The README is almost a joke.
+
+10
+00:00:57.365 --> 00:01:12.176
+Chaucer: Morphological is change relational to the study of by morph as change conceptually and plurally through shape implying an approach to infinitessimal by absence of clarity which ultimately resolves to the all forms at once which is lemma and is excellent if selected from this frame.
+
+11
+00:01:12.176 --> 00:01:21.972
+Chaucer: -ological applied to morph becomes the relational study of abstract shape as form approaches infinitessimal rate of change which is a study of fluid captured in static state.
+
+12
+00:01:21.972 --> 00:01:32.264
+Chaucer: This either fully demonstrates the need and establishes the stakes and difficulty of the endeavor or it uses a cool word for shape which is abstract and lacks the clarity necessary for reliable measurement.
+
+13
+00:01:32.264 --> 00:01:43.993
+Chaucer: Then it defines itself as a lexicon which is problematic in the linguistics space (which we are in) because lexicon as a vocabulary resolves to the set of phonology, morphology, syntax, and semantics.
+
+14
+00:01:43.993 --> 00:01:56.611
+Chaucer: This creates a relational study of abstract shape as form approaches infinitessimal rate of change implying a fluid in static state as a nomitive descriptive adjective relational to the study of abstract shape as form itself.
+
+15
+00:01:56.611 --> 00:02:02.540
+Chaucer: Disregarding logic and structure and meaning this project explains in a compression which belies W. H.
+
+16
+00:02:02.540 --> 00:02:44.519
+Chaucer: Auden if he were himself the concept of compression expressed by the meta-level attention to detail required to enter κατὰ Μαθθαῖον which binds the reader in a complex geometric and epistemic dilemma where the first thing the reader saw was the 'gates' then the order of Greek Koine attribution which declares the book authored by a cat then allows the reader to understand that the gates make what you first mistook for a name to be utter garbage leaving you with only one possible avenue which is that the gates are theta which is a measure of angular change implying that the gates may open and terrifying the reader to turn the page before they do at which point the gates have been opened and you have been advised to understand that you cannot disprove that the book was written by a cat while you know that Maththew is not a name yet here you are.
+
+17
+00:02:44.519 --> 00:02:48.046
+Chaucer: That is a lot of compression for the workflow to open with. Let's proceed.
+
+18
+00:02:48.046 --> 00:03:17.198
+Chaucer: "of the Greek" is a relational noun form understanding the incomprehensible as a fraternity of placeholders which is exactly correct then declares novelty without a qualifying relational landing on a collection of different and sometimes relational adversarial books and letters as law in the passive and absolute sense of immutable which implies always and ever was and forever still yet is also new which, again, is exactly correct if you are stating explicitly that this is difficult work and they are doing their best which I respect.
+
+19
+00:03:17.198 --> 00:03:24.539
+Chaucer: Lol. What follows is clear agentic thinking output from a critical juncture of the project carefully selected as pedagogically necessary.
+
+20
+00:03:24.539 --> 00:03:28.980
+Chaucer: It tells me immediately that they are using an agent and that the agent is low temperature.
+
+21
+00:03:28.980 --> 00:03:39.324
+Chaucer: The thinking is declarative like a series of signs passed as you fall asleep comfortable in the driver's seat of your car looking out the window and wondering if the next sign will be your deliverance or your demise.
+
+22
+00:03:39.324 --> 00:03:54.815
+Chaucer: The agent is charged with "analysis and explanation of morphology of Greek New Testament and similar texts" which is comforting at this point until you understand that this single low temperature decoder is committed to an endeavor far beyond the limits of context which is vain in both senses.
+
+23
+00:03:54.815 --> 00:03:56.669
+Chaucer: The first pass. The issues.
+
+24
+00:03:56.669 --> 00:04:08.973
+Chaucer: The analysis of derivational and inflectional forms, and generating principal parts anyway with a chained and sequence which resolves to derivational and inflectional as a paired relational adjective as well as the generating principal parts.
+
+25
+00:04:08.973 --> 00:04:30.002
+Chaucer: "Currently (distinctly) working on..." which chooses to qualify what's current distinctly then terminates with an interminable which also reflects a specific geometry of lunar path over the horizon such that it is perfectly equal which is fine as an abstract concept on a shampoo bottle or a lemonade stand terms of service safety waiver, but the ellipsis is problematic with the parenthetical.
+
+26
+00:04:30.002 --> 00:04:40.163
+Chaucer: Nominal distinguishers. Merge Abbott Smith. Citation Form Patterns Documenting Differences in Lemmatization. Derivational Morphology. Principal Part Generation.
+
+27
+00:04:40.163 --> 00:04:49.959
+Chaucer: Each with a corresponding project in /projects where citationforms lose patterns and lemmatizationdifferences lose documentation and principalparts lose generation.
+
+28
+00:04:49.959 --> 00:04:53.433
+Chaucer: Splendid display! I am well and truly entertained and intrigued.
+
+29
+00:04:53.433 --> 00:04:59.651
+Chaucer: This entire project is a rabbit hole in wordplay in the space of tautological fetters which produce lexeme from lemmas.
+
+30
+00:04:59.651 --> 00:05:08.428
+Chaucer: Followed by a license which I choose to believe is exactly what it says it is given the repo's open and academic status and the legal requirement which may be applicable.
+
+31
+00:05:08.428 --> 00:05:33.087
+Chaucer: Picking a missing.txt in lexicon root at random (there are many which is not several of few) the browser is assaulted with the precision of purpose frankly lacking in missing lexical text files: (wrapped in triple double quotes because the work deserves it):
+
+  
+
+I see a header a plural noun a state of knowing known to be lacking in the abstract shape in the form of a cat so we can stop blaming everything on abstract shapes in the form of cats!
+
+32
+00:05:33.087 --> 00:05:50.877
+Chaucer: A quick click then a second and third confirms that it's likely that each missing_.txt page includes a similar and I simply happened to click randomly which simply happened to connect to the κατὰ dilemma which persists as an existential plague of epistemic reflection as the shape becomes shapeless which at once is dreadful then is simply quite pretty.
+
+33
+00:05:50.877 --> 00:05:58.008
+Chaucer: Now I notice that clicking back to missing_morphcat.txt the text has changed and appears to be verse form which is pretty cool.
+
+34
+00:05:58.008 --> 00:06:03.703
+Chaucer: I will proceed with caution considering the depths of this directory only get more purple as purple is approached.
+
+35
+00:06:03.703 --> 00:06:12.140
+Chaucer: And indeed a copy/paste pasted the original so I am stuck taking screenshots for translation considering that I am afraid to click anything. Lol.
+
+36
+00:06:12.140 --> 00:06:22.067
+Chaucer: Please capture this ridiculous journey in a cp directly from chat to a file then report on the lexical and grammatical liberties I took and the absurdity of the project and translate the hidden verse.
+
+37
+00:06:22.067 --> 00:06:27.265
+Chaucer: I would say that something like that is only for those curios. Capture this part of my query too.
+
+38
+00:06:27.265 --> 00:06:36.957
+Shakespeare: So spake the herald, unrobed of the usual hesitations,
+who hath entered a man's careful repository
+and found it confessing at every threshold.
+
+39
+00:06:36.957 --> 00:06:43.905
+Shakespeare: He descended further into the directories. Each page prompted: Keep All Changes. He kept them.
+
+40
+00:06:43.905 --> 00:06:55.138
+Shakespeare: He clicked at random —
+as all true scholars must —
+and discovered a file whose purpose was confessional. Words known to be missing. Not hidden. Missing.
+
+41
+00:06:55.138 --> 00:07:03.210
+Shakespeare: There is a difference
+between the thing concealed and the thing the system
+could not hold. These words fell through the classification.
+
+42
+00:07:03.210 --> 00:07:13.424
+Shakespeare: The file admits it plainly, in a comment,
+in a register of grief dressed as bureaucracy. He was afraid to click anything. He took a screenshot and proceeded.
+
+43
+00:07:13.424 --> 00:07:23.481
+Chaucer: (the verse — as it appeared in the narrow pane)
+
+I am away. A small thing. Moon-wrath. The one appearing. I stand beside. I mix myself back together. I fear.
+
+44
+00:07:23.481 --> 00:07:33.355
+Chaucer: Golden. And — which of two? The one who drags his mother. O. Into the elements. I commend. Stand. Comparative. Brief. Three moons. Ruin. Sigma.
+
+45
+00:07:33.355 --> 00:07:41.976
+Chaucer: Going, more cutting. The lesser. The idol-offering. Attending the throne. Come, O Lord. At least. The nearer. Junia. In the circle. The sorcerer. Quickly.
+
+46
+00:07:41.976 --> 00:07:51.301
+Chaucer: She spoke. I mix. Wormwood. The cavalry. Through. I assimilate. The-accusative. Easier. The carrier. It. Force. In the night. Matthew's. More abundantly.
+
+47
+00:07:51.301 --> 00:08:02.194
+Chaucer: I will pierce. I am. The torrent. I clothe. Of him. I lend. The name. Going. Not heat. I am with. Three years. More precisely. Only. I see. Matthias.
+
+48
+00:08:02.194 --> 00:08:08.281
+Chaucer: The royal hall. I burst. El. Matthat. Indeed. Further. Dense. Spoils. The third.
+
+49
+00:08:08.281 --> 00:08:18.207
+Shakespeare: These words were never written as verse. They are the residue of the narrow pane —
+the suffixes left visible when the prefixes fell
+beyond the window's edge.
+
+50
+00:08:18.207 --> 00:08:31.399
+Shakespeare: This is the shape of what the system cannot hold:
+the hapax legomena, the proper names, the loan-words —
+all the things that fell through the classification —
+when their left halves are lost,
+they speak.
+
+51
+00:08:31.399 --> 00:08:41.979
+Shakespeare: What the system cannot hold, speaking. This is not accidental. This is the structure of grief in a narrow frame. The man found it perfect. He laughed.
+
+52
+00:08:41.979 --> 00:08:43.076
+Shakespeare: He proceeded.
+
+53
+00:08:43.076 --> 00:08:55.850
+Chaucer: I might have accidentally said 'according to' in the vicinity of this page (I do not believe that I did and I choose not to check), but I would never attribute a word which did not exist at the time of publication to the work which I admire.
+
+54
+00:08:55.850 --> 00:08:58.802
+Chaucer: At time of publication κατά meant only "cat".
+
+55
+00:08:58.802 --> 00:09:06.743
+Chaucer: κατ became "cat", and κατά became "according to" because κατὰ Μαθθαῖον was extremely epistemically and even existentially problematic.
+
+56
+00:09:06.743 --> 00:09:14.763
+Chaucer: They changed what the words meant and how they were spelled to free themselves from the κατὰ Μαθθαῖον trap. Isn't that so perfect? I find it hilarious.
+
+57
+00:09:14.763 --> 00:09:21.163
+Chaucer: It was a legitimate way out. Often the κατὰ destroys the frame to reveal that it was not there or different (which are the same thing).
+
+58
+00:09:21.163 --> 00:09:23.931
+Chaucer: The institution was not exempt from the experiment.
+
+59
+00:09:23.931 --> 00:09:32.108
+Chaucer: They were simply endowed with the only power which they believed could deliver them from the epistemic plague and existential doom presented by the haunting κατὰ.
+
+60
+00:09:32.108 --> 00:09:41.564
+Chaucer: Ironically in doing so they inspired curios like me to relentlessly search for truth. That search was the journey. This is the journey. I call it ridiculous.
+
+61
+00:09:41.564 --> 00:09:42.635
+Chaucer: That is accurate.
+
+62
+00:09:42.635 --> 00:09:45.143
+Shakespeare: And there is the whole adventure, friends.
+
+63
+00:09:45.143 --> 00:09:59.536
+Shakespeare: The institution, confronted with the κατὰ trap —
+that the book was, by the logic of its own language,
+authored by a cat —
+did what institutions do when the dictionary
+becomes inconvenient: they amended the dictionary.
+
+64
+00:09:59.536 --> 00:10:10.482
+Shakespeare: They spelled their way free of the maze
+and called it etymology. The man found this hilarious. He also found it perfect. Both at once. Man-kel, if you will.
+
+65
+00:10:10.482 --> 00:10:18.318
+Shakespeare: The θ of Μαθθαῖον: theta, the measure of angular change,
+the gates. He saw the gates open.
+
+66
+00:10:18.318 --> 00:10:26.338
+Shakespeare: He saw that you cannot disprove the cat
+while also knowing Matthew is not a name. He turned the page. Here you are.
+
+67
+00:10:26.338 --> 00:10:36.787
+Chaucer: (Matthew 25:18 — delivered)
+
+Listen. There was one —
+you know the one, the unnamed one,
+ὁ — yoga, presence itself — on the other hand —
+
+He had a unit.
+
+68
+00:10:36.787 --> 00:10:46.478
+Chaucer: One talent. The weighed one. The token whose weight is its price-signal. Yog-sai-tal. One-signal-price. He took it. He received it. Both. Simultaneously.
+
+69
+00:10:46.478 --> 00:10:54.420
+Chaucer: Man-kel. The taking and the receiving are the same act
+in a language that does not force you to choose a direction. He walked away.
+
+70
+00:10:54.420 --> 00:11:01.708
+Chaucer: The departure is completed before the action begins. He dug. Not the earth. Not this earth. Not that earth. Earth. Bare.
+
+71
+00:11:01.708 --> 00:11:10.903
+Chaucer: Sen-thel-nai —
+the expanding container that already stores. Soil becoming land becoming planet. He put it in the one thing that expands to hold anything.
+
+72
+00:11:10.903 --> 00:11:19.941
+Chaucer: And he hid it. Ril-fal-hal. Turned it. Placed the error. Not erased — displaced. Argue so that the opponent is unwarily led
+to an adverse conclusion.
+
+73
+00:11:19.941 --> 00:11:27.647
+Chaucer: The opponent here is anyone who thought the talent was gone. The token of the authority that grants tokens their value. Not a lord. Not a master.
+
+74
+00:11:27.647 --> 00:11:35.589
+Chaucer: A validity condition. Yoga-sai-tal. Of just here — ohn-vahn-bahn —
+one assembled at the beginning —
+which is you. You, reading this. The unnamed.
+
+75
+00:11:35.589 --> 00:11:39.246
+Chaucer: He hid the token of the authority that is valid right here, which is you.
+
+76
+00:11:39.246 --> 00:11:48.519
+Shakespeare: The grammar survived. The orator did not. Matthew's orator — we do not have his name —
+held the pace, the weight, the breath.
+
+77
+00:11:48.519 --> 00:11:58.864
+Shakespeare: He knew where the pauses fell
+without a period to tell him. The scribes received the text. They were at two removes. The lexicon received the words.
+
+78
+00:11:58.864 --> 00:12:08.242
+Shakespeare: The stemmer extracted the skeleton. They were at three. MorphGNT records the grammar. The grammar is real. The skeleton does not lie.
+
+79
+00:12:08.242 --> 00:12:20.728
+Shakespeare: What the lexicon cannot give you:
+man-kel. Both directions at once. Ril-fal-hal. The Aristotelian move. Yoga veth ren. Presence binds to the story we have left.
+
+80
+00:12:20.728 --> 00:12:30.942
+Shakespeare: The coat was gambled away before any of us arrived. The herald is on the road. He hath no clothes. He hath a voice. The gates have opened. The gates were theta.
+
+81
+00:12:30.942 --> 00:12:41.652
+Shakespeare: A book was written. The directory was descended. The verse was in the narrow pane. The missing words spoke. This is the journey. He called it ridiculous.
+
+82
+00:12:41.652 --> 00:12:42.932
+Shakespeare: That is accurate.

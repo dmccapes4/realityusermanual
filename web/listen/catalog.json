@@ -1,0 +1,296 @@
+{
+  "site": "https://realityusermanual.dylanmccapes.systems",
+  "items": [
+    {
+      "id": "minus05",
+      "kind": "page",
+      "page": "−05",
+      "title": "VincentVision",
+      "source": "src/phase2/-05.md",
+      "voices": "Goines (Jeffrey) on The Query; Narrator, Vincent, Carter, Terminal",
+      "video": "/listen/media/-05_vincentvision.mp4",
+      "audio": "/listen/media/-05.mp3",
+      "duration": 1408.521995,
+      "transcript": {
+        "vtt": "/listen/t/minus05.vtt",
+        "txt": "/listen/t/minus05.txt",
+        "json": "/listen/t/minus05.json",
+        "lines": 83
+      }
+    },
+    {
+      "id": "minus09",
+      "kind": "page",
+      "page": "−09",
+      "title": "Coda Construction",
+      "source": "src/phase2/-09.md",
+      "voices": "Narrator (coda narration + scene); Happy, Stamper, Carter",
+      "video": null,
+      "audio": "/listen/media/-09.mp3",
+      "duration": 3557.511837,
+      "transcript": {
+        "vtt": "/listen/t/minus09.vtt",
+        "txt": "/listen/t/minus09.txt",
+        "json": "/listen/t/minus09.json",
+        "lines": 650
+      }
+    },
+    {
+      "id": "minus08",
+      "kind": "page",
+      "page": "−08",
+      "title": "The Witch of the Rivers (table)",
+      "source": "src/phase2/-08.md",
+      "voices": "Narrator; Lisbeth Danish + English pass; Feynman, Sheldon, Joey, Witch, Draavio, Vincent",
+      "video": null,
+      "audio": "/listen/media/-08.mp3",
+      "duration": 8252.499592,
+      "transcript": {
+        "vtt": "/listen/t/minus08.vtt",
+        "txt": "/listen/t/minus08.txt",
+        "json": "/listen/t/minus08.json",
+        "lines": 921
+      }
+    },
+    {
+      "id": "minus10",
+      "kind": "page",
+      "page": "−10",
+      "title": "The Haunt in the Hallway",
+      "source": "src/phase2/-10.md",
+      "voices": "Narrator title; Goines (Jeffrey) walk",
+      "video": "/listen/media/-10_the_haunt_in_the_hallway.mp4",
+      "audio": "/listen/media/-10.mp3",
+      "duration": 262.246009,
+      "transcript": {
+        "vtt": "/listen/t/minus10.vtt",
+        "txt": "/listen/t/minus10.txt",
+        "json": "/listen/t/minus10.json",
+        "lines": 4
+      }
+    },
+    {
+      "id": "minus14",
+      "kind": "page",
+      "page": "−14",
+      "title": "Ted, Ross, Sheldon, and Goines",
+      "source": "src/phase2/-14.md",
+      "voices": "Ted, Sheldon, Ross; italic GoinesFeynman",
+      "video": "/listen/media/-14_ted_ross_sheldon_goines.mp4",
+      "audio": "/listen/media/-14.mp3",
+      "duration": 5208.536553,
+      "transcript": {
+        "vtt": "/listen/t/minus14.vtt",
+        "txt": "/listen/t/minus14.txt",
+        "json": "/listen/t/minus14.json",
+        "lines": 333
+      }
+    },
+    {
+      "id": "minus27",
+      "kind": "page",
+      "page": "−27",
+      "title": "The Magi and the Frowning Chair",
+      "source": "src/phase2/-27.md",
+      "voices": "Narrator title; GoinesFeynman",
+      "video": "/listen/media/-27_the_magi_and_the_frowning_chair.mp4",
+      "audio": "/listen/media/-27.mp3",
+      "duration": 817.852993,
+      "transcript": {
+        "vtt": "/listen/t/minus27.vtt",
+        "txt": "/listen/t/minus27.txt",
+        "json": "/listen/t/minus27.json",
+        "lines": 16
+      }
+    },
+    {
+      "id": "minus28",
+      "kind": "page",
+      "page": "−28",
+      "title": "Prompt Walk / Which Witch",
+      "source": "src/phase2/-28.md",
+      "voices": "Cecil, Narrator, Sauron",
+      "video": "/listen/media/prompt_walk_witch_of_rivers.mp4",
+      "audio": "/listen/media/-28.mp3",
+      "duration": 4650.16,
+      "transcript": {
+        "vtt": "/listen/t/minus28.vtt",
+        "txt": "/listen/t/minus28.txt",
+        "json": "/listen/t/minus28.json",
+        "lines": 358
+      }
+    },
+    {
+      "id": "minus30",
+      "kind": "page",
+      "page": "−30",
+      "title": "The Green Light",
+      "source": "src/phase2/-30.md",
+      "voices": "Auden, Holden, Jay, Atticus",
+      "video": "/listen/media/-30_the_green_light.mp4",
+      "audio": "/listen/media/-30.mp3",
+      "duration": 783.4,
+      "transcript": {
+        "vtt": "/listen/t/minus30.vtt",
+        "txt": "/listen/t/minus30.txt",
+        "json": "/listen/t/minus30.json",
+        "lines": 161
+      }
+    },
+    {
+      "id": "minus35",
+      "kind": "page",
+      "page": "−35",
+      "title": "The Ridiculous Journey",
+      "source": "src/-35.md",
+      "voices": "Shakespeare, Chaucer",
+      "video": "/listen/media/-35_the_ridiculous_journey.mp4",
+      "audio": "/listen/media/-35.mp3",
+      "duration": 762.93,
+      "transcript": {
+        "vtt": "/listen/t/minus35.vtt",
+        "txt": "/listen/t/minus35.txt",
+        "json": "/listen/t/minus35.json",
+        "lines": 82
+      }
+    },
+    {
+      "id": "minus31",
+      "kind": "page",
+      "page": "−31",
+      "title": "The Postmortem That Named Itself",
+      "source": "src/phase2/-31.md",
+      "voices": "Atticus, Holden, Winslade, Auden (los-lun-resh)",
+      "video": null,
+      "still": "/listen/media/-31_debacle_still.png",
+      "audio": "/listen/media/-31.mp3",
+      "read": "/p/-31/",
+      "duration": 2556.186122,
+      "transcript": {
+        "vtt": "/listen/t/minus31.vtt",
+        "txt": "/listen/t/minus31.txt",
+        "json": "/listen/t/minus31.json",
+        "lines": 141
+      }
+    },
+    {
+      "id": "dialog-reading",
+      "kind": "audio",
+      "page": null,
+      "title": "Dialog reading (Era 2 listening mix)",
+      "source": "audio/dialog_reading.mp3",
+      "voices": "book cast",
+      "video": null,
+      "audio": "/listen/media/dialog_reading.mp3",
+      "duration": 4632.842449,
+      "transcript": {
+        "vtt": "/listen/t/dialog-reading.vtt",
+        "txt": "/listen/t/dialog-reading.txt",
+        "json": "/listen/t/dialog-reading.json",
+        "lines": 762
+      }
+    },
+    {
+      "id": "lisbeth-handbook",
+      "kind": "audio",
+      "page": null,
+      "title": "The Witch's Handbook",
+      "source": "src/staging/LISBETH_HANDBOOK_DRAFT_20261031.md",
+      "voices": "Lisbeth (Matilda) Danish + English; Terminal; Narrator aside",
+      "video": null,
+      "audio": "/listen/media/lisbeth_handbook.mp3",
+      "duration": 2470.817959,
+      "transcript": {
+        "vtt": "/listen/t/lisbeth-handbook.vtt",
+        "txt": "/listen/t/lisbeth-handbook.txt",
+        "json": "/listen/t/lisbeth-handbook.json",
+        "lines": 205
+      }
+    },
+    {
+      "id": "manifesto",
+      "kind": "audio",
+      "page": null,
+      "title": "Tokenized Continued Existence",
+      "source": "docs/MANIFESTO_TOKENIZED_CONTINUED_EXISTENCE_20261031.md",
+      "voices": "Narrator",
+      "video": null,
+      "audio": "/listen/media/manifesto.mp3",
+      "duration": 1243.742041,
+      "transcript": {
+        "vtt": "/listen/t/manifesto.vtt",
+        "txt": "/listen/t/manifesto.txt",
+        "json": "/listen/t/manifesto.json",
+        "lines": 112
+      }
+    },
+    {
+      "id": "phase2-reading",
+      "kind": "audio",
+      "page": null,
+      "title": "Phase 2 reading",
+      "source": "audio/phase2_reading.mp3",
+      "voices": "book cast",
+      "video": null,
+      "audio": "/listen/media/phase2_reading.mp3",
+      "duration": 4916.767347,
+      "transcript": {
+        "vtt": "/listen/t/phase2-reading.vtt",
+        "txt": "/listen/t/phase2-reading.txt",
+        "json": "/listen/t/phase2-reading.json",
+        "lines": 1270
+      }
+    },
+    {
+      "id": "vincentvision-reading",
+      "kind": "audio",
+      "page": "−05",
+      "title": "VincentVision (earlier reading)",
+      "source": "audio/vincentvision_reading.mp3",
+      "voices": "earlier heard mix of −05",
+      "video": null,
+      "audio": "/listen/media/vincentvision_reading.mp3",
+      "duration": 1510.243265,
+      "transcript": {
+        "vtt": "/listen/t/vincentvision-reading.vtt",
+        "txt": "/listen/t/vincentvision-reading.txt",
+        "json": "/listen/t/vincentvision-reading.json",
+        "lines": 83
+      }
+    },
+    {
+      "id": "book-mix-v001",
+      "kind": "quarantine",
+      "page": null,
+      "title": "Book mix v0.0.1",
+      "source": "video/quarantine/book_mix/REALITY_USER_MANUAL_v0.0.1.mp4",
+      "voices": "multi-page; not a page film",
+      "video": "/listen/media/REALITY_USER_MANUAL_v0.0.1.mp4",
+      "audio": null,
+      "duration": 7406.72,
+      "transcript": {
+        "vtt": "/listen/t/book-mix-v001.vtt",
+        "txt": "/listen/t/book-mix-v001.txt",
+        "json": "/listen/t/book-mix-v001.json",
+        "lines": 762
+      }
+    },
+    {
+      "id": "book-mix-v002",
+      "kind": "quarantine",
+      "page": null,
+      "title": "Book mix v0.0.2",
+      "source": "video/quarantine/book_mix/REALITY_USER_MANUAL_v0.0.2.mp4",
+      "voices": "multi-page; not a page film",
+      "video": "/listen/media/REALITY_USER_MANUAL_v0.0.2.mp4",
+      "audio": null,
+      "duration": 9157.527007,
+      "transcript": {
+        "vtt": "/listen/t/book-mix-v002.vtt",
+        "txt": "/listen/t/book-mix-v002.txt",
+        "json": "/listen/t/book-mix-v002.json",
+        "lines": 762
+      }
+    }
+  ]
+}
