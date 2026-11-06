@@ -146,7 +146,8 @@
       "voices": "Shakespeare, Chaucer",
       "video": "/listen/media/-35_the_ridiculous_journey.mp4",
       "audio": "/listen/media/-35.mp3",
-      "duration": 762.93,
+      "duration": 759.85,
+      "read": "/p/-35/",
       "transcript": {
         "vtt": "/listen/t/minus35.vtt",
         "txt": "/listen/t/minus35.txt",

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listen — player</title>
+<link rel="stylesheet" href="/desk.css">
+<link rel="stylesheet" href="/listen/listen.css">
+<style>
+  body { background: #080b0a; color: #c8d4c0; }
+  a { color: #00c060; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <a href="/listen/">Listen</a>
+    <h1 id="play-title">Player</h1>
+  </div>
+  <div class="stamp" id="play-stamp">intake</div>
+</header>
+<div class="player-grid">
+  <main class="player-main">
+    <div id="stage"></div>
+    <div class="takes" id="takes"></div>
+  </main>
+  <aside class="transcript-pane">
+    <div class="transcript-head">
+      <span>Transcript</span>
+      <span id="line-count"></span>
+    </div>
+    <div id="transcript" class="transcript" tabindex="-1"></div>
+  </aside>
+</div>
+<script src="/listen/listen.js"></script>
+<script>ListenDesk.play();</script>
+</body>
+</html>
