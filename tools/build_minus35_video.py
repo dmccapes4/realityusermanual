@@ -71,8 +71,8 @@ VOICE_SETTINGS: dict[str, dict] = {
         "style": 0.15, "use_speaker_boost": True,
     },
     "Chaucer": {
-        "stability": 0.38, "similarity_boost": 0.72,
-        "style": 0.48, "use_speaker_boost": True,
+        "stability": 0.32, "similarity_boost": 0.70,
+        "style": 0.58, "use_speaker_boost": True,
     },
 }
 
@@ -327,18 +327,41 @@ ACT_BACKGROUNDS = {
     8: "road_morning",        # Shakespeare closes — coat on road, morning, empty
 }
 
-# Chaucer position per act — he moves; Shakespeare never does
-CHAUCER_POSITIONS = {
-    0: "chaucer_observing",    # standing right, watching Shakespeare open
-    1: "chaucer_descending",   # leaning forward into the labyrinth
-    2: "chaucer_descending",   # still in the descent
-    3: "chaucer_verse",        # holding the narrow list, reading as verse
-    4: "chaucer_road_forward", # moving forward, road behind
-    5: "chaucer_herald",       # arms wide, announcing
-    6: "chaucer_herald",       # still heralding
-    7: "chaucer_matthew",      # hands open and down — the delivery
-    8: "chaucer_road_close",   # close, final, on the road alone
-}
+# Chaucer's 12 poses — he cycles through these.
+# Each is a (char_key, x_offset) pair where x_offset is pixels from right edge.
+# Poses within a Chaucer speaking run change every ~3 segments.
+CHAUCER_POSE_SEQUENCE: list[tuple[str, int]] = [
+    ("chaucer_lectern",      W - 440),  # at the podium, gripping edges
+    ("chaucer_hands_raised", W - 480),  # both arms up, head back
+    ("chaucer_crowd_turn",   W - 420),  # turned to address the crowd
+    ("chaucer_fist_chin",    W - 380),  # kneeling, fist to chin, contemplating
+    ("chaucer_herald_full",  W - 460),  # full herald scroll raised
+    ("chaucer_aside",        W - 350),  # theatrical aside to audience
+    ("chaucer_gate_arch",    W - 470),  # framed in the stone arch
+    ("chaucer_exultant",     W - 455),  # on a step, arms wide, laughing
+    ("chaucer_fence_lean",   W - 400),  # elbow on fence rail, conversational
+    ("chaucer_verse_column", W - 430),  # holding narrow parchment, reading
+    ("chaucer_kneel_earth",  W - 370),  # kneeling, hand on the earth
+    ("chaucer_road_point",   W - 410),  # pointing back down the road
+]
+
+# Act → starting pose index (which pose in the sequence he opens with)
+ACT_POSE_START = {0: 0, 1: 2, 2: 4, 3: 6, 4: 9}
+
+def chaucer_pose(cues: list[dict], cue_t: float) -> tuple[str, int]:
+    """Return (char_key, x_pos) for Chaucer at cue_t.
+    Cycles through CHAUCER_POSE_SEQUENCE; changes every 3 Chaucer segments.
+    """
+    act = act_from_cue(cues, cue_t)
+    # Count how many Chaucer segments have elapsed in this act before cue_t
+    chaucer_segs_in_act = [
+        c for c in cues
+        if c.get("act", 0) == act and c["speaker"] == "Chaucer" and c["start"] <= cue_t
+    ]
+    pose_index_in_act = len(chaucer_segs_in_act) // 3
+    start = ACT_POSE_START.get(act, 0)
+    idx = (start + pose_index_in_act) % len(CHAUCER_POSE_SEQUENCE)
+    return CHAUCER_POSE_SEQUENCE[idx]
 
 def act_from_cue(cues: list[dict], cue_t: float) -> int:
     """Return the act number at cue_t, from cues.jsonl 'act' field."""
@@ -432,67 +455,118 @@ BG_PROMPTS: dict[str, tuple[str, str]] = {
 }
 
 # ── Character prompts ─────────────────────────────────────────────────────────
+_REGALIA = (
+    "Tournament herald's regalia: rich parti-coloured tabard over a fitted doublet, "
+    "gold trim at collar and cuffs, a herald's staff or scroll in hand. "
+    "He earned these clothes back. He is wearing them with full awareness of that fact. "
+    "The clothes are part of the performance and he knows it. "
+)
+
 CHAR_PROMPTS: dict[str, tuple[str, str]] = {
-    # Shakespeare: always left, static, quill/notebook
+    # ── Shakespeare: always left, static, quill/notebook ──────────────────────
     "shakespeare_quill": (
         "Full body side profile, transparent background. A playwright-narrator. Facing right. "
-        "Elizabethan dress — doublet, ruff collar, dark wool. A quill pen in hand, notebook open. "
-        "Standing upright, weight even. The posture of a man who has seen everything "
-        "and is recording it correctly. His expression is precise and not unkind. "
-        "He does not perform. He annotates.",
+        "Elizabethan doublet, ruff collar, dark wool. Quill pen in hand, notebook open at chest. "
+        "Standing upright, weight even. The posture of a man recording what he has already understood. "
+        "His expression is precise and not unkind. He annotates.",
         "dd"
     ),
-    # Chaucer positions — all face left (toward Shakespeare / the audience)
-    "chaucer_observing": (
-        "Full body side profile, transparent background. A medieval herald — Geoffrey Chaucer. Facing left. "
-        "Simple tunic, travel-worn. Arms at sides, watching. The voice is ready but not yet deployed. "
-        "The clothes are intact here: he has not yet gambled them away.",
+    # ── Chaucer: 12 poses, all in tournament herald regalia ───────────────────
+    # He faces left (toward Shakespeare and the audience).
+    "chaucer_lectern": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Both hands gripping the edges of a heavy wooden lectern, leaning forward over it, "
+        "declaiming with full commitment. Eyes wide. Mid-sentence. The lectern is part of the image.",
         "dd"
     ),
-    "chaucer_descending": (
-        "Full body side profile, transparent background. A medieval herald. Facing left, leaning forward. "
-        "Tunic slightly disheveled. One hand extended ahead — feeling the depth of the corridor. "
-        "The posture of a man descending into something fascinating and dangerous. "
-        "He is not afraid. He is intrigued.",
+    "chaucer_hands_raised": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left, slightly back. "
+        + _REGALIA +
+        "Both arms raised fully overhead, palms open to the sky. Head tilted back. "
+        "The expression is pure exultation — not relief, triumph. He has just announced something perfect.",
         "dd"
     ),
-    "chaucer_verse": (
-        "Full body side profile, transparent background. A medieval herald. Facing left. "
-        "Holding a narrow parchment scroll — but only reading the right half, which is lit. "
-        "His lips are moving. He is reading aloud what the narrow light reveals. "
-        "One finger traces the suffix column. The clothes are now somewhat reduced — "
-        "a coat missing, tunic remaining.",
+    "chaucer_crowd_turn": (
+        "Three-quarter view, transparent background. Geoffrey Chaucer — tournament herald. "
+        + _REGALIA +
+        "Turning back to address the crowd over his right shoulder, one arm sweeping wide "
+        "toward an unseen audience. His face is animated, mid-phrase, slightly laughing. "
+        "The movement is mid-turn — caught between facing forward and facing back.",
         "dd"
     ),
-    "chaucer_road_forward": (
-        "Full body side profile, transparent background. A medieval herald on a road. "
-        "Facing left, striding. No coat. Simple tunic only. Arms swinging. "
-        "The stride is confident. He has no clothes and a clear destination. "
-        "The face: focused, not troubled.",
+    "chaucer_fist_chin": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Down on one knee. Right fist pressed to chin, elbow on raised knee — the thinker's pose "
+        "but theatrical: he is not brooding, he is building the next sentence in real time. "
+        "The other hand rests on the floor. His expression is concentrated delight.",
         "dd"
     ),
-    "chaucer_herald": (
-        "Full body side profile, transparent background. A medieval herald — announcing. "
-        "Facing left. Arms wide open — the announcement position. "
-        "No coat. Tunic only. Head back, voice projected. "
-        "This is the man who makes things real by saying them out loud. "
-        "He is saying something real. You can see it working.",
+    "chaucer_herald_full": (
+        "Full body side profile, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Classic herald declaration stance: right arm fully extended upward holding a proclamation scroll, "
+        "left arm out to the side for balance, weight on front foot, voice projected. "
+        "This is the pose that makes a knight real.",
         "dd"
     ),
-    "chaucer_matthew": (
-        "Full body side profile, transparent background. A medieval herald in delivery. "
-        "Facing left. Hands open, pointing downward — toward the earth. "
-        "The gesture says: here. In this. The earth itself. "
-        "No coat. Tunic only. The delivery is not theatrical — it is true. "
-        "He has done this before. He is doing it again. It is the same thing.",
+    "chaucer_aside": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left but "
+        "turning slightly toward the viewer. "
+        + _REGALIA +
+        "One hand cupped at the side of his mouth — theatrical aside to the audience. "
+        "Conspiratorial grin, slightly raised eyebrow. He is telling us something the others can't hear. "
+        "He is delighted by the secret.",
         "dd"
     ),
-    "chaucer_road_close": (
-        "Full body side profile, transparent background. A medieval herald on a road, close view. "
-        "Facing left. No coat. Tunic only. Standing still now. "
-        "The performance is over or just beginning — these are the same. "
-        "He is on the road. He has no clothes. He has a voice. "
-        "That is enough. You can see it is enough.",
+    "chaucer_gate_arch": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Standing inside a stone arch — the arch frames him, both sides visible at the edges. "
+        "Arms open wide, filling the arch. The arch is part of the image: stone, worn threshold, "
+        "the gate held open by his presence.",
+        "dd"
+    ),
+    "chaucer_exultant": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Standing on a low stone step, one foot raised on it. Both arms flung wide, "
+        "head thrown back, mouth open in laughter. Not performing laughter — actually laughing "
+        "at something specific and correct. The step and a fragment of stone wall are part of the image.",
+        "dd"
+    ),
+    "chaucer_fence_lean": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Left elbow resting on a wooden fence rail, weight shifted onto it, relaxed. "
+        "Right hand gesturing conversationally. The expression is collegial — "
+        "explaining something to someone he likes. The fence rail is part of the image.",
+        "dd"
+    ),
+    "chaucer_verse_column": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "Holding a narrow strip of parchment at arm's length with both hands — just the right half "
+        "of a longer document, the left edge cut off. Reading aloud from it, lips moving, "
+        "tracing one finger down a column of short Greek endings. Rapt attention.",
+        "dd"
+    ),
+    "chaucer_kneel_earth": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left, kneeling. "
+        + _REGALIA +
+        "Both knees on the ground, one hand pressed flat to bare earth. "
+        "Looking down at where the hand meets the soil — not grief, recognition. "
+        "Sen-thel-nai: the expanding container. He understands what this is.",
+        "dd"
+    ),
+    "chaucer_road_point": (
+        "Full body, transparent background. Geoffrey Chaucer — tournament herald. Facing left. "
+        + _REGALIA +
+        "On a road. One arm extended fully behind him, pointing back down the road "
+        "at something no longer visible. Face turned toward the viewer. "
+        "The expression says: that is where it was. This is where we are now. "
+        "The road surface is visible at his feet.",
         "dd"
     ),
 }
@@ -585,10 +659,22 @@ def _visual_breakpoints(cues: list[dict]) -> list[float]:
 
     bps: set[float] = {0.0, tail}
     last_act = -1
+
+    # Track Chaucer segment count per act to catch pose changes (every 3 segs)
+    act_chaucer_count: dict[int, int] = {}
+
     for c in cues:
-        if c.get("act", 0) != last_act:
+        act = c.get("act", 0)
+        # Act change → new background
+        if act != last_act:
             bps.add(c["start"])
-            last_act = c["act"]
+            last_act = act
+        # Chaucer pose change (every 3 Chaucer segments within an act)
+        if c["speaker"] == "Chaucer":
+            n = act_chaucer_count.get(act, 0)
+            act_chaucer_count[act] = n + 1
+            if n % 3 == 0:
+                bps.add(c["start"])
 
     return sorted(bps)
 
@@ -619,28 +705,17 @@ def draw_frame(screen, audio_t: float, cues: list[dict], font, font_mono) -> Non
         ph.blit(pl, (10, 230))
         screen.blit(ph, (80, H - 500))
 
-    # Chaucer: position varies by act
-    ch_key  = CHAUCER_POSITIONS.get(act, "chaucer_observing")
+    # Chaucer: pose cycles through 12 positions based on act + segment count
+    ch_key, ch_x = chaucer_pose(cues, cue_t)
     chaucer = char_plate(ch_key)
     if chaucer:
-        # Dramatic x-offset: herald comes closer to center in later acts
-        x_offsets = {
-            "chaucer_observing":    W - 360,
-            "chaucer_descending":   W - 390,
-            "chaucer_verse":        W - 370,
-            "chaucer_road_forward": W - 420,
-            "chaucer_herald":       W - 460,  # arms-wide needs more room
-            "chaucer_matthew":      W - 400,
-            "chaucer_road_close":   W - 350,
-        }
-        x = x_offsets.get(ch_key, W - 360)
-        screen.blit(chaucer, (x, H - 520))
+        screen.blit(chaucer, (ch_x, H - 520))
     else:
-        ph = pygame.Surface((260, 480), pygame.SRCALPHA)
+        ph = pygame.Surface((280, 480), pygame.SRCALPHA)
         ph.fill((*NIGHT, 180))
-        pl = font.render(f"CHAUCER\n{ch_key}", True, BONE)
+        pl = font.render(ch_key, True, BONE)
         ph.blit(pl, (10, 230))
-        screen.blit(ph, (W - 380, H - 500))
+        screen.blit(ph, (ch_x, H - 500))
 
     # HUD
     cue = cue_at(cues, cue_t)
@@ -724,12 +799,13 @@ def cmd_frames() -> None:
         pygame.image.save(screen, str(FRAMES / fname))
 
         act = act_from_cue(cues, mid_cue_t)
+        ch_key, _ = chaucer_pose(cues, mid_cue_t)
         rel = f"frames/{fname}"
         lines.append(f"file '{rel}'")
         lines.append(f"duration {dur_audio:.4f}")
         last_rel = rel
         print(f"  [{i:3d}] act={act}  cue={mid_cue_t:6.1f}s  hold={dur_audio:.2f}s  "
-              f"{ACT_BACKGROUNDS.get(act,'?')}", flush=True)
+              f"{ACT_BACKGROUNDS.get(act,'?')}  {ch_key}", flush=True)
 
     lines.append(f"file '{last_rel}'")
     concat.write_text("\n".join(lines) + "\n")

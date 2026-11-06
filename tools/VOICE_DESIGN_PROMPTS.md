@@ -141,23 +141,30 @@ He is not reading aloud; he is annotating a notebook.
 ---
 
 ## Chaucer
-*Orator of −35. The naked herald. Delivers the performance.*
+*Orator of −35. The herald in tournament regalia. Delivers the performance.*
 
 ```
-British male, late thirties, vernacular register — the accent is Middle English
-simplified to modern RP but with direct, plain vowels; no archaic affectation.
-The voice of a man who has lost his clothes and found it to be a clarification.
-Direct, embodied, present-tense. Variable pace: slows for the word that carries
-weight, quickens when revelation arrives. You can hear the breath.
-There is no distance between speaker and subject. When he names a thing, the thing
-is named. Not performing confidence — performing truth, which is different.
-He speaks at the audience as if they are witnesses to something real,
-because they are. Energy is high; it never becomes anxious. He is certain.
+British male, mid-thirties. Exuberant in the original sense — joyful, showy,
+delighted by his own words, theatrical without being dishonest. This is the
+Geoffrey Chaucer who gambled away his clothes and found it clarifying, who
+introduces knights in full tournament regalia with total commitment, who makes
+Sir Ulrich von Lichtenstein real by saying so out loud with full conviction.
+
+The register is vernacular RP — neither archaic nor modern — fast-moving,
+highly variable: he can slow to a whisper mid-sentence and then suddenly ring
+out at full volume and it sounds correct both times. The rhythm changes with
+the content. He rises on revelation. He drops to conspiratorial near-silence
+for an aside. He laughs mid-sentence sometimes, not out of nerves but delight.
+
+There is no ironic distance between him and what he says. He means every word.
+The flamboyance is not performance anxiety — it is the confidence of a man who
+knows that the announcement makes the thing real, and he has practiced this,
+and he is good at it, and he is glad to be doing it right now in front of you.
 ```
 
 **Use for:** Chaucer oration in −35. Verbatim VOLARE passages, the verse, Matthew 25:18.
-**Settings:** stability 0.38, similarity_boost 0.72, style 0.48, use_speaker_boost true.
-**Add as:** `"Chaucer"` in VOICE_MAP via `.env` `VOICE_CHAUCER=<id>`.
+**Settings:** stability 0.32, similarity_boost 0.70, style 0.58, use_speaker_boost true.
+**Update voice in ElevenLabs → Voice Design → regenerate → paste new ID as `VOICE_CHAUCER` in `.env`.**
 
 ---
 
