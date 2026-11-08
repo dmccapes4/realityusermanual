@@ -57,6 +57,9 @@ LABELS: dict[str, tuple[str, str]] = {
     "ARCHIVIST":  ("Archivist", "Archivist"),
     "SNAKE":      ("Snake",     "Snake"),
     "SAURON":     ("Sauron",    "Sauron"),
+    "NARRATOR_EN":  ("Narrator", "Narrator"),
+    "SCAPE":        ("Goat",     "Goat"),
+    "DOCTOR_DRAKE": ("Raymora",  "Joey"),
 }
 
 VOICE_OF = {spk: voice for spk, voice in LABELS.values()}

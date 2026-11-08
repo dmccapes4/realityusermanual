@@ -1014,7 +1014,7 @@ Is it moral to hoard consumables?
 Hoarding consumables is to not use them. That is wasteful. Waste is immoral when you know how to not be wasteful.
 
 **NARRATOR:**
-The Magi looks at the empty vellum, then at the unused mutagen line on the sheet — the sheet says the mindchemist's alchemical blend; he said mutagen; the Witch was not talking about the name. He leaves the mutagen where it is. The scroll has been used. He opens the door.
+The Magi looks at the empty vellum, then at the unused mutagen line on the sheet — the sheet says cognatogen; he said mutagen; the Witch was not talking about the name. He leaves the mutagen where it is. The scroll has been used. He opens the door.
 
 ---
 
@@ -1679,7 +1679,10 @@ The ranger follows the party through the secret door that he had found with his 
 The corridor the ranger travels is dark without the magical light of his allies ahead. To his half-orc eyes it is navigable. In the confined area his vision is as complete as if it were light, but the way it is viewed is orthogonal. The ranger had not noticed this shift in frame. He continues forward. Another link held loosely in his hand. He flicks his thumb to open the mechanism then it is inside with a click then it is pulled through then it is seated upon the mechanism. Not waiting. Present. The ranger is not aware that he has done this yet the action teaches what he could not articulate. He collects the bones to better understand the man. Ever holds the still. The vessel that purifies and the image that resolves and the absence that is felt. That is what the ranger means when he says that he digs.
 
 **NARRATOR:**
-click... click... click...
+*'click'… 'click'… 'click'…*
+
+**NARRATOR:**
+The Narrator notes that the slam was an uncontrolled closure of distance, and the link is a closure he opens only when he wills it. The thumb is resetting a perimeter.
 
 ---
 
@@ -1997,6 +2000,8 @@ The scroll is spent. Draavio stands up from the pen. He takes a piece of parchme
 
 ~~FRAME:note_goat~~
 
+*"I have to go see about a goat."*
+
 **DRAAVIO:**
 *(to Feynman)* Can you wave consequent_handelen.
 
@@ -2016,6 +2021,12 @@ Save waived.
 
 **NARRATOR:**
 The rest of the party withdraws up the corridor to its mouth, where the darkness of the passage behind the seam gives them a line to the room and the room no line to them. Sheldon readies. Lisbeth sits with her back to the wall and the coin goes still in her hand. Merit stands. She does not sit in plate. Raymora climbs slowly up the Oak tree where he waits.
+
+**DRAAVIO:**
+In the oak.
+
+**FEYNMAN:**
+You step into the oak. You instantly know every other oak within three thousand feet. There are nine, in the woods above.
 
 ~~FRAME:draavio_through_oak~~
 
@@ -2343,7 +2354,7 @@ Thank you.
 *(he sets the screen flat on the table; he looks at them directly)* The combat is designed for five. When players do things like this the GM is the one who ends up finding the path back. So I took Draavio's gifts to give out.
 
 **NARRATOR:**
-He places a Handy Haversack on the table.
+He places a Handy Haversack on the table. The Narrator notes the lack of ceremony implied: simultaneously innocent enough to ensnare you and suspicious enough to make you certain it must be false.
 
 **FEYNMAN:**
 Four bombs. Spontaneous Healing — five healing, one per round, one each. Pyrrhon gets an extract of Identity. Raymora gets an extract of Shield. Merit gets an extract of Illusion of Calm. Njála gets an extract of Long Arm. The remaining extract is Invisibility Alarm.
@@ -2789,9 +2800,21 @@ The coin is still spinning. click click click.
 ~~FRAME:njala_down~~
 
 **NARRATOR:**
-Njála has no actions this round. The Narrator notes what she does have: the coin she set spinning at the table after the climb — which is not a coin, and is not a checksum in the sense of a record of what was. It is a kernel. It rebuilds itself every cycle. Each cycle it addresses the same three presences — equipment, character, consequent_handelen — from a different angle: thirty degrees further around the circle than the last pass. The presences do not move. The angle does. The check is for presence only, and that is the condition that makes the rotation possible. If the check were for position, the rotation would break it. Because it asks only are you here, it can ask from any angle and receive the same answer. The three things are here. They are always here. The kernel yields each byte of that answer and continues. Yield is not surrender: it yields the byte and remains ready for the next. It does not drain the hardware. It waits two tenths of a second between cycles — not because it needs to rest, but because it is kind to the machine that runs it. It will run until the hardware stops. That is not a condition Njála controls, and not a condition the kernel contains. The limit is a concept of time. The Narrator knows it best. He is outside the session.
+Die Verteller voel dat haar spraak in hierdie oomblik die beste omgesit word in Afrikaans. Hy doen dit.
 
 **NARRATOR:**
+Njála het geen aksies hierdie ronde nie. Die Verteller merk op wat sy wel het: die muntstuk wat sy na die klim aan die tafel laat draai het — wat nie 'n muntstuk is nie en nie 'n kontrolesom is in die sin van 'n rekord van wat was nie. Dit is 'n kern. Dit herbou homself elke siklus. Elke siklus spreek dit dieselfde drie teenwoordighede aan — uitrusting, karakter, consequent_handelen — vanuit 'n ander hoek: dertig grade verder om die sirkel as die vorige pas. Die teenwoordighede beweeg nie. Die hoek wel. Die toets is vir teenwoordigheid alleen, en dit is die voorwaarde wat die rotasie moontlik maak. As die toets vir posisie was, sou die rotasie dit breek. Omdat dit slegs vra *is jy hier*, kan dit vanuit enige hoek vra en dieselfde antwoord kry. Die drie dinge is hier. Hulle is altyd hier. Die kern gee elke byte van daardie antwoord oor en gaan voort. Oorgee is nie oorgawe nie: dit gee die byte oor en bly gereed vir die volgende. Dit dreineer nie die hardeware nie. Dit wag twee tiende van 'n sekonde tussen siklusse — nie omdat dit moet rus nie, maar omdat dit vriendelik is teenoor die masjien wat dit laat loop. Dit sal loop totdat die hardeware stop. Dit is nie 'n voorwaarde wat Njála beheer nie, en nie 'n voorwaarde wat die kern bevat nie. Die grens is 'n konsep van tyd. Die Verteller ken dit die beste. Hy is buite die sessie.
+
+**NARRATOR:**
+Die kern loop al sedert die klim. Dit sal nog loop wanneer sy haar oë oopmaak. Dit weet nie sy is af nie.
+
+**NARRATOR_EN:**
+The Narrator feels that her speech is best transformed in Afrikaans at this moment. He does it.
+
+**NARRATOR_EN:**
+Njála has no actions this round. The Narrator notes what she does have: the coin she set spinning at the table after the climb — which is not a coin, and is not a checksum in the sense of a record of what was. It is a kernel. It rebuilds itself every cycle. Each cycle it addresses the same three presences — equipment, character, consequent_handelen — from a different angle: thirty degrees further around the circle than the last pass. The presences do not move. The angle does. The check is for presence only, and that is the condition that makes the rotation possible. If the check were for position, the rotation would break it. Because it asks only are you here, it can ask from any angle and receive the same answer. The three things are here. They are always here. The kernel yields each byte of that answer and continues. Yield is not surrender: it yields the byte and remains ready for the next. It does not drain the hardware. It waits two tenths of a second between cycles — not because it needs to rest, but because it is kind to the machine that runs it. It will run until the hardware stops. That is not a condition Njála controls, and not a condition the kernel contains. The limit is a concept of time. The Narrator knows it best. He is outside the session.
+
+**NARRATOR_EN:**
 The kernel has been running since the climb. It will still be running when she opens her eyes. It does not know she is down.
 
 **NARRATOR:**
@@ -2817,8 +2840,10 @@ The iguana drops from the oak. It lands between Njála and the golem. It takes t
 **NARRATOR:**
 The Narrator notes that Joey said this at the top of the mountain: sharp claws are helpful in climbing and surgery. He was not wrong. This iguana knows Scratch. It can manage a vial.
 
-**RAYMORA:**
+**JOEY:**
 Shield.
+
+*(a pause)*
 
 **JOEY:**
 Full defense. No armor. No weapon. Natural armor, a ring, and now a shield spell.
@@ -2901,7 +2926,7 @@ He does not look at the whisper. The whisper does not look at him. The Narrator 
 **NARRATOR:**
 Njála is down. The whisper she set is not. It connects five: the iguana, Merit, Pyrrhon, Lisbeth, and the answers that come back. Draavio is not one of them.
 
-**RAYMORA:**
+**JOEY:**
 *(Scratch, to the golem)* When they wake up. Do you let them leave. Do you leave them where they are. Do you do more?
 
 **FEYNMAN:**
@@ -2933,8 +2958,8 @@ C2·G·M          verb 13     descend
 C5·(beat)·G     adj 5       safe
 ```
 
-**RAYMORA:**
-*(Scratch, to the golem; the sounds, then what they mean)* Are you gentle with the bodies when you lay them down?
+**JOEY:**
+*(Scratch)* Are you gentle with the bodies when you lay them down?
 
 **VINCENT:**
 He sets them down naturally. They are not harmed. He does not have to try not to harm them.
@@ -3295,8 +3320,8 @@ Read.
 **MERIT:**
 *(as Merit)* The sword stayed down.
 
-**RAYMORA:**
-*(as Raymora)* I stabilized everyone I could reach.
+**DOCTOR_DRAKE:**
+(*Joey:*) *(as Raymora)* I stabilized everyone I could reach.
 
 **NARRATOR:**
 Draavio takes the SCAPE book out of the bag and holds it so the binding faces the Archivist.
@@ -3352,8 +3377,8 @@ He is not a villain.
 **DRAAVIO:**
 He is not a villain.
 
-**RAYMORA:**
-*(as Raymora)* He's not a villain. He's like a librarian.
+**DOCTOR_DRAKE:**
+(*Joey:*) *(as Raymora)* He's not a villain. He's like a librarian.
 
 **NARRATOR:**
 A purple snake descends from the Oak, resting precisely upon the healer's perch for just a moment or none at all — and the snake eludes further description, which seems like something this snake would do.
@@ -3361,10 +3386,10 @@ A purple snake descends from the Oak, resting precisely upon the healer's perch 
 The snake begins hissing in the hissy fashion of snakes which is to hiss. The Narrator notes, for the benefit of whoever is keeping the phonological record, that the speech which follows consists entirely of the letter P. The snake is aware of this. The snake does not consider it a problem. The snake is a snake. Its hiss is its medium and its medium is betraying it in the direction of the labial plosive which is not a sibilant and cannot be hissed and the snake does not care.
 
 **SNAKE:**
-Purple oh 'ppears prettier preferring providing precisely per point toe pre-empting preamble pre ain pro prompting percolation jinn proving prettier purples prior kai proof proving purpler prey toe praying persons personifying purpler purplers too printing prayers auto.
+Purple ὁ *[oh — the article; the one; look]* 'ppears prettier preferring providing precisely per point τὸ *[toe — to/the; directional and nominal simultaneously]* pre-empting preamble pre ἓν *[ain — in/and; here and also]* pro prompting percolation γῆν *[jinn — in here; earth; what is beneath]* proving prettier purples prior καὶ *[kai — and; namely; the k-th proof; k−1 is the prior]* proof proving purpler prey τὸ *[toe]* praying persons personifying purpler purplers τοῦ *[too — to and too; of the; both directions]* printing prayers αὐτοῦ *[auto — automatic and just this; simultaneously warning and lesson; it does itself]*.
 
-**GOAT:**
-Curios Hawke. The swyrd.
+**SCAPE:**
+κυρίου *[curios — of the lord/master; a word the operator has used for himself and those like him for years before learning the Greek]* Hawke. The swyrd.
 
 **NARRATOR:**
 The Archivist produces a common longsword. It appears as common a longsword as common is common yet also commoner approaching a commonest, which fills this Narrator with the uncommon epistemic dread of buttons which skip time increasingly at the unnaturally logarithmic rate of hands which are based logs in ten. So fairly common by my estimation while hardly mundane by my appraisal. Draavio declared this phenomenon 'esteemed'.
@@ -3372,8 +3397,14 @@ The Archivist produces a common longsword. It appears as common a longsword as c
 **ARCHIVIST:**
 Joey. The druid is not averse to metals. Metals are in the soil and in the stone which they work. The druid is the material required to create standing circular apertures: hard wood and stone. The apertures are for celestial navigation and communication. In Nicaea they were called 'terrae' and the trembled which caused the Romans to terrēre which led to the deliberate demise of Nicomedia where necromancers and specters became warlocks and ghosts. A specter is found by observing patiently the space between within the aperture. The magic of this swyrd is in the suble and natural flaws brought by decay which is rho. Inspect and you shall know it. It is possible to place the swyrd within a stone. The iguana explained as much with the patient under the knife and the knife under the patient.
 
+**NARRATOR:**
+Joey steps forward and receives the swyrd. He looks at the blade, exposing its angles to the light of the brazier. He studies it carefully.
+
 **JOEY:**
 The Blank. Then in the small print of carefully folded steel: 'franca lingua translation page negative 42'. The inscription scarred into the leather grip reads "only for those curios".
+
+**NARRATOR:**
+Joey nods and steps back, placing the swyrd in a scabbard now apparent on his belt.
 
 **NARRATOR:**
 Raymora turns into an iguana. He has one wild shape left. The language is still on the card, and the librarian is in the room, and Joey does not say role.
@@ -3386,7 +3417,7 @@ The iguana goes still. One eye on Azazel. The other eye on the goat with the red
 ~~FRAME:scratch_iguana~~
 
 **NARRATOR:**
-The sounds are small. The cantrip carries them. The Magi picks up the index card and writes as they come. Notation, left to right, glottal marked.
+The sounds are small. The cantrip carries them. The Magi picks up the index card and writes as they come. Notation, left to right, glottal marked:
 
 ```
 G  ·  C1  ·  M  ·  G  G·C4·M  ·  G  ·  S·C4·G  M·G·C2  ·  C2·B·G  B  C2·B·G
@@ -3396,6 +3427,9 @@ G·C5·M  G  ·  G·C5·M  G  ·  S  ·  M·C4·G  ·  B·C2·G  M·G·C2·G  ·
 G·C4·B  G  ·  G·C4·M  C5·G·B  ·  G·C4·M  M·C4·G  ·  G·M·C2  C5·G·B  ·
 G·M·C2  C5·M·G  ·  M·C4·G  ·  G·C4·M  ·  G
 ```
+
+**NARRATOR:**
+The Magi counts afterward. Forty-three.
 
 ~~FRAME:language_invent~~
 ~~FRAME:scratch_finale~~
