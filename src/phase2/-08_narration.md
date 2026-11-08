@@ -297,7 +297,7 @@ Is it moral?
 Do Narrators decide? Or is it the authors? Or the observers? How do Narrators keep track of all three?
 
 **NARRATOR:**
-This job was considerably easier when it was just Stanley and doors and accursed buttons likely increasing at an exponential rate of time displacement because once you know that there is a natural rate choosing any other rate becomes a moral question, and it only takes one developer to know who asks the question. I conclude, in a state of despair, that there was comfort in knowing that however long time grew it would only ever be an amount of time while here, it is stated sometimes on signs with the rudeness of logic, that we do not know what time is or what its frame is or how to measure it or how to measure drift...
+This job was considerably easier when it was just Stanley and doors and accursed buttons likely increasing at an exponential rate of time displacement because once you know that their *is* a natural rate choosing *any other rate* becomes a moral question, and it only takes one developer to know who asks the question. I conclude, in a state of despair, that there was comfort in knowing that however long time grew it would only ever be *an amount* of time while here, it is stated sometimes on signs with the rudeness of logic, that we do not know what time is or what its frame is or how to measure it or how to measure drift...
 
 **NARRATOR:**
 An undisclosed amount of time passes that feels like about ten seconds if you stop right now.
@@ -679,7 +679,7 @@ Hold Kiæfft, dit Pickfiæs. Fanden tage dig. Din Skide! Hvilcken [aff] Øgle!
 Shut up, you dickface. The devil take you. Your shit! Which off, lizard!
 
 **NARRATOR:**
-aff is off. A translator put of in the bracket and then had to admit that of sounds like... whatever of is. She did not say whatever of is. She said off. Sheldon had been on the lizard since it came over the lip — why an iguana, do you mean role — and she told him which. Off. The shit is the talk, the talk is of the lizard, and off is the direction he can take if he is done. The devil is invited to take the talk. The Narrator notes that this is the first sentence Lisbeth has said tonight that is not poetry.
+*aff* is off. A translator put of in the bracket and then had to admit that of sounds like… whatever of is. She did not say whatever of is. She said off. Sheldon had been on the lizard since it came over the lip — why an iguana, do you mean *role* — and she told him which. Off. The shit is the talk, the talk is of the lizard, and off is the direction he can take if he is done. The devil is invited to take the talk. The Narrator notes that this is the first sentence Lisbeth has said tonight that is not poetry.
 
 **NARRATOR:**
 Joey widens his eyes and holds them open, eyebrows up, mouth a little open: the face a television actor makes when he is playing a man who has just understood something, held one second longer than the understanding. Nobody at the table asks what he understood. Everyone at the table knows the face.
@@ -1074,7 +1074,7 @@ Misfortune. Hex. Witch levels. Will save. *(casts)* It fails; it has no will to 
 Knowledge, religion. Consequent handelen. *(casts)* Fourteen on the face. Twenty-five. What is it, and what does the tongue do?
 
 **FEYNMAN:**
-Human skeleton, advanced a notch. The tongue delivers poison. Fortitude DC fifteen, or paralysis for one d four rounds. It licks as a touch attack. It also slams.
+Human skeleton, advanced a notch. The tongue delivers poison. Fortitude DC fifteen, or paralysis for 1d4 rounds. It licks as a touch attack. It also slams.
 
 **SHELDON:**
 *(to the table, as if the table had asked)* Paralysis. Do not let it touch you. *(To Feynman.)* And Pyrrhon puts a ray in it. *(casts)* Hit. Fire. It was already dry.
@@ -2026,7 +2026,7 @@ Draavio walks in the direction of the oak. At the threshold he does not stop.
 ~~FRAME:iguana_in_tree~~
 
 **NARRATOR:**
-The Narrator notes that the iguana is on the oak, but Njála has not cast Whisper and he is the only one who saw Draavio depart, but he cannot communicate it in Scratch and he doesn't want to burn the WildShape from his healer's perch as it is crucial for his stealth check later. The iguana makes a nodding motion with its head up and its eyes open wider. He does it again. No one hears. No one was paying attention.
+The Narrator notes that the iguana is on the oak, but Njalla has not cast Whisper and he is the only one who saw Draavio depart, but he cannot communicate it in Scratch and he doesn't want to burn the WildShape from his healer's perch as it is crucial for his stealth check later. The iguana makes a nodding motion with its head up and its eyes open wider. He does it again. No one hears. No one was paying attention.
 
 ~~FRAME:note_goat~~
 
@@ -2853,7 +2853,14 @@ Behind it, Draavio.
 He looks different. Not in the way a person looks different after hours. In the way a person looks different after the things he would not spend have been spent. He is carrying the same kit. The kit has been used.
 
 **NARRATOR:**
-Cat's Grace. Dexterity sixteen, plus four. Bull's Strength. Strength eighteen, plus four. Enhancement. Bear's Endurance. Constitution fourteen, plus four. Owl's Wisdom. Wisdom fourteen, plus four. The extract is the wisdom. Mutagen, to Strength. Alchemical, plus four, and two natural armor. It is not the enhancement. It stacks. Strength twenty-six. The penalty is Intelligence, minus two. He took it. Lead Blades on the falchion. Two d six. Power Attack. Furious Focus on the first swing of each turn. The plus one keen falchion. Threat fifteen through twenty.
+Cat's Grace. Dexterity sixteen, plus four.
+Bull's Strength. Strength eighteen, plus four. Enhancement.
+Bear's Endurance. Constitution fourteen, plus four.
+Owl's Wisdom. Wisdom fourteen, plus four. The extract is the wisdom.
+Mutagen, to Strength. Alchemical, plus four, and two natural armor. It is not the enhancement. It stacks. Strength twenty-six. The penalty is Intelligence, minus two. He took it.
+Lead Blades on the falchion. Two d six.
+Power Attack. Furious Focus on the first swing of each turn.
+The +1 keen falchion. Threat fifteen through twenty.
 
 ~~FRAME:draavio_returned~~
 
@@ -3400,7 +3407,7 @@ G·M·C2  C5·M·G  ·  M·C4·G  ·  G·C4·M  ·  G
 That. One. On the other hand. The expression. This. Now lies. Bounded and contained. Gold concealed. Sent? No longer seen. Still lies. This that was that. Then. Now expression. Expresses gold in speech. But. On the other hand. Just that. Just that? No! There. Exactly where? What was taken? That is written. The expression sent. The expression there. The lies were taken. The lies remained. Exactly there! The expression. That.
 
 **NARRATOR:**
-The Narrator notes that the Magi is still writing, though the sounds have stopped. The book still says SCAPE. The decode is not true to Matthew twenty-five eighteen. It is not meant to be.
+The Narrator notes that the Magi is still writing, though the sounds have stopped. The book still says SCAPE. The decode is not true to Matthew 25:18. It is not meant to be.
 
 **PYRRHON:**
 Then what did he read?
@@ -3457,7 +3464,7 @@ Lisbeth opens the pen. Merit stands aside from the door of it. The researchers, 
 The goats were left to the woods.
 
 **NARRATOR:**
-The Magi takes a second scroll out of the case. Tree shape. The notes on its line say to continue observation. He holds it a moment. He puts it back, rolled.
+The Magi takes a second scroll out of the case. Tree shape. The notes on its line say -to continue observation-. He holds it a moment. He puts it back, rolled.
 
 **NARRATOR:**
 Observation stopped.
@@ -3473,7 +3480,7 @@ Observation stopped.
 The Narrator notes that it was not said and then agreed with. It arrived at the table the way the session had been going all night — as if the thing had been true and they had each separately found their way to the same face of it. There is no speaker line. There is no turn order. The party speaks, and what they speak is one sentence.
 
 **NARRATOR:**
-Draavio left. The time between the door and the sinkhole was short. He was not late. He was not missing from the record. He came back transformed. Not because the grove transformed him. Because he acted faithfully in the grove and fidelity changes the one who exercises it. That is the only kind of transformation available. He remained present throughout. The trap did not fire at full capacity because he was not there to fire it. That is a receipt for his action, not a failure of the trap. Consequent handelen. The fidelity of action does not require the planned outcome. It requires the faithful one.
+Draavio left. The time between the door and the sinkhole was short. He was not late. He was not missing from the record. He came back transformed. Not because the grove transformed him. Because he acted faithfully in the grove and fidelity changes the one who exercises it. That is the only kind of transformation available. He remained present throughout. The trap did not fire at full capacity because he was not there to fire it. That is a receipt for his action, not a failure of the trap. -Consequent handelen.- The fidelity of action does not require the planned outcome. It requires the faithful one.
 
 **NARRATOR:**
 Nature does not take sides. The oak did not keep his secret. The oak has no secrets. The light fell into the sinkhole because light falls. The goat with the red collar found the path because it is a goat and goats find paths. None of this was arranged for the party. None of it was arranged against them. Nature is amoral. This is the first condition. Without it the whole system becomes a story someone is telling about you, and you spend the night fighting the narrator instead of the golem.
