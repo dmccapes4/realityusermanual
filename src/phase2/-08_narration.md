@@ -1,24 +1,52 @@
-# −08 Narration Source — VERBATIM
-# Speaker blocks for build_minus08_video.py
-# Source: src/phase2/-08.md — VERBATIM. Nothing trimmed.
-#
-# Conventions:
-#   ~~FRAME:id~~    → visual overlay / background swap (not spoken)
-#   **NARRATOR:**   → Operator(Default) / Merlin voice
-#   **FEYNMAN:**    → Feynman voice (fourth-wall; never in-game)
-#   **SHELDON:**    → Sheldon voice
-#   **LISBETH:**    → Lisbeth voice (Danish)
-#   **LISBETH_EN:** → Lisbeth voice (English translation, immediately after)
-#   **WITCH:**      → Witch voice (her own register)
-#   **MERIT:**      → Witch voice (Merit register — lower, slower, the ford in it)
-#   **JOEY:**       → Joey voice
-#   **DRAAVIO:**    → Merlin voice
-#   **VINCENT:**    → Vincent voice
-#   **GOAT:**       → TTL voice (stability 0.95, style 0.00)
-#
-# Cognatogen: first reference → "mindchemist's alchemical blend"; omitted after.
-# Metadata tombstone (lines 1–32 of source): not spoken, not shown.
-# Code blocks: ~~FRAME:~~ overlays, not spoken, except where narrator comments follow.
+<!--
+Narration conventions (read by tools/sync_minus08_audio.py; voicing starts at "## ACT 0"):
+Speaker blocks for build_minus08_video.py
+Conventions:
+~~FRAME:id~~    → visual overlay / background swap (not spoken)
+**NARRATOR:**   → Operator(Default) / Merlin voice
+**FEYNMAN:**    → Feynman voice (fourth-wall; never in-game)
+**SHELDON:**    → Sheldon voice
+**LISBETH:**    → Lisbeth voice (Danish)
+**LISBETH_EN:** → Lisbeth voice (English translation, immediately after)
+**WITCH:**      → Witch voice (her own register)
+**MERIT:**      → Witch voice (Merit register — lower, slower, the ford in it)
+**JOEY:**       → Joey voice
+**DRAAVIO:**    → Merlin voice
+**VINCENT:**    → Vincent voice
+**GOAT:**       → TTL voice (stability 0.95, style 0.00)
+  ```code fences```  → shown, not spoken
+-->
+
+# Page −08 — [retired]
+
+*Quarantined: 2026-10-29. Content moved to `quarantine/-08_received_how_to_fly.md`.*
+
+---
+
+This page was a receipt. An agent was asked to make a manuscript page — a single HTML presenting the HOW_TO_FLY AJP submission package, embeddable by the distribution. Instead it filed a summary of what the page should have been, with a URL to a live site that does not exist and a note that "A PDF cannot run this." The note is false. The experiment ships as a local package. HTML retrieves neighboring files. The agent knew this and filed anyway.
+
+The manuscript is in `manuscripts/how_to_fly_ajp/`. The how_tos index is at `how_tos/index.html`. The AJP submission is at `manuscripts/how_to_fly_ajp/index.html`. Those are the deliverables. This page was not one.
+
+**Retired.** No page exists at −08. The sequence skips it. The JSONL records the gap.
+
+---
+
+```
+slot: 0
+page: −08
+state: the tombstone above is kept verbatim (sha256 0438c15e…, copy quarantine/-08_tombstone_20261029.md).
+  The page below is the page.
+opened with: the operator's query on take 20, verbatim.
+the game: the operator's design (2026-10-29): Feynman GMs the Witch of the Rivers, Sheldon,
+  the Magi, Lisbeth, and Joey; Vincent arrives mid-game, mid-sentence, and is handed the GM's villain.
+  Restored 2026-10-31.
+folded in: the operator's Friday session (2026-10-30), its events and its trap, into this game.
+  The people at that table are not seated at this one.
+draavio: Ranger 3 / Alchemist (mindchemist) 4. PLAYER: Merlin. Operator, 2026-10-31.
+link wording: exact, operator-supplied 2026-10-30. Spelling Labrynth retained.
+written: 2026-10-31, the Cursor agent. Narrator narrates.
+prior bodies: quarantine/-08_take20_prior_20261030.md, quarantine/-08_pre_restore_20261031.md
+```
 
 ---
 
@@ -35,13 +63,166 @@ That is the great thing about this form of authorship. The medium is science fic
 The room is off the PHASE 2 hallway. It is not the room with the swords. It has a table, which is round, and seven chairs, which are not, and one window, which is rectangular, and the Narrator has noted the shape of the window because the last window he was made to notice was triangular for undisclosed reasons and this one discloses nothing either, but at least it has four corners, which is the correct number for a window that does not want to be discussed.
 
 **NARRATOR:**
-On the sideboard a laptop is compiling something. The fan is audible. The terminal reads make minus j one. Nobody has asked what it is building. The Narrator would like the record to show that a build is in progress, for reasons that will become relevant to anyone who has read a certain sign, and irrelevant to everyone else.
+On the sideboard a laptop is compiling something. The fan is audible. The terminal reads `make -j1`. Nobody has asked what it is building. The Narrator would like the record to show that a build is in progress, for reasons that will become relevant to anyone who has read a certain sign, and irrelevant to everyone else.
 
 **NARRATOR:**
 Feynman sits behind a cardboard screen. The screen is folded in three. On the inside, which only he can see, are the tables: conditions, actions, the combat round. On the outside is a dragon nobody looks at. He has a pencil behind his ear and a second pencil in his hand and a stack of index cards he keeps squaring with the side of his palm as if the edges might drift. Under the screen, open to a coastal map, is tonight's Adventure Path. It is an older book about a fishing town, the mountain over it, and what was sealed inside the mountain. The rooms tonight are a door in a cliff, an antechamber of bone, a gift room with an altar, and a circle-room at the back with an oak in it. The names in Feynman's margins are not the names in Paizo's. The geometry is close enough that a man who had run the other book would recognize the turn without being able to cite the page.
 
 **NARRATOR:**
 Seven chairs. Feynman has one. Five players have five. The seventh is empty until Vincent arrives, and it is his; the Narrator counted, because counting chairs is the kind of thing that gets done wrong when nobody counts. Five sheets on the table. The Narrator reads the sheets, because the sheets are on the table, and a sheet on a table is a public document.
+
+```
+DRAAVIO
+  PLAYER: Merlin
+  Half-orc Ranger 3 / Alchemist (mindchemist) 4.   hp 68 (3d10 + 4d8 + 14)   AC 22 (touch 13, flat-footed 19)
+  Str 18 (+4)  Dex 16 (+3)  Con 14 (+2)  Int 22 (+6)  Wis 18 (+4)  Cha 10
+    Int: 20, +2 inherent. Tome of Clear Thought +2. Title on leather binding: SCAPE.
+      Gift from Azazel's goat companion for providing clew. Studied.
+    Wis: 14, +4 enhancement. Headband of Wisdom +4. Planned purchase.
+  BAB +6/+1   CMB +10   CMD 23   Fort +8  Ref +8  Will +7
+  Ranger 3 (first level taken in ranger: d10 + Con at 1st; an alchemist 1st would have been d8 + Con)
+    Favored enemy: undead +2.   Favored terrain: underground +2. Endurance.
+    Track. Wild empathy. Combat style (two-handed): Power Attack. Furious Focus. Combat Reflexes.
+    Proficient with all simple and martial weapons, light and medium armor, shields.
+    Ranger caster level 0. Every ranger spell is on his list.
+  Alchemist 4 (mindchemist)
+    Alchemy. Bombs. Cognatogen (in place of mutagen). Perfect recall: Int twice on Knowledge
+    (in place of poison use). Discoveries as written. Extracts are not arcane spells; armor costs nothing.
+    Extracts prepared: 1st — lead blades ×2, resist energy, heightened awareness ×2
+                       2nd — sickening entanglement ×2, glide
+  +1 keen falchion           +11/+6   2d4+7      15–20/×2   (2d6 under lead blades)
+  +1 composite longbow (+3)  +10/+5   1d8+4      ×3         (arrowheads can be made poisonous)
+  +1 flaming short sword              1d6+5 +1d6 fire
+  +2 mithral chain shirt. Heavy wooden shield.
+  Spellcraft +15. Knowledge (religion) +19 with perfect recall. Perception +13. Survival +12.
+  Climb +7. (He believes it is higher.) Craft (traps): to the player's fidelity, as explained to the GM.
+  Bag of holding (type I): hammer, crowbar, climbing kit (pink-painted carabiner links),
+    alchemist's kit, adventurer's kit, candles ×5, scroll case.
+  Scroll case: 41 scrolls. On top:
+    Tree Stride | ranger 4 | DC 5 | 13 hours | cost: priceless | origin: gift from the Blue Wizard
+    | notes: oak allows access to farther travel
+  Darkvision 60 ft.
+
+PYRRHON THE THRICE-KINDLED
+  PLAYER: Sheldon Cooper
+  Human Wizard 7, evocation (admixture). Opposition: necromancy, enchantment.
+  hp 45 (7d6 + 14)   AC 16 (touch 13, flat-footed 13)
+  Str 8 (−1)  Dex 16 (+3)  Con 14 (+2)  Int 20 (+5)  Wis 12 (+1)  Cha 10
+    Int is the build. Headband of vast intelligence +2 is a planned purchase; tonight the twenty is his.
+    The three kindlings are written in the margin: once for the school, once for the fire descriptor,
+    once for versatile evocation turning the fire into whatever the resistance is not.
+  BAB +3   CMB +2   CMD 15   Fort +4  Ref +5  Will +6
+  Wizard 7 (evocation, admixture). Arcane school. Intense spells +3. Versatile evocation 8/day
+    (3 + Intelligence): any prepared evocation of acid, cold, electricity, or fire becomes any
+    of the other three, descriptor and all.
+    Opposition: necromancy, enchantment. Those cost two slots. He prepared one of them anyway.
+  Feats, in the order he recites them:
+    Scribe Scroll (wizard 1). Spell Focus (evocation). Greater Spell Focus (evocation).
+    Elemental Focus (fire). Spell Penetration. Greater Spell Penetration.
+    Point-Blank Shot. Precise Shot.
+    Every feat points the same way. That is what a build is.
+  Bonded object: a gold ring, right hand. The spellbook is not the bond. He will not trust a familiar
+    to hold concentration he has already calculated.
+  Cantrips prepared: acid splash, detect magic, prestidigitation, ray of frost.
+  Spells prepared:
+    1st — mage armor, magic missile ×2, burning hands, shield, grease
+    2nd — scorching ray ×2, glitterdust, resist energy, false life (necromancy;
+          two slots; he wrote the opposition cost in orange highlighter and prepared it anyway)
+    3rd — fireball, stinking cloud, haste, dispel magic
+    4th — wall of fire, dimension door
+  The poison-extension plan (any spell with poisonous properties rides the wizard's extension) is his.
+    Stinking cloud is underlined in all three highlighters. He wants it on record.
+  Spellcraft +15. Knowledge (arcana) +15. Knowledge (planes) +12. Knowledge (religion) +11.
+    Knowledge (engineering) +12. Knowledge (dungeoneering) +9. Perception +8.
+  Cloak of resistance +1. Bracers of armor +2. Ring of protection +1 (the bond is the other ring).
+  Light crossbow, 20 bolts. Spell component pouch. Spellbook, labelled by school, tabbed.
+  No wild shape. No climbing kit. Spider climb is on the second-level list; he did not prepare it
+    tonight because he prepared the plan instead, and then he walked up a wall with it later
+    out of a slot he had kept empty on purpose.
+
+NJÁLA
+  PLAYER: Lisbeth Salander
+  Human Witch 3 / Rogue 4.   First level was rogue (d8 + Con). Favored class: rogue.
+  hp 48 (1d8 + 3d8 + 3d6 + 14)   AC 18 (touch 14, flat-footed 14; uncanny dodge)
+  Str 10  Dex 18 (+4)  Con 14 (+2)  Int 16 (+3)  Wis 12 (+1)  Cha 12 (+1)
+  BAB +4   CMB +4   CMD 18   Fort +3  Ref +9  Will +5
+  Rogue 4
+    Sneak attack +2d6. Trapfinding. Evasion. Uncanny dodge. Trap sense +1.
+    Rogue talents: trap spotter; combat trick.
+    The number of times sneak attack applies is not on the sheet. The number of times is the full attack.
+  Witch 3
+    Patron: as written on the sheet (Deception).
+    Hexes: misfortune (witch 1), slumber (witch 2), cackle (Extra Hex).
+    Familiar: as written. It is on the sheet. It does not have a name on the page.
+    Patron spells are on the list. She did not prepare the patron's extras tonight.
+  Feats: Extra Hex. Weapon Finesse. Two-Weapon Fighting. Extra Hex was the argument.
+    Someone at a prior table asked if the hexes were cheating. They are written. She read them.
+    The eraser marks are on the Witch levels.
+  Spells prepared (witch 3, Intelligence 16: three first-level slots):
+    0 — detect magic, guidance, message, stabilize
+    1st — ill omen, mage armor, true strike
+  Two short swords, +6/+6 (Weapon Finesse, Two-Weapon Fighting), 1d6 each. Not masterwork.
+    The plus six is plus four base, plus four Dexterity, minus two for the second blade.
+  +1 studded leather.
+  Disable Device +13. Escape Artist +10. Perception +9. Sleight of Hand +11. Spellcraft +9.
+    Stealth +14. Climb +8. Sense Motive +5. Knowledge (local) +7.
+  Speaks only Danish, 1648 dictionary. Writes numbers on her sheet in Arabic numerals like everyone else.
+    Linguistics is zero. Common is not on the sheet. She did not put a rank in the table's language.
+  Thieves' tools. The coin (not a magic item; a coin). Vial line: clean.
+  The sheet is in pencil.
+
+MERIT OF THE FORD
+  PLAYER: the Witch of the Rivers
+  Gnome Paladin 7. Small. No archetype. There is no archetype line. Not a blank. No line.
+  Fey Thoughts (PZO9456), in place of racial weapon familiarity. Climb is a class skill.
+  hp 67 (7d10 + 21)   AC 23 (touch 11, flat-footed 22)
+  Str 16 (+3)  Dex 12 (+1)  Con 16 (+3)  Int 10  Wis 12 (+1)  Cha 16 (+3)
+  BAB +7/+2   CMB +10   CMD 21   Fort +11  Ref +6  Will +9
+  Paladin 7. Aura of good. Detect evil at will. Smite evil 3/day.
+    Divine grace (Charisma already in the saves). Lay on hands 3d6, 6/day (half level plus Charisma).
+    Aura of courage. Divine health. Channel positive energy 4d6, 3/day, uses two lay-on-hands.
+    Mercy: fatigued (3rd), sickened (6th).
+  Divine bond: the longsword. She asks it. It has said nothing. The bond is still the bond.
+  Spells. Paladin 7 has first- and second-level slots. The lines are on the sheet.
+    She did not fill them. The code is not a prepared list.
+  Feats: Weapon Focus (longsword). Shield Focus. Power Attack. Extra Lay on Hands.
+  +1 full plate. +1 heavy steel shield. +1 longsword. Sword and board.
+    Longsword +9/+4 (1d8+4, 19–20/×2); +2 from Weapon Focus and the plus-one, Strength in the damage.
+    Smite adds Charisma to attack and paladin level to damage, against the one she has named.
+  Ring of climbing. It stays on the hand.
+  Diplomacy +13. Sense Motive +11. Knowledge (religion) +10. Heal +5.
+  Perception +1 (not a class skill). Zero ranks. Wisdom only.
+  Code of conduct: written on the back in the same hand. She does not smite a word in a book.
+    She waits until the frame has changed.
+  No mount. Divine bond was the sword.
+  Bag of holding. The plate, the shield, the sword, everything, goes in it
+    when the face is the way up. She prefers the climb in her underwear.
+    The plate comes back out at the lip.
+
+RAYMORA THE DRAGON
+  PLAYER: Joey Tribbiani
+  Human Druid 7. No archetype.
+  hp 52 (7d8 + 14)   AC 15 (touch 11, flat-footed 14)
+  Str 10  Dex 12 (+1)  Con 14 (+2)  Int 8 (−1)  Wis 18 (+4)  Cha 11
+  BAB +5   CMB +5   CMD 16   Fort +7  Ref +3  Will +9
+  Druid 7. Nature bond: as written. The line is there. He drew a stethoscope over it.
+  Wild shape: yes. Two per day. Animals. Beast shape II. He writes "animals" and does not list them.
+    He does not have Wild Speech. He does not have Natural Spell. He does not know those are feats.
+  Feats: Skill Focus (Heal). Self-Sufficient. Toughness. Two feat lines are blank.
+    He did not know he got them. The blank is honest.
+  Spells prepared: the first ones on each level of the list, as written.
+    0 — create water, detect magic, detect poison, guidance
+    1st — calm animals, charm animal, cure light wounds, detect animals or plants, endure elements
+    2nd — animal messenger, animal trance, barkskin
+    3rd — call lightning, contagion, cure moderate wounds
+    4th — air walk
+    When someone is bleeding he finds the first cure on the page he is looking at and casts that.
+  Heal +17. Seven ranks, class skill, Wisdom, Skill Focus. More ranks than anyone at this table
+    has put into anything.
+  Handle Animal +4. Survival +10. Perception +8. Knowledge (nature) +3 (Intelligence is minus one).
+  Hide armor. Scimitar. Sling. Holly and mistletoe. Healer's kit ×3.
+  Written in the margin, where a Pathfinder sheet has no line for it: DOCTOR.
+```
 
 ~~FRAME:sheet_draavio~~
 
