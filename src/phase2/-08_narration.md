@@ -732,10 +732,72 @@ That's a lot.
 **NARRATOR:**
 It is night. It will be night until they go back to the inn. Nobody is charged for the time, so they take it. The code is built at the top of a cliff, between four characters and a lizard, the way the Narrator suspects most languages were: somebody made a sound, somebody else said *that means yes*, and somebody third objected. The Magi writes it down on an index card as it is decided, and the Narrator reads it, because it is on the table.
 
+```
+SCRATCH  (built at the top of the cliff; message carries it; night, no clock)
+  claw 1–5, tapped from the thumb      hiss: sharp / mid / breath      glottal
+  glottal first = noun    glottal second = verb    glottal third = adjective
+  glottal alone = the
+  claw before hiss = positive          hiss before claw = negative      absence counts
+  all claws scraped = yes              sharp hiss alone = no
+  numbers: claws counted to five, scrape, count again; scrape = plus; sharp hiss = minus
+
+       slots             noun              verb              adjective
+   1   claw1             guard / enemy     attack            hostile
+   2   claw2             door              open              locked
+   3   claw3             object            take              valuable
+   4   claw4             trap              disarm / avoid    hidden
+   5   claw5             path              move / follow     safe / clear
+   6   sharp             alarm             trigger           loud
+   7   mid               key / tool        use               helpful / ally
+   8   breath            shadow            hide / wait       dark
+   9   claw1 sharp       leader            kill              strong / absolute
+  10   claw1 mid         prisoner          rescue / free     weak / injured
+  11   claw1 breath      room              search            large
+  12   claw2 sharp       stairs            climb             high / above
+  13   claw2 mid         pit               descend           low / below
+  14   sharp claw1       poison            flee              toxic
+  15   mid claw1         caster / magic    cast              arcane / divine
+  16   breath claw1      time / light      watch             far
+
+  doctor's extension:
+  17   claw3 sharp       blood             hemorrhage        severe / fatal
+  18   claw3 mid         bone / structure  break             broken
+  19   claw3 breath      breath / lungs    suffocate         asphyxiated
+  20   sharp claw3       venom             infect            diseased
+  21   mid claw3         heart / pulse     stabilize         stable / living
+  22   breath claw3      mind / brain      sleep / knock out unconscious
+  23   claw4 sharp       corpse            die               dead
+
+  archivist extension (added in the vault):
+  24   claw4 mid         expression        express           expressive
+  25   claw4 breath      record / archive  write / record    written
+  26   claw5 sharp       gold              conceal / bury    concealed
+  27   claw5 mid         the other / that  remain            remaining / still
+  28   claw5 breath      ground / earth    send away         sent / gone
+  29   claw2 breath      boundary          bind / contain    bounded / contained
+  30   sharp claw2       absence           vanish            unseen / no longer
+  31   mid claw2         lie               conceal / lie     false
+  32   breath claw2      question          ask / seek        unknown / where?
+  33   sharp claw4       the present       be present        now
+  34   mid claw4         that place        be there          exactly there
+
+  particles (no glottal):
+       mid alone         but / on the other hand
+       breath alone      and / continuing
+       numbers           claw without glottal (1–5; scrape to add; sharp hiss to subtract)
+```
+
 ~~FRAME:scratch_table~~
 
 **NARRATOR:**
 The iguana objects. Joey does it at the table, out loud, which is the only way a player can: he taps his fingers on the wood, hisses through his teeth, and makes a small sound at the back of his throat that the Narrator will call a click because it is not anything else.
+
+```
+claw1 · glottal · breath        verb 11     search
+glottal · breath · claw1        noun 16     time / scope
+claw5 · (beat) · glottal        adj 5       clear / empty
+sharp                           no
+```
 
 ~~FRAME:scratch_decode_1~~
 
@@ -749,7 +811,14 @@ Search the scope. Empty. No.
 He's right. There are more places to put a word than sixteen. The order matters, absence counts, and there are three hisses and five claws. We used the first sixteen we thought of. The rest of the space is empty.
 
 **NARRATOR:**
-Joey taps, hisses, clicks; harder this time.
+Joey taps, hisses, clicks; harder this time; the Narrator could chart the amplitude and will not.
+
+```
+claw1 · glottal · mid           verb 10     rescue
+glottal · claw1 · sharp         noun 9      leader
+claw1 · sharp · glottal         adj 9       absolute
+sharp  sharp                    no  no
+```
 
 ~~FRAME:scratch_decode_2~~
 
@@ -957,6 +1026,16 @@ The Magi looks at the empty vellum, then at the unused mutagen line on the sheet
 **FEYNMAN:**
 Antechamber, rough stone, two side niches with old bones. Something is standing just inside the door that used to be a person. It has a tongue. The tongue is the wrong color. It was waiting for the door. It's already moving. Initiative.
 
+```
+Njála           17
+Pyrrhon         15
+skeleton        13
+Draavio         11
+Merit            8
+Raymora          6
+The Archivist    delays
+```
+
 ~~FRAME:initiative_1~~
 
 **FEYNMAN:**
@@ -1092,6 +1171,16 @@ The Narrator notes the rejection the way a ledger notes a refused payment: the t
 
 **NARRATOR:**
 Initiative. The vampire gargoyle comes off the ledge and is airborne over the altar. Gold and silver on the altar that are not the point.
+
+```
+Draavio          19
+Njála            17
+Pyrrhon          14
+Merit            12
+Gargoyle         11
+Raymora           9
+The Archivist     delays
+```
 
 ~~FRAME:initiative_2~~
 ~~FRAME:gargoyle_dive~~
@@ -1811,6 +1900,29 @@ Draw it.
 
 **NARRATOR:**
 Draavio draws it. The Magi's hand is precise when the diagram is a gate.
+
+```
+TRIGGER  (presence → pressure)
+  Stones at the back of the room, near where the circle was, raised subtly.
+  The stones sit on the oak's roots.
+  Researchers investigate thoroughly. Their presence within acts on the rope.
+  Deformation in the rope presses it against the carabiner arm.
+
+CLICK  (the arm is a measure of force; the click is that of a flintlock)
+  Gate snaps. Tension drops.
+  Flint on the gate scrapes iron. Spark.
+
+PAYLOAD
+  Candle / receptacle lights.
+  Vial-poison from the mother becomes gaseous.
+  Sheldon's plan, readied on the click: stinking cloud [poison], conjuration (creation).
+    Fort negates; nauseated while inside and 1d4+1 rounds after; SR no.
+  Draavio's prepared sickening entanglement [poison].
+    As entangle, plus Fort or sickened while in area and 1d4 rounds after.
+    Sickened is −2 on saves, including Fort against the cloud.
+  Lisbeth's misfortune is available for the first researcher who makes a save they should not.
+  Feynman's ruling: any spell with poisonous properties can ride the wizard's extension plan.
+```
 
 ~~FRAME:trap_diagram~~
 
@@ -2548,6 +2660,12 @@ Full attack.
 **FEYNMAN:**
 Full attack. Two swords. Flanking's in the number. Two-weapon penalty's in the number. Cast them in order so I can see them.
 
+```
+main  +8   13 → 21  hit   3 + 7 (sneak) = 10, DR 5 →  5
+off   +8   15 → 23  hit   5 + 8 (sneak) = 13, DR 5 →  8
+                                                    = 13
+```
+
 ~~FRAME:combat_rolls~~
 
 **FEYNMAN:**
@@ -3091,6 +3209,14 @@ The Magi takes the book out of the bag of holding and holds it so the leather bi
 **NARRATOR:**
 Vincent turns the card over, finally, and lays it face up on the table.
 
+```
+THE ARCHIVIST
+  Azazel.
+  Keeper of the record of what was taken. LN by his own account.
+  Companion: a goat. Red collar. The party has met it.
+  Init +2. He had already begun.
+```
+
 ~~FRAME:archivist_card~~
 
 **NARRATOR:**
@@ -3254,6 +3380,15 @@ The iguana goes still. One eye on Azazel. The other eye on the goat with the red
 
 **NARRATOR:**
 The sounds are small. The cantrip carries them. The Magi picks up the index card and writes as they come. Notation, left to right, glottal marked.
+
+```
+G  ·  C1  ·  M  ·  G  G·C4·M  ·  G  ·  S·C4·G  M·G·C2  ·  C2·B·G  B  C2·B·G
+G·C5·S  C5·S·G  ·  C5·G·B  ·  S·C2·G  ·  C5·M·G  M·G·C2  ·  G  G  C5·M·G  ·
+G·B·C1  ·  S·C4·G  G·C4·M  ·  G·C4·M  C4·G·M  G·C5·S  G·C4·B  ·  M  ·  M  ·
+G·C5·M  G  ·  G·C5·M  G  ·  S  ·  M·C4·G  ·  B·C2·G  M·G·C2·G  ·  G·B·C1
+G·C4·B  G  ·  G·C4·M  C5·G·B  ·  G·C4·M  M·C4·G  ·  G·M·C2  C5·G·B  ·
+G·M·C2  C5·M·G  ·  M·C4·G  ·  G·C4·M  ·  G
+```
 
 ~~FRAME:language_invent~~
 ~~FRAME:scratch_finale~~
