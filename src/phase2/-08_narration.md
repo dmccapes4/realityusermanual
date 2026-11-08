@@ -781,6 +781,12 @@ SCRATCH  (built at the top of the cliff; message carries it; night, no clock)
   33   sharp claw4       the present       be present        now
   34   mid claw4         that place        be there          exactly there
 
+  the last four (marked at the top of the cliff; named after the sounds stopped):
+  35   breath claw4      oak / tree        pass through      rooted
+  36   sharp claw5       goat              return / lead back  returned
+  37   mid claw5         judgement         judge             just / judged
+  38   breath claw5      rho               drift             navigable
+
   particles (no glottal):
        mid alone         but / on the other hand
        breath alone      and / continuing
@@ -823,10 +829,10 @@ sharp  sharp                    no  no
 ~~FRAME:scratch_decode_2~~
 
 **LISBETH:**
-Redd Anføren? Absolut. Ney ney.
+Redde. Høffding. Aldeelis. Ney. Ney.
 
 **LISBETH_EN:**
-Rescue the leader? Absolute. No no.
+Rescue. Leader. Absolute. No. No.
 
 **NARRATOR:**
 The Magi puts the index card away. He does not argue with the iguana. He marks four new slots on the card: thirty-five through thirty-eight. He will not name them yet. The iguana hisses once, low, which the Narrator reads as acceptance.
@@ -2589,39 +2595,62 @@ It hasn't done anything. Cast it.
 *(casts)* Twelve. Twenty-seven.
 
 **FEYNMAN:**
-Flesh golem. Construct. Magic immunity, as most constructs, except: DR five slash magic. No mind. No Dexterity. This thing is not clever. It does not have to be.
+Flesh golem. Immune to any spell or spell-like ability that allows spell resistance. Certain spells and effects function differently against it, and those are listed. Damage reduction five, adamantine. Two slams.
 
 **SHELDON:**
-Magic immunity. Not magic resistance. Immunity. Immune to all spells, spell-like abilities, and supernatural effects — with exceptions. They're in the stat block, under special vulnerabilities. Magical slashing can penetrate the DR. Lightning can.
+*(already writing)* Immune to any spell that allows spell resistance.
 
-**FEYNMAN:**
-The book also has a note about electricity. Read it.
-
-**SHELDON:**
-*(He reads it. He puts the book down. He does not say what it says.)*
-
-**FEYNMAN:**
-Read it out loud.
+**NARRATOR:**
+He underlines it. He underlines it again. He stops listening.
 
 **SHELDON:**
-In a moment.
+Glitterdust. Conjuration, creation. No spell resistance. They are walking in a row. Centered on the middle one.
 
 **FEYNMAN:**
-Read it now or don't read it at all.
+*(casts seven Will saves)* All seven fail. Outlined in gold dust. Blinded. *(A beat.)* They have Scent. Innate. They are soldiers in the way werewolves are soldiers — it travels with the shape. Scent does not remove the blindness. It constrains it. They can find you. They cannot see you. The blindness stands.
 
-**SHELDON:**
-*(reading, very quietly)* "A magical attack that deals electricity damage breaks any slow effect on the golem and heals one point of damage for every three points of damage the attack would otherwise deal." *(He stops. He does not say anything else.)*
+**NARRATOR:**
+Seven soldiers, gold-outlined, moving by smell like illiterate animals. Beasts!
+
+**MERIT:**
+*(lower and slower than her own voice, with the accent the Narrator suspects is a ford on a river nobody else has seen)* Merlin continued through the oak.
+
+**LISBETH:**
+Ney. Draavio fortsatte igiennem Egen.
+
+**LISBETH_EN:**
+No. Draavio continued through the oak.
+
+**WITCH:**
+That is what I said.
+
+**NARRATOR:**
+The Narrator files both. He does not decide between them. The sheet has both names on it, one at the top and one in the box marked PLAYER, and the oak let one man in and one man out. He did not come back out the same side. If there were two of them in the tree, the tree did not say. The tree does not say anything. That is why it is still standing.
 
 **FEYNMAN:**
-The other one.
-
-**SHELDON:**
-"A magical attack that deals cold or fire damage slows a flesh golem, as the slow spell, for two d six rounds. No saving throw."
-
-**FEYNMAN:**
-Those are the exceptions. They're in the book. *(He looks at Sheldon's sheet.)* Everything you've prepared deals acid, cold, electricity, or fire, and converts freely between them. All four are represented in those exceptions. Your sheet has a plan for this room. You wrote it before tonight. Initiative.
+Initiative.
 
 ~~FRAME:initiative_3~~
+
+**NARRATOR:**
+The roll goes around. At the end, Feynman looks at the place where the Magi's dice should be.
+
+**FEYNMAN:**
+Draavio is not in the room.
+
+**NARRATOR:**
+Nobody says anything. The note is by the pen. They have all read it.
+
+```
+Njála           17
+Pyrrhon         14
+Merit           12
+peacock woman   10
+flesh golem      8
+Raymora          6
+soldiers        variable (gas: nauseated 3, sickened 2, coughing 2)
+The Archivist   delays (Vincent, still waiting)
+```
 
 **NARRATOR:**
 The Narrator notes that seven is more than four. They entered behind the peacock woman, behind the golem. They are not researchers. Feynman has written on the inside of his screen two lines in small capitals: NOT IMMUNE: MAGICAL SLASHING. NOT IMMUNE: KEEN.
@@ -3572,6 +3601,9 @@ The Magi takes a second scroll out of the case. Tree shape. The notes on its lin
 
 **NARRATOR:**
 Observation stopped.
+
+**NARRATOR:**
+What the Magi was still writing, after the sounds stopped, was the names of the four slots he marked at the top of the cliff. Breath before the fourth claw: oak. Sharp before the fifth: goat. Mid before the fifth: judgement. The last place is breath before the fifth claw, the softest hiss ahead of the farthest claw, and he writes rho, lower-case. The Narrator notes that it is not a name. It is the drift term: the way a thing goes on average, apart from the scatter. Everything above it on the card is a thing, what a thing does, or what a thing is like. rho is which way it was already going. There is no place left on the card after it.
 
 ---
 
