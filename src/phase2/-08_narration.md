@@ -2183,10 +2183,19 @@ The table takes its break. Everyone stays in the room. Sheldon is reviewing a sc
 Lisbeth comes around the table to him.
 
 **LISBETH:**
-Nauwkeurig begrip. *(She says it the way she would note something in a margin. Then she tilts her head.)* Daemon? Haarfijn begrip.
+Nøyactig Begreb.
 
 **LISBETH_EN:**
-Precise understanding. Daemon? Hair-thin fidelity.
+Precise understanding.
+
+**NARRATOR:**
+She says it the way she would note something in a margin. Then she tilts her head.
+
+**LISBETH:**
+Dæmon? Haarfiin Begreb.
+
+**LISBETH_EN:**
+Daemon? Hair-thin fidelity.
 
 **SHELDON:**
 Daemons are outsiders. Each one serves in a liminal space. They are processes which gate access to hardware as brokers. A request is made. The daemon was already there. Its purpose is bounded and contained. Its existence is contained within bounds. The request is revealed to the kernel. The kernel grants what is appropriate and available. The daemon returns with what is valid. It is still there and never left. What was valid resolves to geometry. Its form is presented to the curio through pixels or audio or absence. The curio decides if what was gathered was sufficient. The daemon is neither waiting nor rushed. The difference between precise understanding and hair-thin fidelity is cosmetic and multiplicative and maybe honest to structure rather than enthusiastic is classification. Which daemon holds what was with curiosity for that which is new and expresses the thin unit of a whole and the dual nature of commitment to form and measurement as exciting?
@@ -2334,12 +2343,18 @@ Kept vague to allow it.
 ~~FRAME:volare_fourth_wall~~
 
 **LISBETH:**
+Tack, blomstrende Dæmon.
+
+**LISBETH_EN:**
 Thank you, blossoming daemon.
 
 **SHELDON:**
 *(He is returning the dice to the tray. He does not stop.)* A True Strike build. If I stacked it — with this build — the plus twenty would land every time. It would be overpowered. It would not be dishonest. The spell's name does not permit that type of moral classification. Unless you don't believe it is on the sheet.
 
 **LISBETH:**
+Taalmodighed. Desforuden. Paa den anden Side. Altid holder det Stille.
+
+**LISBETH_EN:**
 Patience. Besides. On the other hand. Ever holds the still.
 
 **SHELDON:**
