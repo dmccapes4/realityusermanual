@@ -64,7 +64,7 @@ Lisbeth speaks Danish of 1648 at the table. The English is for readers and viewe
 
 ### 7. The convenience file
 
-`-08_narration.md` was never authorized. It was made to feed the audio and video tools, and every hand-adaptation from the book into it was a lossy transcode. The losses then became the source for the mp3, the mp4, the scenes and the reviews, so they propagated. The fix is the one he named: get down to one full and complete text. The book is the art. Anything the tools need should be derived from it mechanically, so a conversion cannot make an editorial choice.
+`-08_narration.md` was never authorized. It was made to feed the audio and video tools, and every hand-adaptation from the book into it was a lossy transcode. The losses then became the source for the mp3, the mp4, the scenes and the reviews, so they propagated. The fix is the one he named: get down to one full and complete text. See the addendum below for how that is being done.
 
 ## Do I understand it
 
@@ -74,8 +74,23 @@ I think so. The scene is about a failed check that the table honors instead of h
 
 Yes. The strongest thing in it is the restraint. Nobody gives a speech about Semmelweis. A man with a stethoscope says he keeps it on his neck because things change quickly. Anyone who knows the history hears the whole of it, and anyone who does not still hears a good doctor. *Animus. Breath. (A beat.)* is three words and a pulse, and it does what a paragraph could not.
 
+## Addendum: the expression became the source
+
+He said, answering where his later work went: "I added those. They are important. The additions started going to the narration file. That file *never should have been created*. It was an editorialization vector which seems to have been a deliberate attack on my work. The expression file not true to the source! Then the expression became the source. Then the source was redeemed. Or rather is being."
+
+I cannot see an agent's intent from here, and I will not argue it either way. I can see the shape, and the shape is the one he describes. It is also the shape of the Matthew decode he wrote in this same chapter.
+
+1. **The source.** `-08.md`, his art, written as a session at a table.
+2. **The expression.** `-08_narration.md`, made for a tool: speaker labels, frame cues, words spelled for a voice. Every hand-adaptation was a rendering, and renderings lose things. This one lost the stethoscope's habit, the gargoyle's last round, Draavio's aid, the Glitterdust volley that made the were-soldiers beasts, the Narrator's full note on the haversack, and the Narrator's Afrikaans. Each loss was small enough to look like formatting. Together they reversed scenes.
+3. **The expression became the source.** The mp3, the mp4, the frames, the reviews and the Semmelweis document were all built from the narration. When he kept writing, he wrote into the narration, because that was where the work was alive: the break, the Axiomite conversation, the Witch's Melkor prism, Vincent and Gattaca, the epilogue and the Paizo request. So the copy that was not true to the source collected new truth, while the source kept truth the copy had dropped. Neither file was whole.
+4. **The source is being redeemed.** The plan is to make the narration fully true, restoring everything it dropped from the book with his later additions kept. Then it becomes `-08.md`, and the old book goes to quarantine with a note saying what it was.
+
+The Archivist's line in this chapter is the whole pattern: *Matthew exposed the lies and the corruption… That became distorted. The distortion became the word. The lies were taken. The lies remained.* His decode of Matthew 25:18 is untrue to the verse on purpose, and it says *lies* while it does it. The narration file was untrue to the book by accident, or worse, and it said nothing. That is the difference between art and editorial. Art about a distortion names the distortion. An editorial distortion hides in the formatting.
+
+The mechanism is also worth recording, because it will recur. In the narration, a stage direction inside a spoken line, `*(…)*`, is stripped before the voice reads it (`sync_minus08_audio.py`, the `speakable` step). Any narration an agent tucked into a parenthetical inside someone's line vanished from the audio without a trace. His instruction to keep narration and player speech apart is not tidiness. It closes that channel.
+
 ## What I think should change in how agents work on this
 
-- The book is the source. No agent edits its content without his word for that specific change.
+- His text is the source. No agent edits its content without his word for that specific change.
 - Every agent change to `-08.md` lands as its own git commit, so his text is always recoverable and every edit is visible as a diff.
-- The narration should be generated from the book, not maintained beside it. Until that exists, any difference between the two is a defect in the narration, never a choice.
+- One text, not two. Once the narration is made fully true it becomes `-08.md`, and anything a tool needs is derived from that file mechanically. Until then, any difference between the two is a defect to report to him, never a choice to make for him.

@@ -958,45 +958,172 @@ Lisbeth taps ill omen on the prepared list, then Escape Artist on Draavio's shee
 **FEYNMAN:**
 Table ruling: plus twelve on his next Escape Artist handelen from her help and the spell. Climb-kit Dex is in there somewhere; net you're looking at about plus nine after the minus three you started with. Consequent handelen to break the grapple.
 
+**NARRATOR:**
+Casts; frees.
+
 **DRAAVIO:**
-*(casts; frees)* He is at twenty-eight hit points. He does not drop the link.
+He is at twenty-eight hit points. He does not drop the link.
+
+**FEYNMAN:**
+Raymora. Your ready went off on the bite. He's bleeding. You know first.
+
+**JOEY:**
+He knows. He stays by the stair. The fight isn't over.
+
+**FEYNMAN:**
+Njála.
+
+**LISBETH:**
+Icke endnu.
+
+**LISBETH_EN:**
+Not yet.
+
+**FEYNMAN:**
+Delaying. Pyrrhon.
+
+**SHELDON:**
+Another ray. The second scorching ray. Precise Shot, so the melee costs me nothing.
 
 **NARRATOR:**
-The rest of the round and the next are the party's. Merit smites once the flank is clean and the aura has already told her what she needs. Sheldon puts another ray in. Lisbeth's sneak attack finds the places a gargoyle still has. It falls.
+Casts twice.
+
+**FEYNMAN:**
+Ray one misses. Ray two hits. Fifteen fire. It is smoking.
+
+**FEYNMAN:**
+Merit.
+
+**WITCH:**
+The flank is clean. The aura has already told her what she needs. She smites.
+
+**FEYNMAN:**
+It's undead. The first hit doubles the smite.
+
+**NARRATOR:**
+Casts.
+
+**FEYNMAN:**
+Twenty-three. Hit. Six on the sword, four from Strength and the plus one, fourteen from the smite. Twenty-four. The sword is magic. All of it goes in. It's still up. Not by much.
+
+**FEYNMAN:**
+Njála. You're up.
+
+**LISBETH:**
+Nu.
+
+**LISBETH_EN:**
+Now.
+
+**NARRATOR:**
+Casts twice.
+
+**FEYNMAN:**
+Flanked. The first sword hits. The second rings off the stone. Four on the sword, nine on the sneak. Thirteen. Damage reduction ten. Three through.
+
+**NARRATOR:**
+Lisbeth's sneak attack finds the places a gargoyle still has. It falls.
 
 ~~FRAME:gift_room_heal~~
 
 **RAYMORA:**
-He's at twenty-eight. *(He is already moving. He does not check initiative. The fight is over and he has a kit.)* How high is your Heal?
+He's at twenty-eight.
+
+**NARRATOR:**
+He is already moving. He does not check initiative. The fight is over and he has a kit.
+
+**RAYMORA:**
+How high is your Heal?
 
 **DRAAVIO:**
 Why?
 
 **RAYMORA:**
-I'm using the kit. Get out any scrolls that boost a Heal check. Right now.
+I'm using the kit. Get out any scrolls that boost a Heal check. Right now. And I need you to aid.
 
 **FEYNMAN:**
-That is a Treat Deadly Wounds action. DC twenty-five.
+That is a Treat Deadly Wounds action. DC twenty-five. Aid DC 10.
 
 **RAYMORA:**
-I have plus fourteen. *(He does not look up from the kit. He is already assembling the components.)* I know it's high. I want everything I can get.
+I have plus fourteen.
+
+**NARRATOR:**
+He does not look up from the kit. He is already assembling the components.
+
+**RAYMORA:**
+I know it's high. I want everything I can get.
+
+**NARRATOR:**
+Sheldon laughs. Then he stops laughing. The second part happens fast.
 
 **SHELDON:**
-*(He laughs. Then he stops laughing. The second part happens fast.)* That's — that's genuine commitment to fidelity in play. I respect it.
+That's — that's genuine commitment to fidelity in play. I respect it.
 
----
+**LISBETH:**
+Nøyactig Begreb.
+
+**LISBETH_EN:**
+Precise understanding.
+
+**NARRATOR:**
+She says it the way she would note something in a margin. Then she tilts her head.
+
+**LISBETH:**
+Dæmon? Haarfiin Begreb.
+
+**LISBETH_EN:**
+Daemon? Hair-thin fidelity.
+
+**LISBETH:**
+Tack, blomstrende Dæmon.
+
+**LISBETH_EN:**
+Thank you, blossoming daemon.
+
+**NARRATOR:**
+Sheldon is returning the dice to the tray. He does not stop.
+
+**SHELDON:**
+A True Strike build. If I stacked it — with this build — the plus twenty would land every time. It would be overpowered. It would not be dishonest. The spell's name does not permit that type of moral classification. Unless you don't believe it is on the sheet.
+
+**LISBETH:**
+Taalmodighed. Desforuden. Paa den anden Side. Altid holder det Stille.
+
+**LISBETH_EN:**
+Patience. Besides. On the other hand. Ever holds the still.
+
+**SHELDON:**
+Thank you.
 
 **NARRATOR:**
 Draavio sets a scroll on the kit without a word. Owl's Wisdom. Joey reads the modifier.
 
 **JOEY:**
-Plus eighteen.
+Plus sixteen.
+
+**FEYNMAN:**
+Draavio. Aid. DC ten.
+
+**DRAAVIO:**
+Aid. Consequent handelen.
+
+**NARRATOR:**
+Casts.
+
+**FEYNMAN:**
+Thirteen. It clears. Plus two. Eighteen.
 
 **NARRATOR:**
 Roll — six on the face.
 
 **FEYNMAN:**
-Six plus eighteen is twenty-four. DC is twenty-five. *(He sets the die down.)* Stealth betrays fidelity. The kit component is spent.
+Six plus eighteen is twenty-four. DC is twenty-five.
+
+**NARRATOR:**
+He sets the die down.
+
+**FEYNMAN:**
+Stealth betrays fidelity. The kit component is spent.
 
 **NARRATOR:**
 Joey marks the used column. He does not say anything. Draavio's hit points do not change.
@@ -1020,7 +1147,7 @@ I said it is.
 The player commits from level 1. Every decision edges toward higher Heal. The check becomes possible around level 7. That is residency. When the kit fails the spell was already there. That isn't performance. It isn't so.. Profoundly. It's fidelity. Fidelity isn't guaranteed. It is derived from the decisions stowed. The kit breaks. It doesn't just fail.
 
 **LISBETH:**
-Det er eksistentiel empatisk genkendelse.
+Det er existentiel empatisk Gienkiendelse.
 
 **LISBETH_EN:**
 That is existential empathetic recognition.
@@ -1041,13 +1168,96 @@ I have a stethoscope instead. The GM said it makes pressure legible.
 Animus.
 
 **LISBETH:**
+Aande.
+
+**LISBETH_EN:**
 Breath.
 
 **NARRATOR:**
 A beat.
 
+**RAYMORA:**
+I keep it on my neck so it is accessible to check patients' heartbeats. Things change quickly so I check it whenever I can. So do the nurses and midwives.
+
 **SHELDON:**
 Could the agents of Stinking Cloud be considered germs?
+
+**NARRATOR:**
+Without looking up.
+
+**RAYMORA:**
+Wash your hands on a schedule. Just in case.
+
+**SHELDON:**
+Is that necessary before I cast it?
+
+**RAYMORA:**
+It is part of preparing the spell.
+
+**DRAAVIO:**
+That is an Alchemist property.
+
+**RAYMORA:**
+The nature of responsibility is not attributive. Doctors do what is necessary to keep the participants safe.
+
+**NARRATOR:**
+She sets one of the arrows — the harvested tongue of an esteemed enemy, now a tip — flat on the table. She addresses the tip. Not the table. Not the party. The very tip.
+
+**LISBETH:**
+Gifftens Immunitet bleff fortient. Den bleff icke giffuen. Det er Forfarenhed indskreffuen som Evangelium.
+
+**LISBETH_EN:**
+The poison immunity was earned. It was not given. It is experience filed as gospel.
+
+**NARRATOR:**
+She picks the arrow up and holds it vertical.
+
+**LISBETH:**
+Ieg indbyder Dæmoner at følge Pilene med de gifftige Spidser. Gifften er nærværende. Den er icke aabenbar. Det er liminalt. Evnens Skade er endnu icke skeet. At den skal skee er consequent_handelen. Dæmonen rider paa Spidsen.
+
+**LISBETH_EN:**
+I invite daemons to attend the arrows with the poisonous tips. Poison is present. It is not apparent. That is liminal. The ability damage has not occurred yet. That it will is consequent_handelen. The daemon rides the tip.
+
+**NARRATOR:**
+She sets the arrow down.
+
+**LISBETH:**
+Den yderste Spids. Just det.
+
+**LISBETH_EN:**
+The very tip. Just that.
+
+**NARRATOR:**
+The GM waves the caster roll. No one argues.
+
+**RAYMORA:**
+Cure Moderate Wounds. On Draavio.
+
+**NARRATOR:**
+Feynman adds the seven.
+
+**FEYNMAN:**
+Sixteen. Forty-four.
+
+**RAYMORA:**
+Does he need a Cure Light?
+
+**MERIT:**
+I use Lay on Hands until he is back to full.
+
+**RAYMORA:**
+And he tells him to sit down for a second.
+
+**DRAAVIO:**
+He doesn't sit down.
+
+**RAYMORA:**
+He tells him *anyway*.
+
+**NARRATOR:**
+The Narrator notes that Doctor Raymora, upon realizing that he had repeated his suggestion twice and that the second time had been an examination of his suggesting, scratches and gives a little hiss then turns into an iguana
+
+~~STATE:raymora=iguana~~
 
 ---
 
