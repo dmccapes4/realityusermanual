@@ -1930,7 +1930,7 @@ PAYLOAD
 ~~FRAME:trap_diagram~~
 
 **SHELDON:**
-Stinking cloud nauseates. Nauseated means one move action, no spells, no attacks. Sickening entanglement sickens and can entangle. If they fail both, they cannot leave and cannot act. The minus two from sickened applies to the Fort against my cloud. That is the stack.
+Stinking cloud nauseates. Nauseated means one move action, no spells, no attacks. Sickening entanglement sickens and can entangle. If they fail both, they cannot leave and cannot act. The −2 from sickened applies to the Fort against my cloud. That is the stack.
 
 **DRAAVIO:**
 The circle is in the back. They will stand where the camel meets the needle. Presence appears as pressure. The seed is sown.
@@ -2020,7 +2020,7 @@ Save waived.
 ~~FRAME:circle_room_trap~~
 
 **NARRATOR:**
-The rest of the party withdraws up the corridor to its mouth, where the darkness of the passage behind the seam gives them a line to the room and the room no line to them. Sheldon readies. Lisbeth sits with her back to the wall and the coin goes still in her hand. Merit stands. She does not sit in plate. Raymora climbs slowly up the Oak tree where he waits.
+The rest of the party withdraws up the corridor to its mouth, where the darkness of the passage behind the seam gives them a line to the room and the room no line to them. Sheldon readies. Lisbeth sits with her back to the wall and the coin goes still in her hand. Merit stands. She does not sit in plate. Raymora climbs -slowly- up the Oak tree where he waits.
 
 **DRAAVIO:**
 In the oak.
@@ -2210,6 +2210,61 @@ Axiomite.
 
 **NARRATOR:**
 The Narrator lifts the screen and sets it face-up on the table. Below the screen, already there:
+
+```
+This creature resembles a flawless, perfect example of an elf. When it moves, parts of its body dissolve into golden, crystalline dust, swirling without wind, condensing into winding, artistic coils of symbols and equations before reforming into flesh a moment later.
+
+Axiomite CR 8
+
+XP 4,800
+LN Medium outsider (extraplanar, lawful)
+Init +8; Senses darkvision 60 ft.; Perception +18
+
+DEFENSE
+
+AC 21, touch 15, flat-footed 16 (+4 Dex, +1 dodge, +6 natural)
+hp 85 (10d10+30); regeneration 5 (chaotic or magic)
+Fort +6, Ref +11, Will +14
+DR 10/chaotic; Immune disease, electricity, mind-affecting effects; Resist cold 10, fire 10; SR 19
+
+OFFENSE
+
+Speed 30 ft., fly 30 ft. (good)
+Melee +1 longsword +16/+11 (1d8+8/19–20)
+Spell-Like Abilities (CL 9th; concentration +14)
+
+3/day—dispel chaos, haste, hold monster (DC 20), lightning bolt (DC 18), empowered order's wrath (DC 19), telekinesis (DC 20), true strike
+1/day–summon inevitable (level 6, 1 zelekhut), true seeing
+
+STATISTICS
+
+Str 21, Dex 19, Con 16, Int 21, Wis 20, Cha 20
+Base Atk +10; CMB +15; CMD 30
+Feats Dodge, Empower Spell-Like Ability (order's wrath), Improved Initiative, Iron Will, Mobility
+Skills Craft (any one) +18, Diplomacy +18, Fly +8, Knowledge (any three) +15, Knowledge (planes) +18, Perception +18, Sense Motive +18, Spellcraft +18, Stealth +17, Survival +18
+Languages Abyssal, Celestial, Common, Draconic, Infernal
+SQ crystalline dust form
+
+SPECIAL ABILITIES
+
+Crystalline Dust Form (Su): An axiomite can shift between its solid body and one made of golden, crystalline dust as a free action once per round. In dust form, the axiomite looks like a shifting mass of glowing mathematical symbols and equations. In this form it can fly and gains the incorporeal quality; it can use spell-like abilities but cannot make physical attacks. In its solid form, an axiomite cannot fly. Both shapes are the axiomite's true form, and it does not revert to a different form if killed. A true seeing spell reveals both forms simultaneously.
+
+Summon Inevitable (Sp): Once per day, four axiomites may join hands to summon a single zelekhut inevitable as a full-round action.
+
+ECOLOGY
+
+Environment any (lawful plane)
+Organization solitary, pair, or team (3–12)
+Treasure standard (+1 longsword, other treasure)
+
+Stewards of ancient, colossal cities on lawful planes, axiomites represent the fundamental search for order. According to their own history, the first axiomites sprang from the raw mathematical underpinnings of the cosmos long before the first gods began to stir—they are personifications of a primordial reality made flesh in an attempt to understand itself. New axiomites are formed from souls much like celestials or fiends, with spirits drawn across the planes to one of the axiomites' humming crystal monoliths, emerging later as purified creatures of law and theory.
+
+A particular axiomite may look like any humanoid-shaped creature, though the particular form does not affect its abilities in any way. Beneath this form, all axiomites are the same—clouds of glowing, crystalline dust that constantly swirl and congeal into complex tangles of symbols and equations, making them literally creatures of pure mathematical law.
+
+Axiomite society is broken into three divisions, each with its own duty and purpose. One devotes itself to the construction and maintenance of inevitables, another to the expansion and construction of their capital city, and the third to continuing the exploration and calculation of the laws and constants that underlie all of reality. Their leader is a gestalt mind formed by the greatest individuals of their race, forming when needed and then dispersing into its component axiomites to put the god-mind's plans into action.
+
+Section 15: Copyright Notice — Pathfinder Roleplaying Game Bestiary 2, © 2010, Paizo Publishing, LLC; Authors Wolfgang Baur, Jason Bulmahn, Adam Daigle, Graeme Davis, Crystal Frasier, Joshua J. Frost, Tim Hitchcock, Brandon Hodge, James Jacobs, Steve Kenson, Hal MacLean, Martin Mason, Rob McCreary, Erik Mona, Jason Nelson, Patrick Renie, Sean K Reynolds, F. Wesley Schneider, Owen K.C. Stephens, James L. Sutter, Russ Taylor, and Greg A. Vaughan, based on material by Jonathan Tweet, Monte Cook, and Skip Williams.
+```
 
 **SHELDON:**
 CR 8. LN. Medium outsider. Extraplanar. Lawful.
@@ -3449,8 +3504,8 @@ The Magi counts afterward. Forty-three.
 ~~FRAME:language_invent~~
 ~~FRAME:scratch_finale~~
 
-**LISBETH:**
-*(she does not write; she listens; she renders each word the moment it arrives; what comes out is not Danish and it is not English; it is what Scratch decodes to, and she speaks the decode)*
+**NARRATOR:**
+She does not write; she listens; she renders each word the moment it arrives; what comes out is not Danish and it is not English; it is what Scratch decodes to, and she speaks the decode.
 
 **LISBETH:**
 That. One. On the other hand. The expression. This. Now lies. Bounded and contained. Gold concealed. Sent? No longer seen. Still lies. This that was that. Then. Now expression. Expresses gold in speech. But. On the other hand. Just that. Just that? No! There. Exactly where? What was taken? That is written. The expression sent. The expression there. The lies were taken. The lies remained. Exactly there! The expression. That.
