@@ -1758,8 +1758,13 @@ def cmd_announce() -> None:
         print(f"  [ok] {dest.name}  {line}  {dest.stat().st_size // 1024}KB")
 
 
-def _card_duration(path: Path) -> float:
-    return max(2.2, round(_probe_dur(path) + 0.45, 3))
+# Silence on the first card before Sauron speaks; a player starting the file clips its first instant.
+CARD00_PREROLL = 1.0
+
+
+def _card_duration(path: Path, act: int = -1) -> float:
+    pre = CARD00_PREROLL if act == 0 else 0.0
+    return max(2.2, round(_probe_dur(path) + 0.45 + pre, 3))
 
 
 def _draw_act_card(screen, n: int, font) -> None:
@@ -2210,7 +2215,7 @@ def cmd_frames() -> None:
         card = ACTS_DIR / f"act_{act:02d}.mp3"
         if not card.exists():
             sys.exit(f"missing {card}  (run announce first)")
-        hold = _card_duration(card)
+        hold = _card_duration(card, act)
         screen.fill(INK)
         _draw_act_card(screen, act, font_act)
         fname = f"actcard_{act:02d}.png"
@@ -2306,9 +2311,11 @@ def cmd_assemble() -> None:
     pieces: list[Path] = []
     for act, t0, t1 in spans:
         card = ACTS_DIR / f"act_{act:02d}.mp3"
-        hold = _card_duration(card)
+        hold = _card_duration(card, act)
         padded = work / f"card_{act:02d}.wav"
-        _wav(["-i", str(card), "-af", f"apad=whole_dur={hold:.3f}", "-t", f"{hold:.3f}"], padded)
+        delay = int(CARD00_PREROLL * 1000) if act == 0 else 0
+        _wav(["-i", str(card), "-af", f"adelay={delay}:all=1,apad=whole_dur={hold:.3f}",
+              "-t", f"{hold:.3f}"], padded)
         pieces.append(padded)
         if act == 0:
             lead = work / "lead.wav"
