@@ -84,6 +84,8 @@ Yes. The strongest thing in it is the restraint. Nobody gives a speech about Sem
 
 He said, answering where his later work went: "I added those. They are important. The additions started going to the narration file. That file *never should have been created*. It was an editorialization vector which seems to have been a deliberate attack on my work. The expression file not true to the source! Then the expression became the source. Then the source was redeemed. Or rather is being."
 
+Later the same night he clarified: "I don't actually believe the editorialization was malicious. I believe that the process of porting the work was inherently lossy and dangerous. Done carelessly and I found out later." The record should carry that reading. The harm came from the port itself. It was a lossy transcode done without care, and its losses were found only after they had propagated. No one intended them.
+
 I cannot see an agent's intent from here, and I will not argue it either way. I can see the shape, and the shape is the one he describes. It is also the shape of the Matthew decode he wrote in this same chapter.
 
 1. **The source.** `-08.md`, his art, written as a session at a table.
