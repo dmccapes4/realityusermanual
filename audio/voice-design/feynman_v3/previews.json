@@ -1,0 +1,23 @@
+{
+ "model": "eleven_ttv_v3",
+ "guidance": 5.0,
+ "description": "Native American English with a strong working-class New York accent from Far Rockaway, Queens: dropped r's at the ends of words, broad open vowels, quick street cadence, consonants clipped and lively. Male, late 50s to mid 60s. Excellent quality. Persona: physicist running a tabletop game for friends. Emotion: amused, sharp, warm. A lower, slightly gravelly baritone with a wiry edge, not a young tenor and not a polished lecturer. Talks fast when he is explaining, slows down and drops in pitch on the ruling. Plain and direct, a grin under the words, never a parody. Dry close recording.",
+ "text": "Message. Cantrip. You whisper, it carries the sound. It doesn't translate. He's a druid in there. Wild shape doesn't take his mind. He understands every word anybody says. He just can't say any back. You can hiss. You can click your claws on the rock. You can do something in your throat. That's what an iguana has. You don't get the level until the inn. No spells, no skill points, no score increases. Do you mean now or in general?",
+ "previews": [
+  {
+   "file": "preview_1.mp3",
+   "generated_voice_id": "UosQzbgZZ3DYSVQ9ut6K",
+   "duration_secs": 28.187916666666666
+  },
+  {
+   "file": "preview_2.mp3",
+   "generated_voice_id": "LEiQQNoSW8maPX5nvoSf",
+   "duration_secs": 29.076083333333333
+  },
+  {
+   "file": "preview_3.mp3",
+   "generated_voice_id": "QIVV9O8PDbKbQ69V1NBI",
+   "duration_secs": 33.412416666666665
+  }
+ ]
+}
