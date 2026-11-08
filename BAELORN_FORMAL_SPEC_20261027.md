@@ -101,18 +101,28 @@ The twelve principal numbers (yog through thom) lie on the unit complex circle, 
 
 ### IV.a Note for readers running the checker
 
-The two modes are written identically — three syllables, no mode sigil. So `velora_num.py read` must assume count mode, and it will raise `ValueError: checksum: ...` on any correct off-diagonal vector. **That error is not a defect in the word.** Per the paragraph above, the fired checksum is the signal that the number is off-diagonal, i.e. a state rather than a count.
+**There are two vector notations in the corpus, and this file uses the older one.** This is the confusion to resolve before reading §VI.
 
-Worked case, the battery in §VI:
+*This file (§IV above, and §VI).* A vector is ONE three-syllable word. Place and phase occupy the count-mode slots but are read as independent, so the angle is limited to the twelve 30° steps. The battery in §VI is `sim-kun-keth` — magnitude 4, angle keth (90°, the Π sector: *ionic potential; field vector at boundary*, §III), which is the right sector for a battery.
+
+*`conceptual_language/VELORA_ANGULAR_VECTOR_SYSTEM.md` §II, same date.* A vector component is TWO words:
+
+    [place_word] [phase_word]
+    place_word = the magnitude, 1-12 scale
+    phase_word = the angle in integer degrees, say(1..360)
+
+That notation has **1° resolution**, and its §I is explicit that "the phase syllable inside the count-mode word is the integer's own checksum — it is not the direction being encoded." The same battery in that notation is `[sim-kun-ver] [threl thal-lun-val]` — magnitude four, angle ninety degrees.
+
+Consequences for anyone running the tool:
 
     velora_num.py read sim-kun-keth
       ValueError: checksum: place sim=4 requires phase idx 5 (ver) but got keth=4
-    velora_num.py say 4
-      sim-kun-ver
+    velora_num.py say 4   -> sim-kun-ver
+    velora_num.py say 90  -> threl thal-lun-val
 
-`sim-kun-keth` is **correct as written.** Its angle is keth (90°) because 90° is the Π sector — *ionic potential; field vector at boundary* (§III) — and a battery is a potential. The magnitude (4) and the angle (Π) are independent, which is the definition of vector mode. `sim-kun-ver` would be the count-mode word for the quantity four and would place the battery in the λ sector (decay coefficient), which is wrong for a battery.
+The ValueError is expected under this file's notation and is not a defect in the word. Under the two-word notation it does not arise at all, because each word is a valid count on its own terms.
 
-Do not "fix" an off-diagonal vector to satisfy the checker. Read the sector gloss in §III first and ask whether the angle is carrying a physical meaning. If it is, the word stands.
+**[gate] Which notation this file should use is the operator's call.** Note that the workspace rule `velora-phase-resolution.mdc` lists "use the count-mode phase syllable of the magnitude word as the direction of a vector" under *what agents must not do*, which points at the two-word form. Converting §VI would mean rewriting every step and matrix row there, so it has not been done here. Until it is: **do not silently "fix" §VI's words to satisfy the checker, and do not copy §VI's one-word vector form into new documents.**
 
 ---
 
