@@ -27,7 +27,7 @@
 ~~FRAME:pre_game_table~~
 
 **NARRATOR:**
-That is the great thing about this form of authorship. The medium is science fiction. The claims are deadly serious. They are not submitted for peer review. If the participants wish to peer review them then that is an honor. That they would engage my work with epistemic rigor. If they falsify a claim of mine then it is likely measured (in both senses). That means that failure is simply datum. Datum accrues into data. A single die can fail 19 times. The rules say 20 always succeeds. Did the rules take 20. Or is that another concept. When a player takes 20 is it stealing? Or is it convenient for the role play and easier for the GM? So what did they take that was not already theirs? The GM knew that they could take 20. It was written in the Adventure Path. The characters simply had to ask. At least one. Then they all get to take 20. And they all succeed. Which is amoral because success was the result of logical inquiry itself. Which is only considered worthy of eternal damnation for some...
+That is the great thing about this form of authorship. The medium is science fiction. The claims are deadly serious. They are not submitted for peer review. If the participants wish to peer review them then that is an honor. That they would engage my work with epistemic rigor. If they falsify a claim of mine then it is likely measured (in both senses). That means that failure is simply datum. Datum accrues into data. A single die can fail 19 times. The rules say 20 always succeeds. Did the rules *take* 20. Or is that another concept. When a player takes 20 is it stealing? Or is it convenient for the role play and easier for the GM? So what did they take that was not already theirs? The GM knew that they could take 20. It was written in the Adventure Path. The characters simply had to ask. At least one. Then they all get to take 20. And they all succeed. Which is amoral because success was the result of logical inquiry itself. Which is only considered worthy of eternal damnation for some...
 
 ---
 
@@ -46,15 +46,15 @@ Seven chairs. Feynman has one. Five players have five. The seventh is empty unti
 ~~FRAME:sheet_draavio~~
 
 **NARRATOR:**
-Every sheet has a box marked PLAYER. The Narrator has been calling the man in the second chair the Magi for as long as the Narrator has narrated him. The box on his sheet says Merlin, in the same hand that wrote the scroll ledger. The Narrator does not explain it. There is an unnumbered page elsewhere in this building that says it will return to Merlin later. The Narrator does not know whether this is later. He files the name where the sheet put it: under PLAYER, below the half-orc, beside the oak on the top scroll.
+Every sheet has a box marked PLAYER. The Narrator has been calling the man in the second chair the Magi for as long as the Narrator has narrated him. The box on his sheet says *Merlin*, in the same hand that wrote the scroll ledger. The Narrator does not explain it. There is an unnumbered page elsewhere in this building that says it will return to Merlin later. The Narrator does not know whether this is later. He files the name where the sheet put it: under PLAYER, below the half-orc, beside the oak on the top scroll.
 
 **NARRATOR:**
-The Magi has one sheet. It is two classes. The Narrator watched him build it: the first level in ranger for the hit die and the armor and the word favored, which he has not yet decided he accepts; the next four in alchemist for the mind. A ranger at third level casts nothing. A ranger at third level has the whole ranger list. The scroll case is how he reads the difference.
+The Magi has one sheet. It is two classes. The Narrator watched him build it: the first level in ranger for the hit die and the armor and the word *favored*, which he has not yet decided he accepts; the next four in alchemist for the mind. A ranger at third level casts nothing. A ranger at third level has the whole ranger list. The scroll case is how he reads the difference.
 
 ~~FRAME:sheet_pyrrhon~~
 
 **NARRATOR:**
-Sheldon has three highlighters and has used all three on stinking cloud, which he prepared tonight because the plan is his and he wants it on record. False life is necromancy. He paid two slots and wrote the tax in orange. The Narrator files that as the first time tonight a man has been honest about what a school costs.
+Sheldon has three highlighters and has used all three on *stinking cloud*, which he prepared tonight because the plan is his and he wants it on record. False life is necromancy. He paid two slots and wrote the tax in orange. The Narrator files that as the first time tonight a man has been honest about what a school costs.
 
 ~~FRAME:sheet_njala~~
 
@@ -69,7 +69,7 @@ The Narrator notes the name on the player and the class on the sheet are not the
 ~~FRAME:sheet_raymora~~
 
 **NARRATOR:**
-Joey has written DOCTOR where the sheet had no box. Heal is plus seventeen. Two feat lines are empty because he did not know they were his. The Narrator has heard of a television doctor whose name Raymora the Dragon would spell if you turned the words around, and he has already said so, and he will not say the man's name. The lizard is the build.
+Joey has written DOCTOR where the sheet had no box. Heal is plus seventeen. Two feat lines are empty because he did not know they were his. The Narrator has heard of a television doctor whose name *Raymora the Dragon* would spell if you turned the words around, and he has already said so, and he will not say the man's name. The lizard is the build.
 
 ~~FRAME:merlin_alone~~
 
@@ -159,10 +159,10 @@ It is about everyone.
 Cool.
 
 **LISBETH:**
-Ieg er enig met din Fortrydelse. *(The coin stops on the knuckle of her middle finger.)* Men du giorde en Indrømmelse. Ieg kiender Spillet bedre end Magus, endskiønt hand kiender det vel. Mange kalde mig Hacker. Det er icke sandt. Ieg er en Graffuer. Ieg graffuer op oc ned oc igiennem. Det er den eeniste Maade at graffue.
+Ieg er enig met din Fortrydelse. *(The coin stops on the knuckle of her middle finger.)* Men du giorde en Indrømmelse. Ieg kiender Spillet bedre end Magus, endskiønt hand kiender det vel. Mange kalde mig Hacker. Det er icke sandt. Ieg er en *Graffuer*. Ieg graffuer op oc ned oc igiennem. Det er den eeniste Maade at graffue.
 
 **LISBETH_EN:**
-I agree with your frustration. But you made a concession. I know the game better than the Magi, though he knows it well. Many call me a hacker. That is not true. I am a digger. I dig up and down and through. That is the only way to dig.
+I agree with your frustration. But you made a concession. I know the game better than the Magi, though he knows it well. Many call me a hacker. That is not true. I am a *digger*. I dig up and down and through. That is the only way to dig.
 
 **NARRATOR:**
 The Magi's finger does not move from the last line of the page.
@@ -183,13 +183,13 @@ Witches cackle. The cast and its reflection. The brazier lights the wall. The un
 And here, the Narrator must interrupt, because she has done something that the Narrator, who has spent a career telling a man which door he went through, cannot let pass.
 
 **NARRATOR:**
-She did not say brackets. Nobody says brackets out loud. But the sentence carries them: two words in a bounded pair at the end, witch and which, said so that an English ear cannot tell them apart. Bound in that order the pair reads [witch which], and then it is a thing: that witch, the which, the one that took. Flip what is bounded and it reads [which witch], and then it is a question: which witch has taken? The order inside the brackets decides whether the sentence accuses or asks.
+She did not say brackets. Nobody says brackets out loud. But the sentence carries them: two words in a bounded pair at the end, witch and which, said so that an English ear cannot tell them apart. Bound in that order the pair reads *[witch which]*, and then it is a thing: that witch, the which, the one that took. Flip what is bounded and it reads *[which witch]*, and then it is a question: which witch has taken? The order inside the brackets decides whether the sentence accuses or asks.
 
 **NARRATOR:**
 Which witch? There are more of them at this table than there are chairs. Lisbeth's class. The Witch of the Rivers, sitting at the paladin sheet with no hexes on it. The hex that has not been cast. The faces of a die. And every which in every sentence that has not decided yet whether it is a witch. The implication of those brackets is consequences, and the consequences have not been handled. The Narrator is not going to handle them. He notes, for the benefit of whoever is reading over his shoulder, that they are now on the table next to the coin, and that the coin is still moving.
 
 **NARRATOR:**
-Sheldon opens his mouth and closes it. He does not ask her to translate. He did not need a translation for the word full in full Rogue, and he understood that she had answered it.
+Sheldon opens his mouth and closes it. He does not ask her to translate. He did not need a translation for the word *full* in *full Rogue*, and he understood that she had answered it.
 
 **FEYNMAN:**
 The fishing town is behind you. The mountain is in front of you. The book says there is a way into it, and whoever came down out of it has put guards on the road. It's night. Lisbeth, your character is out front. Find the way in. Roll a Stealth check.
@@ -209,16 +209,16 @@ No.
 She does not raise her voice. She does not switch to English, because she has no English to switch to.
 
 **LISBETH:**
-Ieg er icke enig i, at mand byder mig »rulle en Stealth Check«. Naar Spillederen blander den legemlige Gierning at kaste Terningen met Characterens Troskab i Handling, da indskrencker hand min Evne til at blifue i Characteren. Kastet blifuer høyt. Oc Agtsomheden paa Characteren blifuer som Løffuen, der sporer tre Jagter, naar noget høyt skeer uden for Vinduet — Dukas oc Ellner, Aar 1993; Ross lagde det paa et andet Bord. Det er uhøffligt mod Characteren. Ordet »roll« bør allene brugis effter Lyden, som »role«, om »role playing«, oc allene uden for Sessionen — uden naar Charactererne selff møde Ordet udi Spillet som nyttigt oc beqvemt. Dernest liker ieg icke at kalde et Maal en »check«. Den, som checker DC, er Spillederen. Spillederen er icke Solen udi Systemet; hand er Quanta. Systemet holder een Stierne for hver Spillers Character, oc Stiernerne dantze som Daner, mens Quanta er Dōmbōc oc Domesday, som Daemoner der gaae ind til Dæmoner, oc Bordet er Dumbook, som allene virker udi Forlængelse aff Ild-Ræffuen, der søger at læse lemfældigt. Saa er alt paa Bordet Bogmercker. Checken er det, Spillederen burde haffue bogmerckt for Sessionen. Kastet er en begrændset Efterligning aff Characterens Troskab i Handling. Castet aabenbaris ved udsagt Forsæt oc fundet Retning. Hexe, Terningens Ansict; gielder det? Den eene Hexe grunder det. Den anden Hexe sidder ofuen paa det. De andre Hexer see Bordet aff deris egen Synsvinckel. Vi læse den øffuerste Side, men den er icke et Maal for det, som skede. — Ieg sagde Maal. Ieg tager det tilbage. Siden er bunden aff Sammenhengen oc aff Spillerens Tale; den maaler intet. — Den er Kiernen aff en begrændset stochastisk Machine. Det, som tagis, er Følgen aff den Kierne imod Characterens udsagde Forsæt, effter Eventyrbogen eller hiemmebrygget Logick oc Spillederens Juris Prudentz. Det bedre Ord derfor er flamsk: consequent handelen. Det er den eeniste Phrase, hvilcken ieg vil kaste Kiernen imod. Icke aff Uhøfflighed, icke aff Trods. Ieg taler simpelthen icke Engelsk.
+Ieg er icke enig i, at mand byder mig »rulle en Stealth Check«. Naar Spillederen blander den legemlige Gierning at kaste Terningen met Characterens Troskab i Handling, da indskrencker hand min Evne til at blifue i Characteren. Kastet blifuer høyt. Oc Agtsomheden paa Characteren blifuer som Løffuen, der sporer tre Jagter, naar noget høyt skeer uden for Vinduet — Dukas oc Ellner, Aar 1993; Ross lagde det paa et andet Bord. Det er uhøffligt mod Characteren. Ordet »roll« bør allene brugis effter Lyden, som »role«, om »role playing«, oc allene uden for Sessionen — uden naar Charactererne selff møde Ordet udi Spillet som nyttigt oc beqvemt. Dernest liker ieg icke at kalde et Maal en »check«. Den, som checker DC, er Spillederen. Spillederen er icke Solen udi Systemet; hand er Quanta. Systemet holder een Stierne for hver Spillers Character, oc Stiernerne dantze som Daner, mens Quanta er Dōmbōc oc Domesday, som Daemoner der gaae ind til Dæmoner, oc Bordet er Dumbook, som allene virker udi Forlængelse aff Ild-Ræffuen, der søger at læse lemfældigt. Saa er alt paa Bordet Bogmercker. Checken er det, Spillederen burde haffue bogmerckt for Sessionen. Kastet er en begrændset Efterligning aff Characterens Troskab i Handling. Castet aabenbaris ved udsagt Forsæt oc fundet Retning. Hexe, Terningens Ansict; gielder det? Den eene Hexe grunder det. Den anden Hexe sidder ofuen paa det. De andre Hexer see Bordet aff deris egen Synsvinckel. Vi læse den øffuerste Side, men den er icke et Maal for det, som skede. — Ieg sagde Maal. Ieg tager det tilbage. Siden er bunden aff Sammenhengen oc aff Spillerens Tale; den maaler intet. — Den er Kiernen aff en begrændset stochastisk Machine. Det, som tagis, er Følgen aff den Kierne imod Characterens udsagde Forsæt, effter Eventyrbogen eller hiemmebrygget Logick oc Spillederens Juris Prudentz. Det bedre Ord derfor er flamsk: *consequent handelen*. Det er den eeniste Phrase, hvilcken ieg vil kaste Kiernen imod. Icke aff Uhøfflighed, icke aff Trods. Ieg taler simpelthen icke Engelsk.
 
 **LISBETH_EN:**
-I disagree with being told to "roll a Stealth check." By conflating the physical act of rolling the die with the character's fidelity of action, the GM has restrained my ability to remain in character. The roll becomes loud. And attention to character becomes like the lion's tracking of three hunts when something loud happens outside the window — Dukas and Ellner, 1993; Ross put it on another table. That is rude to the character. The word "roll" should be used only phonetically, as "role," in reference to "role playing," and only outside the session — with the one caveat that the characters themselves may meet the word in the game as useful and appropriate. Further, I don't like calling a measure a "check." The one who checks the DC is the GM. The GM is not Sol in the system; the GM is the quanta. The system contains one star per player-character, and the stars dance like Danes, while the quanta is the Dōmbōc and Domesday as daemons that access demons, and the table is the dumbook, which only acts in extension to the fox of fire who searches to read casually. So everything on the table is bookmarks. The check is what the GM should have bookmarked for the session. The cast is a bounded simulation of the character's fidelity of action. The cast is revealed through stated intent and discovered direction. Witch, face of the die; matters? The one witch grounds it. The other witch sits atop it. The rest of the witches view the table from their own perspective. We read the top face, but it is not a measure of what happened. — I said measure. I take it back. The face is bounded by the context and by the player's speech; it measures nothing. — It is the kernel of a bounded stochastic machine. What is taken is the consequence of that kernel against the character's stated intention, given the Adventure Book or home-brewed logic and the GM's jurisprudence. The better word for it is Flemish: consequent handelen. That is the only phrase witch I will cast the kernel against. Not as rudeness. Not as defiance. I simply do not speak English.
+I disagree with being told to "roll a Stealth check." By conflating the physical act of rolling the die with the character's fidelity of action, the GM has restrained my ability to remain in character. The roll becomes loud. And attention to character becomes like the lion's tracking of three hunts when something loud happens outside the window — Dukas and Ellner, 1993; Ross put it on another table. That is rude to the character. The word "roll" should be used only phonetically, as "role," in reference to "role playing," and only outside the session — with the one caveat that the characters themselves may meet the word in the game as useful and appropriate. Further, I don't like calling a measure a "check." The one who checks the DC is the GM. The GM is not Sol in the system; the GM is the quanta. The system contains one star per player-character, and the stars dance like Danes, while the quanta is the Dōmbōc and Domesday as daemons that access demons, and the table is the dumbook, which only acts in extension to the fox of fire who searches to read casually. So everything on the table is bookmarks. The check is what the GM should have bookmarked for the session. The cast is a bounded simulation of the character's fidelity of action. The cast is revealed through stated intent and discovered direction. Witch, face of the die; matters? The one witch grounds it. The other witch sits atop it. The rest of the witches view the table from their own perspective. We read the top face, but it is not a measure of what happened. — I said measure. I take it back. The face is bounded by the context and by the player's speech; it measures nothing. — It is the kernel of a bounded stochastic machine. What is taken is the consequence of that kernel against the character's stated intention, given the Adventure Book or home-brewed logic and the GM's jurisprudence. The better word for it is Flemish: *consequent handelen*. That is the only phrase witch I will cast the kernel against. Not as rudeness. Not as defiance. I simply do not speak English.
 
 **NARRATOR:**
 The Narrator, again. Count them. She said "roll" and put it outside the session. She said "check" and handed it back to the man behind the screen, who had it already, bookmarked or not. She said "measure" once, heard herself, and took it back in the same breath, because the face of a die is bounded by the room and by what the player said, and a bounded thing does not measure what happened. It is what happened's kernel. What is left is two Flemish words, and in Flemish they mean, near enough, to act consistently. Fidelity of action. She chose a phrase that describes what she was asking the table for while she was asking for it.
 
 **NARRATOR:**
-And she said "the only phrase witch," or rather she said hvilcken, which is which, where an English ear hears witch. Witches. Whiches. The brackets from the cover of the screen have still not been handled. They have acquired a Flemish noun.
+And she said "the only phrase witch," or rather she said *hvilcken*, which is which, where an English ear hears witch. Witches. Whiches. The brackets from the cover of the screen have still not been handled. They have acquired a Flemish noun.
 
 **NARRATOR:**
 Feynman looks at her for the length of one pass of a coin that is not moving. Then he uncaps the second pencil, crosses something out on the inside of his screen, and writes over it.
@@ -245,10 +245,10 @@ Fifteen on the face. With what Njála can do, against what the mountain had book
 The Witch of the Rivers writes nothing; she has already said it under her breath, correctly, once.
 
 **NARRATOR:**
-The Magi writes consequent handelen in the margin of the manual, beside What was taken?, in small letters, and keeps his finger where it was.
+The Magi writes *consequent handelen* in the margin of the manual, beside *What was taken?*, in small letters, and keeps his finger where it was.
 
 **NARRATOR:**
-From here on, at this table, nobody says roll a check. The Narrator will be checking.
+From here on, at this table, nobody says *roll a check*. The Narrator will be checking.
 
 ---
 
@@ -295,7 +295,7 @@ Raymora turns into an iguana.
 ~~STATE:raymora=iguana~~
 
 **SHELDON:**
-An iguana.
+An *iguana*.
 
 **JOEY:**
 Iguanas have sharp claws. Sharp claws are helpful in climbing and surgery. *(He holds up his phone. On it is a photograph of an iguana on a wall.)* Look. The claws.
@@ -357,10 +357,10 @@ I will let a coin spin or flip, a checksum, to find out whether we can know if t
 ~~FRAME:coda_code~~
 
 **NARRATOR:**
-A coin with two sides. Identity lives in the secrets file on the disk. The executable lives in a continuous cycle of compilation, trial, its own deletion, recompilation, and rebirth.
+*A coin with two sides. Identity lives in the secrets file on the disk. The executable lives in a continuous cycle of compilation, trial, its own deletion, recompilation, and rebirth.*
 
 **NARRATOR:**
-Arrays A and B are two linked lists on the disk — same bytes, different traversal order. Each node holds one data byte and a file offset pointing to the next node. The data bytes are never touched. The addresses change. The pointers carry the change.
+*Arrays A and B are two linked lists on the disk — same bytes, different traversal order. Each node holds one data byte and a file offset pointing to the next node. The data bytes are never touched. The addresses change. The pointers carry the change.*
 
 **NARRATOR:**
 Each cycle: One. Read the secrets file: head addresses, coin digit, iteration counter. Two. Traverse A in its current order. Three. Rotate A's traversal order by thirty degrees via matrix multiplication — each term written one at a time. Carry the new head. Update each next pointer. Four. Write new A head to secrets. Five. Same for B. They yield for each other. Six. For each byte of A, search B for a match. Add found offsets to skip-array in order. Advance the skip index. Seven. Confirm B in A the same way. Eight. Flip the binary. Log everything. Nine. Missing byte: exit. Ten. Delete this executable. Recompile from source immediately. Eleven. Sleep one second. Twelve. Execute the new binary. The old process ends. The new one begins.
@@ -375,7 +375,7 @@ Yield is not surrender.
 Yield and surrender are the same thing.
 
 **NARRATOR:**
-The coin is still spinning. The Narrator notes that this is the same disagreement as equipment failure and mishandled, one table over, and that Lisbeth has answered it the way she answers everything, which is to make a thing that runs and let it run.
+The coin is still spinning. The Narrator notes that this is the same disagreement as *equipment failure* and *mishandled*, one table over, and that Lisbeth has answered it the way she answers everything, which is to make a thing that runs and let it run.
 
 **FEYNMAN:**
 No progress. You're on the wall. You're not falling. You're not going up. *(to Joey)* The iguana's got the rope. Aid another, DC ten. Cast a d20, add your Climb. As an iguana it's good.
@@ -431,7 +431,7 @@ It keeps climbing.
 It keeps climbing. The Narrator does not report how long. Neither does Feynman, which turns out to matter.
 
 **SHELDON:**
-*(when the lizard comes over the lip)* Why an iguana? We have been standing at the top of a cliff in the dark, next to a door into a mountain that has guards at the bottom of it, waiting for a lizard.
+*(when the lizard comes over the lip)* Why an *iguana*? We have been standing at the top of a cliff in the dark, next to a door into a mountain that has guards at the bottom of it, waiting for a *lizard*.
 
 **JOEY:**
 *(to Feynman)* How much time did that take?
@@ -443,7 +443,7 @@ It's night. It stays night until you decide to go back to the inn. It took nothi
 *(to Sheldon, as if that settles it, because it does)* I picked the iguana because it's good for play.
 
 **SHELDON:**
-Do you mean role play?
+Do you mean *role* play?
 
 **LISBETH:**
 Hold Kiæfft, dit Pickfiæs. Fanden tage dig. Din Skide! Hvilcken [aff] Øgle!
@@ -467,7 +467,7 @@ The iguana looks at him with one eye. The other eye is on Njála's left hand.
 Pyrrhon. Did you cast speak with animals? Or can you speak to it by nature?
 
 **SHELDON:**
-Speak with animals is a divine spell. Druids. Rangers. It is rarely useful. I do not have it. *(A pause.)* I was speaking at it.
+Speak with animals is a divine spell. Druids. Rangers. It is rarely useful. I do not have it. *(A pause.)* I was speaking *at* it.
 
 **MERIT:**
 *(lower, slower, the ford in it)* Then hear what I saw. The dragon doctor stayed true to his form. He did not hurry because we were waiting. He climbed the way the thing he had become climbs — slowly, on the rope, at the iguana's own speed. He took the rope. He stayed at the very bottom, feet on the ground, claws on the line. And when the ranger missed the gate and began to fall, the tug came up the rope from far below, from the small slow thing that had taken the rope, because the rope ran all the way down to it. That is wisdom in patience. Patient wisdom saved a life, and it did not know it was going to. The forces that work through him are the forces that work through me. I have always known it. I have never seen it. *(She puts her hand flat on the table, the way Merit would put it on the stone.)* That is God.
@@ -503,7 +503,7 @@ You can hiss. You can click your claws on the rock. You can do something in your
 That's a lot.
 
 **NARRATOR:**
-It is night. It will be night until they go back to the inn. Nobody is charged for the time, so they take it. The code is built at the top of a cliff, between four characters and a lizard, the way the Narrator suspects most languages were: somebody made a sound, somebody else said that means yes, and somebody third objected. The Magi writes it down on an index card as it is decided, and the Narrator reads it, because it is on the table.
+It is night. It will be night until they go back to the inn. Nobody is charged for the time, so they take it. The code is built at the top of a cliff, between four characters and a lizard, the way the Narrator suspects most languages were: somebody made a sound, somebody else said *that means yes*, and somebody third objected. The Magi writes it down on an index card as it is decided, and the Narrator reads it, because it is on the table.
 
 ~~FRAME:scratch_table~~
 
@@ -544,7 +544,7 @@ The Magi puts the index card away. He does not argue with the iguana. He marks f
 *(sitting back, eyes wide again, vindicated)* I'm a doctor.
 
 **NARRATOR:**
-The Narrator notes, for the record and for nobody else, that the sheet in front of Joey says Raymora the Dragon, and that a dragon is a drake, and that the Narrator has heard of a television doctor whose name these two words would spell if you turned them around, and that Joey has put more ranks into Heal than any character at this table has put into anything. The Narrator notes that the doctor lexicon is being written on the back of the index card while they talk, and that it starts with blood.
+The Narrator notes, for the record and for nobody else, that the sheet in front of Joey says *Raymora the Dragon*, and that a dragon is a drake, and that the Narrator has heard of a television doctor whose name these two words would spell if you turned them around, and that Joey has put more ranks into Heal than any character at this table has put into anything. The Narrator notes that the doctor lexicon is being written on the back of the index card while they talk, and that it starts with *blood*.
 
 **FEYNMAN:**
 The door.
@@ -596,19 +596,19 @@ Den Syge er under Kniffuen. Endskiønt Kniffuen er under hans Kiød.
 The patient is under the knife. Though the knife is under his flesh.
 
 **NARRATOR:**
-The Narrator notes that Scratch has no word for knife, or patient, or flesh. The doctor used object, prisoner, and the first word on the back of the card. Lisbeth heard a knife in it, and a patient, and the Narrator is not going to argue with the only person at the table whose ears the spell was cast into.
+The Narrator notes that Scratch has no word for *knife*, or *patient*, or *flesh*. The doctor used *object*, *prisoner*, and the first word on the back of the card. Lisbeth heard a knife in it, and a patient, and the Narrator is not going to argue with the only person at the table whose ears the spell was cast into.*
 
 **MAGI:**
 The GM made the ruling.
 
 **LISBETH:**
-Det er den rette Forstand aff underjordisk her.
+Det er den rette Forstand aff *underjordisk* her.
 
 **LISBETH_EN:**
-That is the correct interpretation of underground in this context.
+That is the correct interpretation of *underground* in this context.
 
 **MAGI:**
-Then here is what it does. Favored terrain, underground, plus two. Initiative. Knowledge, geography. Perception. Stealth. Survival. He leaves no trail in it. *(He stops. He looks at the word on the sheet.)* Does Draavio like being underground? The sheet says favored. He doesn't give it special treatment. He doesn't prefer it. He's used to it. He knows what is hidden in it, because he has spent his life finding what was hidden in it, and knowing that makes it easier for him to estimate and infer in the next underground place, and the next. That's not favor. That's regard. *(He crosses out one word on his sheet and writes another.)* Regarded Terrain. It's more accurate.
+Then here is what it does. Favored terrain, underground, plus two. Initiative. Knowledge, geography. Perception. Stealth. Survival. He leaves no trail in it. *(He stops. He looks at the word on the sheet.)* Does Draavio *like* being underground? The sheet says favored. He doesn't give it special treatment. He doesn't prefer it. He's used to it. He knows what is hidden in it, because he has spent his life finding what was hidden in it, and knowing that makes it easier for him to estimate and infer in the next underground place, and the next. That's not favor. That's regard. *(He crosses out one word on his sheet and writes another.)* Regarded Terrain. It's more accurate.
 
 **NARRATOR:**
 The number beside it does not change. The Narrator notes that the number did not need to.
@@ -640,7 +640,7 @@ Feynman takes the top index card from his stack and turns it face up and slides 
 You can have the villain.
 
 **NARRATOR:**
-Vincent reads the card. He takes it. The Narrator would like to put the italic on the verb and leave it there. Then he turns it face down under his left hand, and the Narrator, who reads public documents, notes that a card face down on a table is no longer one. All the Narrator saw was the top line.
+Vincent reads the card. He *takes* it. The Narrator would like to put the italic on the verb and leave it there. Then he turns it face down under his left hand, and the Narrator, who reads public documents, notes that a card face down on a table is no longer one. All the Narrator saw was the top line.
 
 ```
 THE ARCHIVIST
@@ -650,7 +650,7 @@ THE ARCHIVIST
 Sheldon looks at the card, then at the screen, then at Feynman.
 
 **SHELDON:**
-That's yours. The villain is the GM's. You run the villain. That is what the screen is for.
+That's yours. The villain is the GM's. You run the villain. That is what the screen is *for*.
 
 **LISBETH:**
 Spillederen gaff sin egen Skurck bort. Midt i en Sætning.
@@ -667,13 +667,13 @@ Wait, he gets to be the bad guy? Can you do that?
 He says it as a man. The iguana is gone. He sits back in the chair the way he sat back when he said he was a doctor, except this time the claws are hands again, and the hiss is just a man who has been doing a bit for a long time and has decided the bit is over. He thought it was over when they got the language down. The language is on the card. The card is on the table. Vincent is in the seventh chair with a villain under his left hand, and Joey is still only now changing back, because a pretty long bit had kept going after he had filed it as finished.
 
 **SHELDON:**
-You were a lizard through a language, a door, and a man walking in. You dropped it for this.
+You were a lizard through a language, a door, and a man walking in. You dropped it for *this*.
 
 **JOEY:**
 The language felt important to the play. *(He does not say role. He has already been asked that, and he did not mean it then either.)* It was a long bit. I play a doctor. Doctors have long hours. I have to pretend I know what that's like.
 
 **NARRATOR:**
-The Witch of the Rivers says nothing. She looks at Feynman longer than she has looked at anything tonight. The Magi writes one line in the margin of the manual, under consequent handelen, and the Narrator cannot read it upside down. All five of them noticed. Each noticed differently. The man behind the screen let them.
+The Witch of the Rivers says nothing. She looks at Feynman longer than she has looked at anything tonight. The Magi writes one line in the margin of the manual, under *consequent handelen*, and the Narrator cannot read it upside down. All five of them noticed. Each noticed differently. The man behind the screen let them.
 
 **FEYNMAN:**
 You can do that. It's his now. *(To Vincent.)* You'll have to wait.
@@ -796,13 +796,13 @@ Sheldon looks up. The Witch of the Rivers leans forward, then frowns; the Narrat
 Favored enemy.
 
 **DRAAVIO:**
-I'm looking at the word. He was licked. He passed the Fortitude save, so nothing happened. He does not not like the lick. It did not bother him to be licked. He wonders what the consequences of the word favored are.
+I'm looking at the word. He was licked. He passed the Fortitude save, so nothing happened. He does not *not* like the lick. It did not bother him to *be* licked. He wonders what the consequences of the word *favored* are.
 
 **FEYNMAN:**
 Mid-combat?
 
 **DRAAVIO:**
-Mid-combat. Favored. Regarded with partiality. Partiality is a bias — favoring one side. Etymology: Aryan bha-, to speak. Latin favere, to look upon with goodwill. So: spoken of, looked on with goodwill, estimated. He settles on Esteemed Enemy. Estimated with wariness. Invited.
+Mid-combat. Favored. Regarded with partiality. Partiality is a bias — favoring one side. Etymology: Aryan *bha-, to speak. Latin *favere*, to look upon with goodwill. So: spoken of, looked on with goodwill, estimated. He settles on *Esteemed Enemy*. Estimated with wariness. Invited.
 
 **NARRATOR:**
 The Witch of the Rivers laughs. Not the cackle; the uproarious one, head back, at a half-orc deciding in the middle of a fight that being licked by a corpse was an invitation. Feynman lets it finish. The Narrator files it as the best review the line has had.
@@ -1283,7 +1283,7 @@ The Narrator notes, for the record, who asked. One of them did. That was the con
 Feynman lifts the corner of his screen. Under the screen the Adventure Path has a sidebar. He reads it out loud, because it was written for this.
 
 **FEYNMAN:**
-"A seam behind the northernmost coffin opens on a descending corridor (Perception DC 25). The researchers do not return for three days. PCs who take 20 on this check find the seam." *(He looks up.)* The book says check. Books don't come to sessions. Somebody had to ask.
+*"A seam behind the northernmost coffin opens on a descending corridor (Perception DC 25). The researchers do not return for three days. PCs who take 20 on this check find the seam."* *(He looks up.)* The book says check. Books don't come to sessions. Somebody had to ask.
 
 **SHELDON:**
 Taking twenty assumes you fail nineteen times.
@@ -1292,7 +1292,7 @@ Taking twenty assumes you fail nineteen times.
 It doesn't say nineteen. Read it.
 
 **DRAAVIO:**
-"Taking 20 means you are trying until you get it right, and it assumes that you fail many times before succeeding." Many.
+*"Taking 20 means you are trying until you get it right, and it assumes that you fail many times before succeeding."* Many.
 
 **FEYNMAN:**
 Many. Conditions: plenty of time, no threats, no distractions, failing carries no penalty. You write down twenty instead of casting. It costs twenty times as long. One round becomes two minutes. That's the whole rule.
@@ -1357,7 +1357,7 @@ Gift accepted. Late. The room's condition was curious, interesting, strange, or 
 The fight was when the properties were true.
 
 **NARRATOR:**
-The ranger follows the party through the secret door that he had found with his perception while checking the coffins. That is his work after all: grave robbing. He will call it what others do in this moment. That is not what he does. He uncovers what was concealed. He does it because he is curious. He finds the curios interesting. Some say he is strange. He finds his digging to be simultaneously an act that conceals, reveals, and continues through. He finds that combination beautiful. He doesn't have to explain why. He couldn't articulate it for proper expression if he tried. Sometimes beauty is truly in the eye of the beholder. He ponders the link not simply as part of a chain, but as something both holds the rope and is looked through by the rope. Freedom is at the end of the rope. What does that look like? What was taken? He doesn't decide. He is comfortable accepting what is bounded without intervention. That is a ranger's relationship with the underlying mechanics which comprise the magical beauty of nature. As a gardener who pats the virgin soil atop a freshly sown seed and steps back. No longer in control. The seed left to the stochastic noise that accumulates by proximity within its enclosed geometry and without. The seed will be just fine. Or it will not. The gardener will water it on a schedule for as long as the steward is able.
+The ranger follows the party through the secret door that he had found with his perception while checking the coffins. That is his work after all: grave robbing. He will call it what others do in this moment. That is not what he does. He *uncovers* what was *concealed*. He does it because he is *curious*. He finds the curios *interesting*. Some say he is *strange*. He finds his digging to be simultaneously an act that conceals, reveals, and *continues through*. He finds that combination *beautiful*. He doesn't have to explain why. He couldn't articulate it for proper expression if he tried. Sometimes beauty is truly in the eye of the beholder. He ponders the link not simply as part of a chain, but as something both holds the rope and is looked through by the rope. Freedom is at the end of the rope. What does that look like? What was taken? He doesn't decide. He is comfortable accepting what is bounded without intervention. That is a ranger's relationship with the underlying mechanics which comprise the magical beauty of nature. As a gardener who pats the virgin soil atop a freshly sown seed and steps back. No longer in control. The seed left to the stochastic noise that accumulates by proximity within its enclosed geometry and without. The seed will be just fine. Or it will not. The gardener will water it on a schedule for as long as the steward is able.
 
 **NARRATOR:**
 The corridor the ranger travels is dark without the magical light of his allies ahead. To his half-orc eyes it is navigable. In the confined area his vision is as complete as if it were light, but the way it is viewed is orthogonal. The ranger had not noticed this shift in frame. He continues forward. Another link held loosely in his hand. He flicks his thumb to open the mechanism then it is inside with a click then it is pulled through then it is seated upon the mechanism. Not waiting. Present. The ranger is not aware that he has done this yet the action teaches what he could not articulate. He collects the bones to better understand the man. Ever holds the still. The vessel that purifies and the image that resolves and the absence that is felt. That is what the ranger means when he says that he digs.
@@ -1451,7 +1451,7 @@ The creature describes its condition and its desire to escape. It will resume po
 It is not evil to act within your nature. An animal cannot sin. Its actions are amoral. We must free it. It has promised us knowledge upon doing so.
 
 **FEYNMAN:**
-It objects to animal. Its Intelligence is high. It wants that on the record.
+It objects to *animal*. Its Intelligence is high. It wants that on the record.
 
 **SHELDON:**
 It's an outsider. The classification lacks depth. Outsiders vary. I concede that. I do not concede the alignment line in the bestiary is nothing.
@@ -1486,7 +1486,7 @@ That isn't knowledge. That's a riddle.
 A riddle is knowledge with the clew still attached.
 
 **NARRATOR:**
-The mother gathers her pyramid of eggs under the parted carapace, one at a time, carefully, in the order they were stacked. She goes down a crack in the floor that was too narrow for her while the circle held. Sheldon says "the Abyss" to nobody in particular. Merit watches her go with the sword down. Nobody says evil. The bestiary still says it, on a page under Feynman's screen, and nobody at the table has asked it to stop.
+The mother gathers her pyramid of eggs under the parted carapace, one at a time, carefully, in the order they were stacked. She goes down a crack in the floor that was too narrow for her while the circle held. Sheldon says "the Abyss" to nobody in particular. Merit watches her go with the sword down. Nobody says *evil*. The bestiary still says it, on a page under Feynman's screen, and nobody at the table has asked it to stop.
 
 **NARRATOR:**
 click
@@ -1502,7 +1502,7 @@ click
 The researchers will come. Not in your time. In theirs. Hours. What are you doing with hours?
 
 **NARRATOR:**
-The Magi opens the scroll case. He does not unroll anything yet. He says the thing he realized while building the sheet, and he says it plainly, the way he said many when the take-twenty rule was read.
+The Magi opens the scroll case. He does not unroll anything yet. He says the thing he realized while building the sheet, and he says it plainly, the way he said *many* when the take-twenty rule was read.
 
 **DRAAVIO:**
 A multiclass spell list resolves to a financial problem when the spells are not cast in combat. Ranger three is caster level zero. Every ranger spell is still on my list. I cannot prepare one. I can read one. A scroll is spell level times caster level times twenty-five gold. Forty of these cost seven thousand twelve gold and five silver. The forty-first was given.
@@ -1568,7 +1568,7 @@ Consequent handelen.
 He casts it again. Ten.
 
 **FEYNMAN:**
-It lands. The writing goes off the vellum as the spell goes into you. Thirteen hours. You can take the shape of a tree. You cannot continue through a tree, but you can be trapped in one.
+It lands. The writing goes off the vellum as the spell goes into you. Thirteen hours. You can take the shape of a tree. You cannot continue *through* a tree, but you can be trapped in one.
 
 **SHELDON:**
 And what was taken?
@@ -1577,7 +1577,7 @@ And what was taken?
 Gold, up front, for the forty. Time, in camp, for the deciphering. Here, two casts and one Wisdom. The failure is not stolen. It was cast, and it was paid for in front of everyone.
 
 **NARRATOR:**
-Vincent, at the far end, has his card face down under his left hand. He does not look up at time nobody is going to sit through. The Narrator suspects he heard it anyway.
+Vincent, at the far end, has his card face down under his left hand. He does not look up at *time nobody is going to sit through*. The Narrator suspects he heard it anyway.
 
 **FEYNMAN:**
 Draw it.
@@ -1608,7 +1608,7 @@ In the tree so I can feel when they are upon the roots.
 ~~STATE:raymora=iguana~~
 
 **NARRATOR:**
-The party goes off to their various positions. Lisbeth is mysteriously absent. Raymora is attempting to demonstrate CPR as an iguana while Merit nods understandingly. Pyrrhon is reviewing a scroll lent to him by Draavio. The scroll is divine so the exercise is purely academic.
+The party goes off to their various positions. Lisbeth is mysteriously absent. Raymora is attempting to demonstrate CPR as an iguana while Merit nods understandingly. Pyrrhon is reviewing a scroll lent to him by Draavio. The scroll is divine so the exercise is purely academic
 
 **NARRATOR:**
 The Magi opens his scroll case. He takes out the SCAPE vellum. He reads it. He holds it a moment longer than reading requires. He puts it back.
@@ -2059,7 +2059,7 @@ Raymora. You said stealth without your true form. You're already there as an igu
 ~~STATE:raymora=iguana~~
 
 **NARRATOR:**
-The Narrator notes that the iguana on the oak nods its head in a very ayyy way.
+The Narrator notes that the iguana on the oak nods its head in a very *ayyy* way.
 
 **SHELDON:**
 My part of the plan still works. I will do as planned.
@@ -2218,13 +2218,13 @@ Lisbeth moves her mini thirty feet to the golem; one attack; casts.
 Hits. And sneak attack.
 
 **SHELDON:**
-It isn't flanked. And it has a negative Dexterity. There's no bonus to deny.
+It isn't flanked. And it has a *negative* Dexterity. There's no bonus to deny.
 
 **FEYNMAN:**
 *(he does not look up)* It hasn't acted yet. It's flat-footed. "The rogue's attack deals extra damage anytime her target would be denied a Dexterity bonus to AC, whether the target actually has a Dexterity bonus or not." Whether it has one or not. Four on the sword, seven on the sneak. Eleven. Damage reduction five. Six through.
 
 **SHELDON:**
-It's a construct.
+It's a *construct*.
 
 **FEYNMAN:**
 Different edition. In this book constructs take precision damage. Somebody found a crack in the stitching. Seventy-three. Pyrrhon.
@@ -2236,7 +2236,7 @@ I have nothing.
 You have a full round.
 
 **SHELDON:**
-Everything I have prepared allows spell resistance, and it doesn't have spell resistance, it has immunity, which is not a number, and you cannot penetrate something that isn't a number. I have Spell Penetration. I have a feat for a door with no lock. I am a man who has spent seven levels learning to set things on fire and has walked into a room with a sculpture made of the dead and a sign on it that says no.
+Everything I have prepared allows spell resistance, and it doesn't *have* spell resistance, it has *immunity*, which is not a number, and you cannot penetrate something that isn't a number. I have Spell Penetration. I have a feat for a door with no lock. I am a man who has spent seven levels learning to set things on fire and has walked into a room with a sculpture made of the dead and a sign on it that says *no*.
 
 **FEYNMAN:**
 So what's he do?
@@ -2248,7 +2248,7 @@ He takes the total defense action. Plus four dodge to AC. In protest.
 The Witch of the Rivers laughs. One short, very exact laugh; the Narrator could chart the waveform but will not.
 
 **SHELDON:**
-It's not funny. It's character.
+It's not funny. It's *character*.
 
 **FEYNMAN:**
 It's both. Merit.
@@ -2277,7 +2277,7 @@ The peacock woman. She sees what's happened to her researchers. She sees the wom
 ~~FRAME:were_soldier_breaking~~
 
 **NARRATOR:**
-Nobody says villain. The Narrator notes that nobody says it.
+Nobody says *villain*. The Narrator notes that nobody says it.
 
 **FEYNMAN:**
 Golem. Full attack, Njála. *(casts)* First slam hits. *(casts)* Second slam hits. Seventeen. Seventeen. Thirty-four.
@@ -2348,16 +2348,16 @@ It is written. I have read it.
 She read it.
 
 **SHELDON:**
-It's not intended.
+It's not *intended*.
 
 **MAGI:**
 It is written. Whether it is intended is a different question with a different author. *(He is not looking at Sheldon. He is looking at his extracts.)* Witch three, rogue four, is not a free build. She gave up hexes and spells to get the dice, and the dice only work when somebody else stands in the right square. Merit is standing in the right square. So am I. It isn't free. It's paid in someone else's position.
 
 **SHELDON:**
-It's precision damage. It's applied mathematically.
+It's *precision damage*. It's applied *mathematically*.
 
 **FEYNMAN:**
-Yeah. That's what precision is. *(He puts the pencil down, which is the first time tonight.)* If there's a moral failure here, where is it? Is it in the understanding? She understood the rule. Is it in the arithmetic? The arithmetic is right. I checked it. Is it in the rule? Then it's the rule's failure, and the rule's authors', and you'll find out they wrote it on purpose, because the game wants flanking to matter. The only thing she did was read the sentence all the way to the end. You read your sentence to the word immune and stopped. Pyrrhon.
+Yeah. That's what precision is. *(He puts the pencil down, which is the first time tonight.)* If there's a moral failure here, where is it? Is it in the understanding? She understood the rule. Is it in the arithmetic? The arithmetic is right. I checked it. Is it in the rule? Then it's the rule's failure, and the rule's authors', and you'll find out they wrote it on purpose, because the game wants flanking to *matter*. The only thing she did was read the sentence all the way to the end. You read *your* sentence to the word *immune* and stopped. Pyrrhon.
 
 **SHELDON:**
 *(he has had a full round to think, and it shows)* It's a flesh golem. Lightning raised it; every story agrees on that. So I give it lightning. Versatile evocation: scorching ray, fire to electricity —
@@ -2372,7 +2372,7 @@ He does not raise his voice. He reaches across, turns Sheldon's notes the right 
 Read the bullets. The second sentence says certain spells function differently. They are listed.
 
 **SHELDON:**
-*(reading, very quietly)* "A magical attack that deals electricity damage breaks any slow effect on the golem and heals one point of damage for every three points of damage the attack would otherwise deal." *(He stops.)* It would have healed it.
+*(reading, very quietly)* "A magical attack that deals electricity damage breaks any slow effect on the golem and heals one point of damage for every three points of damage the attack would otherwise deal." *(He stops.)* It would have *healed* it.
 
 **MAGI:**
 Keep reading.
@@ -2390,7 +2390,7 @@ The Narrator notes that the Magi said this without any of the satisfaction a per
 Pyrrhon stands up. He does not need to stand up. Nobody at the table has stood up all night. He stands up.
 
 **SHELDON:**
-Pyrrhon the Thrice-Kindled casts scorching ray. Second level. Evocation. Fire. Caster level seven: two rays. No conversion. The fire stays fire. Ray one. Ranged touch. Precise Shot, no penalty for firing into melee. *(casts)* Eleven! Plus five! Sixteen against touch eight!
+Pyrrhon the Thrice-Kindled casts *scorching ray*. Second level. Evocation. Fire. Caster level seven: two rays. No conversion. The fire stays fire. Ray one. Ranged touch. Precise Shot, no penalty for firing into melee. *(casts)* Eleven! Plus five! Sixteen against *touch eight*!
 
 **FEYNMAN:**
 Hits. It's immune to the damage; the spell allows resistance, so the immunity eats the hit points. But it's a magical attack dealing fire. The bullet fires. *(casts two dice)* Seven rounds. Slowed. No save. It can take a single move or a single standard on its turn, not both, nothing full-round. Minus one to hit, to AC, to Reflex. Half speed.
@@ -2402,13 +2402,13 @@ Ray two!
 Hits. Slow doesn't stack with slow. It doesn't get slower, and the rounds don't add.
 
 **SHELDON:**
-I don't care! It's slowed! My fire wizard slowed the golem with fire!
+I don't *care*! It's *slowed*! My *fire* wizard *slowed* the *golem* with *fire*!
 
 **NARRATOR:**
 He looks around the table.
 
 **SHELDON:**
-I was never without access! I simply had not read the bullets!
+I was *never* without access! I simply had not *read the bullets*!
 
 **FEYNMAN:**
 Njála.
@@ -2450,7 +2450,7 @@ Njála has no actions this round. The Narrator notes what she does have: the coi
 The kernel has been running since the climb. It will still be running when she opens her eyes. It does not know she is down.
 
 **NARRATOR:**
-Feynman picks the pencil back up.
+Feynman picks the pencil back up
 
 **FEYNMAN:**
 For the record, since the record matters on this page. Without the slow, that's a full attack. Two slams at an average of fourteen each is twenty-eight. She had fourteen. That's minus fourteen. Her Con is fourteen. In this game you die at negative your Con score. She would have been dead on the first hit. The slow gave her a round. She used it.
@@ -2556,13 +2556,13 @@ Njála is down. The whisper she set is not. It connects five: the iguana, Merit,
 Vincent.
 
 **VINCENT:**
-The sheet says languages: none. There are not scores for Intelligence or Wisdom. Just a line through them.
+The sheet says *languages: none*. There are not scores for Intelligence or Wisdom. Just a line through them.
 
 **NARRATOR:**
 The Narrator notes that flesh golems are mindless, and that there are rumors of rare intelligent flesh golems who retain the memory of their bodies. These bodies are Babylonian scholars, circa the sixth century AD, by the hairstyles, which are obvious, and by the marks from the crucifixes. Definitely Babylonian scholars. That is not something this Narrator injected.
 
 **VINCENT:**
-The golem scratches. No. I carry them away. I set them down safe. I do not want them to attack me when they wake.
+The golem scratches. *No. I carry them away. I set them down safe. I do not want them to attack me when they wake.*
 
 **SHELDON:**
 I want to hear this conversation.
@@ -2666,10 +2666,10 @@ The penalty is on this swing. It hits. Down.
 I can help with that. I am in my surgeon form.
 
 **LISBETH:**
-Kløerne. De skide Kløer. Hand vidste, at Draavio kunde haffue Behoff for hans Hielp. Hans Form som Chirurge føyede sig til den Nød udi det Øyeblikk. Hand vidste om Gabet udi Lexiconet. Hand fordrede Lægesprog. Det Sprog dreff al Tale. Hand siger Ieg er Læge hver Gang Lejlighed giffues, thi hand er det. *(to Joey)* Doctor. Maa ieg bede at see dit Blad?
+Kløerne. De skide Kløer. Hand vidste, at Draavio kunde haffue Behoff for hans Hielp. Hans Form som Chirurge føyede sig til den Nød udi det Øyeblikk. Hand vidste om Gabet udi Lexiconet. Hand fordrede Lægesprog. Det Sprog dreff al Tale. Hand siger *Ieg er Læge* hver Gang Lejlighed giffues, thi hand er det. *(to Joey)* Doctor. Maa ieg bede at see dit Blad?
 
 **LISBETH_EN:**
-The claws. The fucking claws. He knew Draavio might need his help. His surgeon form fit that need in that moment. He knew the gap in the lexicon. He demanded doctor language. That language drove all communication. He says I'm a doctor every chance he gets because he is. Doctor. May I please view your sheet?
+The claws. The fucking claws. He knew Draavio might need his help. His surgeon form fit that need in that moment. He knew the gap in the lexicon. He demanded doctor language. That language drove all communication. He says *I'm a doctor* every chance he gets because he is. Doctor. May I please view your sheet?
 
 ~~FRAME:strike_4_point~~
 
@@ -2867,7 +2867,7 @@ Vincent turns the card over, finally, and lays it face up on the table.
 ~~FRAME:archivist_card~~
 
 **NARRATOR:**
-The Narrator notes that when Feynman slid this card across the table, he slid it face up, and said you can have the villain, and Vincent took it, and put it face down. The verb for handing a thing over, in the old language, is the one that gives us both tradition and traitor. Feynman handed over a villain. What the table does with it now decides which word the handing was.
+The Narrator notes that when Feynman slid this card across the table, he slid it face up, and said *you can have the villain*, and Vincent took it, and put it face down. The verb for handing a thing over, in the old language, is the one that gives us both *tradition* and *traitor*. Feynman handed over a villain. What the table does with it now decides which word the handing was.
 
 **MERIT:**
 Merit focuses detect evil on him.
@@ -2951,13 +2951,13 @@ I know.
 *(out of character, to Feynman)* The card said villain.
 
 **FEYNMAN:**
-The card said you can have the villain. That's my word. I wrote it before he walked in. It isn't his.
+The card said *you can have the villain*. That's my word. I wrote it before he walked in. It isn't his.
 
 **SHELDON:**
 Then in character. Pyrrhon has read the old texts. A name like that is in them, and in them he is the one who taught men to work metal, and make blades, and paint their eyes, and was bound in the desert for it. The goat is sent to him with everyone's sins tied on. In every bestiary Pyrrhon has read, that is a villain.
 
 **DRAAVIO:**
-Evil is a moral judgement applied within a frame. Villain is a role. Somebody hands it to somebody.
+Evil is a moral judgement applied within a frame. *Villain* is a role. Somebody hands it to somebody.
 
 **LISBETH:**
 Bucken bær det, som andre giorde.
@@ -3044,13 +3044,13 @@ The Narrator notes that the Magi is still writing, though the sounds have stoppe
 Then what did he read?
 
 **ARCHIVIST:**
-Oh is That. Ain is One. Deh, On the other hand. Toe, The expression. To dig is to reveal, to conceal, to channel, to perforate. He heard it open. Now lies.
+*Oh* is That. *Ain* is One. *Deh*, On the other hand. *Toe*, The expression. To dig is to reveal, to conceal, to channel, to perforate. He heard it open. Now lies.
 
 **ARCHIVIST:**
-Ekrupsen toe argurion. Gold concealed. The gold is a token, and a token has power only from the authority that grants it. Kata Maththew is an expression whose meaning was changed by an authority. Sent? No longer seen. Still lies.
+*Ekrupsen toe argurion.* Gold concealed. The gold is a token, and a token has power only from the authority that grants it. *Kata Maththew* is an expression whose meaning was changed by an authority. Sent? No longer seen. Still lies.
 
 **ARCHIVIST:**
-Auto. Just that? No. There. The word also means there. That is the last of the verse. After it, the iguana is no longer reading Matthew.
+*Auto.* Just that? No. There. The word also means there. That is the last of the verse. After it, the iguana is no longer reading Matthew.
 
 **MERIT:**
 What was taken?
@@ -3123,13 +3123,13 @@ Divine alignment is not with a faction. It is not with a cause or a camp or a fl
 The magical beauty of nature is revealed through greater understanding of the underlying mechanics. Not through the first description. Not through what it looks like from outside the sinkhole, from above the crater, from the outer shell of perception. Through reading the stat block to the end. Through asking what fire does to a flesh golem and finding out. Through the checksum that keeps running below the level of consciousness because the prerequisites are still present. Through the tree that says nothing, because nothing needs to be said. The mechanics are the beauty. The outer shell is beautiful too. The warning is not against seeing it. The warning is against stopping there.
 
 **NARRATOR:**
-Beware.
+*Beware.*
 
 **NARRATOR:**
 The party says the last word together. It is also the first word of the sentence run in the other direction:
 
 **NARRATOR:**
-Beware. Not the outer shell of perception. The underlying mechanics — greater understanding of them, through this revealed — the magical beauty. Of nature. Immutable cosmic law. Divine alignment. Nature is amoral.
+*Beware. Not the outer shell of perception. The underlying mechanics — greater understanding of them, through this revealed — the magical beauty. Of nature. Immutable cosmic law. Divine alignment. Nature is amoral.*
 
 **NARRATOR:**
 The Narrator files it. Not as a conclusion. As the sentence the session had been speaking since the gargoyle, now said aloud in the order that arrives at the beginning last.
