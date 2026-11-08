@@ -964,7 +964,7 @@ def cue_state(cue: dict | None, k: str, default: str = "") -> str:
 # conversation. Draavio and the goat stand in the centre once, normal size, after the
 # draavio_returns cut scene. Then he is only seen inside a strike: point → swing →
 # down, small, somewhere else on the floor each time, sometimes facing the other way.
-BATTLE_FRAMES = {"draavio_returned", "golem_talk", "joey_sheet",
+BATTLE_FRAMES = {"draavio_returned", "golem_talk",
                  "golem_to_hole", "golem_in_hole", "battle_after"}
 
 # seq → x where Draavio points from, x of each soldier, facing (+1 right, -1 left),
@@ -1141,55 +1141,11 @@ FRAME_ENEMIES: dict[str, list[str]] = {
     "goat_porthole":            ["goat_porthole"],
 }
 
-# ── Character sheet prompts ───────────────────────────────────────────────────
-# Realistic render of a filled-out Pathfinder (Paizo) character sheet.
-_SHEET = (
-    "A filled-out Pathfinder RPG character sheet (Paizo official layout). "
-    "Portrait orientation, flat lay, slight angle as if on a table. "
-    "Hand-written entries in ink, realistic paper texture. "
-    "The sheet is clearly in use — dice nearby, pencil marks, eraser ghosts. "
-    "Realistic style, warm overhead light. "
-)
-SHEET_PROMPTS: dict[str, tuple[str, str]] = {
-    "sheet_draavio": (
-        _SHEET + "Character name: DRAAVIO. Player: Merlin. Class: Ranger 3 / Alchemist 4. "
-        "Half-orc. Hit points 68. Strength 18, Dexterity 16, Constitution 14, Intelligence 22, Wisdom 18. "
-        "The sheet has a scroll case drawn in the margin. Pink carabiner note visible. "
-        "Two class lines filled — the build is visible as a deliberate financial decision.",
-        "realistic"
-    ),
-    "sheet_pyrrhon": (
-        _SHEET + "Character name: PYRRHON THE THRICE-KINDLED. Player: Sheldon Cooper. "
-        "Class: Wizard 7 (evocation, admixture). Human. Hit points 45. "
-        "Three highlighters — orange, blue, green — used heavily. "
-        "STINKING CLOUD underlined in all three colors. FALSE LIFE noted with an orange tax annotation. "
-        "Feat list reads like a single argument: every line points the same direction.",
-        "realistic"
-    ),
-    "sheet_njala": (
-        _SHEET + "Character name: NJÁLA. Player: Lisbeth Salander. "
-        "Class: Witch 3 / Rogue 4. Human. Hit points 48. "
-        "Written entirely in pencil. Eraser marks visible on the witch/rogue split line. "
-        "LINGUISTICS: 0. The vial line is clean. COMMON is not on the sheet.",
-        "realistic"
-    ),
-    "sheet_merit": (
-        _SHEET + "Character name: MERIT OF THE FORD. Player: (blank). "
-        "Class: Paladin 7. Gnome. Small. Hit points 67. "
-        "No archetype line — not a blank field, the line simply does not exist on this sheet. "
-        "Code of conduct written on the back in the same hand as the front. "
-        "Spell slots present but empty. The code is not a prepared list.",
-        "realistic"
-    ),
-    "sheet_raymora": (
-        _SHEET + "Character name: RAYMORA THE DRAGON. Player: Joey Tribbiani. "
-        "The labels are reversed from a standard sheet. "
-        "Class: Druid 7. Human. Hit points 52. Heal +17 — more ranks than anyone at the table. "
-        "DOCTOR written in the margin where the sheet has no line for it. "
-        "Two feat lines blank. He did not know they were his.",
-        "realistic"
-    ),
-}
+# ── Character sheets ─────────────────────────────────────────────────────────
+# Not image-model stills. tools/build_minus08_sheets.py fills the Paizo PZO1110 sheet
+# from the sheet blocks in -08.md and writes sheet_*.png into act00_the_table.
+# A frame listed here shows that sheet and nobody is drawn over it.
+SHEET_SHOWN = {"joey_sheet": "sheet_raymora"}
 
 # ── Table-mode frame IDs (pre-game only — act=0) ─────────────────────────────
 # These frames use the table background + player portrait overlays.
@@ -1621,12 +1577,10 @@ def cmd_stills(render: bool = False) -> None:
             print(f"  [dry] {sid}")
 
     print("── Character sheets ──────────────────────────────────────────────")
-    for sid, (prompt, style) in SHEET_PROMPTS.items():
-        dest = bg_path(sid)
-        if render:
-            render_image(sid, prompt, style, dest)
-        else:
-            print(f"  [dry] {sid}")
+    if render:
+        subprocess.run([sys.executable, str(BASE / "tools/build_minus08_sheets.py")], check=True)
+    else:
+        print("  [dry] tools/build_minus08_sheets.py")
 
 
 # ── Plate cache ───────────────────────────────────────────────────────────────
@@ -2130,6 +2084,13 @@ def draw_frame(screen, audio_t: float, cues: list[dict], font, font_mono) -> Non
         act_bg = ACT_BACKGROUNDS.get(act, "antechamber")
         _SHOT["bg"] = act_bg
         _draw_initiative(screen, frame_id, bg_plate(act_bg), font, font_mono)
+    elif frame_id in SHEET_SHOWN:
+        _SHOT["bg"] = SHEET_SHOWN[frame_id]
+        bg = bg_plate(SHEET_SHOWN[frame_id])
+        if bg:
+            screen.blit(bg, (0, 0))
+        else:
+            screen.fill(NIGHT)
     elif frame_id == "manual_page":
         # procedural: pre_game_table bg + "organize a trip" text overlay
         bg = _resolve_bg(frame_id, act)
@@ -2145,7 +2106,7 @@ def draw_frame(screen, audio_t: float, cues: list[dict], font, font_mono) -> Non
         else:
             screen.fill(NIGHT)
 
-    if not in_cutscene:
+    if not in_cutscene and frame_id not in SHEET_SHOWN:
         _draw_sprites(screen, cue, act, frame_id, speaker, speaking_char,
                       in_table_mode, brk, audio_t, font)
 
