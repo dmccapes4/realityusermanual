@@ -274,7 +274,7 @@ def phase2_cues() -> list[dict]:
             guess = {
                 "06": BASE / "src" / "phase2" / "-06.md",
                 "07": BASE / "src" / "phase2" / "-07.md",
-                "08": BASE / "src" / "phase2" / "-08.md",
+                "08": BASE / "quarantine" / "-08_book_pre_narration_20261107.md",
             }.get(mode)
             path = guess if guess and guess.exists() else path
         if not path.exists():
@@ -305,12 +305,17 @@ def cues_jsonl(path: Path) -> list[dict]:
         if not line.strip():
             continue
         c = json.loads(line)
+        start = float(c.get("start") or 0)
+        end   = float(c.get("end")   or 0)
+        dur   = c.get("dur")
+        if dur is None:
+            dur = max(0.0, end - start)
         cues.append({
-            "start": c.get("start", 0),
-            "end": c.get("end", 0),
-            "dur": c.get("dur"),
+            "start":   start,
+            "end":     end,
+            "dur":     float(dur),
             "speaker": c.get("speaker", "Voice"),
-            "text": c.get("text", ""),
+            "text":    c.get("text", ""),
         })
     return cues
 
@@ -376,12 +381,12 @@ def main():
         "id": "minus08",
         "kind": "page",
         "page": "−08",
-        "title": "The Witch of the Rivers (table)",
+        "title": "-08 The Archivist is Goat",
         "source": "src/phase2/-08.md",
         "voices": "Narrator; Lisbeth Danish + English pass; Feynman, Sheldon, Joey, Witch, Draavio, Vincent",
-        "video": link_media(BASE / "video" / "minus08" / "-08_the_table.mp4", "-08_the_table.mp4"),
+        "video": link_media(BASE / "video" / "minus08" / "-08_the_archive.mp4", "-08_the_archive.mp4"),
         "audio": link_media(BASE / "audio" / "minus08" / "minus08.mp3", "-08.mp3"),
-        "duration": ffprobe_dur(BASE / "video" / "minus08" / "-08_the_table.mp4")
+        "duration": ffprobe_dur(BASE / "video" / "minus08" / "-08_the_archive.mp4")
         or ffprobe_dur(BASE / "audio" / "minus08" / "minus08.mp3"),
     }, cues_jsonl(BASE / "audio" / "minus08" / "cues.jsonl"))
 
@@ -398,6 +403,19 @@ def main():
     }, minus10_cues())
 
     add({
+        "id": "minus10b",
+        "kind": "page",
+        "page": "−10b",
+        "title": "The Frame Material",
+        "source": "src/phase2/-10b.md",
+        "voices": "GoinesFeynman; Vincent",
+        "video": link_media(BASE / "video" / "minus10b" / "-10b_the_frame_material.mp4", "-10b_the_frame_material.mp4"),
+        "audio": link_media(BASE / "audio" / "minus10b" / "minus10b.mp3", "-10b.mp3"),
+        "duration": ffprobe_dur(BASE / "video" / "minus10b" / "-10b_the_frame_material.mp4")
+        or ffprobe_dur(BASE / "audio" / "minus10b" / "minus10b.mp3"),
+    }, cues_jsonl(BASE / "audio" / "minus10b" / "cues.jsonl"))
+
+    add({
         "id": "minus14",
         "kind": "page",
         "page": "−14",
@@ -408,6 +426,19 @@ def main():
         "audio": link_media(BASE / "audio" / "minus14" / "07k_reading.mp3", "-14.mp3"),
         "duration": ffprobe_dur(BASE / "video" / "minus14" / "-14_ted_ross_sheldon_goines.mp4"),
     }, minus14_cues())
+
+    add({
+        "id": "minus25",
+        "kind": "page",
+        "page": "−25",
+        "title": "The Night of the Tesseract Turn",
+        "source": "src/phase2/-25.md",
+        "voices": "Matilda; Goat (TTL); Operator (Clone); Narrator",
+        "video": link_media(BASE / "video" / "minus25" / "-25_the_tesseract_turn.mp4", "-25_the_tesseract_turn.mp4"),
+        "audio": link_media(BASE / "audio" / "minus25" / "minus25.mp3", "-25.mp3"),
+        "duration": ffprobe_dur(BASE / "video" / "minus25" / "-25_the_tesseract_turn.mp4")
+        or ffprobe_dur(BASE / "audio" / "minus25" / "minus25.mp3"),
+    }, cues_jsonl(BASE / "audio" / "minus25" / "cues.jsonl"))
 
     add({
         "id": "minus27",
@@ -475,6 +506,72 @@ def main():
         "read": "/p/-31/",
         "duration": ffprobe_dur(minus31_audio),
     }, minus31_cues())
+
+    add({
+        "id": "crisis006",
+        "kind": "audio",
+        "page": "006",
+        "title": "006 Unnumbered Crisis",
+        "source": "src/006_crisis/",
+        "voices": "Narrator, Feynman, McClane, Cecil, Caller, Editor, Terminal",
+        "video": None,
+        "audio": link_media(BASE / "audio" / "crisis" / "006_unnumbered_crisis.mp3", "006_unnumbered_crisis.mp3"),
+        "duration": ffprobe_dur(BASE / "audio" / "crisis" / "006_unnumbered_crisis.mp3"),
+        "read": "/p/006/",
+    }, cues_jsonl(BASE / "audio" / "crisis" / "cues.jsonl"))
+
+    add({
+        "id": "minus0",
+        "kind": "audio",
+        "page": "−0",
+        "title": "−0 Sauron's Decree",
+        "source": "src/phase2/-0.md",
+        "voices": "Sauron, Feynman, McClane, Operator, Euler",
+        "video": None,
+        "audio": link_media(BASE / "audio" / "minus0" / "minus0.mp3", "minus0.mp3"),
+        "duration": ffprobe_dur(BASE / "audio" / "minus0" / "minus0.mp3"),
+        "read": "/p/-0/",
+    }, cues_jsonl(BASE / "audio" / "minus0" / "cues.jsonl"))
+
+    add({
+        "id": "minus00",
+        "kind": "audio",
+        "page": "−00",
+        "title": "−00 Operator Note",
+        "source": "src/phase2/-00.md",
+        "voices": "Operator",
+        "video": None,
+        "audio": link_media(BASE / "audio" / "minus00" / "minus00.mp3", "minus00.mp3"),
+        "duration": ffprobe_dur(BASE / "audio" / "minus00" / "minus00.mp3"),
+        "read": "/p/-00/",
+    }, cues_jsonl(BASE / "audio" / "minus00" / "cues.jsonl"))
+
+    add({
+        "id": "minus000",
+        "kind": "audio",
+        "page": "−000",
+        "title": "−000 One Script",
+        "source": "src/phase2/-000.md",
+        "voices": "Terminal",
+        "video": None,
+        "audio": link_media(BASE / "audio" / "minus000" / "minus000.mp3", "minus000.mp3"),
+        "duration": ffprobe_dur(BASE / "audio" / "minus000" / "minus000.mp3"),
+        "read": "/p/-000/",
+    }, cues_jsonl(BASE / "audio" / "minus000" / "cues.jsonl"))
+
+    add({
+        "id": "minus0000",
+        "kind": "page",
+        "page": "−0000",
+        "title": "−0000 Cast Rewrite",
+        "source": "src/phase2/-0000.md",
+        "voices": "Chandler, Ross, Joey, Narrator, Sauron (Default)",
+        "video": link_media(BASE / "video" / "minus0000" / "-0000_cast_rewrite.mp4", "-0000_cast_rewrite.mp4"),
+        "audio": link_media(BASE / "audio" / "minus0000" / "minus0000.mp3", "minus0000.mp3"),
+        "duration": ffprobe_dur(BASE / "video" / "minus0000" / "-0000_cast_rewrite.mp4")
+        or ffprobe_dur(BASE / "audio" / "minus0000" / "minus0000.mp3"),
+        "read": "/p/-0000/",
+    }, cues_jsonl(BASE / "audio" / "minus0000" / "cues.jsonl"))
 
     book = book_cues()
     add({

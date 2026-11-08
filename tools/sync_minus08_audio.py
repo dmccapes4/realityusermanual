@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 tools/sync_minus08_audio.py
-Rebuild audio/minus08 cues and concat list from -08_narration.md, in narration order.
+Rebuild audio/minus08 cues and concat list from -08.md (narration format), in narration order.
 
 A paragraph whose text one voice has already spoken reuses that segment (or the run
 of consecutive segments that spell it). Only new or changed paragraphs go to ElevenLabs.
@@ -25,7 +25,7 @@ import wave
 from pathlib import Path
 
 BASE      = Path(__file__).resolve().parent.parent
-SRC       = BASE / "src" / "phase2" / "-08_narration.md"
+SRC       = BASE / "src" / "phase2" / "-08.md"
 AUDIO_DIR = BASE / "audio" / "minus08"
 SEG_DIR   = AUDIO_DIR / "segments"
 CUES_F    = AUDIO_DIR / "cues.jsonl"

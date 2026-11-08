@@ -52,6 +52,26 @@ def page_id(stem: str) -> str:
     return "minus" + stem.lstrip("-")
 
 
+SHOWN_AS = {"LISBETH_EN": "Lisbeth (English)", "NARRATOR_EN": "Narrator (English)",
+            "DOCTOR_DRAKE": "Doctor Drake", "SCAPE": "SCAPE"}
+
+
+def readable(text: str) -> str:
+    """Narration-format pages: drop the video cues, show speaker labels as names."""
+    out, fence = [], False
+    for line in text.split("\n"):
+        s = line.strip()
+        if re.fullmatch(r"```[\w-]*", s):
+            fence = not fence
+        if not fence:
+            if re.fullmatch(r"~~(FRAME|STATE|SCRATCH):[^~]+~~", s):
+                continue
+            line = re.sub(r"^\*\*([A-Z][A-Z_]+):\*\*",
+                          lambda m: f"**{SHOWN_AS.get(m.group(1), m.group(1).title())}:**", line)
+        out.append(line)
+    return "\n".join(out)
+
+
 def build(stem: str, listen_id: str | None = None) -> Path:
     if not stem.startswith("-"):
         stem = f"-{stem}"
@@ -60,7 +80,7 @@ def build(stem: str, listen_id: str | None = None) -> Path:
         src = SRC_ROOT / f"{stem}.md"   # try src/ directly (e.g. -35.md)
     if not src.exists():
         raise SystemExit(f"missing {src}")
-    text = src.read_text(encoding="utf-8")
+    text = readable(src.read_text(encoding="utf-8"))
     title_m = re.search(r"^#\s+(.+)$", text, re.M)
     title = title_m.group(1).strip() if title_m else f"Page {stem}"
     body = markdown.markdown(

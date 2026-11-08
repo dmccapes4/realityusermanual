@@ -7,7 +7,7 @@ the party's unattributed sentence and the closing Axiomite block are left alone.
 import re
 import sys
 
-PATH = "src/phase2/-08.md"
+PATH = "quarantine/-08_book_pre_narration_20261107.md"
 
 LISBETH_EN = (
     "*I like that the rules", "*I agree with your frustration", "*Witches cackle.",

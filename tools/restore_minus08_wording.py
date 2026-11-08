@@ -13,8 +13,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sync_minus08_audio import key, spoken  # noqa: E402
 
-BOOK = Path("src/phase2/-08.md")
-NARR = Path("src/phase2/-08_narration.md")
+BOOK = Path("quarantine/-08_book_pre_narration_20261107.md")
+NARR = Path("src/phase2/-08.md")
 LABEL = re.compile(r"^\*\*([^*]+?):\*\*\s*")
 
 
