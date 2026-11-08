@@ -1014,6 +1014,7 @@ CLIMB_GONE: dict[str, set[str]] = {
     "climb_njala_top":  {"njala", "pyrrhon"},          # Njála free-climbed; Pyrrhon spider-climbed
     "climb_merit_top":  {"njala", "pyrrhon", "merit"},
     "joey_wildshape":   {"njala", "pyrrhon", "merit"},  # Joey still below as doctor → iguana
+    "coda_code":        {"njala", "pyrrhon", "merit"},  # the coin spins at the foot of the wall
     "iguana_on_rope":   {"njala", "pyrrhon", "merit", "draavio"},  # everyone up; only iguana left
 }
 
@@ -1159,7 +1160,7 @@ TABLE_MODE_FRAMES = {
 # Frame IDs that need a background fallback because they have no PNG.
 # Maps frame_id → bg_id to use when act context alone isn't enough.
 FRAME_BG_FALLBACK: dict[str, str] = {
-    "coda_code":             "cliff_top_night",
+    "coda_code":             "mountain_road",
     "manual_page":           "pre_game_table",
     "merlin_alone":          "pre_game_table",
     "party_table":           "pre_game_table",
