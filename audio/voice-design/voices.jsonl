@@ -1,0 +1,29 @@
+{"id": "narrator", "speaker": ["The Narrator"], "name": "Narrator", "voice_id": "Nxtvajpo1h6Ok0K5zP4M", "prompt": "B omniscient clerk", "wired": true}
+{"id": "mcclane", "speaker": ["McClane"], "name": "McClane", "voice_id": "v5WGk9HED8B9DwqtgdY9", "prompt": "saved McClane", "wired": true}
+{"id": "stamper", "speaker": ["Stamper"], "name": "Stamper", "voice_id": "yDqObAdig5l43Vkth1Qo", "prompt": "A deadpan (later of two)", "wired": true, "alt": "8JMwS6fGCnMo44yhwCLf oil-field grit 20:30Z"}
+{"id": "cecil", "speaker": ["Cecil", "Cecil Palmer"], "name": "Cecil", "voice_id": "mFxwGQHOfdvvPAYlbCXN", "prompt": "broadcast host", "wired": true}
+{"id": "sauron", "speaker": ["Sauron"], "name": "Sauron", "voice_id": "y83sBjIAA8cOKB2nYkOQ", "prompt": "B pole messenger", "wired": true}
+{"id": "sauron_default", "speaker": ["Sauron (Default)"], "name": "Sauron (Default)", "voice_id": "M2HASKhyinBcyBrKOfms", "prompt": "A tea-room host; Joey deliveries on -0000", "wired": true}
+{"id": "chandler", "speaker": ["Chandler"], "name": "Chandler(Default)", "voice_id": "4OvJ5XokvoRTp7JZAVu1", "prompt": "A default sarcasm", "wired": true, "alt": "FWSQOCNh4LOLLLoSB9UD Chandler(McClane)"}
+{"id": "ross", "speaker": ["Ross"], "name": "Ross", "voice_id": "CwB1mcAtrctICNsZs7IP", "prompt": "A earnest", "wired": true}
+{"id": "joey", "speaker": ["Joey"], "name": "Joey", "voice_id": "QDidinP5kDJnJ9cCCGp6", "prompt": "A stillness", "wired": true}
+{"id": "caller", "speaker": ["Caller", "The Caller"], "name": "CallerA", "voice_id": "eJmYJPoMPWAIOXtr7M6J", "prompt": "A British oracle", "wired": true, "alt": "a45J1uNXE16b7RgUDPFM CallerB; 9oXVO6SYC5tMdCA5TjRj CallerC"}
+{"id": "euler", "speaker": ["Euler"], "name": "Euler", "voice_id": "NkNI8nxq3DIt5kOnwBOH", "prompt": "A living lecturer", "wired": true}
+{"id": "draavio", "speaker": ["Draavio", "Magi"], "name": "Bill", "voice_id": "pqHfZKP75CvOlQylNhV4", "prompt": "library Bill; measured documentary; Euler was the lecturer stand-in", "wired": true}
+{"id": "editor", "speaker": ["Editor"], "name": "Editor", "voice_id": "TKYBHwjLmJEO0NsJJdwK", "prompt": "A technical editor", "wired": true}
+{"id": "carter", "speaker": ["Carter"], "name": "Carter", "voice_id": "MwdOFxwRC5Rru2LQ0DnY", "prompt": "A corridor stakeholder", "wired": true}
+{"id": "goines", "speaker": ["Goines"], "name": "Goines", "voice_id": "AZeB2F9LIG4QDh5xm27p", "prompt": "A empty-room lecturer", "wired": true}
+{"id": "operator", "speaker": ["Operator"], "name": "Operator", "voice_id": "0APuPpq6kIXc8Qz7JDYt", "prompt": "A male-leaning written I", "wired": true}
+{"id": "terminal", "speaker": ["Terminal"], "name": "Terminal", "voice_id": "Q2VrKSkh0ao0bi32RtFc", "prompt": "C equation/checksum", "wired": true}
+{"id": "feynman", "speaker": ["Feynman"], "name": "Feynman v3", "voice_id": "UosQzbgZZ3DYSVQ9ut6K", "prompt": "feynman_v3/description.txt; preview_1", "wired": true, "previous_voice_id": "b0slphXbemaraca3riTn"}
+{"id": "vincent", "speaker": ["Vincent"], "name": null, "voice_id": null, "note": "no generated voice in library; stand-in Will"}
+{"id": "velora", "speaker": ["Velora"], "name": null, "voice_id": null, "note": "no generated voice in library; stand-in Lily"}
+{"id": "ted", "speaker": ["Ted"], "name": "Ted", "voice_id": "mGvd1mvfXjuqYQREqkVi", "prompt": "library Ted", "wired": true}
+{"id": "sheldon", "speaker": ["Sheldon"], "name": "Sheldon", "voice_id": "OAXPclEPumYkMdEw2L4g", "prompt": "library Sheldon", "wired": true}
+{"id": "goines_real", "speaker": ["GoinesReal"], "name": null, "voice_id": null, "note": "not the empty-room lecturer; prompts in REPORT_goines_real.md; leave unwired until saved"}
+{"id": "goines_feynman", "speaker": ["GoinesFeynman"], "name": "GoinesFeynman", "voice_id": "WLUTmOTCnJcX4diy6U78", "prompt": "library GoinesFeynman", "wired": true}
+{"id": "goines_magi", "speaker": ["GoinesMagi"], "name": null, "voice_id": null, "note": "same throat as Goines, Babylonian magi demeanor; prompts in REPORT_goines_magi.md; leave unwired until saved"}
+{"id": "auden", "speaker": ["Auden"], "name": "Auden", "voice_id": "dzwyqh76kT1iXqbtUwqI", "prompt": "transatlantic dry notebook narrator", "wired": true}
+{"id": "holden", "speaker": ["Holden"], "name": "Holden", "voice_id": "s5Us2s63OX1brvt7DKSv", "prompt": "NY skeptic flat/up inflection", "wired": true}
+{"id": "gatsby", "speaker": ["Gatsby", "Jay"], "name": "Gatsby", "voice_id": "h4mJQbhkwgGm7srdTsMu", "prompt": "practiced warmth looks at the light", "wired": true}
+{"id": "atticus", "speaker": ["Atticus"], "name": "Atticus", "voice_id": "0w201zUOH1U3u6PzgzdY", "prompt": "Alabama baritone courtroom cadence", "wired": true}

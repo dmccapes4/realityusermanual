@@ -343,12 +343,15 @@ def scratch_wav(notation: str, dest: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--revoice", action="append", default=[],
+                    help="voice whose old audio is not reused (its voice id changed)")
     args = ap.parse_args()
+    revoice = {vclass(v) for v in args.revoice}
 
     if DUR_CACHE.exists():
         _durs.update(json.loads(DUR_CACHE.read_text()))
     paras = parse()
-    old = load_old()
+    old = [c for c in load_old() if c["vc"] not in revoice]
     by_name = {p.name: p for p in SEG_DIR.glob("*.mp3")}
     next_idx = max(int(n.split("_")[0]) for n in by_name if n[:4].isdigit()) + 1
 
@@ -369,7 +372,8 @@ def main() -> None:
             continue
         for chunk in chunks(p["text"]):
             short = SPEAKER_SHORT.get(p["voice"], p["voice"][:4])
-            h = hashlib.md5(chunk.encode()).hexdigest()[:16]
+            salt = VOICE_MAP.get(p["voice"], "") + ":" if vclass(p["voice"]) in revoice else ""
+            h = hashlib.md5((salt + chunk).encode()).hexdigest()[:16]
             have = next((n for n in by_name if n.endswith(f"_{short}_{h}.mp3")), None)
             if have:
                 plan.append({**base, "text": chunk, "seg": have})

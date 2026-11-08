@@ -3645,6 +3645,9 @@ The Narrator does not follow the goats either. His job ends at the edge of the w
 **NARRATOR:**
 When Draavio looks back at the ring of light, it has set. The oak is an oak. The book in his hand still says SCAPE.
 
+~~STATE:break=on~~
+~~FRAME:party_table~~
+
 **FEYNMAN:**
 *(closing the screen; the dragon faces the table again)* That's the session. Experience for the skeleton, the gargoyle, and the golem, split five ways. Vincent, you didn't take a turn.
 
@@ -3670,7 +3673,7 @@ Whether the printed number decides the order. Or reports on something that was a
 Feynman holds the screen. He does not open it.
 
 **FEYNMAN:**
-In the crisis pages — the accounting crisis, the unnumbered page — the question was the same one. The operator declared the page unnumbered. But the page was already bound in sequence. It was still the nth page. Every calculation that followed was off by one on the label, not on the page. The crisis was about a missing label. Not a missing number. The order was already there before the label existed.
+In the crisis pages — the accounting crisis, the unnumbered page — I asked the same question. Does the number assign the order, or report on an order already there? I said the operator could not have it both ways. I was wrong. I kept going without an answer. The caller had one. Tsad is the journey. Nun is where the water splits. Mem is what continues through. It was never order against label. The checksum counted the pages by presence, and it passed both times. Every page was there. What continues through is presence. The content. The checksum had it right all along.
 
 **MERLIN:**
 Was that my bad?
@@ -3716,6 +3719,7 @@ click
 
 ---
 
+~~STATE:break=off~~
 ~~FRAME:circle_room_trial~~
 
 *10 second pause*
