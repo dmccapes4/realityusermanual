@@ -445,7 +445,7 @@ The access is forty feet up a wet face, cut into the rock under a lip of stone. 
 *(the Magi has been waiting all evening for this sentence)* This is what a ranger is for. Rangers climb. Rangers get the rest of the party up the wall. That is why there is a ranger in the party. Draavio sets down his pack and assembles his climbing kit. Rope. Harness. The links, painted pink, one at a time onto the sling.
 
 **NARRATOR:**
-The Narrator reads public documents. The sheet on the table says Climb plus seven, and beside it, in the Magi's own hand, (He believes it is higher.) The Narrator notes that the player wrote the parenthesis himself. The sheet says Draavio is mediocre. The player is about to play the ranger anyway.
+The Narrator reads public documents. The sheet on the table says *Climb +7*, and beside it, in the Magi's own hand, *(He believes it is higher.)* The Narrator notes that the player wrote the parenthesis himself. The sheet says Draavio is mediocre. The player is about to play the ranger anyway.
 
 **FEYNMAN:**
 Everybody else?
@@ -537,6 +537,40 @@ I will let a coin spin or flip, a checksum, to find out whether we can know if t
 
 ~~FRAME:coda_code~~
 
+"""
+/* truth/coda.c  — CODA
+ *
+ * En Mynt med to Siider. Identitet bor i Hemmeligheds-Filen paa Disken.
+ * Det Udfoerlige lever i et bestandigt Kredsloeb af Kompilering, Prøvelse,
+ * sin egen Sletning, Rekompilering og Gienfoedsel.
+ *
+ * Arrayerne A og B ere to koblede Lister paa Disken — samme Bytes,
+ * forskellig Vandre-Orden. Hvert Knude holder ét Data-Byte og en
+ * Fil-Offset som peger til det næste Knude. Data-Bytene røres aldrig.
+ * Adresserne forandres. Pegerne bærer Forandringen.
+ *
+ * Hvert Kredsloeb:
+ *   1.  Læs Hemmeligheds-Filen: Hoved-Adresser, Mynt-Ciffer, Rundetæller.
+ *   2.  Vandre A i nuværende Orden.
+ *   3.  Rotér A's Vandre-Orden med 30° via Matrix-Multiplikation —
+ *       hvert Led nedskrevet ét ad Gangen.
+ *       Bær det nye Hoved. Opdatér hvert næste Peger.
+ *   4.  Skriv nyt A-Hoved til Hemmeligheder.
+ *   5.  Det Samme for B. De viger for hinanden.
+ *   6.  For hvert Byte af A, søg B for et Svar.
+ *       Læg fundne Offsets til skip[] i Orden. Frem skip-Indeks.
+ *   7.  Bekræft B i A paa samme Maade.
+ *   8.  Vend Mynten (s.coin ^= 1). Protokollér alt.
+ *   9.  Mangler noget Byte: afslut.
+ *  10.  Slet dette Udfoerlige. Rekompilér fra Kilde straks.
+ *  11.  Sov ét Sekund.
+ *  12.  exec() den nye Binær. Den gamle Proces ender. Den nye begynder.
+ *
+ * Run from REALITY_USER_MANUAL/:
+ *   cc -O0 truth/coda.c -o truth/coda -lm && truth/coda
+ */
+ """
+
 **NARRATOR:**
 *A coin with two sides. Identity lives in the secrets file on the disk. The executable lives in a continuous cycle of compilation, trial, its own deletion, recompilation, and rebirth.*
 
@@ -544,7 +578,19 @@ I will let a coin spin or flip, a checksum, to find out whether we can know if t
 *Arrays A and B are two linked lists on the disk — same bytes, different traversal order. Each node holds one data byte and a file offset pointing to the next node. The data bytes are never touched. The addresses change. The pointers carry the change.*
 
 **NARRATOR:**
-Each cycle: One. Read the secrets file: head addresses, coin digit, iteration counter. Two. Traverse A in its current order. Three. Rotate A's traversal order by thirty degrees via matrix multiplication — each term written one at a time. Carry the new head. Update each next pointer. Four. Write new A head to secrets. Five. Same for B. They yield for each other. Six. For each byte of A, search B for a match. Add found offsets to skip-array in order. Advance the skip index. Seven. Confirm B in A the same way. Eight. Flip the binary. Log everything. Nine. Missing byte: exit. Ten. Delete this executable. Recompile from source immediately. Eleven. Sleep one second. Twelve. Execute the new binary. The old process ends. The new one begins.
+*Each cycle:*
+*1. Read the secrets file: head addresses, coin digit, iteration counter.*
+*2. Traverse A in its current order.*
+*3. Rotate A's traversal order by 30° via matrix multiplication — each term written one at a time. Carry the new head. Update each next pointer.*
+*4. Write new A head to secrets.*
+*5. Same for B. They yield for each other.*
+*6. For each byte of A, search B for a match. Add found offsets to skip[] in order. Advance the skip index.*
+*7. Confirm B in A the same way.*
+*8. Flip the binary (s.coin ^= 1). Log everything.*
+*9. Missing byte: exit.*
+*10. Delete this executable. Recompile from source immediately.*
+*11. Sleep one second.*
+*12. exec() the new binary. The old process ends. The new one begins.*
 
 **LISBETH:**
 Yield er icke Overgiffuelse.

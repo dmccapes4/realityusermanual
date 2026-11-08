@@ -1,0 +1,18 @@
+[
+ [
+  "`make -j1`",
+  "make minus j one"
+ ],
+ [
+  "*Climb +7*",
+  "Climb plus seven"
+ ],
+ [
+  "*(He believes it is higher.)*",
+  "(He believes it is higher.)"
+ ],
+ [
+  "*Each cycle:* *1. Read the secrets file: head addresses, coin digit, iteration counter.* *2. Traverse A in its current order.* *3. Rotate A's traversal order by 30° via matrix multiplication — each term written one at a time. Carry the new head. Update each next pointer.* *4. Write new A head to secrets.* *5. Same for B. They yield for each other.* *6. For each byte of A, search B for a match. Add found offsets to skip[] in order. Advance the skip index.* *7. Confirm B in A the same way.* *8. Flip the binary (s.coin ^= 1). Log everything.* *9. Missing byte: exit.* *10. Delete this executable. Recompile from source immediately.* *11. Sleep one second.* *12. exec() the new binary. The old process ends. The new one begins.*",
+  "Each cycle: One. Read the secrets file: head addresses, coin digit, iteration counter. Two. Traverse A in its current order. Three. Rotate A's traversal order by thirty degrees via matrix multiplication — each term written one at a time. Carry the new head. Update each next pointer. Four. Write new A head to secrets. Five. Same for B. They yield for each other. Six. For each byte of A, search B for a match. Add found offsets to skip-array in order. Advance the skip index. Seven. Confirm B in A the same way. Eight. Flip the binary. Log everything. Nine. Missing byte: exit. Ten. Delete this executable. Recompile from source immediately. Eleven. Sleep one second. Twelve. Execute the new binary. The old process ends. The new one begins."
+ ]
+]

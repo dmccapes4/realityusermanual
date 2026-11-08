@@ -86,10 +86,8 @@ def vclass(voice: str) -> str:
     return VOICE_CLASS.get(voice, voice)
 
 
-# The text stays as written; these are how the voice reads it.
-SAY = [
-    ("`make -j1`", "make minus j one"),
-]
+# The text stays as written; minus08_say.json holds how the voice reads it.
+SAY = [tuple(p) for p in json.loads((Path(__file__).resolve().parent / "minus08_say.json").read_text())]
 
 
 def spoken(t: str) -> str:
@@ -133,7 +131,7 @@ def parse(path: Path = SRC) -> list[dict]:
 
     for line in body.splitlines():
         s = line.strip()
-        if s.startswith("```"):
+        if s.startswith("```") or s == '"""':
             flush()
             fence = not fence
             continue
