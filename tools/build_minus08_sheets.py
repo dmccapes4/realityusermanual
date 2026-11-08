@@ -65,13 +65,25 @@ SKILL_TOP = {
     "Sleight of Hand": 567, "Spellcraft": 579, "Stealth": 590, "Survival": 601,
     "Swim": 613, "Use Magic Device": 624,
 }
-SKILL_COL = {"total": 440, "ranks": 522, "box": 320}
+SKILL_COL = {"total": 440, "ability": 490, "ranks": 522, "misc": 552, "box": 320}
+# Component boxes, centres measured from the rendered page.
+AC_COL = {"armor": 125.5, "shield": 154.5, "dex": 183.5, "size": 212, "natural": 241,
+          "deflection": 270, "misc": 299}
+SAVE_PART = {"base": 141, "ability": 169, "magic": 197, "misc": 224.5}
+CMB_COL = {"bab": 170, "str": 200, "size": 230}
+CMD_COL = {"bab": 170, "str": 200, "dex": 230, "size": 261}
+INIT_COL = {"dex": 272, "misc": 299}
+SPEED = {"base": (378, 116), "armor": (455, 116)}
+WEAPON_COL = {"type": (25, 58), "range": (58, 105.7), "ammo": (105.7, 206.7), "dmg": (206.7, 310)}
 COND_LINES = [665.8, 677.3]
 LANG_LINES = [705.3, 716.7, 727.8]
 
 # page 2
-ACI_ROWS = [72, 90, 108, 126, 144]
-ACI_COL = {"item": (35, 145), "bonus": 162, "type": 204}
+ACI_ROWS = [78, 96, 114, 132, 150]
+ACI_TOTAL = 166
+ACI_COL = {"item": (35, 145), "bonus": 163, "type": 204, "acp": 253, "asf": 300, "wt": 341,
+           "props": (361, 408)}
+GEAR_WT = 157.6
 GEAR_ROWS = [217.7, 231.5, 246.0, 262.5, 277.2, 290.8, 305.5, 319.5, 334.2, 347.8, 362.5,
              379.0, 393.7, 407.3, 422.0, 436.5, 451.0, 464.8, 479.3, 496.0, 510.5, 524.3,
              538.8, 552.8, 567.5, 583.8]
@@ -79,8 +91,8 @@ GEAR_X = (35, 148)
 FEAT_ROWS = [213.5 + 14.67 * i for i in range(12)]
 SPEC_ROWS = [417.5 + 14.67 * i for i in range(20)]
 TEXT_X = (180, 410)
-SPELL_ROW = [92, 110, 127, 145, 162, 179, 196, 214, 231, 248]
-SPELL_COL = {"known": 439, "dc": 469, "day": 531, "bonus": 562}
+SPELL_ROW = [93.2, 109.5, 127.5, 144.2, 162.5, 178.9, 196.9, 213.7, 231.9, 248.5]
+SPELL_COL = {"known": 439, "dc": 469, "day": 531, "bonus": 561}
 SCHOOL_LINE = (428, 576, 307)
 SPELL_BLOCK = {0: 331.0, 1: 393.8, 2: 457.3, 3: 511.5, 4: 559.8, 5: 601.2, 6: 635.2, 7: 669.8,
                8: 704.2, 9: 732.3}  # first ruled line under each level
@@ -442,6 +454,191 @@ SHEETS: dict[str, dict] = {
 }
 
 
+# ── What a player at the table works out (Pathfinder 1e Core Rulebook) ───────
+# The totals above are the sheet blocks. The parts below are the arithmetic a player writes
+# beside them: class base saves, BAB, size, armor, skill columns, spells per day.
+# Where a part does not add up to the block's total, the total stands and the box that
+# would balance it stays empty.
+SKILL_ABIL = {
+    "Acrobatics": "DEX", "Appraise": "INT", "Bluff": "CHA", "Climb": "STR", "Craft 1": "INT",
+    "Craft 2": "INT", "Craft 3": "INT", "Diplomacy": "CHA", "Disable Device": "DEX",
+    "Disguise": "CHA", "Escape Artist": "DEX", "Fly": "DEX", "Handle Animal": "CHA",
+    "Heal": "WIS", "Intimidate": "CHA", "Linguistics": "INT", "Perception": "WIS",
+    "Perform 1": "CHA", "Perform 2": "CHA", "Profession 1": "WIS", "Profession 2": "WIS",
+    "Ride": "DEX", "Sense Motive": "WIS", "Sleight of Hand": "DEX", "Spellcraft": "INT",
+    "Stealth": "DEX", "Survival": "WIS", "Swim": "STR", "Use Magic Device": "CHA",
+}
+SKILL_ABIL.update({k: "INT" for k in SKILL_TOP if k.startswith("Knowledge")})
+TRAINED_ONLY = {"Disable Device", "Handle Animal", "Linguistics", "Profession 1", "Profession 2",
+                "Sleight of Hand", "Spellcraft", "Use Magic Device"} | \
+               {k for k in SKILL_TOP if k.startswith("Knowledge")}
+K = "Knowledge ({})".format
+CLASS_SKILLS = {
+    "ranger": {"Climb", "Craft 1", "Handle Animal", "Heal", "Intimidate", K("dungeoneering"),
+               K("geography"), K("nature"), "Perception", "Profession 1", "Ride", "Spellcraft",
+               "Stealth", "Survival", "Swim"},
+    "alchemist": {"Appraise", "Craft 1", "Disable Device", "Fly", "Heal", K("arcana"), K("nature"),
+                  "Perception", "Profession 1", "Sleight of Hand", "Spellcraft", "Survival",
+                  "Use Magic Device"},
+    "wizard": {"Appraise", "Craft 1", "Fly", "Linguistics", "Profession 1", "Spellcraft"} |
+              {k for k in SKILL_TOP if k.startswith("Knowledge")},
+    "rogue": {"Acrobatics", "Appraise", "Bluff", "Climb", "Craft 1", "Diplomacy", "Disable Device",
+              "Disguise", "Escape Artist", "Intimidate", K("dungeoneering"), K("local"),
+              "Linguistics", "Perception", "Perform 1", "Profession 1", "Sense Motive",
+              "Sleight of Hand", "Stealth", "Swim", "Use Magic Device"},
+    "witch": {"Craft 1", "Fly", "Heal", "Intimidate", K("arcana"), K("history"), K("nature"),
+              K("planes"), "Profession 1", "Spellcraft", "Use Magic Device"},
+    "paladin": {"Craft 1", "Diplomacy", "Handle Animal", "Heal", K("nobility"), K("religion"),
+                "Profession 1", "Ride", "Sense Motive", "Spellcraft", "Climb"},  # Climb: Fey Thoughts
+    "druid": {"Climb", "Craft 1", "Fly", "Handle Animal", "Heal", K("geography"), K("nature"),
+              "Perception", "Profession 1", "Ride", "Spellcraft", "Survival", "Swim"},
+}
+
+DETAIL: dict[str, dict] = {
+    "draavio": {
+        "style": "ledger", "levels": {"ranger": 3, "alchemist": 4},
+        "head": {"size": "M", "gender": "M"},
+        "speed": ("30", "30"), "init": ("+3", "+3", ""),
+        "acp": {"armor": "+6", "shield": "+2", "dex": "+3"},
+        # Rules give Fort 7+2, Ref 7+3, Will 2+4; the block's +8/+8/+7 stand.
+        "saveparts": {"fort": ("+7", "+2", "", ""), "ref": ("+7", "+3", "", ""),
+                      "will": ("+2", "+4", "", "")},
+        "cmbp": ("+6", "+4", "0"), "cmdp": ("+6", "+4", "+3", "0"),
+        "wdetail": [{"type": "S, 2H", "range": "", "ammo": ""},
+                    {"type": "P", "range": "110 ft", "ammo": "arrows"},
+                    {"type": "P", "atk": "+11/+6", "crit": "19-20/x2"}],
+        "skill_over": {K("religion"): ("7", "+6"), "Climb": ("", "")},
+        "aci": [("+2 mithral chain shirt", "+6", "light", "0", "10%", "12.5", "max Dex +6"),
+                ("Heavy wooden shield", "+2", "shield", "-2", "15%", "10", "")],
+        "aci_total": ("+8", "", "-2", "25%", "22.5"),
+        "gear_wt": {"Bag of holding (type I):": "15", "Tome of Clear Thought +2": "5"},
+        "spellday": {1: ("", "17", "3", "+2"), 2: ("", "18", "1", "+1")},
+    },
+    "pyrrhon": {
+        "style": "pedant", "levels": {"wizard": 7},
+        "head": {"size": "M", "gender": "M"},
+        "speed": ("30", "30"), "init": ("+3", "+3", "0"),
+        # Ring of protection +1 is deflection; the block's touch 13 stands.
+        "acp": {"armor": "+2", "shield": "0", "dex": "+3", "size": "0", "natural": "0",
+                "deflection": "+1", "misc": "0"},
+        "saveparts": {"fort": ("+2", "+2", "0", "0"), "ref": ("+2", "+3", "0", "0"),
+                      "will": ("+5", "+1", "0", "0")},
+        "cmbp": ("+3", "-1", "0"), "cmdp": ("+3", "-1", "+3", "0"),
+        "wdetail": [{"type": "P", "range": "80 ft", "atk": "+6", "crit": "19-20/x2", "dmg": "1d8"}],
+        "aci": [("Bracers of armor +2", "+2", "armor", "0", "0%", "1", "force"),
+                ("Ring of protection +1", "+1", "deflection", "0", "0%", "", "")],
+        "aci_total": ("+3", "", "0", "0%", "1"),
+        "gear_wt": {"Cloak of resistance +1": "1", "Spell component pouch": "2",
+                    "Spellbook (by school, tabbed)": "3", "Light crossbow, 20 bolts": "6"},
+        "spellday": {0: ("", "15", "4", "-"), 1: ("", "16", "4", "+2"), 2: ("", "17", "3", "+1"),
+                     3: ("", "18", "2", "+1"), 4: ("", "19", "1", "+1")},
+        "school_slot": True,
+    },
+    "njala": {
+        "style": "sparse", "levels": {"rogue": 4, "witch": 3},
+        "head": {"size": "M", "gender": "F"},
+        "speed": ("30", "30"), "init": ("+4", "+4", ""),
+        "acp": {"armor": "+4", "dex": "+4"},
+        # Rules give Fort 2+2; the block's +3 stands.
+        "saveparts": {"fort": ("+2", "+2", "", ""), "ref": ("+5", "+4", "", ""),
+                      "will": ("+4", "+1", "", "")},
+        "cmbp": ("+4", "0", "0"), "cmdp": ("+4", "0", "+4", "0"),
+        "wdetail": [{"type": "P", "crit": "19-20/x2"}, {"type": "P", "crit": "19-20/x2"}],
+        "skill_over": {"Linguistics": ("0", "")},
+        "aci": [("+1 studded leather", "+4", "light", "0", "15%", "20", "")],
+        "aci_total": ("+4", "", "0", "15%", "20"),
+        "spellday": {0: ("", "13", "4", ""), 1: ("", "14", "2", "+1")},
+    },
+    "merit": {
+        "style": "own", "levels": {"paladin": 7},
+        "head": {"size": "Small", "gender": "F", "alignment": "LG"},
+        "speed": ("20", "15"), "init": ("+1", "+1", ""),
+        "acp": {"armor": "+10", "shield": "+3", "dex": "+1", "size": "+1"},
+        "saveparts": {"fort": ("+5", "+3", "", "+3"), "ref": ("+2", "+1", "", "+3"),
+                      "will": ("+5", "+1", "", "+3")},
+        "cmbp": ("+7", "+3", "-1"), "cmdp": ("+7", "+3", "+1", "-1"),
+        "wdetail": [{"type": "S"}],
+        "aci": [("+1 full plate", "+10", "heavy", "-5", "35%", "25", "max Dex +1"),
+                ("+1 heavy steel shield", "+3", "shield", "-1", "15%", "7.5", "")],
+        "aci_total": ("+13", "", "-6", "50%", "32.5"),
+    },
+    "raymora": {
+        "style": "loose", "levels": {"druid": 7},
+        "head": {"size": "M", "gender": "M"},
+        "speed": ("30", "20"), "init": ("+1", "+1", ""),
+        "acp": {"armor": "+4", "dex": "+1"},
+        "saveparts": {"fort": ("+5", "+2", "", ""), "ref": ("+2", "+1", "", ""),
+                      "will": ("+5", "+4", "", "")},
+        "cmbp": ("+5", "0", "0"), "cmdp": ("+5", "0", "+1", "0"),
+        "wdetail": [{"type": "S", "atk": "+5", "crit": "18-20/x2", "dmg": "1d6"},
+                    {"type": "B", "range": "50 ft", "ammo": "bullets", "atk": "+6", "crit": "x2",
+                     "dmg": "1d4"}],
+        "skill_over": {"Heal": ("7", "+6")},
+        "aci": [("Hide armor", "+4", "medium", "-3", "20%", "25", "")],
+        "aci_total": ("+4", "", "-3", "20%", "25"),
+        "spellday": {0: ("", "", "4", ""), 1: ("", "", "5", ""), 2: ("", "", "4", ""),
+                     3: ("", "", "3", ""), 4: ("", "", "2", "")},
+    },
+}
+
+
+def mod(sh, ab):
+    m = sh["abil"][ab][1]
+    return int(m) if m else 0
+
+
+def skill_rows(sh, det) -> dict[str, tuple[str, str, str, str]]:
+    """skill -> (total, ability, ranks, misc). Ranks are what is left after ability and the
+    class-skill +3; anything over the character level goes in misc."""
+    level = sum(det["levels"].values())
+    cls = set().union(*(CLASS_SKILLS[c] for c in det["levels"]))
+    over = det.get("skill_over", {})
+    rows = {}
+    for name, val in sh["skills"].items():
+        if isinstance(val, tuple) and name.startswith("Craft"):
+            continue
+        total, given_ranks = (val, "") if not isinstance(val, tuple) else val
+        if total is None:
+            continue
+        ab = mod(sh, SKILL_ABIL[name])
+        abs_ = f"{ab:+d}" if ab else "0"
+        if name in over:
+            r, m = over[name]
+            rows[name] = (total or "", abs_, r, m)
+            continue
+        if given_ranks and not total:
+            rows[name] = ("", abs_, given_ranks, "")
+            continue
+        t = int(total)
+        if given_ranks:
+            r = int(given_ranks)
+            rest = t - ab - r
+            rows[name] = (total, abs_, given_ranks, f"{rest:+d}" if rest else "")
+            continue
+        cb = 3 if name in cls else 0
+        r = t - ab - cb
+        if cb and r < 1:
+            rows[name] = (total, abs_, "", "")
+            continue
+        misc = cb
+        if r > level:
+            misc += r - level
+            r = level
+        rows[name] = (total, abs_, str(max(r, 0)), f"+{misc}" if misc else "")
+    style = det["style"]
+    if style in ("ledger", "pedant"):
+        for name in SKILL_TOP:
+            if name in rows or name.startswith(("Craft", "Perform", "Profession")):
+                continue
+            if name in sh["skills"]:
+                continue
+            ab = mod(sh, SKILL_ABIL[name])
+            abs_ = f"{ab:+d}" if ab else "0"
+            total = "" if (style == "ledger" or name in TRAINED_ONLY) else abs_
+            rows[name] = (total, abs_, "", "")
+    return rows
+
+
 # ── Rendering ────────────────────────────────────────────────────────────────
 PDF_ZIP = "https://downloads.paizo.com/PZOCUP009E_PathfinderRPG_RecordSheets.zip"
 
@@ -484,26 +681,53 @@ def fill_page1(img, sh, pen: Pen):
             pen.center(*BOX[k], sh[k], pt + 0.5, fit=34)
     for k, v in sh["saves"].items():
         pen.center(SAVE_COL["total"], SAVE_ROW[k], v, pt + 0.5)
+    det = sh["detail"]
+    cp = pt - 0.5
+    for k, parts in det["saveparts"].items():
+        for col, v in zip(("base", "ability", "magic", "misc"), parts):
+            if v:
+                pen.center(SAVE_PART[col], SAVE_ROW[k], v, cp, fit=18)
+    for col, v in det["acp"].items():
+        pen.center(AC_COL[col], BOX["ac"][1], v, cp, fit=18)
+    for col, v in zip(("bab", "str", "size"), det["cmbp"]):
+        pen.center(CMB_COL[col], BOX["cmb"][1], v, cp, fit=18)
+    for col, v in zip(("bab", "str", "dex", "size"), det["cmdp"]):
+        pen.center(CMD_COL[col], BOX["cmd"][1], v, cp, fit=18)
+    total, dex, misc = det["init"]
+    pen.center(*BOX["init"], total, pt + 0.5)
+    pen.center(INIT_COL["dex"], BOX["init"][1], dex, cp)
+    if misc:
+        pen.center(INIT_COL["misc"], BOX["init"][1], misc, cp)
+    base, armored = det["speed"]
+    pen.text(SPEED["base"][0], SPEED["base"][1], base, pt + 0.5, anchor="rs")
+    pen.text(SPEED["armor"][0], SPEED["armor"][1], armored, pt + 0.5, anchor="rs")
     for i, w in enumerate(sh["weapons"][:5]):
+        w = {**w, **{k: v for k, v in (det["wdetail"][i] if i < len(det["wdetail"]) else {}).items()
+                     if v and not w.get(k)}}
         top = WEAPON_TOP[i]
         pen.line_fill(26, 210, top + 26, w.get("name", ""), pt)
         pen.center(240, top + 21, w.get("atk", ""), pt - 0.5, fit=46)
         pen.center(292, top + 21, w.get("crit", ""), pt - 1, fit=30)
-        pen.line_fill(26, 58, top + 51, w.get("type", ""), pt - 1)
-        pen.line_fill(108, 205, top + 51, w.get("ammo", ""), pt - 1.5)
-        pen.line_fill(207, 310, top + 51, w.get("dmg", ""), pt - 1)
+        for col in ("type", "range"):
+            x0, x1 = WEAPON_COL[col]
+            pen.center((x0 + x1) / 2, top + 47, w.get(col, ""), pt - 1, fit=x1 - x0 - 3)
+        pen.line_fill(*WEAPON_COL["ammo"], top + 51, w.get("ammo", ""), pt - 1.5)
+        pen.line_fill(*WEAPON_COL["dmg"], top + 51, w.get("dmg", ""), pt - 1)
+    det = sh["detail"]
+    sp = pt - 0.5
     for name, val in sh["skills"].items():
-        top = SKILL_TOP[name]
-        base = top + 9
         if name.startswith("Craft") and isinstance(val, tuple) and not val[1]:
-            pen.line_fill(347, 412, base, val[0], pt - 1)
-            continue
-        total, ranks = (val, "") if not isinstance(val, tuple) else val
-        if total:
-            pen.center(SKILL_COL["total"], base - 3.5, total, pt - 0.5, fit=22)
-        if ranks:
-            pen.center(SKILL_COL["ranks"], base - 3.5, ranks, pt - 0.5, fit=20)
-    for name in sh.get("class_skills", []):
+            pen.line_fill(347, 412, SKILL_TOP[name] + 9, val[0], pt - 1)
+    for name, (total, ab, ranks, misc) in skill_rows(sh, det).items():
+        y = SKILL_TOP[name] + 5.5
+        for col, v in (("total", total), ("ability", ab), ("ranks", ranks), ("misc", misc)):
+            if v:
+                pen.center(SKILL_COL[col], y, v, sp, fit=22)
+    cls = set().union(*(CLASS_SKILLS[c] for c in det["levels"]))
+    marked = set(sh.get("class_skills", [])) | {n for n in sh["skills"] if n in cls}
+    if det["style"] in ("ledger", "pedant"):
+        marked |= {n for n in cls if not n.startswith(("Craft", "Profession"))}
+    for name in marked:
         top = SKILL_TOP[name]
         cx, cy = SKILL_COL["box"], top + 5.5
         pen.d.line([((cx - 2) * S, cy * S), ((cx - 0.5) * S, (cy + 2) * S), ((cx + 3) * S, (cy - 3) * S)],
@@ -516,11 +740,30 @@ def fill_page1(img, sh, pen: Pen):
 
 def fill_page2(img, sh, pen: Pen):
     pt = sh.get("pt", 8.5)
-    for i, (item, bonus, typ) in enumerate(sh["aci"][:5]):
-        x0, x1 = ACI_COL["item"]
-        pen.line_fill(x0, x1, ACI_ROWS[i] + 3, item, pt - 0.5)
+    det = sh["detail"]
+    cp = pt - 1
+    for i, row in enumerate(det["aci"][:5]):
+        item, bonus, typ, acp, asf, wt, props = row
+        pen.line_fill(*ACI_COL["item"], ACI_ROWS[i], item, pt - 0.5)
+        for col, v in (("bonus", bonus), ("type", typ), ("acp", acp), ("asf", asf), ("wt", wt)):
+            if v:
+                pen.center(ACI_COL[col], ACI_ROWS[i] - 5, v, cp, fit=40)
+        if props:
+            pen.line_fill(*ACI_COL["props"], ACI_ROWS[i], props, cp - 0.5)
+    for col, v in zip(("bonus", "type", "acp", "asf", "wt"), det["aci_total"]):
+        if v:
+            pen.center(ACI_COL[col], ACI_TOTAL - 5, v, cp, fit=40)
+    wts = det.get("gear_wt", {})
     for i, g in enumerate(sh["gear"][:len(GEAR_ROWS)]):
         pen.line_fill(*GEAR_X, GEAR_ROWS[i], g, pt - 1)
+        if g in wts:
+            pen.center(GEAR_WT, GEAR_ROWS[i] - 5, wts[g], cp - 0.5, fit=15)
+    for lvl, parts in det.get("spellday", {}).items():
+        for col, v in zip(("known", "dc", "day", "bonus"), parts):
+            if v:
+                pen.center(SPELL_COL[col], SPELL_ROW[lvl], v, cp, fit=18)
+    if det.get("school_slot"):
+        pen.text(432, 277, "+1 evocation slot each level (school)", cp - 1, fit=140)
     for i, ft in enumerate(sh["feats"][:len(FEAT_ROWS)]):
         pen.line_fill(*TEXT_X, FEAT_ROWS[i], ft, pt)
     rows = SPEC_ROWS
@@ -649,7 +892,8 @@ def compose(p1, p2, seed) -> Image.Image:
 
 
 def build(name: str, debug=False) -> Path:
-    sh = SHEETS[name]
+    det = DETAIL[name]
+    sh = {**SHEETS[name], "detail": det, "head": {**SHEETS[name]["head"], **det["head"]}}
     p1, p2 = page_images()
     seed = sh["seed"]
     pen1 = Pen(p1, hand(sh["font"]), sh["ink"], seed, sh.get("pencil", False))
