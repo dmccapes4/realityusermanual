@@ -88,6 +88,20 @@ This is the finding I did not expect, and it is why the bridge is the right spin
 
 None of these threw an error. Each one is **consistency without completeness**, or **confidence without a reference leg**. A broken bridge does not read zero — *it reads emphatically.* That is the thing to be afraid of, and it is the same fear in five costumes.
 
+### The diagnosis was already written, in the scene
+
+`src/phase2/-30.md:107` — Jay:
+
+> "They stopped looking at the light because they decided that green means green. **Once you decide a thing means itself, you are done. You have nothing left to look at.**"
+
+That is row 1 of the table above, stated before I measured it. GGSD returned five "possible interpretations" for `κυρίου` and all five were lord-or-master with the referent varied. The set did not collapse because something was removed. **It collapsed because the thing was decided to mean itself**, and after that there was nothing left to look at — so nothing was proposed, so nothing was eliminated, so the validator passed.
+
+The scene also contains the remedy. `-30.md:135` repeats *"That is the condition of those curios"* verbatim, and the stage direction says why:
+
+> *"This repetition is a checksum, not emphasis. The first time was a description. The second time is a welcome."*
+
+A checksum is a reference leg. Saying the same thing twice and comparing is the only way to know the first reading was right — which is Code 128's modulo-103 digit (§IX), `εἷς` at 16 verified against `εἷς` at 17 (§V), and marble struck before granite. I raised the Code 128 checksum this morning without knowing this line existed, and the word **curios** is `τοῦ κυρίου`.
+
 ---
 
 ## §V. Matthew 19 — the stitch, and it holds
@@ -170,9 +184,59 @@ So the obscure reading is not that the camel is squeezed. It is that **the camel
 
 `εὐκοπώτερον` is tagged `A- ----NSNC` — and that trailing **`C` is the degree slot: comparative.** The morphology says the sentence is a *comparison*, not an absurdity.
 
-Under the standard reading it is hyperbole: one impossible thing against another. Under his: the camel-through-the-aperture is **trivially, continuously true**, and the verse is then saying the rich man's entry is harder than a thing that happens every time anyone opens an eye. That is a sharper claim than hyperbole, and it is the one the comparative degree actually supports.
+Under the standard reading it is hyperbole: one impossible thing against another. Under his: the camel-through-the-aperture is **trivially, continuously true**, and the verse is then saying `πλούσιος` entry is harder than a thing that happens every time anyone opens an eye. That is a sharper claim than hyperbole, and it is the one the comparative degree actually supports.
 
-The grammar seals it. SBLGNT gives **one** `εἰσελθεῖν` governing both halves — the camel *enters* through the bore and the rich man *enters* the kingdom, on a single shared infinitive. And 19:17 has already used the identical construction: `εἰς τὴν ζωὴν εἰσελθεῖν`, enter into life. **Three entries, one verb, and πάλιν at 24 telling you to run the stitch again.**
+The grammar seals it. SBLGNT gives **one** `εἰσελθεῖν` governing both halves — the camel *enters* through the bore and `πλούσιος` *enters* the kingdom, on a single shared infinitive. And 19:17 has already used the identical construction: `εἰς τὴν ζωὴν εἰσελθεῖν`, enter into life. **Three entries, one verb, and πάλιν at 24 telling you to run the stitch again.**
+
+### Credit correction (added after writing)
+
+The geometry above is **his, and it was already written down.** `src/004_lucifer/004_02_matthew_19.md` §XI contains it under the heading *"The geometry of τρυπήματος ῥαφίδος — fit is to the shape"*:
+
+> "Fit is not fit to a size. Fit is fit to a shape. The eye of a needle is not round. It is thin... That means you must stand far away. At sufficient distance, the thin slot appears as a line. And the camel must be facing you."
+
+I had not opened that file when I did the arithmetic. **The 1.5–3 km is a measurement on a derivation he already had, not a reading I brought to it.** The only thing the arithmetic added was the coincidence in §VII — that the fit distance and the acuity limit land within a factor of three of each other.
+
+His §XI also carries the point that the needle's eye is a **slot**, not a circle, which is stronger than how I framed it. A slot is an *anisotropic* aperture: it admits along one axis and refuses along the other. So the constraint is not distance alone, it is **distance plus orientation**, and his original text says exactly that — *"he stands sideways, profile-on, too close, seeing his own width. He cannot turn to face it."*
+
+---
+
+## §VII-b. πλούσιος is not "rich," and the swap runs the same direction twice
+
+**His correction, 2026-11-08:** *"You have the eroded version of rich and it is important... πλούσιος: abundance (like in yoga). \*pleu- to swim / to float / to drift (erodes to flows over)."*
+
+He is right, and the erosion is not in the Greek. It is in the English.
+
+| | root | sense |
+|---|---|---|
+| **πλούσιος** < πλοῦτος | PIE **\*pleu-** "to flow, to swim, to float" | **that which has flowed in — an overflow, an abundance** |
+| **"rich"** < OE *rīce* | PIE **\*h₃reǵ-** "to rule, to straighten" | **kingly, mighty, of high rank** |
+
+`πλοῦτος` sits with `πλέω` (to sail, to float), Latin *pluit* and *pluvia* (it rains, rain), Sanskrit *plu-/plavate* (to float, to swim), and English *flow*, *float*, *flood*, *fleet*. It is a **water word.** The thing it names is a rising level.
+
+`rich` sits with *rex*, *regal*, *royal*, *raj*, *Reich*. It is a **power word.** It names a position over other people.
+
+**These are not the same concept and they are not even adjacent.** The Greek says *the one who overflows*; the English says *the one who rules*. Nothing in πλούσιος is about dominion, and nothing in "rich" is about abundance.
+
+### And κύριος went the same way
+
+| Greek | its root | English | its root |
+|---|---|---|---|
+| **πλούσιος** | \*pleu- "to flow, swim" | rich | \*h₃reǵ- "to rule" |
+| **κύριος** | \*ḱewh₁- "to swell, be strong" | lord | OE *hlāford* < *hlāf-weard*, **"loaf-ward"** |
+
+Two for two. **Both Greek words are about water rising. Both English words are about holding or ruling.** One is a level; the other is a custody. The operator reached κύριος → the moon's authority over the waves from the swelling root on 2026-11-08 before this pattern was visible, and `πλούσιος` is the second instance of it in the same week.
+
+This is the cleanest demonstration of the erosion thesis I have found, because it needs no conjecture: both pairs are in standard etymological dictionaries, and anyone can check them.
+
+### Which makes the −30 scene a reading of the verse
+
+`src/phase2/-30.md:113` — Atticus:
+
+> "It is hardest for the content to become enlightened. They have everything they need. **Not the burden of wealth. Not the fervor of greed.** They stay put and enjoy dinner after work."
+
+Under `πλούσιος` = *overflowing*, that is not a gloss on the verse. **It is the verse.** The comparative in 19:24 is hardest not for the greedy but for **the content** — those who have enough, and whose enoughness is why they stop looking. The camel is the exculpating case in the same scene: *"Camels hoard water because they need to. It is not sin for a camel to hoard water"* (`004_02_matthew_19.md` §XI). The camel's abundance is justified by its nature. The content person's stopping is not.
+
+And then Holden — `-30.md:115` — *"No! Sell it all!"*, which is 19:21, followed immediately by Jay: *"It isn't so easy."*
 
 ---
 
@@ -259,3 +323,12 @@ the thing expecting to correct it. I am logging that pattern rather than conclud
 | Moving-iron needle self-magnetizes on the first DC pulse | **From memory**, and I am confident in the physics; no bench test |
 | Code 128 carries a modulo-103 checksum | **From memory.** Not opened |
 | §IV — the five failure modes | **Mine.** Assembled from this session's own record, not from a source |
+| "Once you decide a thing means itself, you are done" is the diagnosis of row 1, written first | **Opened** — `src/phase2/-30.md:107` |
+| The repeated line at `-30.md:135` is marked a **checksum** in its own stage direction | **Opened** — `-30.md:137` |
+| The camel geometry (slot not circle, far distance, head-on orientation) is **his, already written** | **Opened** — `src/004_lucifer/004_02_matthew_19.md` §XI, read in full after writing §VII |
+| `πλούσιος` < `πλοῦτος` < PIE \*pleu- "to flow, swim, float"; cognates πλέω, *pluit*, *pluvia*, Skt *plu-*, Eng *flow/float/flood/fleet* | **From memory.** Standard (Beekes, Watkins). **Not opened tonight** — and this is now load-bearing for §VII-b, so it should be checked against a dictionary before publication |
+| "rich" < OE *rīce* < PIE \*h₃reǵ- "to rule"; cognate *rex*, *regal*, *raj*, *Reich* | **From memory.** Standard. Same caveat |
+| "lord" < OE *hlāford* < *hlāf-weard*, "loaf-ward" | **From memory.** Standard |
+| `κύριος` < \*ḱewh₁- "to swell, be strong" | **From memory**, carried from the chase doc where it was also unopened |
+| That the two swaps run the same direction (water → power) | **Mine.** An observation over the two pairs above. It is only as good as the four etymologies, all of which are from memory |
+| −30's "hardest for the content" is a reading of the comparative in 19:24 | **His**, in the scene. The connection to `πλούσιος` = overflowing is **mine** |
