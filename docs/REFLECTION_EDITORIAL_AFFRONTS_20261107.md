@@ -68,7 +68,13 @@ Lisbeth speaks Danish of 1648 at the table. The English is for readers and viewe
 
 ## Do I understand it
 
-I think so. The scene is about a failed check that the table honors instead of hiding. A doctor commits everything, the friends add what they can, the die comes up six, and the failure becomes the occasion for the best conversation of the night: fidelity, residency, recognition, the most basic measure, the habit of checking, germs, hands, latent poison, earned immunity. Then the GM waves a roll and the healing simply happens. The grace arrives after the honesty, not instead of it. The iguana is the doctor catching himself examining his own suggestion. He hisses at his own recursion and becomes the animal who later speaks Matthew. Then take twenty: a rule that pays for failure in time instead of pretending it never happened. The heal scene sets that up exactly. You do not get the certain result by skipping the failures. You get it by paying for them honestly.
+Not at first. I read it as a scene about a failed check the table honors. He corrected that (2026-11-07):
+
+> The scene is about patience, fidelity, and equipment. A scroll is called a consumable. Draavio forgot to use it. Is that waste? Players hoard consumables because they are waiting. Is that wasteful? Is their patience a rush? The doctor is the main character of the play btw. … Draavio is a red herring. In the climax I turn him into an instrument. The doctor is the one who makes the instrumentation moral.
+
+So the doctor is the center, not the failure. He commits from level one: fidelity, residency, recognition, practice, the most basic measure, habit, earned immunity. Then he stacks *everything*, and the kit breaks. The kit breaking is not the point. It is the stakes. Each consequent handelen stacks in a direction, and that is true of a doctor. Then he casts Cure Moderate Wounds, which he could have done anyway. Merit has Lay on Hands and the party does not need a doctor. He does not care. He is a doctor, and he shows them what that means and why it matters. He uses his equipment when the opportunity arises, and he does everything in his power to make that use effective. Draavio's forgotten scroll is the same question from the other side: is unspent equipment patience or waste?
+
+His line, his mantra: "A job done well is a job done thoughtfully by an operator who cares." Patience. Practice. Use your equipment effectively. Consequent handelen.
 
 ## Do I like it
 
