@@ -1,0 +1,16 @@
+{
+  "provenance": "Computed by tools/titan_governed_trajectory.py (DOP853, rtol=1e-11, atol=1e-11, explicit Titan+Rhea+Iapetus + GM_PLANET J2 + Saturn reflex + Sol/Jupiter tides; pass --recompute-1679 to re-run from scratch)",
+  "sat441_earliest_date": "1749-12-31 00:00:00 TDB",
+  "forward_71yr_explicit_3moon_benchmark_1750_to_1821": {
+    "titan_orbits_elapsed": 1626.3,
+    "position_error_vs_sat441_km": 98544.6,
+    "phase_drift_deg": 4.506,
+    "phase_drift_hours": 4.79
+  },
+  "backward_1679_explicit_3moon": {
+    "target_jd": 2334435.5,
+    "target_date": "1679-06-01 00:00 TDB",
+    "numerical_roundtrip_1750_1679_1750_err_km": 0.0153,
+    "titan_saturn_rel_pos_1679_km": [1247708.51, -144218.7, -40810.56]
+  }
+}

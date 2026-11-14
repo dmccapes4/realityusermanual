@@ -1,0 +1,500 @@
+{
+  "terra_real_ovoid_samples": {
+    "july_2020_aphelion": {
+      "body": "terra",
+      "jd_tdb": 2459035.5,
+      "d_sol_center_km": 152095228.908,
+      "d_surface_to_surface_km": 151393150.771,
+      "speed_kms": 29.27844,
+      "radial_rate_kms": -0.00297,
+      "speed_rate_kms2": -8.459040852699951e-10,
+      "dir_decay_rads": 1.947760533203584e-07,
+      "dir_decay_deg_day": 0.96421,
+      "zecliptic_lat_deg": 0.0026,
+      "sol_equator_lat_deg": 3.3327
+    },
+    "jan_2021_perihelion": {
+      "body": "terra",
+      "jd_tdb": 2459217.5,
+      "d_sol_center_km": 147093244.812,
+      "d_surface_to_surface_km": 146391166.675,
+      "speed_kms": 30.27872,
+      "radial_rate_kms": 0.0045,
+      "speed_rate_kms2": 2.3617948323437003e-08,
+      "dir_decay_rads": 2.0180625244811962e-07,
+      "dir_decay_deg_day": 0.99901,
+      "zecliptic_lat_deg": -0.0027,
+      "sol_equator_lat_deg": -3.2618
+    },
+    "annual_radial_swing_km": 5001984.1
+  },
+  "saturn_real_state_july_2020": {
+    "body": "saturn_bary",
+    "jd_tdb": 2459035.5,
+    "d_sol_center_km": 1497911272.888,
+    "d_surface_to_surface_km": 1497155304.888,
+    "speed_kms": 9.19946,
+    "radial_rate_kms": -0.22491,
+    "speed_rate_kms2": 1.4570513029136474e-09,
+    "dir_decay_rads": 6.483067489449949e-09,
+    "dir_decay_deg_day": 0.03209,
+    "zecliptic_lat_deg": -0.1855,
+    "sol_equator_lat_deg": 4.6704
+  },
+  "historic_three_legs": {
+    "terra_to_mars_mars2020": {
+      "craft": "Mars 2020 Perseverance (-168)",
+      "coast_start_cal": "2020-Oct-03 00:00:00.0000",
+      "pure_coast_end_cal": "2021-Feb-14 00:00:00.0000",
+      "pure_coast_days": 134.0,
+      "pure_coast_drift_vs_jpl_km": 1419.47,
+      "entry_cal": "2021-Feb-18 20:00:00.0000",
+      "coast_to_entry_days": 138.8333,
+      "launch_table_to_entry_days": 202.8333,
+      "drift_to_entry_vs_jpl_km": 1949.95,
+      "drift_note": "Pure coast (Oct 3 -> Feb 14) precedes terminal targeting trims; Oct 3 -> Feb 18 20:00 includes tiny TCM-3 (~0.1 m/s) and terminal entry trims (Feb 16-18) plus SRP.",
+      "distance_to_mars_center_at_entry_km": 12417.94,
+      "altitude_above_mars_surface_km": 9021.74
+    },
+    "terra_to_jupiter_newhorizons": {
+      "craft": "New Horizons (-98)",
+      "launch_utc": "2006-01-19 19:00",
+      "pure_coast_start_cal": "2006-Mar-13 00:00:00.0000",
+      "jupiter_closest_approach_cal": "2007-Feb-28 05:00:00.0000",
+      "launch_to_ca_days": 404.416,
+      "launch_to_ca_years": 1.1072,
+      "integrated_post_tcm3_coast_days": 352.2083,
+      "post_escape_sol_speed_kms": 42.803,
+      "post_jupiter_sol_speed_kms": 23.157,
+      "drift_vs_jpl_telemetry_km": 5708.04,
+      "jupiter_surface_altitude_km": 2232168.0
+    },
+    "jupiter_to_titan_voyager1": {
+      "craft": "Voyager 1 (-31)",
+      "launch_date": "1977-09-05",
+      "jupiter_flyby_cal": "1979-Mar-05 12:00:00.0000",
+      "jupiter_surface_altitude_km": 277560.2,
+      "sol_speed_before_jupiter_kms": 13.145,
+      "sol_speed_after_jupiter_kms": 23.507,
+      "geometric_speed_gain_at_jupiter_kms": 10.363,
+      "titan_encounter_0600_cal": "1980-Nov-12 06:00:00.0000",
+      "jupiter_to_titan_days": 617.75,
+      "total_terra_to_titan_years": 3.186,
+      "integrated_post_tcm_coast_days": 576.2083,
+      "unpowered_575d_drift_vs_jpl_km": 5751.5,
+      "drift_note": "Includes small Nov 1980 approach trim + RTG thermal recoil / SRP over 575.2 days.",
+      "titan_surface_altitude_at_0600_jpl_km": 17609.9
+    }
+  },
+  "audit_1679": {
+    "sat441_earliest_date": "1749-12-31 00:00:00 TDB",
+    "forward_71yr_explicit_3moon_benchmark_1750_to_1821": {
+      "titan_orbits_elapsed": 1626.3,
+      "position_error_vs_sat441_km": 98544.6,
+      "lumped_1moon_error_vs_sat441_km": 173334.3,
+      "phase_drift_deg": 4.506,
+      "phase_drift_hours": 4.79
+    },
+    "backward_1679_audit": {
+      "target_jd": 2334435.5,
+      "target_date": "1679-06-01 00:00 TDB",
+      "numerical_roundtrip_1750_1679_1750_err_km": 0.0153,
+      "titan_saturn_rel_pos_1679_km": [
+        1247708.51,
+        -144218.7,
+        -40810.56
+      ],
+      "best_1679_launch_geometry": {
+        "jd_launch": 2334634.5,
+        "day_of_1679": 350.0,
+        "lon_terra_deg": 71.44,
+        "lon_mars_deg": 282.41,
+        "lon_jupiter_deg": 43.01,
+        "lon_saturn_deg": 98.34,
+        "saturn_ahead_of_jupiter_deg": 55.33,
+        "total_3d_chord_km": 1704910356.0,
+        "jupiter_bend_deg": 91.19
+      }
+    }
+  },
+  "corridor_windows_1750_2250": [
+    {
+      "jd_launch": 2364464.5,
+      "year_approx": 1761.59,
+      "total_3d_chord_km": 1358935045.0,
+      "jupiter_bend_required_deg": 8.49,
+      "mars_angular_offset_deg": 93.99,
+      "saturn_dist_sol_arr_km": 1400243480.0,
+      "saturn_neptune_sep_deg": 123.1
+    },
+    {
+      "jd_launch": 2372174.5,
+      "year_approx": 1782.7,
+      "total_3d_chord_km": 1452396367.0,
+      "jupiter_bend_required_deg": 3.7,
+      "mars_angular_offset_deg": 94.5,
+      "saturn_dist_sol_arr_km": 1506363764.0,
+      "saturn_neptune_sep_deg": 266.3
+    },
+    {
+      "jd_launch": 2379194.5,
+      "year_approx": 1801.92,
+      "total_3d_chord_km": 1428242631.0,
+      "jupiter_bend_required_deg": 5.76,
+      "mars_angular_offset_deg": 79.28,
+      "saturn_dist_sol_arr_km": 1402189240.0,
+      "saturn_neptune_sep_deg": 65.4
+    },
+    {
+      "jd_launch": 2386394.5,
+      "year_approx": 1821.63,
+      "total_3d_chord_km": 1348641907.0,
+      "jupiter_bend_required_deg": 13.03,
+      "mars_angular_offset_deg": 58.64,
+      "saturn_dist_sol_arr_km": 1383334155.0,
+      "saturn_neptune_sep_deg": 238.0
+    },
+    {
+      "jd_launch": 2393624.5,
+      "year_approx": 1841.42,
+      "total_3d_chord_km": 1397258392.0,
+      "jupiter_bend_required_deg": 21.02,
+      "mars_angular_offset_deg": 5.4,
+      "saturn_dist_sol_arr_km": 1506157477.0,
+      "saturn_neptune_sep_deg": 35.1
+    },
+    {
+      "jd_launch": 2394104.5,
+      "year_approx": 1842.74,
+      "total_3d_chord_km": 1465808894.0,
+      "jupiter_bend_required_deg": 17.11,
+      "mars_angular_offset_deg": 127.15,
+      "saturn_dist_sol_arr_km": 1499565543.0,
+      "saturn_neptune_sep_deg": 23.5
+    },
+    {
+      "jd_launch": 2401124.5,
+      "year_approx": 1861.96,
+      "total_3d_chord_km": 1447714218.0,
+      "jupiter_bend_required_deg": 9.16,
+      "mars_angular_offset_deg": 47.85,
+      "saturn_dist_sol_arr_km": 1420930526.0,
+      "saturn_neptune_sep_deg": 181.9
+    },
+    {
+      "jd_launch": 2408159.5,
+      "year_approx": 1881.22,
+      "total_3d_chord_km": 1486756659.0,
+      "jupiter_bend_required_deg": 6.47,
+      "mars_angular_offset_deg": 53.89,
+      "saturn_dist_sol_arr_km": 1374369681.0,
+      "saturn_neptune_sep_deg": 359.8
+    },
+    {
+      "jd_launch": 2408264.5,
+      "year_approx": 1881.5,
+      "total_3d_chord_km": 1491668796.0,
+      "jupiter_bend_required_deg": 21.28,
+      "mars_angular_offset_deg": 1.27,
+      "saturn_dist_sol_arr_km": 1370895412.0,
+      "saturn_neptune_sep_deg": 356.6
+    },
+    {
+      "jd_launch": 2415674.5,
+      "year_approx": 1901.79,
+      "total_3d_chord_km": 1494590355.0,
+      "jupiter_bend_required_deg": 3.15,
+      "mars_angular_offset_deg": 23.67,
+      "saturn_dist_sol_arr_km": 1497824496.0,
+      "saturn_neptune_sep_deg": 152.4
+    },
+    {
+      "jd_launch": 2422859.5,
+      "year_approx": 1921.46,
+      "total_3d_chord_km": 1427832281.0,
+      "jupiter_bend_required_deg": 16.76,
+      "mars_angular_offset_deg": 64.83,
+      "saturn_dist_sol_arr_km": 1431130238.0,
+      "saturn_neptune_sep_deg": 306.1
+    },
+    {
+      "jd_launch": 2423189.5,
+      "year_approx": 1922.37,
+      "total_3d_chord_km": 1347057327.0,
+      "jupiter_bend_required_deg": 20.66,
+      "mars_angular_offset_deg": 99.93,
+      "saturn_dist_sol_arr_km": 1445512703.0,
+      "saturn_neptune_sep_deg": 297.2
+    },
+    {
+      "jd_launch": 2429879.5,
+      "year_approx": 1940.68,
+      "total_3d_chord_km": 1321886925.0,
+      "jupiter_bend_required_deg": 7.24,
+      "mars_angular_offset_deg": 109.54,
+      "saturn_dist_sol_arr_km": 1367708696.0,
+      "saturn_neptune_sep_deg": 122.8
+    },
+    {
+      "jd_launch": 2437064.5,
+      "year_approx": 1960.35,
+      "total_3d_chord_km": 1468080193.0,
+      "jupiter_bend_required_deg": 21.47,
+      "mars_angular_offset_deg": 84.31,
+      "saturn_dist_sol_arr_km": 1499693558.0,
+      "saturn_neptune_sep_deg": 283.4
+    },
+    {
+      "jd_launch": 2437439.5,
+      "year_approx": 1961.38,
+      "total_3d_chord_km": 1464906490.0,
+      "jupiter_bend_required_deg": 21.45,
+      "mars_angular_offset_deg": 169.62,
+      "saturn_dist_sol_arr_km": 1491511557.0,
+      "saturn_neptune_sep_deg": 274.2
+    },
+    {
+      "jd_launch": 2437589.5,
+      "year_approx": 1961.79,
+      "total_3d_chord_km": 1464743585.0,
+      "jupiter_bend_required_deg": 15.91,
+      "mars_angular_offset_deg": 71.91,
+      "saturn_dist_sol_arr_km": 1487375583.0,
+      "saturn_neptune_sep_deg": 270.5
+    },
+    {
+      "jd_launch": 2444789.5,
+      "year_approx": 1981.5,
+      "total_3d_chord_km": 1432563920.0,
+      "jupiter_bend_required_deg": 3.44,
+      "mars_angular_offset_deg": 94.92,
+      "saturn_dist_sol_arr_km": 1449846671.0,
+      "saturn_neptune_sep_deg": 61.9
+    },
+    {
+      "jd_launch": 2451479.5,
+      "year_approx": 1999.82,
+      "total_3d_chord_km": 1251169688.0,
+      "jupiter_bend_required_deg": 21.56,
+      "mars_angular_offset_deg": 93.57,
+      "saturn_dist_sol_arr_km": 1365057055.0,
+      "saturn_neptune_sep_deg": 246.9
+    },
+    {
+      "jd_launch": 2451614.5,
+      "year_approx": 2000.19,
+      "total_3d_chord_km": 1436261806.0,
+      "jupiter_bend_required_deg": 18.8,
+      "mars_angular_offset_deg": 3.33,
+      "saturn_dist_sol_arr_km": 1361672163.0,
+      "saturn_neptune_sep_deg": 242.8
+    },
+    {
+      "jd_launch": 2451719.5,
+      "year_approx": 2000.48,
+      "total_3d_chord_km": 1499348894.0,
+      "jupiter_bend_required_deg": 7.85,
+      "mars_angular_offset_deg": 34.11,
+      "saturn_dist_sol_arr_km": 1359323947.0,
+      "saturn_neptune_sep_deg": 239.5
+    },
+    {
+      "jd_launch": 2451899.5,
+      "year_approx": 2000.97,
+      "total_3d_chord_km": 1238836748.0,
+      "jupiter_bend_required_deg": 21.9,
+      "mars_angular_offset_deg": 139.05,
+      "saturn_dist_sol_arr_km": 1355926286.0,
+      "saturn_neptune_sep_deg": 233.9
+    },
+    {
+      "jd_launch": 2458979.5,
+      "year_approx": 2020.35,
+      "total_3d_chord_km": 1466640603.0,
+      "jupiter_bend_required_deg": 2.56,
+      "mars_angular_offset_deg": 33.26,
+      "saturn_dist_sol_arr_km": 1490801933.0,
+      "saturn_neptune_sep_deg": 41.2
+    },
+    {
+      "jd_launch": 2466224.5,
+      "year_approx": 2040.19,
+      "total_3d_chord_km": 1341970773.0,
+      "jupiter_bend_required_deg": 21.04,
+      "mars_angular_offset_deg": 44.54,
+      "saturn_dist_sol_arr_km": 1447175944.0,
+      "saturn_neptune_sep_deg": 192.9
+    },
+    {
+      "jd_launch": 2466539.5,
+      "year_approx": 2041.05,
+      "total_3d_chord_km": 1481977768.0,
+      "jupiter_bend_required_deg": 16.12,
+      "mars_angular_offset_deg": 81.21,
+      "saturn_dist_sol_arr_km": 1460154099.0,
+      "saturn_neptune_sep_deg": 184.7
+    },
+    {
+      "jd_launch": 2473589.5,
+      "year_approx": 2060.35,
+      "total_3d_chord_km": 1489969894.0,
+      "jupiter_bend_required_deg": 8.12,
+      "mars_angular_offset_deg": 16.02,
+      "saturn_dist_sol_arr_km": 1353220853.0,
+      "saturn_neptune_sep_deg": 358.4
+    },
+    {
+      "jd_launch": 2480984.5,
+      "year_approx": 2080.6,
+      "total_3d_chord_km": 1344092830.0,
+      "jupiter_bend_required_deg": 19.26,
+      "mars_angular_offset_deg": 10.73,
+      "saturn_dist_sol_arr_km": 1475605107.0,
+      "saturn_neptune_sep_deg": 159.3
+    },
+    {
+      "jd_launch": 2488244.5,
+      "year_approx": 2100.48,
+      "total_3d_chord_km": 1396497607.0,
+      "jupiter_bend_required_deg": 11.56,
+      "mars_angular_offset_deg": 58.37,
+      "saturn_dist_sol_arr_km": 1468069818.0,
+      "saturn_neptune_sep_deg": 309.3
+    },
+    {
+      "jd_launch": 2495129.5,
+      "year_approx": 2119.33,
+      "total_3d_chord_km": 1490537110.0,
+      "jupiter_bend_required_deg": 19.24,
+      "mars_angular_offset_deg": 65.08,
+      "saturn_dist_sol_arr_km": 1352600510.0,
+      "saturn_neptune_sep_deg": 125.8
+    },
+    {
+      "jd_launch": 2495504.5,
+      "year_approx": 2120.35,
+      "total_3d_chord_km": 1481121560.0,
+      "jupiter_bend_required_deg": 19.04,
+      "mars_angular_offset_deg": 57.19,
+      "saturn_dist_sol_arr_km": 1350801406.0,
+      "saturn_neptune_sep_deg": 114.0
+    },
+    {
+      "jd_launch": 2502449.5,
+      "year_approx": 2139.37,
+      "total_3d_chord_km": 1480549564.0,
+      "jupiter_bend_required_deg": 5.77,
+      "mars_angular_offset_deg": 93.28,
+      "saturn_dist_sol_arr_km": 1478014727.0,
+      "saturn_neptune_sep_deg": 287.7
+    },
+    {
+      "jd_launch": 2510189.5,
+      "year_approx": 2160.56,
+      "total_3d_chord_km": 1442852738.0,
+      "jupiter_bend_required_deg": 6.11,
+      "mars_angular_offset_deg": 80.94,
+      "saturn_dist_sol_arr_km": 1483320549.0,
+      "saturn_neptune_sep_deg": 65.1
+    },
+    {
+      "jd_launch": 2516924.5,
+      "year_approx": 2179.0,
+      "total_3d_chord_km": 1215784531.0,
+      "jupiter_bend_required_deg": 15.07,
+      "mars_angular_offset_deg": 3.74,
+      "saturn_dist_sol_arr_km": 1350611011.0,
+      "saturn_neptune_sep_deg": 244.4
+    },
+    {
+      "jd_launch": 2517134.5,
+      "year_approx": 2179.57,
+      "total_3d_chord_km": 1499812034.0,
+      "jupiter_bend_required_deg": 14.91,
+      "mars_angular_offset_deg": 53.14,
+      "saturn_dist_sol_arr_km": 1350827965.0,
+      "saturn_neptune_sep_deg": 237.9
+    },
+    {
+      "jd_launch": 2524379.5,
+      "year_approx": 2199.41,
+      "total_3d_chord_km": 1475259356.0,
+      "jupiter_bend_required_deg": 15.69,
+      "mars_angular_offset_deg": 57.56,
+      "saturn_dist_sol_arr_km": 1463210704.0,
+      "saturn_neptune_sep_deg": 45.7
+    },
+    {
+      "jd_launch": 2531684.5,
+      "year_approx": 2219.41,
+      "total_3d_chord_km": 1354644671.0,
+      "jupiter_bend_required_deg": 16.51,
+      "mars_angular_offset_deg": 4.14,
+      "saturn_dist_sol_arr_km": 1483071887.0,
+      "saturn_neptune_sep_deg": 195.6
+    },
+    {
+      "jd_launch": 2532119.5,
+      "year_approx": 2220.6,
+      "total_3d_chord_km": 1481811865.0,
+      "jupiter_bend_required_deg": 21.72,
+      "mars_angular_offset_deg": 111.6,
+      "saturn_dist_sol_arr_km": 1494754112.0,
+      "saturn_neptune_sep_deg": 184.8
+    },
+    {
+      "jd_launch": 2538914.5,
+      "year_approx": 2239.2,
+      "total_3d_chord_km": 1299715164.0,
+      "jupiter_bend_required_deg": 1.31,
+      "mars_angular_offset_deg": 35.77,
+      "saturn_dist_sol_arr_km": 1352352001.0,
+      "saturn_neptune_sep_deg": 0.1
+    }
+  ],
+  "governed_1yr_mission": {
+    "model_label": "inverse_bvp_required_equivalent_field_drift",
+    "launch_jd_tdb": 2458984.25,
+    "arrival_jd_tdb": 2459349.5,
+    "arrival_cal_tdb": "2021-May-15 00:00:00.0000",
+    "transit_days": 365.25,
+    "transit_years": 1.0,
+    "post_escape_fuel_expended_kg": 0.0,
+    "departure_escape_excess_kms": 9.0,
+    "convergence_pos_miss_km": 0.0003,
+    "convergence_vel_miss_ms": 0.0,
+    "phase1_required_drift_vec_ms2": [
+      0.00064,
+      -0.00413,
+      3e-05
+    ],
+    "phase2_required_drift_vec_ms2": [
+      -0.00164,
+      0.00497,
+      -0.00022
+    ],
+    "mean_required_field_drift_ms2": 0.0046,
+    "peak_required_field_drift_ms2": 0.0052,
+    "peak_required_field_drift_g": 0.00053,
+    "peak_cruise_speed_sol_kms": 76.557,
+    "min_jupiter_surface_alt_km": 40477203.0,
+    "min_mars_surface_alt_km": 115916529.0,
+    "min_saturn_ring_plane_radius_km": 1200980.0,
+    "saturn_rings_cleared": true,
+    "titan_aerocapture": {
+      "termination_event": "atmo_exit_1000km",
+      "pass_duration_s": 1902.28,
+      "entry_interface_alt_km": 1000.0,
+      "entry_speed_kms": 6.1,
+      "min_altitude_km": 249.29,
+      "exit_altitude_km": 1000.0,
+      "exit_speed_kms": 1.753,
+      "peak_crew_g_load": 1.34,
+      "exit_specific_energy_km2s2": -0.9752,
+      "bound_to_titan_at_exit": true,
+      "post_exit_apoapsis_alt_km": 4053.0,
+      "time_to_apoapsis_min": 136.4
+    },
+    "trajectory_jsonl": "data/titan_ephemeris/titan_1yr_trajectory.jsonl"
+  }
+}
