@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" fill="none" aria-hidden="true">
+  <!-- Ink cat facing left — cream fill so it reads on the void field -->
+  <g fill="#e8dcc4" stroke="#1a1410" stroke-width="3" stroke-linejoin="round">
+    <ellipse cx="130" cy="100" rx="70" ry="38"/>
+    <ellipse cx="175" cy="108" rx="28" ry="32"/>
+    <circle cx="58" cy="78" r="34"/>
+    <path d="M36 58 L42 28 L58 55 Z"/>
+    <path d="M62 52 L78 26 L88 58 Z"/>
+    <path d="M198 95 C230 70 236 40 210 28" fill="none" stroke="#e8dcc4" stroke-width="10" stroke-linecap="round"/>
+    <path d="M198 95 C230 70 236 40 210 28" fill="none" stroke="#1a1410" stroke-width="3" stroke-linecap="round"/>
+    <rect x="78" y="118" width="14" height="28" rx="4"/>
+    <rect x="100" y="120" width="14" height="26" rx="4"/>
+    <rect x="160" y="118" width="16" height="28" rx="4"/>
+    <rect x="182" y="120" width="14" height="26" rx="4"/>
+  </g>
+  <ellipse cx="48" cy="74" rx="6" ry="3.5" fill="#1a1410"/>
+  <circle cx="46" cy="74" r="1.6" fill="#e8dcc4"/>
+</svg>

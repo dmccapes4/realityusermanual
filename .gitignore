@@ -1,5 +1,10 @@
 web/listen/media/
+web/listen/t/
+web/p/
+*.vtt
 .venv/
+.cache/
+audio/.cache/
 __pycache__/
 *.pyc
 *.pyo
@@ -7,3 +12,55 @@ __pycache__/
 *.gpg
 tools/ggsd/.venv
 tools/ggsd/runs/
+web/staging/
+
+# Large media — backed up outside git
+*.mp3
+*.m4a
+*.mp4
+*.wav
+*.webm
+*.mov
+*.mkv
+*.m4v
+*.avi
+*.ogg
+
+# Video / listen build trees (rasters and masters live off-repo)
+video/
+images/
+audio/
+assets/scratch/
+**/frames/
+**/stills/
+prompt_walk_page_builder/episodes/crops/
+web/hall/previews/
+web/expression/images/
+src/form/plates/
+*.npy
+
+# Rasters and manuscript PDFs (git is source + listen transcripts, not renders)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+!assets/mischievouslittlechicken.png
+!assets/title_inscription.png
+!REALITY_USER_MANUAL.pdf
+misc/**/crops/
+manuscripts/
+web/m/**/files/
+
+# Fetched / simulated ephemeris (regenerate with tools/)
+data/titan_ephemeris/
+
+# Generated / experiment trees (not repo source)
+.REMOVING_UNSEEN_FROM_RECORD/
+misc/
+prompt_walk_page_builder/
+tools/imessage_thread/quarantine/
+drafts/staging/nascent_runs/
+.cursor/
+.notsecret/
+*.log

@@ -1,0 +1,24 @@
+{
+  "id": "glacial-cell",
+  "title": "Mother Earth as Governed Field",
+  "author": "Dylan McCapes",
+  "target": "first true manuscript \u2014 manifesto, not a journal coat",
+  "received": "2026-10-22",
+  "station": "glacial-cell",
+  "note": "Gattaca intake. Sequence only: the manifesto.",
+  "open": "files/SEQUENCE/MANIFESTO_MOTHER_EARTH_GOVERNED_FIELD.pdf",
+  "tree": [
+    {
+      "name": "SEQUENCE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "MANIFESTO_MOTHER_EARTH_GOVERNED_FIELD.pdf",
+          "type": "pdf",
+          "url": "files/SEQUENCE/MANIFESTO_MOTHER_EARTH_GOVERNED_FIELD.pdf",
+          "bytes": 1295157
+        }
+      ]
+    }
+  ]
+}

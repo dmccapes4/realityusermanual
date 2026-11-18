@@ -10,9 +10,18 @@ const emptyEl = document.getElementById("empty");
 const titleEl = document.getElementById("desk-title");
 const stampEl = document.getElementById("desk-stamp");
 
+// HTML stations (the HOW_TO stack) open in a frame; <object type=pdf> will not.
+const frameEl = document.createElement("iframe");
+frameEl.id = "html-viewer";
+frameEl.style.display = "none";
+frameEl.setAttribute("title", "station");
+objectEl.parentNode.insertBefore(frameEl, objectEl.nextSibling);
+
 function hideAll() {
   objectEl.style.display = "none";
   objectEl.removeAttribute("data");
+  frameEl.style.display = "none";
+  frameEl.removeAttribute("src");
   imageWrap.style.display = "none";
   textEl.style.display = "none";
   emptyEl.style.display = "none";
@@ -32,6 +41,11 @@ function loadFile(file) {
   if (file.type === "image") {
     imageWrap.style.display = "flex";
     imageEl.src = file.url;
+    return;
+  }
+  if (file.type === "html") {
+    frameEl.style.display = "block";
+    frameEl.src = file.url;
     return;
   }
   fetch(file.url).then((r) => {

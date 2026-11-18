@@ -1,0 +1,13 @@
+{
+  "duration_ms": 7200,
+  "redirect": "/hall/#-0",
+  "beats": [
+    { "id": "title_in", "start_ms": 0, "end_ms": 1200 },
+    { "id": "kata_to_cat", "start_ms": 1200, "end_ms": 1800 },
+    { "id": "cat_exit_left", "start_ms": 1800, "end_ms": 2800 },
+    { "id": "maththaion_center", "start_ms": 2600, "end_ms": 3600 },
+    { "id": "theta_open", "start_ms": 3600, "end_ms": 5400 },
+    { "id": "suck", "start_ms": 5000, "end_ms": 6800 },
+    { "id": "land", "start_ms": 6800, "end_ms": 7200 }
+  ]
+}

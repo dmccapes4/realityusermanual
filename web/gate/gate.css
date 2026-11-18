@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "GateSerif";
+  src: url("/gate/fonts/DejaVuSerif-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+:root {
+  --bone: #e8dcc4;
+  --ink: #141210;
+  --rust: #8c3a2a;
+  --void: #0a0908;
+  --theta: clamp(4.5rem, 14vw, 10rem);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%;
+  background: var(--void);
+  color: var(--bone);
+  overflow: hidden;
+  font-family: "GateSerif", "DejaVu Serif", Georgia, serif;
+}
+
+.stage {
+  position: relative;
+  width: 100%; height: 100%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at center, #1c1814 0%, var(--void) 70%);
+  perspective: 1400px;
+}
+
+.hallway {
+  position: absolute; inset: 0;
+  background: center / cover no-repeat url("/gate/assets/hallway.png");
+  opacity: 0;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aperture {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 0; height: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 200vmax var(--void);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: transparent;
+}
+
+.title {
+  position: relative;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2.4rem, 9vw, 7.5rem);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--bone);
+  opacity: 0;
+  transform: scale(0.92);
+  text-shadow: 0 0 40px rgba(232, 220, 196, 0.25), 0 2px 24px rgba(0,0,0,0.55);
+  user-select: none;
+}
+
+.kata, .sp { display: inline-block; }
+.math {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.flank { display: inline-block; }
+
+.theta-text {
+  display: inline-block;
+  letter-spacing: -0.06em;
+}
+
+.gates {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.04em;
+  width: calc(var(--theta) * 2.08);
+  height: calc(var(--theta) * 1.2);
+  perspective: 1100px;
+  transform-style: preserve-3d;
+  z-index: 9;
+}
+
+.theta-leaf {
+  display: block;
+  width: var(--theta);
+  height: calc(var(--theta) * 1.2);
+  flex: 0 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 1.65s cubic-bezier(.15,.75,.2,1);
+  will-change: transform;
+}
+.theta-leaf.left { transform-origin: left center; transform: rotateY(0deg); }
+.theta-leaf.right { transform-origin: right center; transform: rotateY(0deg); }
+.theta-leaf svg,
+.theta-leaf img { display: block; width: 100%; height: 100%; overflow: visible; }
+.theta-leaf.right img { transform: scaleX(-1); }
+
+.cat {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  width: clamp(160px, 20vw, 260px);
+  height: auto;
+  opacity: 0;
+  transform: translate(-280%, -45%);
+  pointer-events: none;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.55));
+}
+
+.skip {
+  position: absolute;
+  z-index: 20;
+  right: 18px; bottom: 16px;
+  background: transparent;
+  border: 1px solid rgba(232, 220, 196, 0.35);
+  color: var(--bone);
+  font: 10px/1 "Futura", "Century Gothic", sans-serif;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  cursor: pointer;
+  opacity: 0.55;
+}
+.skip:hover { opacity: 1; border-color: var(--rust); color: #fff; }
+
+.hint {
+  position: absolute;
+  z-index: 20;
+  left: 18px; bottom: 18px;
+  margin: 0;
+  font: 10px/1 "Futura", "Century Gothic", sans-serif;
+  letter-spacing: 0.22em;
+  opacity: 0.35;
+}
+
+/* —— Beats —— */
+.beat-title_in .title {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.9s ease, transform 1.1s cubic-bezier(.2,.8,.2,1);
+}
+
+.beat-kata_to_cat .kata {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.45s ease, transform 0.5s ease;
+}
+.beat-kata_to_cat .cat {
+  opacity: 1;
+  transform: translate(-280%, -45%);
+  transition: opacity 0.35s ease;
+}
+
+.beat-cat_exit_left .kata { opacity: 0; }
+.beat-cat_exit_left .cat {
+  opacity: 1;
+  transform: translate(-160vw, -45%);
+  transition: transform 1s cubic-bezier(.4,0,.2,1);
+}
+
+/* Shared: pivot the composition on ΘΘ at viewport center */
+.beat-maththaion_center .kata,
+.beat-maththaion_center .sp,
+.beat-theta_open .kata,
+.beat-theta_open .sp,
+.beat-suck .kata,
+.beat-suck .sp {
+  display: none !important;
+}
+
+.beat-maththaion_center .title,
+.beat-theta_open .title,
+.beat-suck .title {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 1;
+  transform: none;
+  font-size: clamp(2.4rem, 9vw, 7.5rem);
+  z-index: 8;
+}
+
+.beat-maththaion_center .math,
+.beat-theta_open .math,
+.beat-suck .math {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.beat-maththaion_center .theta-text,
+.beat-theta_open .theta-text,
+.beat-suck .theta-text {
+  display: none !important;
+}
+
+.beat-maththaion_center .gates,
+.beat-theta_open .gates,
+.beat-suck .gates {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+
+.beat-maththaion_center .flank.pre,
+.beat-theta_open .flank.pre,
+.beat-suck .flank.pre {
+  position: absolute;
+  right: calc(50% + var(--theta) * 1.12);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 7;
+}
+
+.beat-maththaion_center .flank.post,
+.beat-theta_open .flank.post,
+.beat-suck .flank.post {
+  position: absolute;
+  left: calc(50% + var(--theta) * 1.12);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 7;
+}
+
+/* Closed face-on at center (maththaion_center) — then swing open */
+.beat-theta_open .flank,
+.beat-suck .flank {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Swing apart + mild yaw so Θ stays readable as a door leaf */
+.beat-theta_open .gates {
+  width: calc(var(--theta) * 3.2);
+  gap: 0.55em;
+  transition: width 1.65s cubic-bezier(.15,.75,.2,1), gap 1.65s cubic-bezier(.15,.75,.2,1);
+}
+.beat-theta_open .theta-leaf {
+  width: calc(var(--theta) * 1.2);
+  height: calc(var(--theta) * 1.44);
+}
+.beat-theta_open .theta-leaf.left {
+  transform: translateX(-42%) rotateY(42deg);
+}
+.beat-theta_open .theta-leaf.right {
+  transform: translateX(42%) rotateY(-42deg);
+}
+
+.beat-theta_open .hallway { opacity: 1; transition: opacity 0.6s ease; }
+.beat-theta_open .aperture {
+  opacity: 1;
+  width: min(58vw, 620px);
+  height: min(58vw, 620px);
+  transition: width 1.6s cubic-bezier(.2,.7,.2,1), height 1.6s cubic-bezier(.2,.7,.2,1), opacity 0.3s;
+  z-index: 2;
+}
+
+.beat-suck .hallway {
+  opacity: 1;
+  transform: scale(2.8);
+  transition: transform 1.7s cubic-bezier(.5,0,.2,1);
+}
+.beat-suck .aperture {
+  opacity: 1;
+  width: 160vmax;
+  height: 160vmax;
+  transition: width 1.5s cubic-bezier(.4,0,.2,1), height 1.5s cubic-bezier(.4,0,.2,1);
+}
+.beat-suck .title {
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+.beat-suck .gates {
+  width: calc(var(--theta) * 4.2);
+  gap: 1.4em;
+}
+.beat-suck .theta-leaf.left {
+  transform: translateX(-70%) rotateY(58deg);
+}
+.beat-suck .theta-leaf.right {
+  transform: translateX(70%) rotateY(-58deg);
+}
+
+.beat-land .hallway {
+  opacity: 1;
+  transform: scale(1);
+  transition: none;
+}
+.beat-land .aperture { opacity: 0; }
+.beat-land .title { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .title, .cat, .hallway, .aperture, .theta-leaf, .flank, .kata {
+    transition: none !important;
+  }
+}

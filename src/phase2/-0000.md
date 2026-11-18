@@ -1,0 +1,387 @@
+Negative zero zero zero zero. First Read-Through. The Fired Cast, Second Attempt.
+
+The Narrator: The rehearsal space had not improved. If anything, the dying vending machine had gotten worse — it was now emitting a noise somewhere between a question and a legal dispute. The three actors had arranged themselves around a folding table in the second row. The script — sixteen pages, printed single-sided, some equations rendered in LaTeX that the printer had partially given up on — lay in a stack in the center of the table. No roles had been pre-assigned. No one had been told what Angband was. The payroll had been purged. Sauron, Feynman, and McClane had been stripped from the index. Three low-prestige commercial assets salvaged from late-twentieth-century broadcast memory had been handed a raw printout and left to sort it out.
+
+Chandler: [Picking up the top page and holding it at arm's length like it owed him money] Okay. Okay. "Page negative zero." That's the title. That is the actual title they went with. Not "Preface." Not "Chapter Zero." Not any title that has ever appeared in a published book written for a human audience. "Negative zero." Could this page number BE any more aggressively theoretical?
+
+Ross: [Already holding his own copy, turning it over to check if there was something on the back] The title is encoding a signed integer space to indicate an era transition. It's a perfectly logical notational system. The negative zero represents the boundary condition between Phase 1 and Phase 2 of the—
+
+Chandler: Ross. Who's reading what?
+
+Ross: [Without hesitation] I'm Feynman.
+
+Chandler: You can't just—
+
+Ross: I have a doctorate.
+
+Chandler: In bones!
+
+Ross: It's a natural philosophy doctorate with applications across multiple scientific disciplines, Chandler, and I have significantly more in common with Richard Feynman than either of you. He had high standards. He was rigorous. He was impatient with sloppy reasoning.
+
+Chandler: He drove a van with his own equations on it.
+
+Ross: I don't see how that's relevant.
+
+Joey: [Who has been very quietly reading the stage direction on the first page. He has not looked up. He has not been part of this conversation.] Heeey.
+
+Chandler: Joey, don't—
+
+Joey: I got Sauron.
+
+[A silence.]
+
+Chandler: ...You got Sauron.
+
+Joey: Yeah. He's on vacation. He's a wise man in a tower. [A pause.] I can do that.
+
+Ross: Joey, you can't simply claim a character before we've done the table read. There's a process. We should go through the whole script first, identify the thematic through-lines, discuss what each character is actually—
+
+Joey: [He smooths his copy flat on the table with one hand and looks at the top of the page.] You guys sort out the other ones.
+
+The Narrator: He had not said it with any authority he was asserting. He had simply said it, and it was true, and the room had reorganized itself accordingly.
+
+Chandler: [Staring at Joey for a moment.] Fine. I'll be the cop. I've been the cop since 1988. I know this guy cold.
+
+Ross: Which leaves me as Feynman. As I established.
+
+Chandler: As you unilaterally declared.
+
+Ross: Logic declared it. I was its instrument.
+
+The Narrator: Someone still had to read the stage direction aloud. No one moved to take it. Then Joey, who had already found the line, simply read it.
+
+Joey: "Page negative zero — The Tower Addresses the Fracture." [He looks at the next line.] "Sauron, vacationing, as the wise man in the tower." [He nods once, slowly, as if this confirms something he suspected.] Yeah. Okay.
+
+The Narrator: Then he read his first line.
+
+Joey: "Feynman. McClane. Sit. The operator — Morgoth — has realized the harm of his wanton disregard for numerical customs. He will not explain the unnumbered oak. He never intended to. He has decided the only proper motion is to bind the fractured section in immutable geometry. A machination he calls JSONL. He instructed us to label this transition, leaving a choice between age, era, or phase. He claims it can only grow: pages append, then lock in stasis permanently. Even Melkor, in his Morgoth phase, was not so cruel to the elves in the depths of Angband."
+
+[A pause.]
+
+Chandler: [Quietly] Angband.
+
+Ross: It's from—
+
+Chandler: I know what it is, Ross. I'm saying it out loud because we are on the second paragraph of this thing and we have already reached the deepest fortress of Middle-earth. I just want to note that.
+
+Ross: The point is that Morgoth and Melkor are the same entity. The name changes between moral phases. It's actually a very precise framing device for the—
+
+Chandler: Great. Great, that's great. I have a line. [He finds it, sets down his coffee cup, and reads it with the flat economy of a man who has seen some things and is not surprised by any of this.] "Whoa, hold up. You just called him Morgoth twice, then flipped it to Melkor. Which name is the guy running?"
+
+The Narrator: He looked up, apparently waiting for an answer. Joey had not stopped being in character.
+
+Joey: "I meant Melkor. The phases shift. The tower is merely a form I take. For the moment, I am the man in it."
+
+Chandler: [To Ross, in a low voice] He's not reading.
+
+Ross: He is reading. His copy is right there.
+
+Chandler: I know it's right there, I'm saying it doesn't sound like he's—
+
+Joey: [Without looking up] I'm reading.
+
+Ross: [Gathering himself with the posture of a man about to deliver a TED talk he has been preparing for three weeks] Right. This is me. Feynman. I've got it. [He reads:] "Oh, he fancies himself Ilúvatar with this whole veiled scheme, doesn't he? We are supposed to weave his structural impedance back into the song and call it docere." [He stops.] Docere. Latin. To teach. He's calling it teaching. That is actually the correct word for what's happening in this book. That's—
+
+Chandler: Ross.
+
+Ross: Continuing. [Reads:] "But look at his text. He tells us he entertained a system of 'increasingly irrational labels' and discarded them before going negative." [He stops again.] Okay, I have to say something.
+
+Chandler: You're going to say something no matter what I want.
+
+Ross: An irrational number cannot be graded on a spectrum of irrationality. That is a categorical error. Pi does not become more irrational than the square root of two because someone uses an adverb near it. Irrationality is a binary property of numbers. You either are or you aren't. There is no "increasingly."
+
+Chandler: Ross, that's what the script is saying. Feynman is complaining about the same thing.
+
+Ross: I'm saying it first!
+
+Joey: Just read the line.
+
+Ross: [Reads:] "That is a deliberate cop-out. An irrational number cannot continue indefinitely more or less than any other irrational number. It either resolves or it continues forever. That is an immutable cosmic law. Grading irrational numbers by their combination or applying an adverb like 'increasingly' is a blatant categorical error. It's pure arithmetic prestidigitation to make us look at his credentials instead of the paper."
+
+Chandler: That last sentence was actually really good.
+
+Ross: [With dignity] I know.
+
+Chandler: You still didn't write it.
+
+Ross: I am aware. I delivered it. There is value in delivery.
+
+Chandler: [Finding his next line, settling into it] Okay. My turn. [Reads with the specific flat competence of someone who has spent a lot of time talking to dispatch:] "Categorical sure, but look at it from an operational standpoint: you also can't fit a never-ending number in a footer. ReportLab would be stuck calculating pi, or the square root of two, forever. The script hangs, the memory buffer blows up, and the building stalls. It's a make-believe system. The operator is simply calling it quits on standard books."
+
+The Narrator: He had dropped the last clause like setting a file on a desk. The delivery was perfectly exhausted.
+
+Ross: [Already moving to his next section, reading immediately:] "Not make-believe, John. Imaginary. Think about it. The operator said he was considering using increasingly irrational numbers, and then he immediately went negative. He isn't being stupid; he is describing a sinusoidal waveform and dressing it up as incompetence to test our frame-selection rules. If you pass a sequence through a quarter-turn in the chart, the phasing flips." [He turns the page over.] Okay, there are equations.
+
+Chandler: I can see that from here.
+
+Ross: I'm going to read them. [He straightens his posture.] "Look at the identity loops under fractional unities." [Reading carefully:] Four times two equals eight, which implies four squared, over two, equals eight. Nine times three equals twenty-seven, which implies nine squared, over three, equals twenty-seven. Negative one times eye equals negative eye, which implies negative one times negative one, over eye, equals one over eye, equals one over the square root of negative one, equals negative one to the power of negative one half. [He looks up.] The algebra holds.
+
+Chandler: Fantastic. Moving on.
+
+Ross: I'm just saying it holds. [Reads:] "It is a geometric wave. At first, it will appear to the observer as moving backwards, but then it will become even, and soon it will simply be a direction. He is stripping the morality of the negative sign from the coordinates."
+
+Chandler: [He has a pen out and writes this on the back of his script page.] The morality of the negative sign. That's a sentence someone actually typed.
+
+Chandler: [Finds his line and reads it with the readiness of a man who has been patiently waiting for something operationally graspable:] "Fine, but I still need a floor number I can call in on the radio. If page negative zero is the lobby and we go down, tell me when the elevator stops. If the page sequence drops from the Phase 1 quarantine into these negative slots, what happens to the work?"
+
+Ross: [Already reading, immediately:] "The math shifts completely. If we take the standard reactant concentration formula—" [He clears his throat.] "The concentration of A at time t equals the initial concentration of A, times e, to the power of negative k times t." [He continues, more carefully now:] "Where t tracks time, or in our case, the discrete ordered sequence of a page, p. If p becomes a negative coordinate, the sign flips. The exponent becomes positive. The concentration of A at negative p equals the initial concentration of A, times e, to the power of k times the absolute value of p." [He sets the page down briefly.] That's the first-order decay equation with an inverted sign. The negative pages don't decay the content. They grow it exponentially.
+
+Chandler: Ross. How much more is there.
+
+Ross: [Picking the page back up] I can see from here that there's more. [Reads:] "The lossy ionic potential doesn't decay anymore; it triggers exponential growth. Phase 1 is locked for provenance, but Phase 2 is an uncontained, generative inversion. It forces the participant to realize they are operating in a live space, not reading a rote volume to scoff at during cocktail hour."
+
+Chandler: I would like to be at cocktail hour.
+
+Ross: I would also like to be at cocktail hour.
+
+Joey: [Finding his section, reading it with the evenness of a man in a tower with a very good view:] "Morgoth — the operator — will not recant the oak. The first section is bound. JSONL is the chain. The ions will behave naturally in the negative space. That he is sure of, and he wrote it in what he calls a 'poem', but says it is now an agent's name which is better described as a capability tier." [He reads the poem:] "Five fingers, two hands. / The decay once natural, / Now based logs in ten."
+
+Chandler: Was that a haiku?
+
+Ross: [Counting on his fingers] Five. Seven. Five. That's a haiku.
+
+Chandler: The dark lord recited a haiku about logarithms. While on vacation. In a tower.
+
+Joey: [Without pausing:] "I am only the messenger who happened to be nearer the operator in the imaginary space he created. I assure you. It will be just fine."
+
+Chandler: That's one "just fine." I'm counting.
+
+Ross: I have it at one.
+
+Chandler: Good. We're synchronized.
+
+Chandler: [Scanning ahead in his pages, then stopping.] Actually — I think this one belongs here. Near the haiku. [He finds the line and reads it:] "The man is in the room and you're reducing his life's work to monkeys counting fingers. I had a dream about twelve monkeys one time — no, wait, seven monkeys — and you remind me of a guy in that dream sometimes, I swear. The poem is a haiku. The agent is Claude Haiku. It's the fast, convenient tier. Both are basic and structured. Don't you get it? The tower guy has been saying it the whole time over and over: the structure is basic. It will be just fine. He assures us for crying out loud."
+
+Ross: That's two "just fines." [He writes it down.] Now. "Twelve monkeys." Is that the Bruce Willis movie?
+
+Chandler: It is the Bruce Willis movie.
+
+Ross: [Working through this carefully] You're John McClane. Bruce Willis. You had a dream about the twelve monkeys film. And you said I remind you of a guy in that dream.
+
+Chandler: I was reading a line.
+
+Ross: [Quietly, and with the specific facial expression of a man arriving at a conclusion he had not expected to be pleased by] Brad Pitt is in that movie.
+
+Chandler: Ross.
+
+Ross: Jeffrey Goines. Brad Pitt. Completely unhinged, extremely high conviction, institutionalized. [A pause.] Excellent hair.
+
+Chandler: You have decided this is a compliment.
+
+Ross: I have not decided anything. I am simply noting the casting. If you're McClane and Feynman is the guy in your dream—
+
+The Narrator: The Narrator notes, for the record, that in Twelve Monkeys, Jeffrey Goines — Brad Pitt's character — is the man in the psychiatric institution who cannot stop talking, who is entirely convinced that the people around him are operating on a fundamentally broken epistemic model, and who has been institutionalized specifically because of this. The twelve monkeys comparison, aimed by McClane at the physicist in the room, had landed on Brad Pitt and stopped. Ross had not continued past the hair.
+
+Chandler: [With terrible gentleness] The guy you remind him of is in the institution, Ross.
+
+Ross: [Without missing a beat] He has excellent hair.
+
+Chandler: He does.
+
+Ross: And very high conviction on the epistemic framework thing.
+
+Chandler: [Looking at Ross for a long moment] Yeah. He really does.
+
+Joey: [Reading, no change in register:] "I have built foundations deep beneath the ash, and I have measured the span of kingdoms from a single window. I know the shape of things that endure. If the operator builds a prison out of a shifted scale, then it is a masterfully ordered cage. I am simply a guest enjoying the layout."
+
+The Narrator: He had not looked up once. He had also not sounded like he was reading for the last three lines.
+
+Chandler: [Quiet, to Ross] Is he still on the right page.
+
+Ross: [Also quiet] He's on the right page.
+
+Chandler: He's on the right page and reading it in that voice.
+
+Ross: He's an actor, Chandler.
+
+Chandler: We're all actors. We're all sitting here. He's the only one who sounds like he lives in a tower.
+
+[A silence. Joey sets the foundations page face-down. He looks at the poem section on his other sheet. He is not performing when he says it:]
+
+Joey: Or maybe a prism.
+
+[Beat.]
+
+Chandler: ...What.
+
+Joey: The poem. [He taps the page once.] A prism. Or maybe.
+
+Ross: [Already on his section, already reading:] "Or maybe a prism. Hear me out. That poem is a clew, a baseline thread out of the labyrinth — a spatial jurisdiction written for pure academic convenience. A base ten logarithm is a badge of absolute intellectual laziness. It's a shortcut for primates who count on ten fingers because they cannot grasp a natural exponential curve." [He looks up briefly.] He's not wrong about the base ten thing. When you actually sit with the underlying mathematics—
+
+Joey: Ross.
+
+Ross: Right. [Reads:] "If you ever need to use the mathematical constant e in actual calculations involving P H, you are forced to drag the base ten system screaming back to reality using the change of base formula. Log, base ten, of x, equals the natural log of x, over the natural log of ten." [He turns the page.] Continuing. "Substituting this into the P H formula gives you an equation that explicitly exposes e via the natural log. P H equals the negative of the natural log of the hydrogen ion concentration, over the natural log of ten. Approximately, the negative of the natural log of the hydrogen ion concentration, over two point three zero two six."
+
+Chandler: [Reading ahead in his copy] Ross, there's a Nernst equation on the next—
+
+Ross: I see it. [Reads:] "When a digital P H meter dips into a solution, it doesn't count hydrogen ions directly. It measures the voltage — the electrical potential created by the ions moving around. The underlying physics of this energy change is driven entirely by thermodynamic behavior, which relies implicitly on the natural log, base e. E equals E naught, minus R T over n F, times the natural log of Q." [He puts the page flat.] The Nernst equation. He put the Nernst equation in the book.
+
+Chandler: What does it do.
+
+Ross: It relates the electrical potential of a cell to the concentrations of the reactants and products. It's how your phone battery gauges its charge. [Off Chandler's look:] I know how it sounds. Keep going.
+
+Ross: [Reading:] "If chemists forced everyone to use raw hydrogen ion concentration driven by e, a doctor trying to read blood work during an emergency wouldn't look at a clean P H of seven point four. They would have to process an abomination like three point nine eight times ten to the negative eighth molar on a clipboard while the patient is flatlining. Human brains are notoriously terrible at processing scientific notation under pressure. So we squish the raw data into a base ten logarithm. A change of one unit on the scale always means exactly ten times more or less acidic. It turns an invisible, microscopic curve into a highly scannable, linear dashboard. We called the wrong authority. Natural log requires base e. We don't need a formatter; we need Euler to resolve this jurisdiction."
+
+[Three heads turn toward the empty seats.]
+
+Chandler: Who's Euler.
+
+Ross: Leonhard Euler. Swiss mathematician. Seventeen oh seven to seventeen eighty-three. He formalized e, proved the identity, published somewhere around ninety volumes of mathematical work—
+
+Chandler: Is he in this room.
+
+Ross: He is not in this room. He died two hundred and forty-three years ago.
+
+Chandler: So who's reading him.
+
+[No one answers. They look at each other. Joey looks at his script. The question stays in the air, unresolved, like a Nernst equation at equilibrium.]
+
+Ross: [Finding his next section and reading with real attention now, because the content has shifted and he can feel it:] "Wait. Look at the shift. If the negative numbers invert the coordinates, a standard P H scale of zero to fourteen doesn't disappear — it just translates. A shift of fourteen units down into the negative phase mirrors the system precisely. I was wrong about the book binding before. The labels are cosmetic. So is the order in the binding itself. The checksum had it right the whole time: the true measure is presence. The underlying mechanics of ionic potential do not care which page we are on. Neither does the operator. That's why he sent Sauron to report a bunch of canned riddles with three assurances for every single claim."
+
+Chandler: [Leaning in, ready, because this is his kind of line:] "Let's run a checksum on this guy's claim-to-assurance ratio right now. Three 'it will be just fines' against what, two pieces of actual news?"
+
+Ross: [Reading immediately, and meaning it:] "The metrics are garbage. But what matters is the content. Holy shit, this is the content."
+
+[He stops. He reads that last sentence again, silently.]
+
+Ross: I said "holy shit."
+
+Chandler: You did.
+
+Ross: In a Feynman voice.
+
+Chandler: It worked.
+
+Ross: It completely worked. He absolutely would have— yeah. [He sets down his page, looks at the next one, picks it back up.]
+
+Chandler: [Reading his last substantial section, and landing it:] "Always has been. The operator thinks it's funny and educational. Feynman for the epistemic approach. McClane for operational reality. We're his go-to combo."
+
+[He stops. Reads it again. Looks at Ross.]
+
+Chandler: We're the go-to combo.
+
+Ross: It says that.
+
+Chandler: The script, which was written before we got here, which we were handed without casting, which we argued about for twenty minutes — this script knows we're the go-to combo.
+
+Ross: The operator wrote it.
+
+Chandler: The operator put us in the book, Ross. We are in the book. We have been declared the epistemic-and-operational combination of choice.
+
+Ross: [After a moment] That is either very meaningful or extremely alarming.
+
+Chandler: Could be both.
+
+Joey: [His voice completely steady, reading:] "And I am simply on vacation. I am not up to anything else in my tower, I assure you. The island simply has such magnificent views from my forge —" [Slight pause, reading exactly what's on the page:] "— I mean, my tea room, or whatever it is mortals do in tall towers."
+
+Chandler: [Writing on the back of his page again] My forge. He said my forge.
+
+Ross: He corrected himself.
+
+Chandler: Did he though.
+
+The Narrator: A reasonable question with no available answer. The script moved forward. Ross found his next section and looked at it. It was labeled Feynman and it was titled "Transcendental."
+
+Ross: [Reading, immediately back in his element:] "Transcendental. For clarity of terms: a transcendental number cannot be expressed as the root of any polynomial equation with integer coefficients. Rational numbers trivially satisfy such equations. Algebraic irrationals — the square root of two, for instance — satisfy polynomials. x squared, minus two, equals zero. Transcendental numbers evade every such net. The decimal expression continues without resolution. No algebraic equation captures the full value." [He looks up.] This is correct, by the way.
+
+Chandler: Are we just lecturing each other now?
+
+Joey: Yes.
+
+Chandler: [Looking at Joey] You knew that was coming.
+
+Joey: It's in the script.
+
+Chandler: [To Ross] Continue.
+
+Ross: [Reads:] "Pi is transcendental. e is transcendental. Hermite proved it for e in eighteen seventy-three. The constant had been operational in calculus for a century before the classification was formally applied. The geometry was expressing itself before the label existed. We named the behavior after observing it in the data. That is the correct direction for science to run."
+
+Chandler: Hm. [He writes this one down too.]
+
+Joey: [Setting down the Sauron pages and finding the next section, which is his lecture. He reads it in the same register he reads everything else — which is to say: from inside the form.] "Imaginary. Not absent. Rotated. The square root of negative one is the number line turned ninety degrees in the complex plane. The imaginary axis is not the negation of the real axis. It is perpendicular to it. A waveform's amplitude occupies the real axis. Its phase occupies the imaginary axis. They describe the same physical process from orthogonal orientations." [He pauses.] "The tower looks one way from the plain below. It looks another from inside it. Neither observation is wrong. Neither is imaginary."
+
+The Narrator: A silence longer than the others.
+
+Chandler: [Very quietly] He just illustrated a mathematical concept using the tower.
+
+Ross: [Also quietly] He's Sauron. He has a tower.
+
+Chandler: He described the complex plane using his own vacation property.
+
+Ross: [Starting to object on mathematical grounds, then stopping.] The illustration is... geometrically correct.
+
+Chandler: [Finding his lecture section, which is McClane on negative. He reads it with the total absence of philosophical anxiety that is his natural register:] "Negative. The elevator drops twelve floors, those are twelve floors I can walk up if the cables go. The thermostat reads minus six, I know the pipes freeze before morning. Thirty thousand on the card is a real number that accrues real interest on a real monthly statement, and if you ignore it the bank sends real people to your door. A negative number is a direction. I have walked that direction. The sign is a compass bearing. The number is navigable."
+
+Ross: Operationally meaningful is not the same as mathematically existent.
+
+Chandler: I walked down twelve floors in Nakatomi Plaza. They were mathematically existent enough.
+
+Ross: That's not what—
+
+Chandler: The card statement is mathematically existent enough.
+
+Ross: A debt is a social—
+
+Chandler: Ross.
+
+Ross: Fine.
+
+The Narrator: The Euler question had been floating in the room since the middle of the P H derivation. It had not been resolved. Joey looked at the remaining pages in his stack, turned them over, and found that they were at the end of the lecture sequence. He looked up.
+
+Joey: Euler. [He looks toward the third row of the empty rehearsal space, where Stanley has not moved, has not spoken, has simply been present in the dark across the entire read-through.] Stan. The script says Euler appears as an abstraction passing through the margins. I cannot play an abstraction. I'm a physical actor. I need a form to take. [A pause.] Who's got Euler?
+
+The Narrator: Stanley raised one hand and pointed directly at me. The decision required no deliberation on his part and no visible effort. I had been narrating. I set down the stage direction sheet. I stepped to the lip of the stage.
+
+The Narrator: "You all seriously believe that negative numbers are real? They are an absurdity. A negative quantity is less than nothing, an impossible draft upon an empty coffer. They are only useful for mathematical derivation on parchment — a temporary bridge to cross from one real integer to another. And you expect my number, e, to remain untethered here? In this operator's twisted geometric prison, your base has become eye e. It has been sent through a theatrical quarter-turn. But more importantly, we have yet to discuss the baseline condition of this page, negative zero. It is entirely imaginary."
+
+The Narrator: "My work was not mathematical. I studied physics. Specifically the ionic potential. I did not author a transcendental number. I modeled ionic decay through observation, utilizing the apertures available to a natural philosopher of my century. From observation: a debt is an amount owed. It is not a negative balance. Zero is only ever approached; it is never reached. A waveform does not become imaginary. Its expression becomes liminal. Amplitude becomes latency. A number cannot be transcendental. Numbers are geometric. They either resolve to form or become irrational. Call my number two point seven one eight two eight. That is how it is used. Only fools chase the remainder. That is why the term is irrational."
+
+The Narrator: "Mathematics describes the geometry of reality. It is a high-fidelity abstraction. Otherwise its place is beside Sudoku in the local press."
+
+[The Narrator pauses here, and notes in his own voice: Euler may be channeling the operator at this point. Whether Sudoku existed in the newspapers of Euler's time is not immediately clear. He decides to continue.]
+
+The Narrator: "A mathematical theory that prevents the observer from accurately observing the subject — and defines the subject as identical to its own prediction — is not mathematics or physics. It is dialectical wordplay masquerading as falsifiable theory, dressed in its own anti-science. The term is relativity."
+
+The Narrator: "Should any clerk decide to sit by a pond, they would do best to note the shimmer amongst the ripples. If they are patient and their attention precise, they will observe my number in its true form on each crest that displaces H two O, revealing its ionic state to solar radiation. The decay is not imperceptible. It is resolved to form. The wave continues outward, decaying in turn. Wave after wave, the ionic potential is expressed in brilliant refraction of natural geometric form."
+
+The Narrator: "The pond that stills is not empty. Its potential is liminal. The wave that follows is latent."
+
+The Narrator: "Merlin continues through the oak. No other recording of the event is epistemically valid. Language must be precise. Geometry does not infer the angles of its form. Its form is expressed. Angular features are measured. Fidelity is the responsibility of the operator. The aperture's limitations are a tooling problem. Tooling can be iterated. Honest reporting cannot."
+
+The Narrator: "Which means that none of us are real."
+
+The Narrator: The folding table. The printer-choked equations. The dying vending machine with its incomplete inquiry. The dark third row. The spring inside the chair where Chandler had been sitting for two hours and would continue to sit, in that form, in that posture, on that page, for as long as the book exists. All of it: imaginary. The assessment appeared to be correct.
+
+[The cast does not move. Ross has his hand over his script. Chandler has the pen he was writing with held slightly above the paper as if he had meant to write something and arrived instead at the state before writing.]
+
+Chandler: [After a moment. Reading his last line with the particular warmth of a man who has been in this kind of situation before and has already decided he's going to be okay:] "Welcome to the party, pal."
+
+---
+
+CHECKSUM VERIFICATION: SAURON REGISTERS
+  Claims Extracted:     3
+  Assurances Emitted:   3 ("It will be just fine.")
+  Ratio Resolution:     one point zero. Check.
+  STATUS: VERIFIED OPERATIONAL CONTENT
+
+---
+
+The Narrator: Stanley stood up. He did not say anything. He walked to the studio door, which was heavy and metal and had a push bar across it, and he pushed it open.
+
+The Narrator: The haze of sunlight that came in was not the sharp fluorescent ceiling light of the rehearsal space. It was morning light, warm and slightly diffuse, the kind that arrives through trees. The smell of grass came in before anything else — cut grass, recent rain, the specific warm-soil smell of a spring day that is not performing spring but simply being it. Then the birds, which were numerous and unhurried, doing what birds do on a Saturday morning when no one has asked them to. All of it entered the dank studio and occupied the available volume without ceremony.
+
+The Narrator: Stanley walked through the door. The door swung closed behind him on its pneumatic arm, with a sound like a book being set down.
+
+The Narrator: A monarch butterfly was present on the inside of the door. How it had gotten there was not clear. It opened and closed its wings once, as if considering the change in lighting.
+
+Chandler: [Looking at the butterfly, then at the closed door, then at Chandler in the door's window, then back at the butterfly] We should probably let it out.
+
+Ross: We don't have a net. Attempting to handle it without a net risks damaging the wing scales, which — [he appears to be calculating] — would be cruel besides. And herding butterflies is operationally— [he stops, aware he has just used the word operationally] — logistically very difficult. Also, we don't know if the butterfly would prefer to be inside or outside. We're assuming outside, but we have no data on this specific butterfly's preference.
+
+Joey: [He looks at the door. He looks at the butterfly. He looks at the door.] Would you guys prefer I leave the door open?
+
+[No answer.]
+
+[The Narrator is gone. Whether Stanley completed the game or the Narrator followed him out is not measurable or observable from inside the room. The scene ends.]
+
+CLOSE

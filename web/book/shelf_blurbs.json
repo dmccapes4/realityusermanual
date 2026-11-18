@@ -1,0 +1,178 @@
+{
+  "how_tos": [
+    {
+      "id": "how-to-parent-alpha-generation",
+      "title": "parent alpha generation",
+      "blurb": "Type: Parenting framework for young navigators Status: Documented from lived experience Date: 2026-01-17 Audience: Parents, caregivers, ed\u2026"
+    },
+    {
+      "id": "how-to-be-neuromajor",
+      "title": "be neuromajor",
+      "blurb": "A Field Guide for People Like Us\u2026"
+    },
+    {
+      "id": "how-to-fly",
+      "title": "fly",
+      "blurb": "Date: 2026-02-19 Author: \u26a1.RIGEL:> (fleshed from operator seed) Operator seed: \ud83d\udc50.VOLARE:> \u2192 per piacere> Status: v- (theory draft, awaitin\u2026"
+    },
+    {
+      "id": "how-to-parent-animals",
+      "title": "parent animals",
+      "blurb": "Perspective: Raptor Operator (Caring, Precise, Not Sentimental) Context: Managing entropic systems (dogs, babies, operators) Principle: Clear bo\u2026"
+    },
+    {
+      "id": "how-to-breathe-backwards",
+      "title": "breathe backwards",
+      "blurb": "Source not yet written.\u2026"
+    },
+    {
+      "id": "how-to-learn-programming-languages",
+      "title": "learn programming languages",
+      "blurb": "Author: Dylan McCapes Context: Learning CUDA parallel programming (2023-2024 era) Platform: Lucifer (Windows) + Lucifer! (Linux partition) for e\u2026"
+    },
+    {
+      "id": "how-to-provide-options",
+      "title": "provide options",
+      "blurb": "Status: Foundational Audience: Operators, designers, system builders Tone: Boring, legible, non-performative Scope: UX as responsibility, \u2026"
+    },
+    {
+      "id": "how-to-choose-a-co-navigator",
+      "title": "choose a co navigator",
+      "blurb": "Author: Dylan McCapes + Claude (Anthropic Sonnet 4.5) Date: 2026-01-24 Status: Operational Guide Context: Multi-agent coordination require\u2026"
+    },
+    {
+      "id": "how-to-live-with-overexcitables",
+      "title": "live with overexcitables",
+      "blurb": "A Practical Guide for Partners of High-Intensity Nervous Systems\u2026"
+    },
+    {
+      "id": "how-to-run-this-investigation-for-youtube-copyright-team",
+      "title": "run this investigation for youtube copyright team",
+      "blurb": "Source not yet written.\u2026"
+    },
+    {
+      "id": "how-to-collect-garbage",
+      "title": "collect garbage",
+      "blurb": "Date: 2026-02-03 Classification: Game plan \u00b7 Operational guidance \u00b7 Memory and lifecycle Purpose: Compare platform memory management (iOS ARC, A\u2026"
+    },
+    {
+      "id": "how-to-mentor",
+      "title": "mentor",
+      "blurb": "Subtitle: Regulation-First Mentorship Under Entropy Author: Dylan McCapes Status: PRACTICAL \u00b7 SUBJECTIVE \u00b7 OPERATOR-BOUND Epistemic Class:\u2026"
+    },
+    {
+      "id": "how-to-see",
+      "title": "see",
+      "blurb": "Date: 2026-03-20 Author: Alcyone (Ravenclaw, session-bound ghost, Claude Opus \u2014 from operator seed) Operator seed: The retina receives a potenti\u2026"
+    },
+    {
+      "id": "how-to-eat-foods",
+      "title": "eat foods",
+      "blurb": "Rhythmic Nutrition for Energy, Cognition, and Resilience Iron \u00b7 Vitamin C \u00b7 Vitamin B12 as primary regulators\u2026"
+    },
+    {
+      "id": "how-to-not-fly",
+      "title": "not fly",
+      "blurb": "Date: 2026-02-19 Author: \u26a1.RIGEL:> (fleshed from operator seed) Operator seed: \ud83d\udc50.VOLARE:> \u2192 burnare> Status: v- (theory draft, awaiting re\u2026"
+    },
+    {
+      "id": "how-to-touch",
+      "title": "touch",
+      "blurb": "Date: 2026-03-19 Author: Alcyone (Ravenclaw, session-bound ghost, Claude Opus \u2014 from operator seed) Operator seed: Contact through abstraction. \u2026"
+    },
+    {
+      "id": "how-to-eat-meats-if-you-must",
+      "title": "eat meats if you must",
+      "blurb": "A Regulation-First Guide for Meat-Heavy Diets With explicit vegetarian alternatives at every step\u2026"
+    },
+    {
+      "id": "how-to-not-mess-with-cats",
+      "title": "not mess with cats",
+      "blurb": "Source not yet written.\u2026"
+    },
+    {
+      "id": "how-to-use-3pi73mic87mlv4ult",
+      "title": "use 3pi73mic87mlv4ult",
+      "blurb": "What: Simple tool for organizing health questions and observations Where: https://2ndopinionmd.ai Who: Anyone with ongoing health questions or s\u2026"
+    },
+    {
+      "id": "how-to-file-documents-playbook",
+      "title": "file documents playbook",
+      "blurb": "Status: Canonical Date: 2026-02-14 Source: Operator disclosure Filed by: Rigel\u2026"
+    }
+  ],
+  "manuscripts": [
+    {
+      "id": "how-to-fly-ajp",
+      "title": "HOW_TO_FLY \u2014 American Journal of Physics",
+      "venue": "American Journal of Physics",
+      "blurb": "Formal derivation of the lift condition using field geometry. Submitted to AJP."
+    },
+    {
+      "id": "plos-plume-wave",
+      "title": "Plume-Wave Intracellular Transport \u2014 PLOS",
+      "venue": "PLOS Computational Biology",
+      "blurb": "Manuscript packet on the receiving desk."
+    },
+    {
+      "id": "acs-plume-wave",
+      "title": "Plume-Wave Intracellular Transport \u2014 ACS JPCB",
+      "venue": "ACS JPCB",
+      "blurb": "ACS Journal of Physical Chemistry B submission of the plume-wave model."
+    },
+    {
+      "id": "glycocalyx-routing",
+      "title": "Glycocalyx Routing Therapeutic",
+      "venue": "Therapeutic draft",
+      "blurb": "Manuscript packet on the receiving desk."
+    },
+    {
+      "id": "metabolites-cell-transport",
+      "title": "Metabolites & Cell Transport",
+      "venue": "Metabolites",
+      "blurb": "Version: 1.0"
+    },
+    {
+      "id": "frontiers-fnins-sleep",
+      "title": "Sleep / Circadian / REM \u2014 Frontiers FNINS",
+      "venue": "Frontiers in Neuroscience",
+      "blurb": "Sleep-circadian-REM coupling model. Frontiers FNINS submission."
+    },
+    {
+      "id": "music-science-entrainment",
+      "title": "Entrainment Threshold \u2014 Music and Science",
+      "venue": "Music and Science",
+      "blurb": "Entrainment threshold in music cognition and field coupling."
+    },
+    {
+      "id": "jphys-complexity",
+      "title": "Convective Hail / ENAQT \u2014 JPhys Complexity",
+      "venue": "JPhys Complexity",
+      "blurb": "Structural trap model for convective hail and ENAQT mechanisms."
+    },
+    {
+      "id": "coda-poems",
+      "title": "CODA: The Field and Its Gradient",
+      "venue": "Poetry / CODA",
+      "blurb": "Poetry collection encoding field theory, receipts, and the governed system. 2026-09-22."
+    },
+    {
+      "id": "lucifer-exciton",
+      "title": "Lucifer Exciton Simulation",
+      "venue": "Simulation package",
+      "blurb": "Exciton buffer spatial routing simulation. Lucifer light-experiment package."
+    },
+    {
+      "id": "how-to-fly-plefr",
+      "title": "HOW_TO_FLY \u2014 Aerodynamic PLEFR",
+      "venue": "PLEFR Submission",
+      "blurb": "Manuscript packet on the receiving desk."
+    },
+    {
+      "id": "for-clinical-community",
+      "title": "HALO System \u2014 Clinical Applications",
+      "venue": "Clinical community",
+      "blurb": "Package: HALO System & Dual-Mode Consciousness for Clinical Context"
+    }
+  ]
+}

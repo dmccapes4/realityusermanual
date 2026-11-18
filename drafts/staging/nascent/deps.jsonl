@@ -1,0 +1,5 @@
+{"slot":0,"file":"deps.jsonl","describes":"one primitive per line: slug, data, addr, off. off is the byte offset of the line. offset 0 is this line. no datum lives at 0."}
+{"slug":"numpy","data":"pkg:numpy@resolved","addr":"deps.jsonl","off":172}
+{"slug":"pandas","data":"pkg:pandas@resolved","addr":"deps.jsonl","off":247}
+{"slug":"pyzmq","data":"pkg:pyzmq@resolved","addr":"deps.jsonl","off":324}
+{"tombstone":"pandas","reason":"superseded; existence earned, no longer the right answer","off":399}

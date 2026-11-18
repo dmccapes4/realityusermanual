@@ -377,10 +377,16 @@ def verify_historic_legs(tracker: KnownSystemTracker) -> dict:
     r_m_entry = row_by_cal(hz["mars2020_arr_fine"], "2021-Feb-18 20:00")
     mars_at_entry = row_by_cal(hz["mars_body_2021"], "2021-Feb-18 20:00")
     assert_same_jd(r_m_entry, mars_at_entry)
+    # Entry-interface epoch: SAIVERMESH fetched 1-minute Horizons rows for the EI window
+    # (20:30-20:46 TDB) before bogging down; the 20:46 row is the EI-epoch state used here
+    # (HALMANSEIR review II §3.6: the 20:00 row sits ~46 min before interface).
+    r_m_ei = hz["mars2020_ei_1m"][-1]
+    mars_at_ei = hz["mars_body_ei_1m"][-1]
+    assert_same_jd(r_m_ei, mars_at_ei)
 
     jd0 = float(r_m0["jd_tdb"])
     jd_pre = float(r_m_pre_tcm5["jd_tdb"])
-    jd_ent = float(r_m_entry["jd_tdb"])
+    jd_ent = float(r_m_ei["jd_tdb"])
 
     sol_m_pure = solve_ivp(
         lambda t, y: np.concatenate([y[3:], tracker.grav_acc_bary(jd0 + t / DAY_S, y[:3])]),
@@ -398,7 +404,7 @@ def verify_historic_legs(tracker: KnownSystemTracker) -> dict:
     )
     assert sol_m_entry.success, sol_m_entry.message
 
-    mars_pos_jpl = np.array(mars_at_entry["pos_km"])
+    mars_pos_jpl = np.array(mars_at_ei["pos_km"])
     d_mars_center = float(np.linalg.norm(sol_m_entry.y[:3, -1] - mars_pos_jpl))
     results["terra_to_mars_mars2020"] = {
         "craft": "Mars 2020 Perseverance (-168)",
@@ -406,13 +412,13 @@ def verify_historic_legs(tracker: KnownSystemTracker) -> dict:
         "pure_coast_end_cal": r_m_pre_tcm5["cal_tdb"],
         "pure_coast_days": round(jd_pre - jd0, 3),
         "pure_coast_drift_vs_jpl_km": round(float(np.linalg.norm(sol_m_pure.y[:3, -1] - np.array(r_m_pre_tcm5["pos_km"]))), 2),
-        "entry_cal": r_m_entry["cal_tdb"],
-        "coast_to_entry_days": round(jd_ent - jd0, 4),
-        "launch_table_to_entry_days": round(jd_ent - float(r_m_launch["jd_tdb"]), 4),
-        "drift_to_entry_vs_jpl_km": round(float(np.linalg.norm(sol_m_entry.y[:3, -1] - np.array(r_m_entry["pos_km"]))), 2),
-        "drift_note": "Pure coast (Oct 3 -> Feb 14) precedes terminal targeting trims; Oct 3 -> Feb 18 20:00 includes tiny TCM-3 (~0.1 m/s) and terminal entry trims (Feb 16-18) plus SRP.",
-        "distance_to_mars_center_at_entry_km": round(d_mars_center, 2),
-        "altitude_above_mars_surface_km": round(d_mars_center - BODY_META["mars"]["r_eq_km"], 2),
+        "entry_interface_cal": r_m_ei["cal_tdb"],
+        "coast_to_entry_interface_days": round(jd_ent - jd0, 4),
+        "launch_table_to_entry_interface_days": round(jd_ent - float(r_m_launch["jd_tdb"]), 4),
+        "drift_to_entry_interface_vs_jpl_km": round(float(np.linalg.norm(sol_m_entry.y[:3, -1] - np.array(r_m_ei["pos_km"]))), 2),
+        "drift_note": "Pure coast (Oct 3 -> Feb 14) precedes terminal targeting trims; coast to the 20:46 entry-interface epoch includes tiny TCM-3 (~0.1 m/s) and terminal entry trims (Feb 16-18) plus SRP. Entry fields are at the entry-interface epoch (1-min Horizons rows), not the 20:00 approach row.",
+        "distance_to_mars_center_at_entry_interface_km": round(d_mars_center, 2),
+        "altitude_above_mars_surface_at_entry_interface_km": round(d_mars_center - BODY_META["mars"]["r_eq_km"], 2),
     }
 
     # 2. Terra -> Jupiter: New Horizons (-98)
@@ -677,6 +683,7 @@ def scan_echo_star_windows_1750_2250(tracker: KnownSystemTracker) -> list[dict]:
                 "total_3d_chord_km": round(total_path_km, 0),
                 "jupiter_bend_required_deg": round(bend_deg, 2),
                 "mars_angular_offset_deg": round(min_mars_off_deg, 2),
+                "mars_aligned": bool(min_mars_off_deg <= 20.0),
                 "saturn_dist_sol_arr_km": round(float(np.linalg.norm(rs2)), 0),
                 "saturn_neptune_sep_deg": round((lon_n - lon_s) % 360.0, 1),
             })
@@ -689,7 +696,17 @@ def scan_echo_star_windows_1750_2250(tracker: KnownSystemTracker) -> list[dict]:
     if cur_group:
         best = min(cur_group, key=lambda r: r["total_3d_chord_km"] + 4e6 * r["mars_angular_offset_deg"])
         windows.append(best)
-    return windows
+    # Merge windows split by a single failing sample (HALMANSEIR review II §3.4):
+    # launches within 200 days of each other are one corridor; keep the best by the group key.
+    merged: list[dict] = []
+    for w in sorted(windows, key=lambda r: r["jd_launch"]):
+        if merged and w["jd_launch"] - merged[-1]["jd_launch"] <= 200.0:
+            key = lambda r: r["total_3d_chord_km"] + 4e6 * r["mars_angular_offset_deg"]
+            if key(w) < key(merged[-1]):
+                merged[-1] = w
+        else:
+            merged.append(w)
+    return merged
 
 
 # ── Part 4: Inverse BVP for Required Equivalent Field Drift + Event-Driven Titan Aerocapture ───
@@ -814,6 +831,7 @@ def solve_one_year_required_field_mission(tracker: KnownSystemTracker) -> dict:
     min_mars_alt = 1e18
     min_sat_ring_r = 1e18
     field_mags_ms2 = []
+    field_vecs_kms2 = []
     traj_records = []
 
     for k in range(sol_best.t.size):
@@ -840,6 +858,7 @@ def solve_one_year_required_field_mission(tracker: KnownSystemTracker) -> dict:
         af = req_field_vec(ts, res.x)
         af_ms2 = float(np.linalg.norm(af)) * 1000.0
         field_mags_ms2.append(af_ms2)
+        field_vecs_kms2.append(af)
 
         ag = tracker.grav_acc_bary(jd, pk)
         st = ObjectState.from_pv("ship", jd, pk - ps, vk - vs)
@@ -860,6 +879,25 @@ def solve_one_year_required_field_mission(tracker: KnownSystemTracker) -> dict:
             "jupiter_sol_pos_km": [round(float(x), 1) for x in (pj - ps)],
             "saturn_sol_pos_km": [round(float(x), 1) for x in (psa - ps)],
         })
+
+    # Integrated field budget and corridor relationship (HALMANSEIR review II §3.2-3.3):
+    # gross |a| dt is the scale of what the governed field must supply, sustained for a year.
+    t_dense = np.array([float(x) for x in sol_best.t])
+    integrated_field_gross_kms = float(np.trapezoid(np.array(field_mags_ms2), t_dense)) / 1000.0
+    integrated_field_vector_kms = float(np.linalg.norm(
+        np.trapezoid(np.array(field_vecs_kms2), t_dense, axis=0)))
+    if min_jup_alt > 5.0e6 and min_mars_alt > 5.0e6:
+        corridor_relationship = (
+            f"direct_transfer_no_corridor_encounter: the converged solution passes "
+            f"{min_jup_alt:,.0f} km from Jupiter's surface and {min_mars_alt:,.0f} km from "
+            f"Mars's surface; it does not fly the Part 3 corridor geometry. "
+            f"The corridor scan is independent screening, not a description of this mission."
+        )
+    else:
+        corridor_relationship = (
+            f"corridor_encounter: closest Jupiter surface altitude {min_jup_alt:,.0f} km, "
+            f"Mars {min_mars_alt:,.0f} km — compare against the Part 3 window flown."
+        )
 
     # ── Stage 4: Event-Driven Atmospheric Aerocapture at Titan (1000 km -> periapsis -> 1000 km) ──
     m_ship = 12000.0
@@ -965,6 +1003,64 @@ def solve_one_year_required_field_mission(tracker: KnownSystemTracker) -> dict:
             apo_alt_km = round(r_apo - r_tit, 1)
             time_to_apo_min = round(float(sol_post.t[-1]) / 60.0, 1)
 
+    # Implied periapsis + second pass (HALMANSEIR review II §3.1): a capture claim waits
+    # for the return. Continue the pure-gravity post-exit integration apoapsis -> periapsis
+    # (turning point dot(rp, rv) crossing - to +), then fly the full second atmospheric pass
+    # from the first exit state with the same aero model and events.
+    peri_alt_km = None
+    second_pass = None
+    capture_complete = False
+    if apo_alt_km is not None:
+        def ev_periapsis(t_s: float, y: np.ndarray) -> float:
+            return float(np.dot(y[:3], y[3:]))
+        ev_periapsis.terminal = True
+        ev_periapsis.direction = 1
+        sol_peri = solve_ivp(
+            lambda t_s, y: np.concatenate([y[3:], -(gm_tit / (float(np.dot(y[:3], y[:3])) ** 1.5)) * y[:3]]),
+            (0.0, 20.0 * DAY_S), sol_post.y[:, -1],
+            method="DOP853", rtol=1e-10, atol=1e-10, events=[ev_periapsis],
+        )
+        assert sol_peri.success, f"Post-exit periapsis integration failed: {sol_peri.message}"
+        if len(sol_peri.t_events[0]) > 0:
+            peri_alt_km = round(float(np.linalg.norm(sol_peri.y[:3, -1])) - r_tit, 1)
+
+        # Second-pass exit event must arm only after the ship has re-entered below the
+        # interface (the first-pass ev_atmo_exit start-guard would fake a crossing at t=30 s).
+        _exit2_armed = {"seen_inside": False}
+        def ev_atmo_exit2(t_s: float, y: np.ndarray) -> float:
+            r_now = float(np.linalg.norm(y[:3]))
+            if r_now < (r_tit + TITAN_ATMO_INTERFACE_KM) - 1.0:
+                _exit2_armed["seen_inside"] = True
+            if not _exit2_armed["seen_inside"]:
+                return -50.0
+            return r_now - (r_tit + TITAN_ATMO_INTERFACE_KM)
+        ev_atmo_exit2.terminal = True
+        ev_atmo_exit2.direction = 1
+        sol_second = solve_ivp(
+            aero_rhs, (0.0, 40000.0), np.concatenate([rp_end, rv_end]),
+            method="DOP853", max_step=1.0, rtol=1e-9, atol=1e-9,
+            events=[ev_surface_impact, ev_atmo_exit2],
+        )
+        assert sol_second.success, f"Second-pass integration failed: {sol_second.message}"
+        if len(sol_second.t_events[0]) > 0:
+            second_term = "surface_impact"
+        elif len(sol_second.t_events[1]) > 0:
+            second_term = "atmo_exit_1000km"
+        else:
+            second_term = "time_cap_40000s"
+        alts2 = [float(np.linalg.norm(sol_second.y[:3, i])) - r_tit for i in range(sol_second.t.size)]
+        rv2_end = sol_second.y[3:, -1]
+        rf2_end = float(np.linalg.norm(sol_second.y[:3, -1]))
+        e2_end = 0.5 * float(np.dot(rv2_end, rv2_end)) - gm_tit / rf2_end
+        second_pass = {
+            "termination_event": second_term,
+            "min_altitude_km": round(min(alts2), 2),
+            "exit_speed_kms": round(float(np.linalg.norm(rv2_end)), 3),
+            "exit_specific_energy_km2s2": round(e2_end, 4),
+            "bound_after_second_pass": bool(second_term == "atmo_exit_1000km" and e2_end < 0.0),
+        }
+        capture_complete = bool(second_pass["bound_after_second_pass"] and min(alts2) > 0.0)
+
     jsonl_path = DATA_DIR / "titan_1yr_trajectory.jsonl"
     with jsonl_path.open("w") as f:
         for row in traj_records:
@@ -984,6 +1080,10 @@ def solve_one_year_required_field_mission(tracker: KnownSystemTracker) -> dict:
         "phase1_required_drift_vec_ms2": [round(float(x) * 1e-3, 5) for x in res.x[:3]],
         "phase2_required_drift_vec_ms2": [round(float(x) * 1e-3, 5) for x in res.x[3:]],
         "mean_required_field_drift_ms2": round(float(np.mean(field_mags_ms2)), 4),
+        "integrated_field_budget_gross_kms": round(integrated_field_gross_kms, 2),
+        "integrated_field_budget_vector_kms": round(integrated_field_vector_kms, 2),
+        "integrated_field_budget_note": "gross = integral of |a_req| dt over 365.25 d (upper envelope of what the governed field must supply); vector = |integral of a_req dt|. convergence_pos_miss_km is least-squares closure of the 6-on-6 shooting problem (solver exactness), not trajectory accuracy.",
+        "mission_corridor_relationship": corridor_relationship,
         "peak_required_field_drift_ms2": round(float(max(field_mags_ms2)), 4),
         "peak_required_field_drift_g": round(float(max(field_mags_ms2)) / 9.80665, 5),
         "peak_cruise_speed_sol_kms": round(max(r["ship_speed_sol_kms"] for r in traj_records), 3),
@@ -1003,7 +1103,11 @@ def solve_one_year_required_field_mission(tracker: KnownSystemTracker) -> dict:
             "exit_specific_energy_km2s2": round(specific_energy_end, 4),
             "bound_to_titan_at_exit": bool(term_event == "atmo_exit_1000km" and specific_energy_end < 0.0),
             "post_exit_apoapsis_alt_km": apo_alt_km,
+            "post_exit_periapsis_alt_km": peri_alt_km,
             "time_to_apoapsis_min": time_to_apo_min,
+            "second_pass": second_pass,
+            "capture_complete": capture_complete,
+            "capture_note": "bound_to_titan_at_exit is only the first-exit energy state; capture_complete requires the integrated second pass to exit the 1000 km interface still bound and above the surface.",
         },
         "trajectory_jsonl": str(jsonl_path.relative_to(ROOT)),
     }
@@ -1051,6 +1155,12 @@ def main() -> None:
         "historic_three_legs": historic,
         "audit_1679": audit_1679,
         "corridor_windows_1750_2250": windows,
+        "corridor_windows_mars_aligned_1750_2250": [w for w in windows if w["mars_aligned"]],
+        "corridor_summary": {
+            "total_windows": len(windows),
+            "mars_aligned_windows_le20deg": sum(1 for w in windows if w["mars_aligned"]),
+            "note": "corridor_windows_1750_2250 are Jupiter-Saturn chord windows (bend < 22 deg, chord < 1.5e9 km); Mars offset is recorded on every window and the Mars-aligned subset (<= 20 deg) is listed separately. The scan is geometric screening at fixed +165 d / +365.25 d offsets, not integrated trajectories.",
+        },
         "governed_1yr_mission": mission_1yr,
     }
     out_file = DATA_DIR / "titan_governed_results.json"

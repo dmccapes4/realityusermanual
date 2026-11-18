@@ -1,0 +1,3 @@
+{"slot":0,"asked":3,"served":["numpy","pyzmq"],"refused":1,"csum":"e9a757542c091a61"}
+{"slug":"numpy","data":"pkg:numpy@resolved","addr":"deps.jsonl","off":172}
+{"slug":"pyzmq","data":"pkg:pyzmq@resolved","addr":"deps.jsonl","off":324}

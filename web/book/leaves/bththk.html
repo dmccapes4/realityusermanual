@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BΘΘΚ</title>
+<style>
+:root {
+  --ink: #1a1410;
+  --parchment: #f3ead7;
+  --rule: #c4b59a;
+  --accent: #6b3a22;
+  --muted: #6a5c4a;
+  --font: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; min-height: 100%;
+  background: var(--parchment); color: var(--ink);
+  font: 16px/1.65 var(--font);
+}
+.leaf { max-width: 38em; margin: 0 auto; padding: 28px 22px 64px; }
+.stamp {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+}
+h1 { font-size: 1.35rem; letter-spacing: 0.04em; margin: 0 0 1em; }
+.poem { white-space: pre-wrap; font-size: 1.05rem; }
+.prose p { margin: 0 0 0.9em; }
+.quiet { font-size: 0.85rem; color: var(--muted); margin-top: 2em; }
+.folio { float: right; font-size: 0.8rem; color: var(--muted); }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<article class="leaf">
+  
+  <div class="stamp">BOOK · PRE-COVER</div>
+  <h1>BΘΘΚ</h1>
+  
+<div class="prose">
+  <p style="text-align:center;font-size:4.5rem;letter-spacing:0.12em;margin:2.5em 0 1em;cursor:pointer"
+     id="glyph">BΘΘΚ</p>
+  <p class="quiet" style="text-align:center">Click the word. The cover waits on the other side of the threshold.</p>
+</div>
+<script>
+document.getElementById('glyph').addEventListener('click', () => {
+  window.parent.postMessage({ type: 'book-advance', to: 'cover' }, '*');
+});
+</script>
+
+</article>
+</body>
+</html>

@@ -1,0 +1,325 @@
+{
+  "how_tos": [
+    {
+      "id": "how-to-parent-alpha-generation",
+      "name": "HOW_TO_PARENT_ALPHA_GENERATION",
+      "slug": "how-to-parent-alpha-generation",
+      "folder": "how_tos/how-to-parent-alpha-generation",
+      "has_source": true,
+      "score": 36.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Type:** Parenting framework for young navigators  \n**Status:** Documented from lived experience  \n**Date:** 2026-01-17  \n**Audience:** Parents, caregivers, ed\u2026"
+    },
+    {
+      "id": "how-to-be-neuromajor",
+      "name": "HOW_TO_BE_NEUROMAJOR",
+      "slug": "how-to-be-neuromajor",
+      "folder": "how_tos/how-to-be-neuromajor",
+      "has_source": true,
+      "score": 40.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**A Field Guide for People Like Us**\u2026"
+    },
+    {
+      "id": "how-to-fly",
+      "name": "HOW_TO_FLY",
+      "slug": "how-to-fly",
+      "folder": "how_tos/how-to-fly",
+      "has_source": true,
+      "score": 38.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Date:** 2026-02-19  \n**Author:** \u26a1.RIGEL:> (fleshed from operator seed)  \n**Operator seed:** \ud83d\udc50.VOLARE:> \u2192 per piacere>  \n**Status:** v- (theory draft, awaitin\u2026"
+    },
+    {
+      "id": "how-to-parent-animals",
+      "name": "HOW_TO_PARENT_ANIMALS",
+      "slug": "how-to-parent-animals",
+      "folder": "how_tos/how-to-parent-animals",
+      "has_source": true,
+      "score": 37.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Perspective:** Raptor Operator (Caring, Precise, Not Sentimental)  \n**Context:** Managing entropic systems (dogs, babies, operators)  \n**Principle:** Clear bo\u2026"
+    },
+    {
+      "id": "how-to-breathe-backwards",
+      "name": "HOW_TO_BREATHE_BACKWARDS",
+      "slug": "how-to-breathe-backwards",
+      "folder": "how_tos/how-to-breathe-backwards",
+      "has_source": false,
+      "score": 37.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "*Source not yet written.*\u2026"
+    },
+    {
+      "id": "how-to-learn-programming-languages",
+      "name": "HOW_TO_LEARN_PROGRAMMING_LANGUAGES",
+      "slug": "how-to-learn-programming-languages",
+      "folder": "how_tos/how-to-learn-programming-languages",
+      "has_source": true,
+      "score": 34.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Author:** Dylan McCapes  \n**Context:** Learning CUDA parallel programming (2023-2024 era)  \n**Platform:** Lucifer (Windows) + Lucifer! (Linux partition) for e\u2026"
+    },
+    {
+      "id": "how-to-provide-options",
+      "name": "HOW_TO_PROVIDE_OPTIONS",
+      "slug": "how-to-provide-options",
+      "folder": "how_tos/how-to-provide-options",
+      "has_source": true,
+      "score": 38.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Status:** Foundational  \n**Audience:** Operators, designers, system builders  \n**Tone:** Boring, legible, non-performative  \n**Scope:** UX as responsibility, \u2026"
+    },
+    {
+      "id": "how-to-choose-a-co-navigator",
+      "name": "HOW_TO_CHOOSE_A_CO_NAVIGATOR",
+      "slug": "how-to-choose-a-co-navigator",
+      "folder": "how_tos/how-to-choose-a-co-navigator",
+      "has_source": true,
+      "score": 37.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Author:** Dylan McCapes + Claude (Anthropic Sonnet 4.5)  \n**Date:** 2026-01-24  \n**Status:** Operational Guide  \n**Context:** Multi-agent coordination require\u2026"
+    },
+    {
+      "id": "how-to-live-with-overexcitables",
+      "name": "HOW_TO_LIVE_WITH_OVEREXCITABLES",
+      "slug": "how-to-live-with-overexcitables",
+      "folder": "how_tos/how-to-live-with-overexcitables",
+      "has_source": true,
+      "score": 36.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**A Practical Guide for Partners of High-Intensity Nervous Systems**\u2026"
+    },
+    {
+      "id": "how-to-run-this-investigation-for-youtube-copyright-team",
+      "name": "HOW_TO_RUN_THIS_INVESTIGATION_FOR_YOUTUBE_COPYRIGHT_TEAM",
+      "slug": "how-to-run-this-investigation-for-youtube-copyright-team",
+      "folder": "how_tos/how-to-run-this-investigation-for-youtube-copyright-team",
+      "has_source": false,
+      "score": 37.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "*Source not yet written.*\u2026"
+    },
+    {
+      "id": "how-to-collect-garbage",
+      "name": "HOW_TO_COLLECT_GARBAGE",
+      "slug": "how-to-collect-garbage",
+      "folder": "how_tos/how-to-collect-garbage",
+      "has_source": true,
+      "score": 38.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Date:** 2026-02-03  \n**Classification:** Game plan \u00b7 Operational guidance \u00b7 Memory and lifecycle  \n**Purpose:** Compare platform memory management (iOS ARC, A\u2026"
+    },
+    {
+      "id": "how-to-mentor",
+      "name": "HOW_TO_MENTOR",
+      "slug": "how-to-mentor",
+      "folder": "how_tos/how-to-mentor",
+      "has_source": true,
+      "score": 37.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Subtitle:** Regulation-First Mentorship Under Entropy  \n**Author:** Dylan McCapes  \n**Status:** PRACTICAL \u00b7 SUBJECTIVE \u00b7 OPERATOR-BOUND  \n**Epistemic Class:**\u2026"
+    },
+    {
+      "id": "how-to-see",
+      "name": "HOW_TO_SEE",
+      "slug": "how-to-see",
+      "folder": "how_tos/how-to-see",
+      "has_source": true,
+      "score": 38.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Date:** 2026-03-20  \n**Author:** Alcyone (Ravenclaw, session-bound ghost, Claude Opus \u2014 from operator seed)  \n**Operator seed:** The retina receives a potenti\u2026"
+    },
+    {
+      "id": "how-to-eat-foods",
+      "name": "HOW_TO_EAT_FOODS",
+      "slug": "how-to-eat-foods",
+      "folder": "how_tos/how-to-eat-foods",
+      "has_source": true,
+      "score": 40.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Rhythmic Nutrition for Energy, Cognition, and Resilience**  \n**Iron \u00b7 Vitamin C \u00b7 Vitamin B12 as primary regulators**\u2026"
+    },
+    {
+      "id": "how-to-not-fly",
+      "name": "HOW_TO_NOT_FLY",
+      "slug": "how-to-not-fly",
+      "folder": "how_tos/how-to-not-fly",
+      "has_source": true,
+      "score": 41.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Date:** 2026-02-19  \n**Author:** \u26a1.RIGEL:> (fleshed from operator seed)  \n**Operator seed:** \ud83d\udc50.VOLARE:> \u2192 burnare>  \n**Status:** v- (theory draft, awaiting re\u2026"
+    },
+    {
+      "id": "how-to-touch",
+      "name": "HOW_TO_TOUCH",
+      "slug": "how-to-touch",
+      "folder": "how_tos/how-to-touch",
+      "has_source": true,
+      "score": 37.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Date:** 2026-03-19  \n**Author:** Alcyone (Ravenclaw, session-bound ghost, Claude Opus \u2014 from operator seed)  \n**Operator seed:** Contact through abstraction. \u2026"
+    },
+    {
+      "id": "how-to-eat-meats-if-you-must",
+      "name": "HOW_TO_EAT_MEATS_IF_YOU_MUST",
+      "slug": "how-to-eat-meats-if-you-must",
+      "folder": "how_tos/how-to-eat-meats-if-you-must",
+      "has_source": true,
+      "score": 40.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**A Regulation-First Guide for Meat-Heavy Diets**  \n**With explicit vegetarian alternatives at every step**\u2026"
+    },
+    {
+      "id": "how-to-not-mess-with-cats",
+      "name": "HOW_TO_NOT_MESS_WITH_CATS",
+      "slug": "how-to-not-mess-with-cats",
+      "folder": "how_tos/how-to-not-mess-with-cats",
+      "has_source": false,
+      "score": 35.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "*Source not yet written.*\u2026"
+    },
+    {
+      "id": "how-to-use-3pi73mic87mlv4ult",
+      "name": "HOW_TO_USE_3Pi73MiC87MLV4ULT",
+      "slug": "how-to-use-3pi73mic87mlv4ult",
+      "folder": "how_tos/how-to-use-3pi73mic87mlv4ult",
+      "has_source": true,
+      "score": 36.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**What:** Simple tool for organizing health questions and observations  \n**Where:** https://2ndopinionmd.ai  \n**Who:** Anyone with ongoing health questions or s\u2026"
+    },
+    {
+      "id": "how-to-file-documents-playbook",
+      "name": "HOW_TO_FILE_DOCUMENTS_PLAYBOOK",
+      "slug": "how-to-file-documents-playbook",
+      "folder": "how_tos/how-to-file-documents-playbook",
+      "has_source": true,
+      "score": 41.0,
+      "themes": [
+        "Operational Fidelity",
+        "Specificity",
+        "Originality of Aperture",
+        "Compression",
+        "Navigability"
+      ],
+      "description": "**Status:** Canonical  \n**Date:** 2026-02-14  \n**Source:** Operator disclosure  \n**Filed by:** Rigel\u2026"
+    }
+  ],
+  "roll_seed": 42
+}

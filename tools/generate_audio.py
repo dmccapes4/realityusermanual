@@ -2,34 +2,22 @@
 """
 Generate an ElevenLabs audio recording of the REALITY_USER_MANUAL dialog sections.
 
-Section order (Era 2 listening sequence):
-  1. Merlin seed
-  2. Crisis page 1
-  3. Crisis page 3
-  4. Editor note
-  5. Page −0 (Sauron)
-  6. Euler derivation
-  7. Page 00 operator note — Matilda stand-in until audio/00_operator.{wav,mp3} exists
-  8. One script (terminal)
-  9. Page 0000 recast
-  10. Page −05 VincentVision
-  11. Page −06 Animate Reality
-  12. Page −07 Goines
-  13. Finding rho
-  14. Interlude Chandler / Ross
-
-Crisis page 2 (04h) is omitted from this pass (operator order).
-Velora (page 1) is omitted from this pass.
+Section order for this pass:
+  1. 006 Unnumbered Crisis (pages 1–3 and the editor note)
+  2. Page −0 Sauron's Decree
+  3. Page −00 Operator note (Operator voice; audio/00_operator.wav replaces it)
+  4. Page −000 (terminal)
+  5. Page −0000 cast rewrite
 
 Usage:
-  .venv/bin/python tools/generate_audio.py
+  .venv/bin/python tools/generate_audio.py --only crisis --output audio/crisis/006_unnumbered_crisis.mp3 --cues audio/crisis/cues.jsonl
   .venv/bin/python tools/generate_audio.py --reel
   .venv/bin/python tools/generate_audio.py --only -05,-06,-07
-  .venv/bin/python tools/generate_audio.py --only 06,07
 
 Output:
-  audio/dialog_reading.mp3
-  audio/voice_reel.mp3          (--reel)
+  audio/dialog_reading.mp3   (default)
+  path given by --output
+  audio/voice_reel.mp3       (--reel)
 """
 
 from __future__ import annotations
@@ -92,7 +80,7 @@ DEFAULT_SETTINGS = {
 #
 # Character design (custom Voice Design assets, 2026-10-25):
 #   The Narrator  — custom Narrator pending regen; Daniel until then
-#   Feynman       — Callum (no generated asset in the library)
+#   Feynman       — custom Feynman (Voice Design)
 #   McClane       — custom McClane
 #   Stamper       — custom Stamper (later of two; deadpan, not oil-field)
 #   TTL           — espeak-ng
@@ -109,18 +97,19 @@ DEFAULT_SETTINGS = {
 #   Goines        — custom Goines (apart from Feynman)
 #   Terminal      — custom Terminal
 #   Velora        — Lily (no generated asset in the library)
-#   Operator      — custom Operator pending regen; Matilda until then
+#   Operator      — custom Operator
 # Catalog: audio/voice-design/voices.jsonl
 
 VOICE_MAP = {
-    "The Narrator": "onwK4e9ZLuTAKqWW03F9",  # Daniel until Narrator regen
-    "Feynman":      "N2lVS1w4EtoT3dr4eOWO",  # Callum — no custom saved
+    "The Narrator": "Nxtvajpo1h6Ok0K5zP4M",  # Narrator
+    "Feynman":      "b0slphXbemaraca3riTn",  # Feynman (Voice Design)
     "McClane":      "v5WGk9HED8B9DwqtgdY9",  # McClane
     "Stamper":      "yDqObAdig5l43Vkth1Qo",  # Stamper (deadpan)
     "TTL":          "ttl-espeak-ng",
     "Cecil Palmer": "mFxwGQHOfdvvPAYlbCXN",  # Cecil
     "Cecil":        "mFxwGQHOfdvvPAYlbCXN",  # Cecil
-    "Sauron":       "y83sBjIAA8cOKB2nYkOQ",  # Sauron
+    "Sauron":       "y83sBjIAA8cOKB2nYkOQ",  # Sauron (pole messenger)
+    "Sauron (Default)": "M2HASKhyinBcyBrKOfms",  # Sauron (Default) — Joey's deliveries
     "Chandler":     "4OvJ5XokvoRTp7JZAVu1",  # Chandler(Default)
     "Ross":         "CwB1mcAtrctICNsZs7IP",  # Ross
     "Joey":         "QDidinP5kDJnJ9cCCGp6",  # Joey
@@ -129,20 +118,20 @@ VOICE_MAP = {
     "Euler":        "NkNI8nxq3DIt5kOnwBOH",  # Euler
     "Velora":       "pFZP5JQG7iQjIQuC4Bku",  # Lily — no custom saved
     "Editor":       "TKYBHwjLmJEO0NsJJdwK",  # Editor
-    "Vincent":      "bIHbv24MWmeRgasZH58o",  # Will — no custom saved
+    "Vincent":      "S0i6QfyFRAXPgXtLlrPQ",  # Vincent (Voice Design)
     "Carter":       "MwdOFxwRC5Rru2LQ0DnY",  # Carter (legacy; character now Winslade)
     "Winslade":     "MwdOFxwRC5Rru2LQ0DnY",  # Carter ID until Winslade Voice Design
-    "Merlin":       "onwK4e9ZLuTAKqWW03F9",  # Daniel until Merlin Voice Design
+    "Merlin":       "Q9qXuNjHnmnYuh4qnepn",  # Merlin (Voice Design)
     "Goines":          "AZeB2F9LIG4QDh5xm27p",  # Jeffrey — hallway, dayroom speed
     "GoinesFeynman":   "WLUTmOTCnJcX4diy6U78",  # haunt / −27 / 07k italic
     "GoinesMagi":      None,  # pending Voice Design; REPORT_goines_magi.md
     "Terminal":     "Q2VrKSkh0ao0bi32RtFc",  # Terminal
-    "Operator":     "XrExE9yKIg1WjnnlVkGX",  # Matilda until Operator regen
+    "Operator":     "0APuPpq6kIXc8Qz7JDYt",  # Operator
     "Ted":          "mGvd1mvfXjuqYQREqkVi",  # Ted (library)
     "Sheldon":      "OAXPclEPumYkMdEw2L4g",  # Sheldon (library)
-    "Lisbeth":      "XrExE9yKIg1WjnnlVkGX",  # Matilda — Danish
-    "LisbethEn":    "XrExE9yKIg1WjnnlVkGX",  # Matilda — English-tuned pass
-    "Witch":        "pFZP5JQG7iQjIQuC4Bku",  # Lily — Merit / Witch of the Rivers
+    "Lisbeth":      "MhisHZND0w9JfMQVlH0A",  # Lisbeth (Voice Design)
+    "LisbethEn":    "MhisHZND0w9JfMQVlH0A",  # Lisbeth — English pass
+    "Witch":        "hAPnKt1az4WnyeWHvYMF",  # Witch of the Rivers (Voice Design)
     "Draavio":      "yoZ06aMxZJJ28mfd3POQ",  # Sam — casual; Merlin player voice (was Bill/measured)
     "Magi":         "yoZ06aMxZJJ28mfd3POQ",  # same player as Draavio
     "Raymora":      "QDidinP5kDJnJ9cCCGp6",  # Joey — same player
@@ -156,6 +145,13 @@ VOICE_MAP = {
     "Gatsby":       "h4mJQbhkwgGm7srdTsMu",  # Gatsby — practiced warmth, looks at the light
     "Jay":          "h4mJQbhkwgGm7srdTsMu",  # Gatsby alias in -30.md dialog
     "Atticus":      "0w201zUOH1U3u6PzgzdY",  # Atticus — Alabama baritone, courtroom cadence
+    # Page −16 cast — Logos at the Workbench
+    "Oppenheimer":     os.environ.get("VOICE_OPPENHEIMER", "2HV65xXeGOM8tgG9GaHL"),
+    "Keating":         os.environ.get("VOICE_KEATING", "7Nv3aafs6gEJlyJzQIFS"),
+    "Yeshua Merlin":   os.environ.get("VOICE_YESHUA_MERLIN", "4h4UH7UENOeMCEvKPDdp"),
+    "Yeshua Feynman":  os.environ.get("VOICE_YESHUA_FEYNMAN", "QjZDxbA7GqOLOMnJLuWu"),
+    "Yeshua Chaucer":  os.environ.get("VOICE_YESHUA_CHAUCER", "X6lRtSTuarKgK9ov6tq7"),
+    "Goat":            os.environ.get("VOICE_GOAT", "pWXtviCtpMHM8A80ox1D"),
 }
 
 # First-pass map — used only to import index-based cache files into the hash cache.
@@ -183,6 +179,7 @@ VOICE_LABEL = {
     "yDqObAdig5l43Vkth1Qo": "Stamper",
     "mFxwGQHOfdvvPAYlbCXN": "Cecil",
     "y83sBjIAA8cOKB2nYkOQ": "Sauron",
+    "M2HASKhyinBcyBrKOfms": "Sauron (Default)",
     "4OvJ5XokvoRTp7JZAVu1": "Chandler(Default)",
     "CwB1mcAtrctICNsZs7IP": "Ross",
     "QDidinP5kDJnJ9cCCGp6": "Joey",
@@ -196,6 +193,7 @@ VOICE_LABEL = {
     "AZeB2F9LIG4QDh5xm27p": "Goines",
     "Q2VrKSkh0ao0bi32RtFc": "Terminal",
     "XrExE9yKIg1WjnnlVkGX": "Matilda",
+    "b0slphXbemaraca3riTn": "Feynman",
     "Nxtvajpo1h6Ok0K5zP4M": "Narrator",
     "0APuPpq6kIXc8Qz7JDYt": "Operator",
     "pNInz6obpgDQGcFmaJgB": "Adam",
@@ -211,12 +209,24 @@ KNOWN_CHARACTERS = {
     "Sauron", "Chandler", "Ross", "Joey",
     "Caller", "The Caller",
     "Euler", "Editor",
-    "Vincent", "Carter", "Winslade", "Goines",
+    "Vincent", "Carter", "Winslade", "Goines", "GoinesFeynman",
     "Terminal", "Velora", "Operator", "TTL",
     "Merlin",
     "Ted", "Sheldon",
     "Lisbeth", "LisbethEn", "Witch", "Draavio", "Magi", "Raymora",
     "Auden", "Holden", "Gatsby", "Jay", "Atticus",
+    "Oppenheimer", "Keating",
+    "Yeshua Merlin", "Yeshua Feynman", "Yeshua Chaucer",
+    "Goat",
+}
+
+# Screenplay labels in −16.md → VOICE_MAP keys
+SCREENPLAY_SPEAKERS = {
+    "OPPENHEIMER": "Oppenheimer",
+    "KEATING": "Keating",
+    "YESHUA (MERLIN)": "Yeshua Merlin",
+    "YESHUA (FEYNMAN)": "Yeshua Feynman",
+    "YESHUA (CHAUCER)": "Yeshua Chaucer",
 }
 
 # ── Section definitions ──────────────────────────────────────────────────────
@@ -224,18 +234,20 @@ KNOWN_CHARACTERS = {
 # (label, path, mode, extra)
 # mode: dialog | editor | terminal | operator_slot | poem | animate | goines | vincent | rho | interlude
 SECTIONS = [
-    ("Merlin seed",      SRC / "04f_merlin_seed.md",              "dialog",   {}),
-    ("Crisis page 1",    SRC / "04g_crisis_page1.md",              "dialog",   {}),
-    ("Crisis page 3",    SRC / "04i_crisis_page3.md",              "dialog",   {}),
-    ("Editor note",      SRC / "04j_editor_note.md",               "editor",   {}),
-    ("Page -0",          SRC / "04k_sauron_minus_zero.md",         "dialog",   {}),
-    ("Euler derivation", SRC / "04l_euler_derivation.md",          "dialog",   {}),
-    ("Page 00 operator", SRC / "00_operator_note.md",              "operator_slot", {}),
-    ("One script",       SRC / "000_onescripttorulethemall_.md",   "terminal", {}),
-    ("Page 0000",        SRC / "0000_page-0_rewrite_recasting.md", "dialog",   {}),
+    ("Crisis 006 page 1", SRC / "006_crisis" / "006_01_crisis_page1.md", "dialog", {"read_code": True}),
+    ("Crisis 006 page 2", SRC / "006_crisis" / "006_02_crisis_page2.md", "dialog", {"read_code": True}),
+    ("Crisis 006 page 3", SRC / "006_crisis" / "006_03_crisis_page3.md", "dialog", {"read_code": True}),
+    ("Crisis 006 editor", SRC / "006_crisis" / "006_04_editor_note.md", "editor", {}),
+    ("-0 Sauron's Decree", SRC / "phase2" / "-0.md", "dialog", {}),
+    ("-00 Operator Note", SRC / "phase2" / "-00.md", "operator_slot", {}),
+    ("-000 One Script", SRC / "phase2" / "-000.md", "terminal", {"code_narration": True}),
+    ("-0000 Cast Rewrite", SRC / "phase2" / "-0000.md", "dialog",
+     {"joey_quote_speaker": "Sauron (Default)"}),
     ("Page -05",         SRC / "phase2" / "-05.md",               "vincent",  {}),
     ("Page -06",         SRC / "phase2" / "-06.md",               "animate",  {}),
     ("Page -07",         SRC / "phase2" / "-07.md",               "goines",   {}),
+    ("Page -10b",        SRC / "phase2" / "-10b.md",              "goines_feynman", {}),
+    ("Page -16",         SRC / "phase2" / "-16.md",               "screenplay", {}),
     ("Finding rho",      SRC / "06_chapter_finding_rho.md",       "rho",      {}),
     ("Interlude Chandler/Ross", SRC / "07_interlude_chandler_ross.md", "interlude", {}),
     ("Page -30",               SRC / "phase2" / "-30.md",             "green_light", {}),
@@ -398,7 +410,48 @@ ATTICUS_SETTINGS = {
     "use_speaker_boost": True,
 }
 
+# Voice Design prompt: dry wit at the same volume; style a step above the default.
+FEYNMAN_SETTINGS = {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.35,
+    "use_speaker_boost": True,
+}
+
+# Page −16
+OPPENHEIMER_SETTINGS = {
+    "stability": 0.55,
+    "similarity_boost": 0.80,
+    "style": 0.15,
+    "use_speaker_boost": True,
+}
+KEATING_SETTINGS = {
+    "stability": 0.35,
+    "similarity_boost": 0.72,
+    "style": 0.45,
+    "use_speaker_boost": True,
+}
+YESHUA_MERLIN_SETTINGS = {
+    "stability": 0.55,
+    "similarity_boost": 0.80,
+    "style": 0.25,
+    "use_speaker_boost": True,
+}
+YESHUA_FEYNMAN_SETTINGS = {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.35,
+    "use_speaker_boost": True,
+}
+YESHUA_CHAUCER_SETTINGS = {
+    "stability": 0.32,
+    "similarity_boost": 0.70,
+    "style": 0.58,
+    "use_speaker_boost": True,
+}
+
 SPEAKER_SETTINGS = {
+    "Feynman": FEYNMAN_SETTINGS,
     "Operator": OPERATOR_SETTINGS,
     "Stamper": STAMPER_SETTINGS,
     "Vincent": VINCENT_SETTINGS,
@@ -417,12 +470,25 @@ SPEAKER_SETTINGS = {
     "Cecil": CECIL_SETTINGS,
     "Cecil Palmer": CECIL_SETTINGS,
     "Sauron": SAURON_SETTINGS,
+    "Sauron (Default)": SAURON_SETTINGS,
     # Page −30
     "Auden":   AUDEN_SETTINGS,
     "Holden":  HOLDEN_SETTINGS,
     "Gatsby":  GATSBY_SETTINGS,
     "Jay":     GATSBY_SETTINGS,
     "Atticus": ATTICUS_SETTINGS,
+    # Page −16
+    "Oppenheimer":    OPPENHEIMER_SETTINGS,
+    "Keating":        KEATING_SETTINGS,
+    "Yeshua Merlin":  YESHUA_MERLIN_SETTINGS,
+    "Yeshua Feynman": YESHUA_FEYNMAN_SETTINGS,
+    "Yeshua Chaucer": YESHUA_CHAUCER_SETTINGS,
+    "Goat": {
+        "stability": 0.95,
+        "similarity_boost": 0.50,
+        "style": 0.00,
+        "use_speaker_boost": False,
+    },
 }
 
 
@@ -494,9 +560,17 @@ def is_meta_line(stripped: str) -> bool:
     ))
 
 
+def volare_kind(stripped: str) -> str | None:
+    t = re.sub(r"[^\w:>?]", "", stripped).lstrip(".")
+    if t in {"VOLARE:>", "VOLARE."}:
+        return "open"
+    if t in {"VOLARE?", "VOLARE"}:
+        return "close"
+    return None
+
+
 def is_volare_line(stripped: str) -> bool:
-    t = re.sub(r"[^\w:>.]", "", stripped)
-    return t in {"VOLARE:>", "VOLARE.", "VOLARE"}
+    return volare_kind(stripped) is not None
 
 
 def parse_italic_aside(stripped: str):
@@ -509,7 +583,35 @@ def parse_italic_aside(stripped: str):
     return None
 
 
-def split_dialog_line(speaker: str, rest: str):
+# Joey reads these aloud. They are the page header, not Sauron's lines.
+_JOEY_HEADER_QUOTES = {
+    "Page negative zero — The Tower Addresses the Fracture.",
+    "Sauron, vacationing, as the wise man in the tower.",
+}
+
+
+def _emit_quoted(speaker: str, part: str, quote_speaker: str | None):
+    if not quote_speaker or '"' not in part:
+        spoken = clean_text(part)
+        return [(speaker, spoken)] if spoken else []
+    out = []
+    for bit in re.split(r'(".*?")', part):
+        bit = bit.strip()
+        if not bit:
+            continue
+        if len(bit) >= 2 and bit[0] == '"' and bit[-1] == '"':
+            inner = bit[1:-1].strip()
+            who = speaker if inner in _JOEY_HEADER_QUOTES else quote_speaker
+            spoken = clean_text(inner)
+        else:
+            who = speaker
+            spoken = clean_text(bit)
+        if spoken:
+            out.append((who, spoken))
+    return out
+
+
+def split_dialog_line(speaker: str, rest: str, quote_speaker: str | None = None):
     segs = []
     parts = re.split(r"(\*\[[^\]]+\]\*|\[[^\]]+\]|\*\([^)]+\)\*)", rest)
     for part in parts:
@@ -527,9 +629,7 @@ def split_dialog_line(speaker: str, rest: str):
         elif part.startswith("*(") and part.endswith(")*"):
             continue  # acting note — not a second voice
         else:
-            spoken = clean_text(part)
-            if spoken:
-                segs.append((speaker, spoken))
+            segs.extend(_emit_quoted(speaker, part, quote_speaker))
     return segs
 
 
@@ -547,6 +647,7 @@ def parse_md(
     first_person_speaker: str | None = None,
     italic_speaker: str | None = None,
     heading_speaker: str | None = None,
+    joey_quote_speaker: str | None = None,
 ):
     segments = []
     lines = Path(path).read_text(encoding="utf-8").splitlines()
@@ -554,19 +655,36 @@ def parse_md(
     code_buf: list[str] = []
     seen_h2 = False
     fp_latched = False
+    in_volare = False
 
     def flush_code():
-        if not read_code or not code_buf:
-            code_buf.clear()
+        raw_lines = list(code_buf)
+        code_buf.clear()
+        nonempty = [ln for ln in raw_lines if ln.strip()]
+        if nonempty and volare_kind(nonempty[0].strip()) == "open":
+            segments.append(("Operator", "VOLARE."))
+            body_lines = []
+            closed = False
+            for ln in nonempty[1:]:
+                if volare_kind(ln.strip()) == "close":
+                    closed = True
+                    break
+                body_lines.append(ln.strip())
+            spoken = clean_text(" ".join(body_lines))
+            if spoken:
+                segments.append(("Operator", spoken))
+            if closed:
+                segments.append(("Operator", "VOLARE."))
+            return
+        if not read_code or not raw_lines:
             return
         body = "\n".join(
-            ln for ln in code_buf
+            ln for ln in raw_lines
             if ln.strip() and ln.strip() not in {"[]", "{}", "---"}
         )
         body = clean_text(body)
         if body:
             segments.append(("Terminal", body))
-        code_buf.clear()
 
     for line in lines:
         if line.startswith("```"):
@@ -588,7 +706,13 @@ def parse_md(
             continue
         if is_meta_line(stripped):
             continue
-        if is_volare_line(stripped):
+        kind = volare_kind(stripped)
+        if kind == "open":
+            in_volare = True
+            segments.append(("Operator", "VOLARE."))
+            continue
+        if kind == "close":
+            in_volare = False
             segments.append(("Operator", "VOLARE."))
             continue
         if stripped.startswith("|") and stripped.endswith("|"):
@@ -627,20 +751,41 @@ def parse_md(
         parsed = parse_line_as_dialog(stripped)
         if parsed:
             speaker, rest = parsed
-            segments.extend(split_dialog_line(speaker, rest))
+            quote_as = joey_quote_speaker if speaker == "Joey" else None
+            segments.extend(split_dialog_line(speaker, rest, quote_as))
             continue
 
         text = clean_text(stripped)
         if not text:
             continue
-        speaker = default_speaker
-        if first_person_speaker and not seen_h2:
+        speaker = "Operator" if in_volare else default_speaker
+        if not in_volare and first_person_speaker and not seen_h2:
             if is_first_person(text) or fp_latched:
                 speaker = first_person_speaker
                 fp_latched = True
         segments.append((speaker, text))
 
     return segments
+
+
+# ga·tuh·kuh — G[a apple] tt[a attempt] c[a attempt]. CMU only on models that accept
+# <phoneme> (eleven_flash_v2 per ElevenLabs docs). Multilingual v2 reads tags as garbage.
+_PHONEME_TTS_MODELS = frozenset({
+    "eleven_flash_v2",
+    "eleven_turbo_v2",
+    "eleven_turbo_v2_5",
+})
+_GATTACA_PHONEME = '<phoneme alphabet="cmu-arpabet" ph="G AE1 T AH0 K AH0">Gattaca</phoneme>'
+
+
+def gattaca_for_tts(text: str, model_id: str) -> str:
+    """Apply Gattaca pronunciation at the TTS boundary, not in clean_text."""
+    text = re.sub(r"<phoneme[^>]*>\s*Gattaca\s*</phoneme>", "Gattaca", text)
+    if "Gattaca" not in text:
+        return text
+    if model_id in _PHONEME_TTS_MODELS:
+        return re.sub(r"\bGattaca\b", _GATTACA_PHONEME, text)
+    return text
 
 
 def clean_text(t: str) -> str:
@@ -651,6 +796,7 @@ def clean_text(t: str) -> str:
     t = re.sub(r"#{1,6}\s*", "", t)
     t = re.sub(r"  +", " ", t)
     t = t.replace("−", "minus ")
+    t = re.sub(r"<phoneme[^>]*>\s*Gattaca\s*</phoneme>", "Gattaca", t)
     return t.strip()
 
 
@@ -699,14 +845,59 @@ def parse_editor(path: Path):
     return out
 
 
-def parse_terminal(path: Path):
-    text = Path(path).read_text(encoding="utf-8")
-    blocks = re.split(r"\n{2,}", text)
+def _terminal_blocks(lines: list[str]):
+    text = "\n".join(lines)
     out = []
-    for b in blocks:
+    for b in re.split(r"\n{2,}", text):
         body = clean_text(b)
         if body:
             out.append(("Terminal", body))
+    return out
+
+
+def parse_terminal(path: Path, code_narration: bool = False):
+    kept = []
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        if line.strip().startswith("```"):
+            continue
+        kept.append(line)
+    if not code_narration:
+        return _terminal_blocks(kept)
+
+    # The heredoc body is source. gen_coda_spoken names every symbol.
+    try:
+        from gen_coda_spoken import process_line
+    except ImportError:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from gen_coda_spoken import process_line
+
+    out = []
+    prose: list[str] = []
+    in_code = False
+
+    def flush_prose():
+        nonlocal prose
+        if prose:
+            out.extend(_terminal_blocks(prose))
+            prose = []
+
+    for line in kept:
+        if not in_code and "<< 'END'" in line:
+            prose.append(line)
+            flush_prose()
+            in_code = True
+            continue
+        if in_code and line.strip() == "END":
+            in_code = False
+            prose.append(line)
+            continue
+        if in_code:
+            spoken = process_line(line)
+            if spoken:
+                out.append(("Terminal", spoken))
+            continue
+        prose.append(line)
+    flush_prose()
     return out
 
 
@@ -1246,26 +1437,136 @@ def parse_minus31_ledger(path: Path):
     return segments
 
 
+def parse_screenplay(path: Path, narrator: str = "GoinesFeynman"):
+    """Sticky-speaker screenplay parse for −16 (and similar).
+
+    **SPEAKER:** lines set the sticky voice. Following prose stays with that
+    speaker until the next speaker cue. Italic stage directions go to narrator
+    without clearing sticky. Display math is skipped. Front matter before the
+    first ACT is skipped.
+    """
+    segments: list[tuple[str, str]] = []
+    sticky: str | None = None
+    speech_buf: list[str] = []
+    started = False
+    in_math = False
+
+    def flush_speech():
+        nonlocal speech_buf
+        if sticky and speech_buf:
+            spoken = clean_text(" ".join(speech_buf))
+            if spoken:
+                segments.append((sticky, spoken))
+        speech_buf = []
+
+    def resolve_speaker(raw: str) -> str | None:
+        key = re.sub(r"\s+", " ", raw.strip()).upper()
+        if key in SCREENPLAY_SPEAKERS:
+            return SCREENPLAY_SPEAKERS[key]
+        title = raw.strip()
+        if title in KNOWN_CHARACTERS:
+            return title
+        return None
+
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+
+        if in_math:
+            if "\\]" in stripped or stripped == "$$":
+                in_math = False
+            continue
+        if stripped.startswith("\\[") or stripped == "$$":
+            flush_speech()
+            in_math = True
+            continue
+        if re.match(r"^---+$", stripped):
+            flush_speech()
+            continue
+        if not stripped:
+            flush_speech()
+            continue
+
+        if line.startswith("#"):
+            heading = re.sub(r"^#+\s*", "", line).strip()
+            if re.match(r"(?i)^act\b", heading):
+                started = True
+            if not started:
+                continue
+            flush_speech()
+            spoken = clean_text(heading)
+            if spoken:
+                segments.append((narrator, spoken))
+            continue
+
+        if not started:
+            continue
+
+        bare = stripped.strip("*").strip()
+        if bare.upper() in {"END.", "END", "BLACKOUT.", "BLACKOUT"}:
+            flush_speech()
+            sticky = None
+            segments.append((narrator, clean_text(bare)))
+            continue
+
+        m = re.match(r"^\*\*([^*]+):\*\*\s*(.*)$", stripped)
+        if m:
+            who = resolve_speaker(m.group(1))
+            if who:
+                flush_speech()
+                sticky = who
+                rest = m.group(2).strip()
+                if rest:
+                    speech_buf.append(rest)
+                continue
+            continue
+
+        if re.match(r"^\*[^*].*[^*]\*$", stripped) or re.match(r"^\*[^*]\*$", stripped):
+            flush_speech()
+            inner = clean_text(stripped.strip("*"))
+            if inner:
+                segments.append((narrator, inner))
+            continue
+
+        if sticky:
+            speech_buf.append(stripped)
+        else:
+            spoken = clean_text(stripped)
+            if spoken:
+                segments.append((narrator, spoken))
+
+    flush_speech()
+    return segments
+
+
 def parse_section(label: str, path: Path, mode: str, extra: dict):
     if mode == "operator_slot":
         rec = find_operator_recording()
         if rec:
             print(f"  [SLOT] {label}: using recorded {rec.name} (replaces Matilda stand-in)")
             return [("__operator__", str(rec))]
-        print(f"  [SLOT] {label}: Matilda stand-in (Solar System Explorer). Drop audio/00_operator.wav to replace.")
+        print(f"  [SLOT] {label}: Operator voice. Drop audio/00_operator.wav to replace.")
         return parse_operator(path)
     if mode == "poem":
         return parse_poem(path)
     if mode == "editor":
         return parse_editor(path)
     if mode == "terminal":
-        return parse_terminal(path)
+        return parse_terminal(path, code_narration=bool(extra.get("code_narration")))
     if mode == "vincent":
         return parse_vincent(path)
     if mode == "animate":
         return parse_animate(path)
     if mode == "goines":
         return parse_md(path, default_speaker="Goines")
+    if mode == "goines_feynman":
+        return parse_md(
+            path,
+            default_speaker="GoinesFeynman",
+            italic_speaker="GoinesFeynman",
+            heading_speaker="GoinesFeynman",
+        )
+    if mode == "screenplay":
+        return parse_screenplay(path, narrator=extra.get("narrator", "GoinesFeynman"))
     if mode == "rho":
         return parse_finding_rho(path)
     if mode == "interlude":
@@ -1274,7 +1575,11 @@ def parse_section(label: str, path: Path, mode: str, extra: dict):
         return parse_md(path, default_speaker="Auden", italic_speaker="Auden")
     if mode == "minus31":
         return parse_minus31_ledger(path)
-    return parse_md(path)
+    return parse_md(
+        path,
+        read_code=bool(extra.get("read_code")),
+        joey_quote_speaker=extra.get("joey_quote_speaker"),
+    )
 
 
 # ── TTS ──────────────────────────────────────────────────────────────────────
@@ -1352,6 +1657,7 @@ def tts(
     model_id: str = "eleven_multilingual_v2",
     language_code: str | None = None,
 ) -> list[Path]:
+    text = gattaca_for_tts(text, model_id)
     settings = settings_for(speaker)
     paths = []
     for piece in chunk_text(text):
@@ -1536,6 +1842,18 @@ def collect_existing(sections):
     return files, gaps
 
 
+def probe_dur(path: Path) -> float:
+    result = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+        capture_output=True, text=True,
+    )
+    try:
+        return float(result.stdout.strip())
+    except ValueError:
+        return 0.0
+
+
 def generate(sections, voice_map):
     all_segments = []
     for label, path, mode, extra in sections:
@@ -1551,11 +1869,19 @@ def generate(sections, voice_map):
     print("Generating audio...")
 
     segment_files: list[Path] = []
+    cues: list[dict] = []
+    cursor = 0.0
     for speaker, text in all_segments:
         if speaker == "__operator__":
             rec = Path(text)
             mp3 = ensure_mp3(rec)
             print(f"  [operator] {mp3}")
+            dur = probe_dur(mp3)
+            cues.append({
+                "start": cursor, "end": cursor + dur, "dur": dur,
+                "speaker": "Operator", "text": rec.name,
+            })
+            cursor += dur
             segment_files.append(mp3)
             continue
         if not text.strip():
@@ -1564,9 +1890,20 @@ def generate(sections, voice_map):
         if not vid:
             print(f"  [SKIP] no voice for {speaker}")
             continue
-        segment_files.extend(tts(speaker, text, vid))
+        paths = tts(speaker, text, vid)
+        pieces = chunk_text(text)
+        if len(paths) != len(pieces):
+            pieces = [text] * len(paths) if len(paths) == 1 else pieces[:len(paths)]
+        for piece, p in zip(pieces, paths):
+            dur = probe_dur(p)
+            cues.append({
+                "start": cursor, "end": cursor + dur, "dur": dur,
+                "speaker": speaker, "text": piece,
+            })
+            cursor += dur
+            segment_files.append(p)
 
-    return segment_files
+    return segment_files, cues
 
 
 def write_manifest(segment_files: list[Path], sections):
@@ -1586,6 +1923,7 @@ def main():
     ap.add_argument("--reel", action="store_true", help="Generate a short voice-cast reel only")
     ap.add_argument("--only", help="Comma-separated section keys to generate (e.g. -05,-06,-07)")
     ap.add_argument("--output", help="Override output mp3 path (default: audio/dialog_reading.mp3)")
+    ap.add_argument("--cues", help="Write a cues.jsonl next to the spoken pieces")
     ap.add_argument("--stitch-existing", action="store_true",
                     help="Concat whatever hash-cache segments exist; do not call TTS")
     args = ap.parse_args()
@@ -1620,7 +1958,7 @@ def main():
 
     import_legacy_cache()
     sections = selected_sections(args.only)
-    files = generate(sections, VOICE_MAP)
+    files, cues = generate(sections, VOICE_MAP)
     if not files:
         print("No segments generated.")
         return
@@ -1630,9 +1968,14 @@ def main():
     print(f"\nConcatenating {len(files)} files...")
     concatenate(files, out_path)
     print(f"Output: {out_path}")
+    if args.cues:
+        cue_path = Path(args.cues)
+        cue_path.parent.mkdir(parents=True, exist_ok=True)
+        cue_path.write_text("".join(json.dumps(c, ensure_ascii=False) + "\n" for c in cues))
+        print(f"Cues: {cue_path} ({len(cues)})")
     rec = find_operator_recording()
     if not rec:
-        print("\n00 slot is the Matilda stand-in. Drop audio/00_operator.wav to replace it.")
+        print("\n00 slot is the Operator voice. Drop audio/00_operator.wav to replace it.")
     print("Done.")
 
 

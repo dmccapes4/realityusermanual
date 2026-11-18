@@ -16,7 +16,7 @@
           "name": "REALITY_USER_MANUAL.pdf",
           "type": "pdf",
           "url": "files/SEQUENCE/REALITY_USER_MANUAL.pdf",
-          "bytes": 987144
+          "bytes": 1661332
         }
       ]
     },
@@ -24,6 +24,12 @@
       "name": "DISTRIBUTIONS",
       "type": "dir",
       "children": [
+        {
+          "name": "HOW_TO stack (22 documents, searchable)",
+          "type": "html",
+          "url": "/m/how-tos/",
+          "label": "page \u221209"
+        },
         {
           "name": "How to Fly",
           "type": "pdf",
@@ -35,6 +41,12 @@
           "type": "pdf",
           "url": "/m/glacial-cell/files/SEQUENCE/MANIFESTO_MOTHER_EARTH_GOVERNED_FIELD.pdf",
           "label": "first true manuscript"
+        },
+        {
+          "name": "Plume-Wave Routing in Intracellular Transport",
+          "type": "pdf",
+          "url": "/m/plume-wave/files/SEQUENCE/Main_Manuscript_Plume_Wave_Intracellular_Transport.pdf",
+          "label": "PLOS Comp Bio submission"
         }
       ]
     }

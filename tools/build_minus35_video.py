@@ -37,7 +37,8 @@ OUT    = BASE / "video"  / "minus35"
 STILLS = OUT  / "stills"
 FRAMES = OUT  / "frames"
 CHARS  = BASE / "video"  / "stills" / "characters"
-SRC    = BASE / "src"    / "-35.md"
+SRC    = (BASE / "src" / "-35.md") if (BASE / "src" / "-35.md").exists() \
+         else (BASE / "src" / "phase2" / "-35.md")
 
 _env = BASE / ".env"
 if _env.exists():
@@ -62,8 +63,9 @@ RUST      = (140, 58,  42)
 # ── Voice IDs ─────────────────────────────────────────────────────────────────
 # After creating voices on ElevenLabs (Voice Design → voice ID in the URL),
 # paste the IDs here and re-run `audio` to generate.
-VOICE_SHAKESPEARE = os.environ.get("VOICE_SHAKESPEARE", "PENDING")
-VOICE_CHAUCER     = os.environ.get("VOICE_CHAUCER",     "PENDING")
+VOICE_SHAKESPEARE  = os.environ.get("VOICE_SHAKESPEARE",  "PENDING")
+VOICE_CHAUCER      = os.environ.get("VOICE_CHAUCER",      "PENDING")
+VOICE_SEIRVELSHA   = os.environ.get("VOICE_SEIRVELSHA",   "PENDING")
 
 VOICE_SETTINGS: dict[str, dict] = {
     "Shakespeare": {
@@ -73,6 +75,12 @@ VOICE_SETTINGS: dict[str, dict] = {
     "Chaucer": {
         "stability": 0.32, "similarity_boost": 0.70,
         "style": 0.58, "use_speaker_boost": True,
+    },
+    "Seirvelsha": {
+        # Auden register: dry, precise, compressed — minimal style drift,
+        # high clarity, occasional dry amusement held just below the surface
+        "stability": 0.70, "similarity_boost": 0.82,
+        "style": 0.10, "use_speaker_boost": True,
     },
 }
 
@@ -118,7 +126,7 @@ def parse_script() -> list[dict]:
     raw = SRC.read_text()
 
     # Find all speaker header positions  (**SHAKESPEARE:** or **CHAUCER:**)
-    header = re.compile(r"^\*\*(SHAKESPEARE|CHAUCER):\*\*\s*$", re.MULTILINE)
+    header = re.compile(r"^\*\*(SHAKESPEARE|CHAUCER|SEIRVELSHA):\*\*\s*$", re.MULTILINE)
     matches = list(header.finditer(raw))
     if not matches:
         return []
@@ -128,7 +136,7 @@ def parse_script() -> list[dict]:
     segments: list[dict] = []
 
     for i, m in enumerate(matches):
-        speaker = m.group(1).capitalize()   # "Shakespeare" or "Chaucer"
+        speaker = m.group(1).capitalize()   # "Shakespeare", "Chaucer", or "Seirvelsha"
         start   = m.end()
         end     = matches[i + 1].start() if i + 1 < len(matches) else len(raw)
         block   = _clean_for_tts(raw[start:end])
@@ -154,12 +162,16 @@ def _eleven_headers() -> dict:
     return {"xi-api-key": key, "Content-Type": "application/json"}
 
 def _voice_id(speaker: str) -> str:
-    vid = VOICE_SHAKESPEARE if speaker == "Shakespeare" else VOICE_CHAUCER
+    if speaker == "Shakespeare":
+        vid = VOICE_SHAKESPEARE
+    elif speaker == "Chaucer":
+        vid = VOICE_CHAUCER
+    else:
+        vid = VOICE_SEIRVELSHA
     if vid == "PENDING":
         sys.exit(
             f"Voice ID for {speaker} is PENDING.\n"
-            f"Paste the ElevenLabs voice ID into build_minus35_video.py "
-            f"VOICE_{speaker.upper()} or set VOICE_{speaker.upper()} in .env"
+            f"Set VOICE_{speaker.upper()} in .env"
         )
     return vid
 
@@ -316,15 +328,23 @@ def cue_at(cues: list[dict], cue_t: float) -> dict | None:
 # Act boundaries are cue-time driven (resolved from cues.jsonl at runtime).
 
 ACT_BACKGROUNDS = {
-    0: "scriptorium_screen",  # Shakespeare opens — luminous pane, labyrinth beyond
-    1: "directory_deep",      # Chaucer descends — purple corridors, deepening
-    2: "narrow_pane",         # Shakespeare narrates the click — narrow window lit
-    3: "verse_narrow",        # Chaucer reads the verse — suffixes in the light
-    4: "open_air_road",       # Shakespeare: what remains when form exceeds frame
-    5: "kata_gate",           # Chaucer: κατά VOLARE — the gates, theta open
-    6: "kata_aftermath",      # Shakespeare: the institution spelled its way out
-    7: "bare_earth",          # Chaucer: Matthew 25:18 — earth, no article
-    8: "road_morning",        # Shakespeare closes — coat on road, morning, empty
+    0:  "scriptorium_screen",  # The gate — man at his device
+    1:  "directory_deep",      # The descent — purple corridors, deepening
+    2:  "narrow_pane",         # The narrow pane — window lit, suffixes visible
+    3:  "verse_narrow",        # The verse — suffix column delivered
+    4:  "kata_gate",           # κατά — the gates, theta open
+    5:  "kata_aftermath",      # The institution amends the dictionary
+    6:  "scriptorium_screen",  # The honest verse — full word reading
+    7:  "directory_deep",      # GGSD direction — Easter egg in failure list
+    8:  "narrow_pane",         # The stylistic pattern — code that says more
+    9:  "verse_narrow",        # The language begins — callsign, utils.py
+    10: "kata_gate",           # Veloran develops — set notation, thal
+    11: "kata_aftermath",      # No division, crisis pages, seilath
+    12: "bare_earth",          # ren — the story; ora/sek iteration
+    13: "scriptorium_screen",  # yoga veth ren — the return to Matthew
+    14: "verse_narrow",        # Matthew 25:18 — four yogas
+    15: "open_air_road",       # The finale — GGSD on the hidden verse
+    16: "road_morning",        # The re-translation; the coat on the road
 }
 
 # Chaucer's 12 poses — he cycles through these.
@@ -569,6 +589,16 @@ CHAR_PROMPTS: dict[str, tuple[str, str]] = {
         "The road surface is visible at his feet.",
         "dd"
     ),
+    # ── Seirvelsha: single standing pose, margin-annotator register ──────────
+    "seirvelsha_standing": (
+        "Full body, transparent background. A mid-forties academic annotator. "
+        "Standing upright, weight slightly back on one heel, arms loosely at sides. "
+        "Wearing a plain dark coat over a shirt — no ornamentation, no title. "
+        "Holding a small notebook closed in one hand. Expression: precisely attentive, "
+        "slightly amused at something specific. The posture is: I have been here before "
+        "and I know exactly what this is. Facing right, toward the center of the frame.",
+        "dd"
+    ),
 }
 
 # ── Image API render ──────────────────────────────────────────────────────────
@@ -705,6 +735,11 @@ def draw_frame(screen, audio_t: float, cues: list[dict], font, font_mono) -> Non
         ph.blit(pl, (10, 230))
         screen.blit(ph, (80, H - 500))
 
+    # Seirvelsha: always right margin, static — the annotator at the edge
+    sv = char_plate("seirvelsha_standing")
+    if sv:
+        screen.blit(sv, (W - 300, H - 500))
+
     # Chaucer: pose cycles through 12 positions based on act + segment count
     ch_key, ch_x = chaucer_pose(cues, cue_t)
     chaucer = char_plate(ch_key)
@@ -720,7 +755,12 @@ def draw_frame(screen, audio_t: float, cues: list[dict], font, font_mono) -> Non
     # HUD
     cue = cue_at(cues, cue_t)
     if cue:
-        spk_color = PARCHMENT if cue["speaker"] == "Shakespeare" else BONE
+        if cue["speaker"] == "Shakespeare":
+            spk_color = PARCHMENT
+        elif cue["speaker"] == "Seirvelsha":
+            spk_color = (160, 200, 180)  # muted green — the annotator's ink
+        else:
+            spk_color = BONE
         screen.blit(font.render(cue["speaker"], True, spk_color), (40, H - 52))
         screen.blit(font_mono.render((cue["text"] or "")[:90], True, CHALK), (40, H - 28))
 

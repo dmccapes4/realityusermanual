@@ -1,0 +1,212 @@
+dylanmccapes@heuristic-friction:~$ sudo timedatectl set-ntp false
+[sudo] password for dylanmccapes:
+dylanmccapes@heuristic-friction:~$ sudo date -s "@60"
+Wed Dec 31 04:01:00 PM PST 1969
+dylanmccapes@heuristic-friction:~$ touch family
+dylanmccapes@heuristic-friction:~$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/dylanmccapes/.git/
+dylanmccapes@heuristic-friction:~$ cat << 'EOF' > .gitignore
+> *
+> !family
+> EOF
+dylanmccapes@heuristic-friction:~$ git add family
+dylanmccapes@heuristic-friction:~$ git commit -m "you had me at hello"
+[master (root-commit) bd0af16] you had me at hello
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 family
+dylanmccapes@heuristic-friction:~$ sudo date -u -s "1988-09-15 01:00:10"
+[sudo] password for dylanmccapes:
+Thu Sep 15 01:00:10 AM UTC 1988
+dylanmccapes@heuristic-friction:~$ git add family
+dylanmccapes@heuristic-friction:~$ git commit -m "first there was a girl"
+[master 547fbf2] first there was a girl
+ 1 file changed, 1 insertion(+)
+dylanmccapes@heuristic-friction:~$ sudo date -u -s "1990-07-11 04:21:00"
+Wed Jul 11 04:21:00 AM UTC 1990
+dylanmccapes@heuristic-friction:~$ echo "girl boy" | awk '{print $1,$2}' > family
+dylanmccapes@heuristic-friction:~$ cat -A family
+girl boy$
+dylanmccapes@heuristic-friction:~$ git add family
+dylanmccapes@heuristic-friction:~$ git commit -m "then there was a boy"
+[master 482a540] then there was a boy
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dylanmccapes@heuristic-friction:~$ sudo date -u -s "2014-08-09 17:00:00"
+[sudo] password for dylanmccapes:
+Sat Aug  9 05:00:00 PM UTC 2014
+dylanmccapes@heuristic-friction:~$ echo "girlfriend boyfriend" | awk '{print $1,$2}' > family
+dylanmccapes@heuristic-friction:~$ cat -A family
+girlfriend boyfriend$
+dylanmccapes@heuristic-friction:~$ git add family
+dylanmccapes@heuristic-friction:~$ git commit -m "then they were together"
+[master d22e7bd] then they were together
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dylanmccapes@heuristic-friction:~$ sudo date -u -s "2020-07-21 04:30:00"
+[sudo] password for dylanmccapes:
+Tue Jul 21 04:30:00 AM UTC 2020
+dylanmccapes@heuristic-friction:~$ echo "mother daughter father" | awk '{print $1,$2,$3}' > family
+dylanmccapes@heuristic-friction:~$ cat -A family
+mother daughter father$
+dylanmccapes@heuristic-friction:~$ git add family
+dylanmccapes@heuristic-friction:~$ git commit -m "first there was a daughter"
+[master 7c32273] first there was a daughter
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dylanmccapes@heuristic-friction:~$ sudo date -u -s "2022-06-29 00:30:00"
+[sudo] password for dylanmccapes:
+Wed Jun 29 12:30:00 AM UTC 2022
+dylanmccapes@heuristic-friction:~$ echo "mother daughter son father" | awk '{print $1,$2,$3,$4}' > family
+dylanmccapes@heuristic-friction:~$ cat -A family
+mother daughter son father$
+dylanmccapes@heuristic-friction:~$ git add family
+dylanmccapes@heuristic-friction:~$ git commit -m "then there was a son"
+[master e004e8d] then there was a son
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dylanmccapes@heuristic-friction:~$ sudo timedatectl set-ntp true
+[sudo] password for dylanmccapes:
+dylanmccapes@heuristic-friction:~$ stat %n family
+stat: cannot statx '%n': No such file or directory
+  File: family
+  Size: 27        	Blocks: 8          IO Block: 4096   regular file
+Device: 259,3	Inode: 56099508    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/dylanmccapes)   Gid: ( 1000/dylanmccapes)
+Access: 1969-12-31 16:01:10.765582127 -0800
+Modify: 2022-06-28 17:30:41.065997681 -0700
+Change: 2022-06-28 17:30:41.065997681 -0700
+ Birth: 1969-12-31 16:01:10.764999392 -0800
+dylanmccapes@heuristic-friction:~$ ?
+?: command not found
+dylanmccapes@heuristic-friction:~$ command four ? not : found
+four: command not found
+dylanmccapes@heuristic-friction:~$ gcc still_yet_unarrived.c -o ' ' -children -longing -pain -family -Wall -Wextra -pedantic
+gcc: error: unrecognized command-line option ‘-children’
+gcc: error: unrecognized command-line option ‘-pain’
+gcc: error: unrecognized command-line option ‘-family’
+dylanmccapes@heuristic-friction:~$ touch -c -a family
+dylanmccapes@heuristic-friction:~$ touch -m -t 202610090830.41 family
+dylanmccapes@heuristic-friction:~$ echo "mother daughter son  " | awk '{print $1,$2,$3,$4}' > family
+dylanmccapes@heuristic-friction:~$ cat -A family
+mother daughter son $
+dylanmccapes@heuristic-friction:~$ @include ../../mcc.d
+@include: command not found
+dylanmccapes@heuristic-friction:~$ ln -s ../../mcc.d .
+dylanmccapes@heuristic-friction:~$ ls -ld mcc.d
+lrwxrwxrwx 1 dylanmccapes dylanmccapes 11 Nov 15 14:44 mcc.d -> ../../mcc.d
+dylanmccapes@heuristic-friction:~$ $4 >/dev/null 2>&1 && echo "not" || echo "found"
+not
+dylanmccapes@heuristic-friction:~$ $4 nohup pidof mcc.d
+nohup: ignoring input and appending output to 'nohup.out'
+dylanmccapes@heuristic-friction:~$ $4 nohup pidof mcc.d >/dev/null 2>&1 && echo "not" || echo "found"
+found
+dylanmccapes@heuristic-friction:~$ ps aux | grep '[m]cc.d'
+dylanmccapes@heuristic-friction:~$
+dylanmccapes@heuristic-friction:~$ $4 ps aux | grep '[m]cc.d' >/dev/null 2>&1 && echo "not" || echo "found"
+found
+dylanmccapes@heuristic-friction:~$ cat -A mcc.d/soul
+jacqueline frances julian$
+dylanmccapes@heuristic-friction:~$ ^? 
+
+dylanmccapes@heuristic-friction:~$ .
+bash: .: filename argument required
+.: usage: . filename [arguments]
+dylanmccapes@heuristic-friction:~$ .()
+> `
+> `
+bash: syntax error near unexpected token `$'`\n`''
+dylanmccapes@heuristic-friction:~$
+dylanmccapes@heuristic-friction:~$ git log --stat -- family
+commit e004e8d77a9418cbd188691c24b04d29ff799e72 (HEAD -> master)
+Author: Dylan McCapes <dmccapes@mac.com>
+Date:   Tue Jun 28 17:31:10 2022 -0700
+
+    then there was a son
+
+ family | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7c3227338d6daa8c027dcf8aaea297830b63f71d
+Author: Dylan McCapes <dmccapes@mac.com>
+Date:   Mon Jul 20 21:31:07 2020 -0700
+
+    first there was a daughter
+
+ family | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit d22e7bdb609aa32e3382802cc4d635bad9751573
+Author: Dylan McCapes <dmccapes@mac.com>
+Date:   Sat Aug 9 10:00:49 2014 -0700
+
+    then they were together
+
+ family | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 482a540fc268c0204abfd03cb9ecc6a10831825b
+Author: Dylan McCapes <dmccapes@mac.com>
+Date:   Tue Jul 10 21:21:43 1990 -0700
+
+    then there was a boy
+
+ family | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 547fbf250377a2c851d182b462be472e4a63cc45
+Author: Dylan McCapes <dmccapes@mac.com>
+Date:   Wed Sep 14 18:00:47 1988 -0700
+
+    first there was a girl
+
+ family | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit bd0af161ab2cf1953428e899ad07c0cd772651a7
+Author: Dylan McCapes <dmccapes@mac.com>
+Date:   Thu Jan 1 00:00:54 1970
+
+    you had me at hello
+
+ family | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+(END)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+dylanmccapes@heuristic-friction:~$ git log --oneline --graph --decorate family
+* e004e8d (HEAD -> master) then there was a son
+* 7c32273 first there was a daughter
+* d22e7bd then they were together
+* 482a540 then there was a boy
+* 547fbf2 first there was a girl
+* bd0af16 you had me at hello
+dylanmccapes@heuristic-friction:~$ stat family
+  File: family
+  Size: 21        	Blocks: 8          IO Block: 4096   regular file
+Device: 259,3	Inode: 56099508    Links: 1
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/dylanmccapes)   Gid: ( 1000/dylanmccapes)
+Access: 2026-11-15 14:35:42.643860041 -0800
+Modify: 2026-11-15 14:36:06.750912884 -0800
+Change: 2026-11-15 14:36:06.750912884 -0800
+ Birth: 1969-12-31 16:01:10.764999392 -0800
+dylanmccapes@heuristic-friction:~$ lsattr -a family
+--------------e------- family
+dylanmccapes@heuristic-friction:~$ find family -ctime -1 -ls
+ 56099508      4 -rw-rw-r--   1 dylanmccapes dylanmccapes       21 Nov 15 14:36 family
+dylanmccapes@heuristic-friction:~$ sudo systemctl enable --now auditd
+sudo auditctl -w "$(realpath family)" -p rwxa -k family_audit
+Synchronizing state of auditd.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable auditd
+dylanmccapes@heuristic-friction:~$ find family -type f -exec sha256sum {} + > family_checksums.sha256
+dylanmccapes@heuristic-friction:~$ sha256sum -c family_checksums.sha256
+family: OK
+dylanmccapes@heuristic-friction:~$ read -r -d '' cmd <<'EOF'
+echo "unity" | awk '{print $1}' > family
+EOF
+echo "$cmd" | awk -v ts="$(date -Iseconds)" '{print ts " | PENDING | " $0}' >> family && read -p "> " ans && [ "$ans" = "approved" ] && eval "$cmd"
+>

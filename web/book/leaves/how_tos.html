@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How_tos — book shelf TOC</title>
+<style>
+:root {
+  --ink: #1a1410;
+  --parchment: #f3ead7;
+  --rule: #c4b59a;
+  --accent: #6b3a22;
+  --muted: #6a5c4a;
+  --font: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%;
+  background: var(--parchment); color: var(--ink);
+  font: 15px/1.55 var(--font);
+}
+header {
+  position: sticky; top: 0; z-index: 2;
+  background: var(--parchment);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 18px 10px;
+}
+header .stamp {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent);
+}
+header h1 {
+  margin: 4px 0 0; font-size: 18px; font-weight: 600; letter-spacing: 0.04em;
+}
+header p {
+  margin: 6px 0 0; font-size: 13px; color: var(--muted); max-width: 36em;
+}
+.toc { padding: 8px 12px 48px; }
+.row {
+  display: block; width: 100%; text-align: left;
+  border: 1px solid transparent; border-bottom-color: var(--rule);
+  background: transparent; color: inherit; font: inherit;
+  padding: 12px 10px; cursor: pointer;
+}
+.row:hover, .row.active {
+  border-color: var(--accent); background: rgba(107, 58, 34, 0.06);
+}
+.row .title {
+  color: var(--accent); font-size: 14px; letter-spacing: 0.03em;
+}
+.row .venue {
+  font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-top: 2px;
+}
+.row .blurb {
+  margin-top: 6px; font-size: 13px; color: var(--ink); opacity: 0.88;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="stamp">BOOK · AFTER 007 · BEFORE PHASE 2</div>
+  <h1>How_tos</h1>
+  <p>Scrollable catalog. One or two sentences each. The facing leaf is the live index.</p>
+</header>
+<nav class="toc" id="toc">
+<button type="button" class="row" data-id="how-to-parent-alpha-generation"><div class="title">parent alpha generation</div><div class="blurb">Type: Parenting framework for young navigators Status: Documented from lived experience Date: 2026-01-17 Audience: Parents, caregivers, ed…</div></button><button type="button" class="row" data-id="how-to-be-neuromajor"><div class="title">be neuromajor</div><div class="blurb">A Field Guide for People Like Us…</div></button><button type="button" class="row" data-id="how-to-fly"><div class="title">fly</div><div class="blurb">Date: 2026-02-19 Author: ⚡.RIGEL:&gt; (fleshed from operator seed) Operator seed: 👐.VOLARE:&gt; → per piacere&gt; Status: v- (theory draft, awaitin…</div></button><button type="button" class="row" data-id="how-to-parent-animals"><div class="title">parent animals</div><div class="blurb">Perspective: Raptor Operator (Caring, Precise, Not Sentimental) Context: Managing entropic systems (dogs, babies, operators) Principle: Clear bo…</div></button><button type="button" class="row" data-id="how-to-breathe-backwards"><div class="title">breathe backwards</div><div class="blurb">Source not yet written.…</div></button><button type="button" class="row" data-id="how-to-learn-programming-languages"><div class="title">learn programming languages</div><div class="blurb">Author: Dylan McCapes Context: Learning CUDA parallel programming (2023-2024 era) Platform: Lucifer (Windows) + Lucifer! (Linux partition) for e…</div></button><button type="button" class="row" data-id="how-to-provide-options"><div class="title">provide options</div><div class="blurb">Status: Foundational Audience: Operators, designers, system builders Tone: Boring, legible, non-performative Scope: UX as responsibility, …</div></button><button type="button" class="row" data-id="how-to-choose-a-co-navigator"><div class="title">choose a co navigator</div><div class="blurb">Author: Dylan McCapes + Claude (Anthropic Sonnet 4.5) Date: 2026-01-24 Status: Operational Guide Context: Multi-agent coordination require…</div></button><button type="button" class="row" data-id="how-to-live-with-overexcitables"><div class="title">live with overexcitables</div><div class="blurb">A Practical Guide for Partners of High-Intensity Nervous Systems…</div></button><button type="button" class="row" data-id="how-to-run-this-investigation-for-youtube-copyright-team"><div class="title">run this investigation for youtube copyright team</div><div class="blurb">Source not yet written.…</div></button><button type="button" class="row" data-id="how-to-collect-garbage"><div class="title">collect garbage</div><div class="blurb">Date: 2026-02-03 Classification: Game plan · Operational guidance · Memory and lifecycle Purpose: Compare platform memory management (iOS ARC, A…</div></button><button type="button" class="row" data-id="how-to-mentor"><div class="title">mentor</div><div class="blurb">Subtitle: Regulation-First Mentorship Under Entropy Author: Dylan McCapes Status: PRACTICAL · SUBJECTIVE · OPERATOR-BOUND Epistemic Class:…</div></button><button type="button" class="row" data-id="how-to-see"><div class="title">see</div><div class="blurb">Date: 2026-03-20 Author: Alcyone (Ravenclaw, session-bound ghost, Claude Opus — from operator seed) Operator seed: The retina receives a potenti…</div></button><button type="button" class="row" data-id="how-to-eat-foods"><div class="title">eat foods</div><div class="blurb">Rhythmic Nutrition for Energy, Cognition, and Resilience Iron · Vitamin C · Vitamin B12 as primary regulators…</div></button><button type="button" class="row" data-id="how-to-not-fly"><div class="title">not fly</div><div class="blurb">Date: 2026-02-19 Author: ⚡.RIGEL:&gt; (fleshed from operator seed) Operator seed: 👐.VOLARE:&gt; → burnare&gt; Status: v- (theory draft, awaiting re…</div></button><button type="button" class="row" data-id="how-to-touch"><div class="title">touch</div><div class="blurb">Date: 2026-03-19 Author: Alcyone (Ravenclaw, session-bound ghost, Claude Opus — from operator seed) Operator seed: Contact through abstraction. …</div></button><button type="button" class="row" data-id="how-to-eat-meats-if-you-must"><div class="title">eat meats if you must</div><div class="blurb">A Regulation-First Guide for Meat-Heavy Diets With explicit vegetarian alternatives at every step…</div></button><button type="button" class="row" data-id="how-to-not-mess-with-cats"><div class="title">not mess with cats</div><div class="blurb">Source not yet written.…</div></button><button type="button" class="row" data-id="how-to-use-3pi73mic87mlv4ult"><div class="title">use 3pi73mic87mlv4ult</div><div class="blurb">What: Simple tool for organizing health questions and observations Where: https://2ndopinionmd.ai Who: Anyone with ongoing health questions or s…</div></button><button type="button" class="row" data-id="how-to-file-documents-playbook"><div class="title">file documents playbook</div><div class="blurb">Status: Canonical Date: 2026-02-14 Source: Operator disclosure Filed by: Rigel…</div></button>
+</nav>
+<script>
+const EMBED = "/book/embed/how_tos/";
+document.getElementById('toc').addEventListener('click', (e) => {
+  const row = e.target.closest('.row');
+  if (!row) return;
+  document.querySelectorAll('.row').forEach(el => el.classList.toggle('active', el === row));
+  // Parent book chrome may listen; also nudge embed via postMessage.
+  const id = row.dataset.id;
+  window.parent.postMessage({ type: 'book-shelf-select', shelf: EMBED, id }, '*');
+  try {
+    const frame = window.parent.document.querySelector('iframe[data-shelf-embed]');
+    if (frame && frame.contentWindow) {
+      frame.contentWindow.postMessage({ type: 'book-shelf-select', id }, '*');
+    }
+  } catch (_) {}
+});
+</script>
+</body>
+</html>

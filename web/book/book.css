@@ -1,0 +1,165 @@
+:root {
+  --void: #0c0a08;
+  --parchment: #f3ead7;
+  --ink: #1a1410;
+  --accent: #c4a574;
+  --accent-hot: #e8dcc4;
+  --seam: #3a3228;
+  --bezel: #161210;
+  --font-ui: "Futura", "Century Gothic", "Avenir Next", sans-serif;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%;
+  background: var(--void);
+  color: var(--accent-hot);
+  font: 13px/1.4 var(--font-ui);
+  overflow: hidden;
+}
+.book-bar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 16px;
+  background: rgba(12,10,8,0.92);
+  border-bottom: 1px solid var(--seam);
+  position: relative; z-index: 5;
+}
+.book-bar .mark {
+  letter-spacing: 0.28em; text-transform: uppercase;
+  font-size: 10px; color: var(--accent);
+}
+.book-bar .title {
+  flex: 1; font-size: 12px; letter-spacing: 0.08em;
+  color: var(--accent-hot); opacity: 0.9;
+}
+.book-bar button, .book-bar a {
+  background: none; border: 1px solid var(--seam);
+  color: var(--accent); font: inherit; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 5px 10px; cursor: pointer; text-decoration: none;
+}
+.book-bar button:hover, .book-bar a:hover {
+  border-color: var(--accent-hot); color: var(--accent-hot);
+}
+.book-bar button:disabled { opacity: 0.35; cursor: default; }
+
+.spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100% - 44px);
+  position: relative;
+}
+.gutter {
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--seam), transparent);
+  transform: translateX(-50%);
+  pointer-events: none; z-index: 2;
+}
+.leaf {
+  position: relative;
+  min-width: 0; min-height: 0;
+  background: var(--bezel);
+  border: 1px solid var(--seam);
+}
+.leaf.left { border-right: 0; }
+.leaf.right {
+  display: flex; flex-direction: column;
+  background: #0a0907;
+}
+.leaf iframe {
+  width: 100%; height: 100%; border: 0; background: var(--parchment);
+}
+.view-screen {
+  flex: 1; min-height: 0;
+  margin: 18px;
+  border: 2px solid #2a241c;
+  background: #050403;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.85);
+}
+.view-screen img.cover {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+}
+.view-screen a.cover-link {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 12px;
+  color: var(--accent-hot); text-decoration: none;
+  font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 40%);
+}
+.view-void {
+  color: var(--accent); letter-spacing: 0.3em; font-size: 11px;
+  opacity: 0.45;
+}
+.view-audio, .view-sidereal, .view-plaque {
+  width: 100%; height: 100%; padding: 20px;
+  color: var(--accent-hot);
+}
+.view-audio .label {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 12px;
+}
+.view-audio .stub {
+  opacity: 0.7; font-size: 12px; line-height: 1.6;
+}
+
+/* Sidereal board */
+.sidereal h2 {
+  margin: 0 0 12px; font-size: 12px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent);
+}
+.sidereal .row {
+  display: flex; gap: 10px; align-items: center; margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.sidereal label { font-size: 11px; letter-spacing: 0.08em; min-width: 7em; }
+.sidereal input[type="number"] {
+  width: 6.5em; background: #12100c; border: 1px solid var(--seam);
+  color: var(--accent-hot); font: inherit; padding: 6px 8px;
+}
+.sidereal .out {
+  margin-top: 16px; font-family: ui-monospace, monospace;
+  font-size: 13px; line-height: 1.7;
+}
+.sidereal .hit { color: #7dffb0; }
+
+/* Rho plaque */
+.plaque-wrap {
+  height: 100%; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 18px;
+}
+.plaque {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  letter-spacing: 0.2em;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  color: var(--accent-hot);
+}
+.plaque-meta {
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent);
+}
+.plaque-reveal {
+  font-size: 1.1rem; letter-spacing: 0.12em; color: #9ad4b0;
+  min-height: 1.4em;
+}
+
+.cta-panel {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 100%; gap: 16px;
+}
+.cta-panel a.cta {
+  border: 1px solid var(--accent);
+  color: var(--accent-hot);
+  text-decoration: none;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  padding: 14px 22px; font-size: 12px;
+}
+.cta-panel a.cta:hover { background: rgba(196,165,116,0.12); }
+
+@media (max-width: 820px) {
+  .spread { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .gutter { display: none; }
+  .leaf.left { border-right: 1px solid var(--seam); border-bottom: 0; }
+}

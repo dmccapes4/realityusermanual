@@ -1,0 +1,35 @@
+{
+  "site": "https://realityusermanual.dylanmccapes.systems",
+  "manuscripts": [
+    {
+      "id": "how-to-fly",
+      "href": "/m/how-to-fly/",
+      "title": "How to Fly",
+      "target": "American Journal of Physics"
+    },
+    {
+      "id": "glacial-cell",
+      "href": "/m/glacial-cell/",
+      "title": "Mother Earth as Governed Field",
+      "target": "first true manuscript"
+    },
+    {
+      "id": "plume-wave",
+      "href": "/m/plume-wave/",
+      "title": "Plume-Wave Routing in Intracellular Transport",
+      "target": "PLOS Computational Biology"
+    },
+    {
+      "id": "how-tos",
+      "href": "/m/how-tos/",
+      "title": "HOW_TO stack",
+      "target": "22 documents, one page, searchable"
+    },
+    {
+      "id": "reality-user-manual",
+      "href": "/m/reality-user-manual/",
+      "title": "REALITY_USER_MANUAL",
+      "target": "the book"
+    }
+  ]
+}

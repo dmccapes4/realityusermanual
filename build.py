@@ -9,9 +9,9 @@ Page structure:
     TOC (placeholder)
 
   Body (arabic numerals, 1–):
-    p.1   — Velora poem (src/00_page1_velora.md)
+    p.1   — Velora poem (src/era1/000_velora/000_velora_poem.md)
     p.2–41 — blank (chapters pending)
-    p.42  — Quenya poem (src/01_page42_quenya.md)
+    p.42  — Quenya poem (src/era1/001_quenya/001_quenya_poem.md)
     p.43+ — chapters as written
 
 Page 42 is not a coincidence.
@@ -20,6 +20,7 @@ Page 42 is not a coincidence.
 import sys, os, re, json, hashlib, subprocess
 sys.stdout.reconfigure(line_buffering=True)
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src", "003_rho"))
 
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
@@ -410,6 +411,20 @@ def render_md(path):
             if in_table:
                 flush_table()
 
+        _img = re.match(r'^!\[([^\]]*)\]\(([^)]+)\)\s*$', line.strip())
+        if _img:
+            # ![alt](path): path relative to the markdown file; width limited to
+            # the body frame, aspect kept.
+            from reportlab.lib.utils import ImageReader
+            _ipath = os.path.join(os.path.dirname(os.path.abspath(path)), _img.group(2))
+            _iw, _ih = ImageReader(_ipath).getSize()
+            _maxw = W - MARGIN_INNER - MARGIN_OUTER
+            _maxh = (H - MARGIN_TOP - MARGIN_BOT) * 0.9
+            _scale = min(_maxw / _iw, _maxh / _ih, 1.0)
+            flowables.append(Image(_ipath, width=_iw * _scale, height=_ih * _scale))
+            flowables.append(Spacer(1, 6))
+            continue
+
         if line.startswith('# '):
             flowables.append(P(_md_inline(line[2:]), "h1"))
         elif line.startswith('## '):
@@ -485,6 +500,32 @@ def _write_ledgers(here):
     dump(os.path.join(here, "era1_pages.jsonl"), e1)
     dump(os.path.join(here, "era2_pages.jsonl"), e2)
 
+def _attach_how_tos():
+    """Hide the HOW_TO stack inside the PDF as a file attachment.
+
+    web/m/how-tos/index.html is self-contained (no server needed). Readers
+    with a paperclip pane (Acrobat, Okular, Evince) can save it out. Page
+    count and the ledgers are untouched; this runs after _write_ledgers.
+    """
+    html_path = os.path.join(HERE, "web", "m", "how-tos", "index.html")
+    if not os.path.exists(html_path):
+        print("  [attach] web/m/how-tos/index.html missing; run tools/build_how_tos.py")
+        return
+    try:
+        from pypdf import PdfReader, PdfWriter
+    except ImportError:
+        print("  [attach] pypdf missing; HOW_TOS.html not attached")
+        return
+    reader = PdfReader(OUT)
+    writer = PdfWriter(clone_from=reader)
+    with open(html_path, "rb") as f:
+        writer.add_attachment("HOW_TOS.html", f.read())
+    tmp = OUT + ".tmp"
+    with open(tmp, "wb") as f:
+        writer.write(f)
+    os.replace(tmp, OUT)
+    print(f"  attached HOW_TOS.html ({os.path.getsize(html_path):,} bytes)")
+
 def build():
     _page_ledger.clear()
     _page_state.update({"mode": "roman", "arabic_start": None,
@@ -536,7 +577,7 @@ def build():
     # Velora immediately after title — unnumbered boot-code page
     story.append(NextPageTemplate("Blank"))
     story.append(PageBreak())
-    story.extend(load_poem(os.path.join(SRC, "00_page1_velora.md")))
+    story.extend(load_poem(os.path.join(SRC, "000_velora/000_velora_poem.md")))
     story.append(NextPageTemplate("Front"))
     story.append(PageBreak())
 
@@ -555,7 +596,7 @@ def build():
     story.append(PageBreak())
 
     # Preface i
-    story.extend(render_md(os.path.join(SRC, "02_preface_i.md")))
+    story.extend(render_md(os.path.join(SRC, "002_preface/002_02_preface_i.md")))
     story.append(PageBreak())
 
     # ── BODY ─────────────────────────────────────────────────────────────────
@@ -582,14 +623,14 @@ def build():
     story.append(_ArabicMark())
 
     # p.1 — Velora
-    story.extend(load_poem(os.path.join(SRC, "00_page1_velora.md")))
+    story.extend(load_poem(os.path.join(SRC, "000_velora/000_velora_poem.md")))
     story.append(PageBreak())
 
     # p.2–41 — 40 definition pages: one word (backwards) per page, left-aligned
     import importlib.util, sys as _sys
     _spec = importlib.util.spec_from_file_location(
         "rho_definition_words",
-        os.path.join(SRC, "03_rho_definition_words.py")
+        os.path.join(SRC, "003_rho/rho_definition_words.py")
     )
     _mod = importlib.util.module_from_spec(_spec)
     _spec.loader.exec_module(_mod)
@@ -604,20 +645,20 @@ def build():
 
     # p.42 — Quenya
     story.append(NextPageTemplate("Poem"))
-    story.extend(load_poem(os.path.join(SRC, "01_page42_quenya.md")))
+    story.extend(load_poem(os.path.join(SRC, "001_quenya/001_quenya_poem.md")))
     story.append(PageBreak())
 
     # ── CHAPTERS (body template) ──────────────────────────────────────────────
     story.append(NextPageTemplate("Body"))
 
     _chapters = [
-        "03a_chapter_0_intro_note.md",
-        "03b_chapter_0.1_reception.md",
-        "04a_chapter_1_lucifer_experiment.md",
-        "04b_chapter_2_matthew_19.md",
-        "04c_chapter_2.1_aslama.md",
-        "04d_chapter_2.2_shav.md",
-        "04e_chapter_2.3_na_bean.md",
+        "003_rho/003_01_intro_note.md",
+        "003_rho/003_02_reception.md",
+        "004_lucifer/004_01_lucifer_experiment.md",
+        "004_lucifer/004_02_matthew_19.md",
+        "004_lucifer/004_03_aslama.md",
+        "004_lucifer/004_04_shav.md",
+        "004_lucifer/004_05_na_bean.md",
         # ch 3 + 4 inserted after Merlin/crisis pages below
     ]
     for ch in _chapters:
@@ -642,25 +683,27 @@ def build():
 
     story.append(NextPageTemplate("DoubleNum"))
     story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "04g_crisis_page1.md")))
+    story.extend(render_md(os.path.join(SRC, "006_crisis/006_01_crisis_page1.md")))
 
     story.append(NextPageTemplate("SplitRight"))
     story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "04h_crisis_page2.md")))
+    story.extend(render_md(os.path.join(SRC, "006_crisis/006_02_crisis_page2.md")))
 
     story.append(NextPageTemplate("SplitLeft"))
     story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "04i_crisis_page3.md")))
+    story.extend(render_md(os.path.join(SRC, "006_crisis/006_03_crisis_page3.md")))
 
     story.append(NextPageTemplate("Body"))
     story.append(PageBreak())
 
     # ── EDITOR NOTE ───────────────────────────────────────────────────────────
-    story.extend(render_md(os.path.join(SRC, "04j_editor_note.md")))
+    story.extend(render_md(os.path.join(SRC, "006_crisis/006_04_editor_note.md")))
     story.append(PageBreak())
 
-    # ── REMAINING CHAPTERS ────────────────────────────────────────────────────
-    for ch in ["04_chapter_waldorf_abstraction.md", "05_chapter_mother_earth.md"]:
+    # ── REMAINING PHASE 1 CHAPTERS ────────────────────────────────────────────
+    # finding rho and the 07 cluster were bound here as arabic +5/+06/+07.
+    # They are Phase 2. See src/PAGE_ORDER.md.
+    for ch in ["005_waldorf/005_01_waldorf_abstraction.md", "007_mother_earth/007_mother_earth.md"]:
         story.extend(render_md(os.path.join(SRC, ch)))
         story.append(PageBreak())
 
@@ -703,104 +746,80 @@ def build():
                     entry["ghost_labels"] = [self.symbol]
                     break
 
+    # Manuscript identities (PAGE_ORDER.md). Footer −n is sheet-cosmetic.
     # −0 : Sauron / Feynman / McClane — no symbolic prefix
     story.append(NextPageTemplate("Neg"))
     story.append(PageBreak())
     story.append(_NegMark())
-    story.extend(render_md(os.path.join(SRC, "04k_sauron_minus_zero.md")))
+    story.extend(render_md(os.path.join(SRC, "phase2/-0.md")))
 
-    # −1 : Operator note (symbolic "00") — cuts off with "That is the entire fucking point."
+    # −1 : Operator note (ghost "00")
     story.append(PageBreak())
     story.append(_Era2SymbolMark("00"))
-    story.extend(render_md(os.path.join(SRC, "00_operator_note.md")))
+    story.extend(render_md(os.path.join(SRC, "phase2/-00.md")))
 
-    # −2 : Injection script + terminal session (symbolic "000")
+    # −2 : Injection script (ghost "000") — chicken image bottom-right
     story.append(PageBreak())
     story.append(_Era2SymbolMark("000"))
-    story.extend(render_md(os.path.join(SRC, "000_onescripttorulethemall_.md")))
+    story.extend(render_md(os.path.join(SRC, "phase2/-000.md")))
+    # mischievouslittlechicken.png — bottom right corner of this page only
+    _chicken_path = os.path.join(HERE, "assets", "mischievouslittlechicken.png")
+    if os.path.exists(_chicken_path):
+        story.append(Image(_chicken_path, width=0.6*inch, height=0.6*inch,
+                           hAlign='RIGHT'))
 
-    # −3 : Friends table read — full script word-for-word (symbolic "0000")
+    # −3 : Friends table read (ghost "0000")
     story.append(PageBreak())
     story.append(_Era2SymbolMark("0000"))
-    story.extend(render_md(os.path.join(SRC, "0000_page-0_rewrite_recasting.md")))
+    story.extend(render_md(os.path.join(SRC, "phase2/-0000.md")))
 
-    # −4 : Euler derivation (era_convert.py, cosmetic formatter) — no symbol
-    story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "04l_euler_derivation.md")))
-
-    # −5 : Era 2 TOC — no symbol
-    story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "TOC_ERA2.md")))
-
-    # ── HOW_TO SECTION ──────────────────────────────────────────────────────
-    # HOW_TO_REPORT — etymology of "report", agent ledger, four personal reads
-    story.append(NextPageTemplate("Body"))
-    story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "HOW_TO_REPORT.md")))
-
-    # HOW_TO_MANIFEST — etymology of "manifest", the method of enumeration
-    story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "HOW_TO_MANIFEST.md")))
-
-    # MANIFEST_HOW_TO — d20-ordered table of contents
-    story.append(PageBreak())
-    story.extend(render_md(os.path.join(SRC, "MANIFEST_HOW_TO_PORTALVISION_20261024.md")))
-
-    # 22 HOW_TO documents in d20 roll order (highest roll first)
-    PV = "/home/dylanmccapes/dev/PORTAL_VISION_LUCIFER"
-    PV0 = "/home/dylanmccapes/dev/PORTAL_VISION_V0.1"
-    _how_tos_d20 = [
-        # pos 1  roll 20
-        f"{PV}/data/artifacts/HOW_TO_SEE.md",
-        # pos 2  roll 19
-        f"{PV}/docs/HOW_TO_PARENT_ANIMALS.md",
-        # pos 3  roll 18
-        f"{PV}/data/artifacts/HOW_TO_NOT_FLY.md",
-        # pos 4  roll 17
-        f"{PV}/distributions/for_azazel_and_hilariousmarcupial/HOW_TO_LEARN_PROGRAMMING_LANGUAGES.md",
-        # pos 5  roll 16
-        f"{PV}/data/artifacts/HOW_TO_EAT_MEATS_IF_YOU_MUST.md",
-        # pos 6  roll 15
-        f"{PV}/game_plans/HOW_TO_CHOOSE_A_CO_NAVIGATOR.md",
-        # pos 7  roll 14
-        f"{PV}/misc/HOW_TO_USE_3Pi$73MiC87MLV4ULT.md",
-        # pos 8  roll 13
-        f"{PV}/projects/dylans_artifacts/youtube_copyright/HOW_TO_RUN_THIS_INVESTIGATION_FOR_YOUTUBE_COPYRIGHT_TEAM.md",
-        # pos 9  roll 12
-        f"{PV}/game_plans/HOW_TO_PARENT_ALPHA_GENERATION.md",
-        # pos 10 roll 11
-        f"{PV}/game_plans/HOW_TO_MENTOR.md",
-        # pos 11 roll 10
-        f"{PV}/data/artifacts/HOW_TO_FLY.md",
-        # pos 12 roll 9
-        f"{PV}/data/artifacts/HOW_TO_EAT_FOODS.md",
-        # pos 13 roll 8a (tiebreak: longer name)
-        f"{PV0}/HOW_TO_BREATHE_BACKWARDS.md",
-        # pos 14 roll 8b (tiebreak: shorter name)
-        f"{PV}/docs/HOW_TO_USE_TOOLS.md",
-        # pos 15 roll 7
-        f"{PV}/data/artifacts/HOW_TO_TOUCH.md",
-        # pos 16 roll 6
-        f"{PV}/docs/HOW_TO_PROVIDE_OPTIONS.md",
-        # pos 17 roll 5
-        f"{PV}/projects/on_interplanar_travel/HOW_TO_NOT_MESS_WITH_CATS.md",
-        # pos 18 roll 4
-        f"{PV}/data/artifacts/HOW_TO_LIVE_WITH_OVEREXCITABLES.md",
-        # pos 19 roll 3
-        f"{PV}/game_plans/HOW_TO_FILE_DOCUMENTS_PLAYBOOK.md",
-        # pos 20 roll 2
-        f"{PV}/game_plans/HOW_TO_COLLECT_GARBAGE.md",
-        # pos 21 roll 1a (tiebreak: longer name)
-        f"{PV}/game_plans/HOW_TO_USE_THE_INTERNET.md",
-        # pos 22 roll 1b (tiebreak: shorter name)
-        f"{PV}/books/addiction_topology/HOW_TO_BE_NEUROMAJOR.md",
+    # After 0000 every manuscript page is the next negative integer.
+    _phase2_after_0000 = [
+        "phase2/-04.md",                 # −04
+        "../docs/TOC_ERA2.md",                             # table, not an integer
+        "phase2/-05.md",                    # −05
+        "phase2/-06.md",                   # −06
+        "phase2/-07.md",                           # −07
+        "phase2/-08.md",              # −08
+        "phase2/-09.md",                 # −09
+        "phase2/-10.md",         # −10
+        "phase2/-11.md",               # −11
+        "phase2/-12.md",          # −12
+        "phase2/-13.md",                  # −13
+        "phase2/-14.md",    # −14
+        "phase2/-15.md",                     # −15
+        "phase2/-16.md",                     # −16
+        "phase2/-17.md",                   # −17
+        "phase2/-18.md",                   # −18
+        "phase2/-19.md",          # −19
+        "phase2/-20.md",                     # −20
+        "phase2/-21.md",                # −21
+        "phase2/-22.md",          # −22
+        "phase2/-23.md",           # −23
+        "phase2/-24.md",                     # −24
+        "phase2/-25.md",               # −25
+        "phase2/-26.md",                # −26
+        "phase2/-27.md",            # −27
+        "phase2/-28.md",           # −28
+        "phase2/-29.md",             # −29
+        "phase2/-30.md",             # −30
+        "phase2/-31.md",             # −31
     ]
-    for _ht_path in _how_tos_d20:
+    for ch in _phase2_after_0000:
         story.append(PageBreak())
-        story.extend(render_md(_ht_path))
+        story.extend(render_md(os.path.join(SRC, ch)))
+
+    # Desk matter for −08 / −09. Not integers. HTML stack attached after build.
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(HERE, "docs", "HOW_TO_REPORT.md")))
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(HERE, "docs", "HOW_TO_MANIFEST.md")))
+    story.append(PageBreak())
+    story.extend(render_md(os.path.join(HERE, "docs", "MANIFEST_HOW_TO_PORTALVISION_20261024.md")))
 
     doc.build(story)
     _write_ledgers(HERE)
+    _attach_how_tos()
     print(f"Built: {OUT}")
     print(f"Era 1 ledger: {os.path.join(HERE, 'era1_pages.jsonl')}")
     print(f"Era 2 ledger: {os.path.join(HERE, 'era2_pages.jsonl')}")

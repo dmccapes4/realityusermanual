@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REALITY_USER_MANUAL — book</title>
+<link rel="stylesheet" href="/book/book.css">
+</head>
+<body>
+<header class="book-bar">
+  <span class="mark">BΘΘΚ</span>
+  <span class="title" id="spread-title">…</span>
+  <button type="button" id="btn-prev">Prev</button>
+  <button type="button" id="btn-next">Next</button>
+  <a href="/gate/">Phase 2</a>
+</header>
+<main class="spread" id="spread">
+  <div class="gutter" aria-hidden="true"></div>
+  <section class="leaf left" aria-label="Left leaf">
+    <iframe id="left-frame" title="Left leaf HTML"></iframe>
+  </section>
+  <section class="leaf right" aria-label="Right leaf">
+    <div id="right-screen" class="view-screen"></div>
+  </section>
+</main>
+<script src="/book/sidereal_board.js"></script>
+<script src="/book/book.js"></script>
+</body>
+</html>

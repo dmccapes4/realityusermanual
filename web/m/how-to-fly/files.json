@@ -1,0 +1,144 @@
+{
+  "id": "how-to-fly",
+  "title": "How to Fly: Pressure Gradients, PLEFR Fields, and Lift Regime Physics",
+  "author": "Dylan McCapes",
+  "target": "American Journal of Physics",
+  "received": "2026-03-01",
+  "station": "how-to-fly",
+  "note": "Gattaca intake tree. Reviewer files only. No receipts, no FullMetalPacket.",
+  "open": "files/SEQUENCE/Main_Manuscript_HOW_TO_FLY.pdf",
+  "tree": [
+    {
+      "name": "ASSAY",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Supporting_Information_HOW_TO_FLY.md",
+          "type": "text",
+          "url": "files/ASSAY/Supporting_Information_HOW_TO_FLY.md",
+          "bytes": 1457
+        },
+        {
+          "name": "Supporting_Information_HOW_TO_FLY.pdf",
+          "type": "pdf",
+          "url": "files/ASSAY/Supporting_Information_HOW_TO_FLY.pdf",
+          "bytes": 21811
+        }
+      ]
+    },
+    {
+      "name": "INTAKE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Cover_Letter_HOW_TO_FLY.md",
+          "type": "text",
+          "url": "files/INTAKE/Cover_Letter_HOW_TO_FLY.md",
+          "bytes": 2615
+        },
+        {
+          "name": "JOURNAL_TARGET_RECOMMENDATION.md",
+          "type": "text",
+          "url": "files/INTAKE/JOURNAL_TARGET_RECOMMENDATION.md",
+          "bytes": 1271
+        },
+        {
+          "name": "README_SUBMISSION_PACKAGE.md",
+          "type": "text",
+          "url": "files/INTAKE/README_SUBMISSION_PACKAGE.md",
+          "bytes": 1994
+        }
+      ]
+    },
+    {
+      "name": "LINEAGE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "HOW_TO_FLY.md",
+          "type": "text",
+          "url": "files/LINEAGE/HOW_TO_FLY.md",
+          "bytes": 37026
+        }
+      ]
+    },
+    {
+      "name": "PLATES",
+      "type": "dir",
+      "children": [
+        {
+          "name": "VISUAL_MAP_HOW_TO_FLY_01_GRAVITATIONAL_CONTRACT.png",
+          "type": "image",
+          "url": "files/PLATES/VISUAL_MAP_HOW_TO_FLY_01_GRAVITATIONAL_CONTRACT.png",
+          "bytes": 5888850
+        },
+        {
+          "name": "VISUAL_MAP_HOW_TO_FLY_02_FLOW_PLEFR_DOMINANCE.png",
+          "type": "image",
+          "url": "files/PLATES/VISUAL_MAP_HOW_TO_FLY_02_FLOW_PLEFR_DOMINANCE.png",
+          "bytes": 5143075
+        },
+        {
+          "name": "VISUAL_MAP_HOW_TO_FLY_03_HOAGS_HALF_DOME.png",
+          "type": "image",
+          "url": "files/PLATES/VISUAL_MAP_HOW_TO_FLY_03_HOAGS_HALF_DOME.png",
+          "bytes": 5103013
+        },
+        {
+          "name": "VISUAL_MAP_HOW_TO_FLY_04_CONTINUOUS_PLANE_OVERLAP.png",
+          "type": "image",
+          "url": "files/PLATES/VISUAL_MAP_HOW_TO_FLY_04_CONTINUOUS_PLANE_OVERLAP.png",
+          "bytes": 5320635
+        },
+        {
+          "name": "VISUAL_MAP_HOW_TO_FLY_05_FOUR_REGIME_PHASE_MAP.png",
+          "type": "image",
+          "url": "files/PLATES/VISUAL_MAP_HOW_TO_FLY_05_FOUR_REGIME_PHASE_MAP.png",
+          "bytes": 4887358
+        },
+        {
+          "name": "VISUAL_MAP_HOW_TO_FLY_06_STALL_COHERENCE_COLLAPSE.png",
+          "type": "image",
+          "url": "files/PLATES/VISUAL_MAP_HOW_TO_FLY_06_STALL_COHERENCE_COLLAPSE.png",
+          "bytes": 3676030
+        }
+      ]
+    },
+    {
+      "name": "SEQUENCE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Main_Manuscript_HOW_TO_FLY.md",
+          "type": "text",
+          "url": "files/SEQUENCE/Main_Manuscript_HOW_TO_FLY.md",
+          "bytes": 30127
+        },
+        {
+          "name": "Main_Manuscript_HOW_TO_FLY.pdf",
+          "type": "pdf",
+          "url": "files/SEQUENCE/Main_Manuscript_HOW_TO_FLY.pdf",
+          "bytes": 93466
+        }
+      ]
+    },
+    {
+      "name": "SUPPLEMENT",
+      "type": "dir",
+      "children": [
+        {
+          "name": "HIERARCHICAL_VISUAL_MAP_HOW_TO_FLY_20260228.md",
+          "type": "text",
+          "url": "files/SUPPLEMENT/HIERARCHICAL_VISUAL_MAP_HOW_TO_FLY_20260228.md",
+          "bytes": 20543
+        },
+        {
+          "name": "OPERATOR_SEED_HOW_TO_FLY.pdf",
+          "type": "pdf",
+          "url": "files/SUPPLEMENT/OPERATOR_SEED_HOW_TO_FLY.pdf",
+          "bytes": 39007
+        }
+      ]
+    }
+  ]
+}

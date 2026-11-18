@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuscripts — book shelf TOC</title>
+<style>
+:root {
+  --ink: #1a1410;
+  --parchment: #f3ead7;
+  --rule: #c4b59a;
+  --accent: #6b3a22;
+  --muted: #6a5c4a;
+  --font: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; height: 100%;
+  background: var(--parchment); color: var(--ink);
+  font: 15px/1.55 var(--font);
+}
+header {
+  position: sticky; top: 0; z-index: 2;
+  background: var(--parchment);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 18px 10px;
+}
+header .stamp {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent);
+}
+header h1 {
+  margin: 4px 0 0; font-size: 18px; font-weight: 600; letter-spacing: 0.04em;
+}
+header p {
+  margin: 6px 0 0; font-size: 13px; color: var(--muted); max-width: 36em;
+}
+.toc { padding: 8px 12px 48px; }
+.row {
+  display: block; width: 100%; text-align: left;
+  border: 1px solid transparent; border-bottom-color: var(--rule);
+  background: transparent; color: inherit; font: inherit;
+  padding: 12px 10px; cursor: pointer;
+}
+.row:hover, .row.active {
+  border-color: var(--accent); background: rgba(107, 58, 34, 0.06);
+}
+.row .title {
+  color: var(--accent); font-size: 14px; letter-spacing: 0.03em;
+}
+.row .venue {
+  font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-top: 2px;
+}
+.row .blurb {
+  margin-top: 6px; font-size: 13px; color: var(--ink); opacity: 0.88;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="stamp">BOOK · LAST SHELF BEFORE PHASE 2</div>
+  <h1>Manuscripts</h1>
+  <p>Venue-shaped packets. Blurbs on this leaf; the facing leaf is the live manuscripts index.</p>
+</header>
+<nav class="toc" id="toc">
+<button type="button" class="row" data-id="how-to-fly-ajp"><div class="title">HOW_TO_FLY — American Journal of Physics</div><div class="venue">American Journal of Physics</div><div class="blurb">Formal derivation of the lift condition using field geometry. Submitted to AJP.</div></button><button type="button" class="row" data-id="plos-plume-wave"><div class="title">Plume-Wave Intracellular Transport — PLOS</div><div class="venue">PLOS Computational Biology</div><div class="blurb">Manuscript packet on the receiving desk.</div></button><button type="button" class="row" data-id="acs-plume-wave"><div class="title">Plume-Wave Intracellular Transport — ACS JPCB</div><div class="venue">ACS JPCB</div><div class="blurb">ACS Journal of Physical Chemistry B submission of the plume-wave model.</div></button><button type="button" class="row" data-id="glycocalyx-routing"><div class="title">Glycocalyx Routing Therapeutic</div><div class="venue">Therapeutic draft</div><div class="blurb">Manuscript packet on the receiving desk.</div></button><button type="button" class="row" data-id="metabolites-cell-transport"><div class="title">Metabolites &amp; Cell Transport</div><div class="venue">Metabolites</div><div class="blurb">Version: 1.0</div></button><button type="button" class="row" data-id="frontiers-fnins-sleep"><div class="title">Sleep / Circadian / REM — Frontiers FNINS</div><div class="venue">Frontiers in Neuroscience</div><div class="blurb">Sleep-circadian-REM coupling model. Frontiers FNINS submission.</div></button><button type="button" class="row" data-id="music-science-entrainment"><div class="title">Entrainment Threshold — Music and Science</div><div class="venue">Music and Science</div><div class="blurb">Entrainment threshold in music cognition and field coupling.</div></button><button type="button" class="row" data-id="jphys-complexity"><div class="title">Convective Hail / ENAQT — JPhys Complexity</div><div class="venue">JPhys Complexity</div><div class="blurb">Structural trap model for convective hail and ENAQT mechanisms.</div></button><button type="button" class="row" data-id="coda-poems"><div class="title">CODA: The Field and Its Gradient</div><div class="venue">Poetry / CODA</div><div class="blurb">Poetry collection encoding field theory, receipts, and the governed system. 2026-09-22.</div></button><button type="button" class="row" data-id="lucifer-exciton"><div class="title">Lucifer Exciton Simulation</div><div class="venue">Simulation package</div><div class="blurb">Exciton buffer spatial routing simulation. Lucifer light-experiment package.</div></button><button type="button" class="row" data-id="how-to-fly-plefr"><div class="title">HOW_TO_FLY — Aerodynamic PLEFR</div><div class="venue">PLEFR Submission</div><div class="blurb">Manuscript packet on the receiving desk.</div></button><button type="button" class="row" data-id="for-clinical-community"><div class="title">HALO System — Clinical Applications</div><div class="venue">Clinical community</div><div class="blurb">Package: HALO System &amp; Dual-Mode Consciousness for Clinical Context</div></button>
+</nav>
+<script>
+const EMBED = "/book/embed/manuscripts/";
+document.getElementById('toc').addEventListener('click', (e) => {
+  const row = e.target.closest('.row');
+  if (!row) return;
+  document.querySelectorAll('.row').forEach(el => el.classList.toggle('active', el === row));
+  // Parent book chrome may listen; also nudge embed via postMessage.
+  const id = row.dataset.id;
+  window.parent.postMessage({ type: 'book-shelf-select', shelf: EMBED, id }, '*');
+  try {
+    const frame = window.parent.document.querySelector('iframe[data-shelf-embed]');
+    if (frame && frame.contentWindow) {
+      frame.contentWindow.postMessage({ type: 'book-shelf-select', id }, '*');
+    }
+  } catch (_) {}
+});
+</script>
+</body>
+</html>

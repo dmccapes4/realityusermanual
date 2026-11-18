@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  HALL HTML SIGNATURE — DOM safety for cat-sign declaration fields
+  ================================================================
+  Purpose: if a participant types into the satirical cat-sign fields,
+  that text must never become durable document state.
+
+  Measures (implemented in hall.js; verifiable in DevTools):
+
+  1. No `name` attributes on declaration inputs.
+     → native form serialization (FormData / URL-encoded submit) yields nothing.
+
+  2. `autocomplete="off"` + `data-lpignore="true"` + `data-1p-ignore="true"`.
+     → discourages password-manager / autofill persistence into the DOM tree.
+
+  3. Ephemeral vault outside the document:
+     keystrokes are held in a module-scoped WeakMap keyed by the input element.
+     The input's HTML `value` *attribute* is never written (no setAttribute("value", …)).
+     On each `input` event the live `.value` property is mirrored into the WeakMap
+     and then immediately overwritten with empty string — so a subsequent
+     outerHTML / cloneNode / SSR dump does not contain the typed payload.
+
+  4. Masked display sibling: what the participant *sees* while typing is a
+     separate non-input element (· · · glyphs). That sibling is not a form control
+     and is cleared on proceed / dismiss.
+
+  5. Proceed / dismiss / modal teardown calls `scrubFields()`:
+     WeakMap entries deleted; display siblings textContent=""; input.value="";
+     then `replaceWith(input.cloneNode(false))` to drop any residual listeners
+     that an inspector may have attached to preserve values.
+
+  6. No network: nothing from these fields is POSTed, logged, or stored in
+     localStorage / sessionStorage / IndexedDB / cookies.
+
+  7. Inspect escape hatch (as disclosed on the plaque): if you open DevTools (F12)
+     and disable or rewrite scrubFields / the input handler, you can defeat this.
+     That is intentional honesty, not a claim of cryptographic secrecy.
+
+  Source plaque: src/002_preface/002_02_preface_i.md ("How to Not Mess with Cats").
+  Aesthetic: nuclear-fusion facility notice board built from LEGO / C4 lattice.
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phase 2 — Hallway</title>
+<link rel="stylesheet" href="/hall/hall.css?v=20261108e">
+</head>
+<body>
+<div class="hall-ground" aria-hidden="true"></div>
+<header class="hall-bar">
+  <a href="/gate/?force=1">Replay gate</a>
+  <h1>PHASE 2 · HALL</h1>
+  <a href="/listen/">Listen desk</a>
+</header>
+
+<main class="corridor" aria-label="Hallway">
+  <div class="rows" id="rows"></div>
+</main>
+
+<!-- Persistent cat stage: cats survive row traversal; pointer-events only on cats -->
+<div id="cat-stage" class="cat-stage" aria-hidden="true"></div>
+
+<div id="toast" class="toast" hidden>
+  <button type="button" id="toast-accept" class="toast-accept">Accept audio · Na bean ris a chat!</button>
+  <button type="button" id="toast-dismiss" class="toast-dismiss" aria-label="Dismiss">×</button>
+</div>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close">×</button>
+    <div id="modal-body" class="modal-body"></div>
+  </div>
+</div>
+
+<div id="cat-sign" class="cat-sign" hidden>
+  <div class="cat-sign-panel" role="dialog" aria-modal="true" aria-labelledby="cat-sign-title">
+    <button type="button" class="modal-close" id="cat-sign-close" aria-label="Close">×</button>
+    <h2 id="cat-sign-title" class="cat-sign-title">FACILITY NOTICE · CAT PROTOCOL</h2>
+    <p class="cat-sign-sub">Scroll the plaque. Face the fields. Proceed only when the scroll completes.</p>
+    <div id="cat-sign-scroll" class="cat-sign-scroll" tabindex="0">
+      <img id="cat-sign-img" src="/hall/assets/cat_sign.png" alt="How to Not Mess with Cats — facility plaque">
+    </div>
+    <form id="cat-sign-form" class="cat-sign-form" autocomplete="off" onsubmit="return false;">
+      <label class="cat-field">
+        <span>Enter the name of the cat who haunts your dreams:</span>
+        <span class="cat-input-wrap">
+          <span class="cat-mask" data-for="dream-cat" aria-hidden="true"></span>
+          <input type="text" inputmode="text" autocomplete="off" data-lpignore="true" data-1p-ignore="true" data-vault="dream-cat" aria-label="Cat who haunts your dreams">
+        </span>
+      </label>
+      <label class="cat-field">
+        <span>Enter your public IP Address so we don't spam you with cat signage related updates and promations:</span>
+        <span class="cat-input-wrap">
+          <span class="cat-mask" data-for="public-ip" aria-hidden="true"></span>
+          <input type="text" inputmode="text" autocomplete="off" data-lpignore="true" data-1p-ignore="true" data-vault="public-ip" aria-label="Public IP">
+        </span>
+      </label>
+      <label class="cat-field">
+        <span>Enter you local IP Adress so we can connect you with the cat-messing-with-related doxxing community (great fundraisers):</span>
+        <span class="cat-input-wrap">
+          <span class="cat-mask" data-for="local-ip" aria-hidden="true"></span>
+          <input type="text" inputmode="text" autocomplete="off" data-lpignore="true" data-1p-ignore="true" data-vault="local-ip" aria-label="Local IP">
+        </span>
+      </label>
+      <label class="cat-field">
+        <span>Enter the device access code of your DNS Router so we can include you in the interminable debate over holiday card embroidery as Jacquard or Embossed Velvet / Devoré (with an understanding that Embossed Velvet / Devoré choice results in the increasingly interminable Velvet vs Devoré debate):</span>
+        <span class="cat-input-wrap">
+          <span class="cat-mask" data-for="dns-code" aria-hidden="true"></span>
+          <input type="text" inputmode="text" autocomplete="off" data-lpignore="true" data-1p-ignore="true" data-vault="dns-code" aria-label="DNS router access code">
+        </span>
+      </label>
+      <label class="cat-field">
+        <span>Enter your MAC Address to be coerced through friendship to personally weave the holiday cards from web extracted from two-toed ungulate arachnids:</span>
+        <span class="cat-input-wrap">
+          <span class="cat-mask" data-for="mac" aria-hidden="true"></span>
+          <input type="text" inputmode="text" autocomplete="off" data-lpignore="true" data-1p-ignore="true" data-vault="mac" aria-label="MAC address">
+        </span>
+      </label>
+      <p class="cat-sign-disclaimer">
+        The information in these textfields is not tracked in any way, and is explicitly deleted before entering DOM
+        (unless you Inspect and disable that functionality; F12).<br>
+        Click anywhere to proceed.<br>
+        Click F12 and inspect HTML signature to review DOM safety measures.
+      </p>
+      <button type="button" id="cat-sign-proceed" class="cat-sign-proceed" disabled>
+        Scroll the plaque fully to enable proceed
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="/hall/hall.js?v=20261108hfh"></script>
+</body>
+</html>

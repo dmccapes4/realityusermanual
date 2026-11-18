@@ -35,18 +35,18 @@ This is the search that was actually run before the reflection's yard section wa
 3. Files with `semitic` in the name, pattern for *kāfir* / *kafir* / the root *k-f-r*. No hits. `docs/library/personal/semitic_roots` was not opened. The pattern was aimed at a filename, and a miss there was kept.
 4. `src/phase2/-08.md` was read from the Joey speech, not from a symbol plate.
 5. `004_05_na_bean.md` was read at the institutional-gloss table.
-6. The workspace, markdown, pattern `kaphir|kaffir|palm face down|yardstick`. Hits used: `docs/library/REPORT_SCARAB_ARAB_KAFIR_20261012.md`, a mention in `NarrativeErosionAndHistoricalInversion/writing/reports/REPORT_UKRAINE_DERIVATION_THEBES_OXBOW_20261021.md`, and `NarrativeErosionAndHistoricalInversion/writing/reflections/REFLECTION_GETTING_ON_BOARD_WITH_THE_METHOD_20261021.md`. The long archive note `NarrativeErosionAndHistoricalInversion/archive/cursor_intro_note_report_review.md` was in the hit list and was not read.
+6. The workspace, markdown, pattern `kaphir|kaffir|palm face down|yardstick`. Hits used: `docs/library/REPORT_SCARAB_ARAB_KAFIR_20261012.md`, a mention in `NarrativeErosionAndSuccessiveInversion/writing/reports/REPORT_UKRAINE_DERIVATION_THEBES_OXBOW_20261021.md`, and `NarrativeErosionAndSuccessiveInversion/writing/reflections/REFLECTION_GETTING_ON_BOARD_WITH_THE_METHOD_20261021.md`. The long archive note `NarrativeErosionAndSuccessiveInversion/archive/cursor_intro_note_report_review.md` was in the hit list and was not read.
 7. `REPORT_SCARAB_ARAB_KAFIR_20261012.md` was opened. It is a working file. Its labels were treated as a verdict on the beliefs. That treatment is withdrawn. The verdict is not repeated in this file.
 8. `REALITY_USER_MANUAL/docs/REFLECTION_DISLOYALTY_20261029.md` was opened at the Qur'an 2:34 paragraph and then used as a bound on the recount. That use is withdrawn. The verse is not a bound.
-9. Glob `**/*YadYard*`. One file: `NarrativeErosionAndHistoricalInversion/ManifestoPortAuthority/reports/YadYardMetric_report.md`.
+9. Glob `**/*YadYard*`. One file: `NarrativeErosionAndSuccessiveInversion/ManifestoPortAuthority/reports/YadYardMetric_report.md`.
 10. That report was read for the first forty lines. The body's reach is treated there as the transmitted measure, and the metre as the substitution. I narrated your statement as a change of mind against that opening. You had not asked for the comparison.
 
 Not opened, though these are the shelves you named:
 
-- `NarrativeErosionAndHistoricalInversion/Symbolic Language/Theban/` — notes, atlases, plates. Not read.
-- `NarrativeErosionAndHistoricalInversion/Symbolic Language/Goblekli Tepe/gobleklitepesymbols.jpg` and `goblekliteperesearchsymbols.pdf`. Not read.
-- `NarrativeErosionAndHistoricalInversion/Symbolic Language/Hebrew/hebrewsymbols.png`. Not read.
-- `NarrativeErosionAndHistoricalInversion/Symbolic Language/Arabic/ArabicSymbols.jpg`. Not read.
+- `NarrativeErosionAndSuccessiveInversion/Symbolic Language/Theban/` — notes, atlases, plates. Not read.
+- `NarrativeErosionAndSuccessiveInversion/Symbolic Language/Goblekli Tepe/gobleklitepesymbols.jpg` and `goblekliteperesearchsymbols.pdf`. Not read.
+- `NarrativeErosionAndSuccessiveInversion/Symbolic Language/Hebrew/hebrewsymbols.png`. Not read.
+- `NarrativeErosionAndSuccessiveInversion/Symbolic Language/Arabic/ArabicSymbols.jpg`. Not read.
 - Astrological plates were not searched as a set. A glob under `Symbolic Language` for astro, zodiac, and Gobekli names returned only the two Gobekli files above. I did not then look further.
 - `docs/library/personal/semitic_roots`. Not read.
 

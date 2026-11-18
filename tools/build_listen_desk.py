@@ -365,17 +365,58 @@ def main():
     }, minus05_cues())
 
     add({
+        "id": "minus07",
+        "kind": "page",
+        "page": "−07",
+        "title": "Goines, Jeffery",
+        "source": "src/phase2/-07.md",
+        "voices": "Goines",
+        "video": link_media(
+            BASE / "video" / "minus07" / "-07_goines_jeffery.mp4",
+            "-07_goines_jeffery.mp4",
+        ),
+        "audio": link_media(
+            BASE / "audio" / "minus07" / "minus07.mp3",
+            "-07.mp3",
+        ),
+        "duration": ffprobe_dur(
+            BASE / "video" / "minus07" / "-07_goines_jeffery.mp4"
+        ) or ffprobe_dur(BASE / "audio" / "minus07" / "minus07.mp3"),
+    }, cues_jsonl(BASE / "video" / "minus07" / "cues.jsonl"))
+
+    add({
         "id": "minus09",
         "kind": "page",
         "page": "−09",
         "title": "Coda Construction",
         "source": "src/phase2/-09.md",
-        "voices": "Narrator (coda narration + scene); Happy, Stamper, Carter",
+        "voices": "Narrator (coda spoken-code); see minus09b for TUROV site scene",
         "video": link_media(BASE / "video" / "minus09" / "-09_coda_construction.mp4", "-09_coda_construction.mp4"),
         "audio": link_media(BASE / "audio" / "minus09" / "minus09.mp3", "-09.mp3"),
         "duration": ffprobe_dur(BASE / "video" / "minus09" / "-09_coda_construction.mp4")
         or ffprobe_dur(BASE / "audio" / "minus09" / "minus09.mp3"),
+        "read": "/p/-09/",
     }, cues_jsonl(BASE / "audio" / "minus09" / "cues.jsonl"))
+
+    add({
+        "id": "minus09b",
+        "kind": "page",
+        "page": "−09",
+        "title": "TUROV Nailgun Review",
+        "source": "src/phase2/-09.md (TUROV sign → approval)",
+        "voices": "Goat (sign); GoinesFeynman; Happy, Stamper, Winslade, Vincent; Yeshua Merlin",
+        "video": link_media(
+            BASE / "video" / "minus09" / "-09_turov_nailgun_review.mp4",
+            "-09_turov_nailgun_review.mp4",
+        ),
+        "audio": link_media(
+            BASE / "video" / "minus09" / "clip_nailgun" / "minus09_turov_nailgun.mp3",
+            "-09_turov_nailgun.mp3",
+        ),
+        "duration": ffprobe_dur(BASE / "video" / "minus09" / "-09_turov_nailgun_review.mp4")
+        or ffprobe_dur(BASE / "video" / "minus09" / "clip_nailgun" / "minus09_turov_nailgun.mp3"),
+        "read": "/p/-09/",
+    }, cues_jsonl(BASE / "video" / "minus09" / "clip_nailgun" / "clip_cues.jsonl"))
 
     add({
         "id": "minus08",
@@ -433,12 +474,29 @@ def main():
         "page": "−25",
         "title": "The Night of the Tesseract Turn",
         "source": "src/phase2/-25.md",
-        "voices": "Matilda; Goat (TTL); Operator (Clone); Narrator",
+        "voices": "Matilda; Goat; Goines",
         "video": link_media(BASE / "video" / "minus25" / "-25_the_tesseract_turn.mp4", "-25_the_tesseract_turn.mp4"),
         "audio": link_media(BASE / "audio" / "minus25" / "minus25.mp3", "-25.mp3"),
         "duration": ffprobe_dur(BASE / "video" / "minus25" / "-25_the_tesseract_turn.mp4")
         or ffprobe_dur(BASE / "audio" / "minus25" / "minus25.mp3"),
     }, cues_jsonl(BASE / "audio" / "minus25" / "cues.jsonl"))
+
+    add({
+        "id": "minus26",
+        "kind": "page",
+        "page": "−26",
+        "title": "thal fom-sur-sol",
+        "source": "src/phase2/-26.md",
+        "voices": "Matilda; Goat",
+        "video": link_media(
+            BASE / "video" / "minus26" / "-26_thal_fom_sur_sol.mp4",
+            "-26_thal_fom_sur_sol.mp4",
+        ),
+        "audio": link_media(BASE / "audio" / "minus26" / "minus26.mp3", "-26.mp3"),
+        "duration": ffprobe_dur(BASE / "video" / "minus26" / "-26_thal_fom_sur_sol.mp4")
+        or ffprobe_dur(BASE / "audio" / "minus26" / "minus26.mp3"),
+        "read": "/p/-26/",
+    }, cues_jsonl(BASE / "audio" / "minus26" / "cues.jsonl"))
 
     add({
         "id": "minus27",
@@ -490,6 +548,22 @@ def main():
         or ffprobe_dur(BASE / "audio" / "minus35" / "minus35.mp3"),
         "read": "/p/-35/",
     }, cues_jsonl(BASE / "audio" / "minus35" / "cues.jsonl"))
+
+    add({
+        "id": "minus36",
+        "kind": "page",
+        "page": "−36",
+        "title": "The   Bed",
+        "source": "src/phase2/-36.md",
+        "voices": "Dylan McCapes; Matilda",
+        "video": link_media(
+            BASE / "video" / "minus36" / "-36_the_bed.mp4",
+            "-36_the_bed.mp4",
+        ),
+        "audio": None,
+        "duration": ffprobe_dur(BASE / "video" / "minus36" / "-36_the_bed.mp4"),
+        "read": "/p/-36/",
+    }, [])
 
     minus31_audio = BASE / "audio" / "minus31" / "minus31.mp3"
     minus31_still = BASE / "audio" / "minus31" / "-31_debacle_still.png"

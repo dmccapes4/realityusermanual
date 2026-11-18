@@ -1,0 +1,631 @@
+{
+  "version": "paizo-plate-v2",
+  "aesthetic": "A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.",
+  "characters": {
+    "feynman": "The gamemaster sits behind a cardboard screen folded in three, a painted dragon on the face the table sees. A pencil behind one ear, another in his hand. He is a man at work, not a portrait of a known person.",
+    "draavio": "Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.",
+    "pyrrhon": "Pyrrhon, a human evoker: lean, precise, no plate. A cloak, bracers, one ring. His attention is on the thing he is about to name. The same face on every plate.",
+    "njala": "Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate.",
+    "merit": "Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.",
+    "iguana": "Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate.",
+    "goat": "A small goat with a red collar. It does not pose. It is already where it meant to stand.",
+    "golem": "A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate.",
+    "peacock": "A small winged woman with a fanned tail like a peacock, outlined in gold dust, blinded, hands that can rise. The same figure on every plate.",
+    "archivist": "The Archivist steps from a ring of low sun. Wings of fire that do not burn the oak. A keeper of a record, not a snarling fiend. The same figure on every plate.",
+    "soldiers": "Seven soldiers outlined in gold dust, blinded, moving by scent, ordinary kit, no heroic pose."
+  },
+  "shot_count": 45,
+  "plates": [
+    {
+      "scene_id": "01",
+      "scene": "The Table",
+      "id": "01a",
+      "slug": "wide",
+      "seed": 1508040208,
+      "cast": [
+        "feynman",
+        "draavio",
+        "pyrrhon",
+        "njala",
+        "merit"
+      ],
+      "filename": "plate_01a_the_table_wide.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. A round table, seven chairs, one rectangular window, night outside. Five people. A laptop compiling on a sideboard, its screen unreadable.\nCHARACTERS: The gamemaster sits behind a cardboard screen folded in three, a painted dragon on the face the table sees. A pencil behind one ear, another in his hand. He is a man at work, not a portrait of a known person. Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. Pyrrhon, a human evoker: lean, precise, no plate. A cloak, bracers, one ring. His attention is on the thing he is about to name. The same face on every plate. Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate. Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 1508040208"
+    },
+    {
+      "scene_id": "01",
+      "scene": "The Table",
+      "id": "01b",
+      "slug": "coin",
+      "seed": 1738501196,
+      "cast": [
+        "njala"
+      ],
+      "filename": "plate_01b_the_table_coin.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A coin moves across a woman's fingers, index to middle to ring, and she does not look at it.\nCHARACTERS: Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate.\nSEED: 1738501196"
+    },
+    {
+      "scene_id": "01",
+      "scene": "The Table",
+      "id": "01c",
+      "slug": "screen",
+      "seed": 3103100542,
+      "cast": [
+        "feynman"
+      ],
+      "filename": "plate_01c_the_table_screen.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. The outside of a cardboard screen: a painted dragon, the fold of the board, a pencil behind an ear.\nCHARACTERS: The gamemaster sits behind a cardboard screen folded in three, a painted dragon on the face the table sees. A pencil behind one ear, another in his hand. He is a man at work, not a portrait of a known person.\nSEED: 3103100542"
+    },
+    {
+      "scene_id": "01",
+      "scene": "The Table",
+      "id": "01d",
+      "slug": "cards",
+      "seed": 2916653139,
+      "cast": [
+        "feynman"
+      ],
+      "filename": "plate_01d_the_table_cards.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Index cards being squared against the heel of a hand. The edges are the subject.\nCHARACTERS: The gamemaster sits behind a cardboard screen folded in three, a painted dragon on the face the table sees. A pencil behind one ear, another in his hand. He is a man at work, not a portrait of a known person.\nSEED: 2916653139"
+    },
+    {
+      "scene_id": "01",
+      "scene": "The Table",
+      "id": "01e",
+      "slug": "links",
+      "seed": 3229203761,
+      "cast": [
+        "draavio"
+      ],
+      "filename": "plate_01e_the_table_links.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Pink-painted metal climbing links on a wooden table beside a half-orc's hand. No text on the paper near them.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 3229203761"
+    },
+    {
+      "scene_id": "01",
+      "scene": "The Table",
+      "id": "01f",
+      "slug": "laptop",
+      "seed": 3803834808,
+      "cast": [
+        "feynman"
+      ],
+      "filename": "plate_01f_the_table_laptop.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A laptop on a sideboard, fan implied by the heat-haze of the paint, the screen a blank glow with no readable marks.\nCHARACTERS: The gamemaster sits behind a cardboard screen folded in three, a painted dragon on the face the table sees. A pencil behind one ear, another in his hand. He is a man at work, not a portrait of a known person.\nSEED: 3803834808"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02a",
+      "slug": "wide",
+      "seed": 3714534130,
+      "cast": [
+        "draavio",
+        "iguana",
+        "pyrrhon",
+        "njala",
+        "merit"
+      ],
+      "filename": "plate_02a_the_climb_wide.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. Night. A wet rock face under a lip of stone. A rope runs from the man on the wall to the bottom.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate. Pyrrhon, a human evoker: lean, precise, no plate. A cloak, bracers, one ring. His attention is on the thing he is about to name. The same face on every plate. Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate. Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 3714534130"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02b",
+      "slug": "iguana_rope",
+      "seed": 361359769,
+      "cast": [
+        "iguana"
+      ],
+      "filename": "plate_02b_the_climb_iguana_rope.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Iguana at the very bottom. Feet on the ground. Claws on the rope. Head thrown up the line.\nCHARACTERS: Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate.\nSEED: 361359769"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02c",
+      "slug": "missed_link",
+      "seed": 2798261923,
+      "cast": [
+        "draavio"
+      ],
+      "filename": "plate_02c_the_climb_missed_link.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A pink metal link has missed its gate and swings on the rope against wet stone.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 2798261923"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02d",
+      "slug": "thumb",
+      "seed": 3722278419,
+      "cast": [
+        "draavio"
+      ],
+      "filename": "plate_02d_the_climb_thumb.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A half-orc thumb reaching for a gate on the wet wall. The hand is the subject.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 3722278419"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02e",
+      "slug": "coin_teeth",
+      "seed": 2478377124,
+      "cast": [
+        "njala"
+      ],
+      "filename": "plate_02e_the_climb_coin_teeth.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. A woman in studded leather climbs with no rope and a coin between her teeth.\nCHARACTERS: Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate.\nSEED: 2478377124"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02f",
+      "slug": "goat_path",
+      "seed": 4065689542,
+      "cast": [
+        "merit"
+      ],
+      "filename": "plate_02f_the_climb_goat_path.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. A paladin in full plate on a narrow goat path at the shoulder of the mountain, not on the wall.\nCHARACTERS: Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 4065689542"
+    },
+    {
+      "scene_id": "02",
+      "scene": "The Climb",
+      "id": "02g",
+      "slug": "wizard_walks",
+      "seed": 3007329259,
+      "cast": [
+        "pyrrhon"
+      ],
+      "filename": "plate_02g_the_climb_wizard_walks.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. A wizard walks up the vertical stone as if it were a floor, cloak hanging toward the cliff.\nCHARACTERS: Pyrrhon, a human evoker: lean, precise, no plate. A cloak, bracers, one ring. His attention is on the thing he is about to name. The same face on every plate.\nSEED: 3007329259"
+    },
+    {
+      "scene_id": "03",
+      "scene": "The Tongue",
+      "id": "03a",
+      "slug": "wide",
+      "seed": 1443228609,
+      "cast": [
+        "iguana",
+        "draavio",
+        "pyrrhon",
+        "njala",
+        "merit"
+      ],
+      "filename": "plate_03a_the_tongue_wide.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. The top of a cliff at night. A shut door into the mountain. The iguana has come over the lip last. Four people wait.\nCHARACTERS: Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate. Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. Pyrrhon, a human evoker: lean, precise, no plate. A cloak, bracers, one ring. His attention is on the thing he is about to name. The same face on every plate. Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate. Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 1443228609"
+    },
+    {
+      "scene_id": "03",
+      "scene": "The Tongue",
+      "id": "03b",
+      "slug": "eyes",
+      "seed": 4118211766,
+      "cast": [
+        "iguana"
+      ],
+      "filename": "plate_03b_the_tongue_eyes.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. An iguana's head. One eye on the people. The other eye elsewhere. Both eyes sharp.\nCHARACTERS: Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate.\nSEED: 4118211766"
+    },
+    {
+      "scene_id": "03",
+      "scene": "The Tongue",
+      "id": "03c",
+      "slug": "claws_card",
+      "seed": 3507236929,
+      "cast": [
+        "iguana"
+      ],
+      "filename": "plate_03c_the_tongue_claws_card.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Iguana claws tapping a blank card. No writing is visible. The claws are the subject.\nCHARACTERS: Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate.\nSEED: 3507236929"
+    },
+    {
+      "scene_id": "03",
+      "scene": "The Tongue",
+      "id": "03d",
+      "slug": "coin_still",
+      "seed": 3595072729,
+      "cast": [
+        "njala"
+      ],
+      "filename": "plate_03d_the_tongue_coin_still.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. The coin has stopped. It sits on a knuckle. The woman watches the lizard, not the coin.\nCHARACTERS: Nj\u00e1la, a human witch-rogue: cropped dark hair, studded leather, two short swords, a coin. Watchful, still. Not a likeness of any actress. The same face on every plate.\nSEED: 3595072729"
+    },
+    {
+      "scene_id": "03",
+      "scene": "The Tongue",
+      "id": "03e",
+      "slug": "waiting",
+      "seed": 337658489,
+      "cast": [
+        "draavio",
+        "pyrrhon",
+        "merit"
+      ],
+      "filename": "plate_03e_the_tongue_waiting.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. Three people at the shut door, not hurrying, night behind them.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. Pyrrhon, a human evoker: lean, precise, no plate. A cloak, bracers, one ring. His attention is on the thing he is about to name. The same face on every plate. Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 337658489"
+    },
+    {
+      "scene_id": "04",
+      "scene": "The Oak",
+      "id": "04a",
+      "slug": "wide",
+      "seed": 1320511268,
+      "cast": [
+        "goat",
+        "draavio",
+        "merit"
+      ],
+      "filename": "plate_04a_the_oak_wide.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. A broken stone floor open to the sky. A living oak rises through the hole. Late orange light in the leaves. A pen of goats at the far wall.\nCHARACTERS: A small goat with a red collar. It does not pose. It is already where it meant to stand. Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 1320511268"
+    },
+    {
+      "scene_id": "04",
+      "scene": "The Oak",
+      "id": "04b",
+      "slug": "collar",
+      "seed": 71443597,
+      "cast": [
+        "goat"
+      ],
+      "filename": "plate_04b_the_oak_collar.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A red collar on a small goat. The wool and the collar. Nothing else.\nCHARACTERS: A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 71443597"
+    },
+    {
+      "scene_id": "04",
+      "scene": "The Oak",
+      "id": "04c",
+      "slug": "pen",
+      "seed": 840241140,
+      "cast": [
+        "goat"
+      ],
+      "filename": "plate_04c_the_oak_pen.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. Seven calm goats in a pen. One wears the red collar. Straw. They are not afraid.\nCHARACTERS: A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 840241140"
+    },
+    {
+      "scene_id": "04",
+      "scene": "The Oak",
+      "id": "04d",
+      "slug": "roots",
+      "seed": 4047267289,
+      "cast": [
+        "draavio"
+      ],
+      "filename": "plate_04d_the_oak_roots.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Oak roots under broken floor stones. A half-orc's boot at the edge, not the subject. The roots are.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 4047267289"
+    },
+    {
+      "scene_id": "04",
+      "scene": "The Oak",
+      "id": "04e",
+      "slug": "leaves",
+      "seed": 3973713308,
+      "cast": [],
+      "filename": "plate_04e_the_oak_leaves.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Late light in oak leaves, orange at the edge of each leaf, the sky beyond.\nCHARACTERS: No figure. The place is the subject.\nSEED: 3973713308"
+    },
+    {
+      "scene_id": "05",
+      "scene": "The Descent",
+      "id": "05a",
+      "slug": "wide",
+      "seed": 1797186015,
+      "cast": [
+        "peacock",
+        "golem",
+        "soldiers"
+      ],
+      "filename": "plate_05a_the_descent_wide.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. A stair from the woods down into orange oak-light. Seven blinded soldiers. A small winged woman in front. A stitched golem behind, carrying, not looking.\nCHARACTERS: A small winged woman with a fanned tail like a peacock, outlined in gold dust, blinded, hands that can rise. The same figure on every plate. A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate. Seven soldiers outlined in gold dust, blinded, moving by scent, ordinary kit, no heroic pose.\nSEED: 1797186015"
+    },
+    {
+      "scene_id": "05",
+      "scene": "The Descent",
+      "id": "05b",
+      "slug": "tail",
+      "seed": 4137212063,
+      "cast": [
+        "peacock"
+      ],
+      "filename": "plate_05b_the_descent_tail.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. The winged woman, tail fanned, gold dust in the air around her, blinded.\nCHARACTERS: A small winged woman with a fanned tail like a peacock, outlined in gold dust, blinded, hands that can rise. The same figure on every plate.\nSEED: 4137212063"
+    },
+    {
+      "scene_id": "05",
+      "scene": "The Descent",
+      "id": "05c",
+      "slug": "golem_walks",
+      "seed": 4038729845,
+      "cast": [
+        "golem"
+      ],
+      "filename": "plate_05c_the_descent_golem_walks.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. The golem walks and does not look at anything. Stitches. Scholar's hair. Burden in its arms.\nCHARACTERS: A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate.\nSEED: 4038729845"
+    },
+    {
+      "scene_id": "05",
+      "scene": "The Descent",
+      "id": "05d",
+      "slug": "gold_dust",
+      "seed": 2424741145,
+      "cast": [
+        "soldiers"
+      ],
+      "filename": "plate_05d_the_descent_gold_dust.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Gold dust on a face that cannot see. The eyes are open and useless. Ordinary soldier's kit at the edge of the frame.\nCHARACTERS: Seven soldiers outlined in gold dust, blinded, moving by scent, ordinary kit, no heroic pose.\nSEED: 2424741145"
+    },
+    {
+      "scene_id": "05",
+      "scene": "The Descent",
+      "id": "05e",
+      "slug": "stitch_hair",
+      "seed": 1337134676,
+      "cast": [
+        "golem"
+      ],
+      "filename": "plate_05e_the_descent_stitch_hair.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. Linen thread through skin. Hair dressed like a scholar's. A mark like a crucifix scar. Not gory for its own sake. The stitch is the subject.\nCHARACTERS: A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate.\nSEED: 1337134676"
+    },
+    {
+      "scene_id": "06",
+      "scene": "The Flank",
+      "id": "06a",
+      "slug": "goat_placed",
+      "seed": 511046417,
+      "cast": [
+        "goat"
+      ],
+      "filename": "plate_06a_the_flank_goat_placed.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. The goat is already standing where a flank is. It does not look at the people coming.\nCHARACTERS: A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 511046417"
+    },
+    {
+      "scene_id": "06",
+      "scene": "The Flank",
+      "id": "06b",
+      "slug": "scent",
+      "seed": 3191232333,
+      "cast": [
+        "soldiers",
+        "goat"
+      ],
+      "filename": "plate_06b_the_flank_scent.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A blinded soldier's face turning toward a smell. The red collar is in the background, soft.\nCHARACTERS: Seven soldiers outlined in gold dust, blinded, moving by scent, ordinary kit, no heroic pose. A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 3191232333"
+    },
+    {
+      "scene_id": "06",
+      "scene": "The Flank",
+      "id": "06c",
+      "slug": "one_swing",
+      "seed": 3672544406,
+      "cast": [
+        "draavio",
+        "soldiers"
+      ],
+      "filename": "plate_06c_the_flank_one_swing.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. One swing of a falchion. One soldier going down. The swing is the whole of it. No second blow in the frame.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. Seven soldiers outlined in gold dust, blinded, moving by scent, ordinary kit, no heroic pose.\nSEED: 3672544406"
+    },
+    {
+      "scene_id": "06",
+      "scene": "The Flank",
+      "id": "06d",
+      "slug": "edge",
+      "seed": 2600031855,
+      "cast": [
+        "draavio"
+      ],
+      "filename": "plate_06d_the_flank_edge.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. The edge of a keen falchion, mithral sleeve at the wrist, pink link in the other hand.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 2600031855"
+    },
+    {
+      "scene_id": "06",
+      "scene": "The Flank",
+      "id": "06e",
+      "slug": "after",
+      "seed": 1531941347,
+      "cast": [
+        "goat",
+        "draavio"
+      ],
+      "filename": "plate_06e_the_flank_after.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. Bodies down. The goat has not moved. The half-orc is already walking to the next. No one is speaking in this picture.\nCHARACTERS: A small goat with a red collar. It does not pose. It is already where it meant to stand. Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 1531941347"
+    },
+    {
+      "scene_id": "06",
+      "scene": "The Flank",
+      "id": "06f",
+      "slug": "walk",
+      "seed": 2359233693,
+      "cast": [
+        "draavio",
+        "goat"
+      ],
+      "filename": "plate_06f_the_flank_walk.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. He does not run. He walks. The goat's head has already turned.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 2359233693"
+    },
+    {
+      "scene_id": "07",
+      "scene": "The Unsewing",
+      "id": "07a",
+      "slug": "sitting",
+      "seed": 2387149999,
+      "cast": [
+        "golem"
+      ],
+      "filename": "plate_07a_the_unsewing_sitting.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. The golem is sitting on the stone because it likes sitting. It is not in a chair. Large, slow, quiet.\nCHARACTERS: A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate.\nSEED: 2387149999"
+    },
+    {
+      "scene_id": "07",
+      "scene": "The Unsewing",
+      "id": "07b",
+      "slug": "claw_stitch",
+      "seed": 2968340156,
+      "cast": [
+        "iguana",
+        "golem"
+      ],
+      "filename": "plate_07b_the_unsewing_claw_stitch.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. An iguana claw in one stitch, cutting. The speed looks careful. Thread, not a wound displayed.\nCHARACTERS: Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate. A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate.\nSEED: 2968340156"
+    },
+    {
+      "scene_id": "07",
+      "scene": "The Unsewing",
+      "id": "07c",
+      "slug": "dust",
+      "seed": 2261765478,
+      "cast": [
+        "merit"
+      ],
+      "filename": "plate_07c_the_unsewing_dust.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. White dust and tan dirt in a paladin's gauntlet. A mostly empty book of blank pages beside the hand. No writing.\nCHARACTERS: Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 2261765478"
+    },
+    {
+      "scene_id": "07",
+      "scene": "The Unsewing",
+      "id": "07d",
+      "slug": "coffins",
+      "seed": 1779435839,
+      "cast": [
+        "merit",
+        "draavio"
+      ],
+      "filename": "plate_07d_the_unsewing_coffins.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. Six plain coffins. Bodies in wet wraps being laid down carefully. No jewels. The paladin's sword is down.\nCHARACTERS: Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate. Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 1779435839"
+    },
+    {
+      "scene_id": "07",
+      "scene": "The Unsewing",
+      "id": "07e",
+      "slug": "sword_down",
+      "seed": 4066783974,
+      "cast": [
+        "merit"
+      ],
+      "filename": "plate_07e_the_unsewing_sword_down.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A longsword point on the stone, the hand not gripping for a fight. Full plate at the edge of the frame.\nCHARACTERS: Merit of the Ford, a human paladin in full plate with a heavy steel shield and a longsword. Calm, sword-and-board, no extra ornament. The same armor on every plate.\nSEED: 4066783974"
+    },
+    {
+      "scene_id": "07",
+      "scene": "The Unsewing",
+      "id": "07f",
+      "slug": "last_stitch",
+      "seed": 1636786797,
+      "cast": [
+        "iguana",
+        "golem"
+      ],
+      "filename": "plate_07f_the_unsewing_last_stitch.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. The last stitch parting. The iguana's claw. The thread going slack.\nCHARACTERS: Raymora in iguana form: a green iguana, sharp claws, slow, deliberate, doctor's stillness. One eye can look elsewhere than the other. The same animal on every plate. A flesh golem stitched from several human bodies. The hair and the marks read as scholars, not as monsters. Large, slow, linen and thread visible. The same body on every plate.\nSEED: 1636786797"
+    },
+    {
+      "scene_id": "08",
+      "scene": "The Record",
+      "id": "08a",
+      "slug": "wide",
+      "seed": 854328504,
+      "cast": [
+        "archivist",
+        "goat"
+      ],
+      "filename": "plate_08a_the_record_wide.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Wide. A ring of low sun on stone around an oak, orange at the edge, white in the middle. A figure steps out. Wings of fire. The leaves are not burning.\nCHARACTERS: The Archivist steps from a ring of low sun. Wings of fire that do not burn the oak. A keeper of a record, not a snarling fiend. The same figure on every plate. A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 854328504"
+    },
+    {
+      "scene_id": "08",
+      "scene": "The Record",
+      "id": "08b",
+      "slug": "binding",
+      "seed": 2179111688,
+      "cast": [
+        "draavio"
+      ],
+      "filename": "plate_08b_the_record_binding.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A dark leather book binding held up. No letters, no title, no ornament that can be read. The hands are a half-orc's.\nCHARACTERS: Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate.\nSEED: 2179111688"
+    },
+    {
+      "scene_id": "08",
+      "scene": "The Record",
+      "id": "08c",
+      "slug": "lip",
+      "seed": 2782779678,
+      "cast": [
+        "goat"
+      ],
+      "filename": "plate_08c_the_record_lip.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. The goat with the red collar at the lip of the sinkhole, owning the view, not looking back.\nCHARACTERS: A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 2782779678"
+    },
+    {
+      "scene_id": "08",
+      "scene": "The Record",
+      "id": "08d",
+      "slug": "leaf",
+      "seed": 377328173,
+      "cast": [
+        "archivist"
+      ],
+      "filename": "plate_08d_the_record_leaf.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Closeup. A tongue of fire beside a green oak leaf. The leaf is intact. The fire is a wing.\nCHARACTERS: The Archivist steps from a ring of low sun. Wings of fire that do not burn the oak. A keeper of a record, not a snarling fiend. The same figure on every plate.\nSEED: 377328173"
+    },
+    {
+      "scene_id": "08",
+      "scene": "The Record",
+      "id": "08e",
+      "slug": "facing",
+      "seed": 1367968678,
+      "cast": [
+        "archivist",
+        "draavio",
+        "goat"
+      ],
+      "filename": "plate_08e_the_record_facing.png",
+      "aspect_ratio": "16:9",
+      "prompt": "AESTHETIC: A painted interior plate from a Pathfinder roleplaying-game book. Oil and gouache. Saturated color under control. Figures read in silhouette before they read in detail. Armor and weapons are clear at a distance. Warm key light, cool shadow. The background is simpler than the figures. Three-quarter staging when the shot is wide. Closeups are allowed and are the same paint. No caption, no letters, no numerals, no watermark, no logo, no photograph, no anime, no chibi. 16:9 plate.\nSCENE: Medium. Draavio holds the book so the binding faces the Archivist. The goat is behind them at the lip. The oak is not on fire.\nCHARACTERS: The Archivist steps from a ring of low sun. Wings of fire that do not burn the oak. A keeper of a record, not a snarling fiend. The same figure on every plate. Draavio, a half-orc ranger: modest tusks, measured face, no boast in the posture. Mithral chain shirt, heavy wooden shield, a keen falchion. Pink-painted metal links on a climbing sling. The same face and kit on every plate. A small goat with a red collar. It does not pose. It is already where it meant to stand.\nSEED: 1367968678"
+    }
+  ]
+}

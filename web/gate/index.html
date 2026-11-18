@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ΚΑΤΑ ΜΑΘΘΑΙΟΝ — Phase 2 gate</title>
+<link rel="stylesheet" href="/gate/gate.css">
+</head>
+<body>
+<div id="stage" class="stage beat-boot" aria-live="polite">
+  <div id="hallway" class="hallway" aria-hidden="true"></div>
+  <div id="aperture" class="aperture" aria-hidden="true"></div>
+
+  <!-- Full title: word-centered until gates take the optical center -->
+  <div id="title" class="title">
+    <span id="kata" class="kata">ΚΑΤΑ</span><span class="sp"> </span>
+    <span id="math" class="math">
+      <span class="flank pre">ΜΑ</span>
+      <span id="gates" class="gates" aria-hidden="true">
+        <span class="theta-leaf left">
+          <img src="/gate/theta_leaf.svg" alt="" width="200" height="240">
+        </span>
+        <span class="theta-leaf right">
+          <img src="/gate/theta_leaf.svg" alt="" width="200" height="240">
+        </span>
+      </span>
+      <span class="theta-text">ΘΘ</span>
+      <span class="flank post">ΑΙΟΝ</span>
+    </span>
+  </div>
+
+  <img id="cat" class="cat" src="/gate/assets/kata_cat.svg" alt="" width="220" height="146">
+
+  <button type="button" id="skip" class="skip">Skip</button>
+  <p id="hint" class="hint">ΚΑΤΑ ΜΑΘΘΑΙΟΝ</p>
+</div>
+<script src="/gate/gate.js"></script>
+</body>
+</html>

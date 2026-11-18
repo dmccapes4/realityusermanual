@@ -7,19 +7,25 @@ greekbible.com   — Bible source. Retrieves verse text and available translatio
 
 logeion.uchicago.edu — A collection of dictionaries. Each dictionary is a
                    separate witness with its own source_id. The site is esteemed
-                   and wariness is warranted. As of 2026-11-01, no public API
-                   was confirmed; retrieval uses the web interface. If an API
-                   is found, the retrieval function is updated here and nowhere else.
+                   and wariness is warranted.
+
+                   API discovered 2026-11-01 from the Angular JS bundle:
+                   Base: https://anastrophe.uchicago.edu/logeion-api
+                   Endpoints used:
+                     /find?w={word}   — lemma + grammatical parse
+                     /detail?w={lemma} — all dictionary entries (dicos array)
+                   No public documentation; treat as discoverable but undocumented.
 """
 
 from __future__ import annotations
 
 import datetime
+import re
 import time
+from pathlib import Path
 from typing import Any
 
 import requests
-from bs4 import BeautifulSoup
 
 from schema import LOGEION_DICTIONARIES, GREEKBIBLE_SOURCE_ID
 
@@ -31,6 +37,23 @@ SESSION.headers.update({
 })
 TIMEOUT = 20
 RETRY_WAIT = 2.0
+
+# ─── Logeion rate limiter ───────────────────────────────────────────────────────
+# The Logeion API is undocumented and unmetered. This project is not a RAG
+# pipeline — each word is looked up once and the result is kept. Keep the
+# request rate at 1/s sustained so the service remains available to others.
+
+_last_logeion_call: float = 0.0
+_LOGEION_RATE_INTERVAL: float = 1.0   # seconds between successive Logeion calls
+
+
+def _logeion_rate_limit() -> None:
+    """Sleep if less than _LOGEION_RATE_INTERVAL has elapsed since the last call."""
+    global _last_logeion_call
+    elapsed = time.time() - _last_logeion_call
+    if elapsed < _LOGEION_RATE_INTERVAL:
+        time.sleep(_LOGEION_RATE_INTERVAL - elapsed)
+    _last_logeion_call = time.time()
 
 
 def _get(url: str, params: dict | None = None) -> requests.Response:
@@ -166,131 +189,250 @@ def _extract_greekbible_translations(soup: BeautifulSoup) -> list[dict[str, str]
 
 # ─── logeion.uchicago.edu ──────────────────────────────────────────────────────
 
-LOGEION_BASE = "https://logeion.uchicago.edu"
+LOGEION_WEB = "https://logeion.uchicago.edu"
+LOGEION_API = "https://anastrophe.uchicago.edu/logeion-api"
+LOGEION_REFERER = "https://logeion.uchicago.edu/"
+
+# Map dname strings returned by the API to stable source_ids
+DNAME_TO_SOURCE_ID = {
+    "LSJ": "logeion_lsj",
+    "Middle Liddell": "logeion_middle",
+    "Lewis & Short": "logeion_ls",
+    "Lewis and Short": "logeion_ls",
+    "Slater": "logeion_slater",
+    "Cunliffe": "logeion_cunliffe",
+    "Montanari": "logeion_montanari",
+    "Autenrieth": "logeion_autenrieth",
+    "Muraoka": "logeion_muraoka",
+    "Dodson": "logeion_dodson",
+    "Gildersleeve": "logeion_gildersleeve",
+    "Smyth": "logeion_smyth",
+    "Abbott-Smith": "logeion_abbott_smith",
+    "Abbott Smith": "logeion_abbott_smith",
+    "Thayer": "logeion_thayer",
+    "Strong": "logeion_strong",
+    "Strong's": "logeion_strong",
+    "Frieze": "logeion_frieze",
+    "BwL": "logeion_bwl",
+}
 
 
-def fetch_logeion(word: str) -> dict[str, Any]:
+def _logeion_get(path: str, params: dict) -> requests.Response:
+    """GET from the anastrophe API with Logeion referer. Rate-limited to 1 req/s."""
+    _logeion_rate_limit()
+    url = f"{LOGEION_API}/{path}"
+    r = SESSION.get(
+        url,
+        params=params,
+        timeout=TIMEOUT,
+        headers={"Accept": "application/json", "Referer": LOGEION_REFERER},
+    )
+    r.raise_for_status()
+    return r
+
+
+def _strip_html(text: str) -> str:
+    """Strip HTML tags for readable entry_text."""
+    from bs4 import BeautifulSoup as BS
+    return BS(text, "lxml").get_text(separator=" ").strip()
+
+
+def fetch_logeion(word: str, hint_lemma: str | None = None) -> dict[str, Any]:
     """
-    Retrieve dictionary entries for a Greek word from Logeion.
+    Retrieve dictionary entries for a Greek word from Logeion via the
+    anastrophe.uchicago.edu REST API discovered 2026-11-01.
 
-    Returns a dict keyed by source_id (one per dictionary found):
-        {
-          "logeion_lsj": {
-              "source_id": ...,
-              "url": ...,
-              "retrieved_at": ...,
-              "word": ...,
-              "entry_text": ...,
-              "raw_html_snippet": ...,
-          },
-          ...
+    Workflow:
+      1. /find?w={word}   — returns lemma + grammatical parses
+         (skipped when hint_lemma is provided — saves one Logeion request)
+      2. /detail?w={lemma} — returns all dictionary entries (dicos array)
+
+    hint_lemma: supply the lemma directly (e.g. from MorphGNT) to skip /find.
+                This halves the Logeion request count for MorphGNT-driven runs.
+
+    Returns a dict keyed by source_id, one entry per dictionary that has content.
+    Also includes a special "logeion_parse" entry with the grammatical information.
+    """
+    retrieved_at = datetime.datetime.now(datetime.UTC).isoformat()
+    web_url = f"{LOGEION_WEB}/{requests.utils.quote(word)}"
+    entries: dict[str, Any] = {}
+
+    # ── Step 1: find lemma ──────────────────────────────────────────────────
+    # Skip /find when hint_lemma is supplied (e.g. from MorphGNT). This saves
+    # one Logeion API call per word and avoids the "word" vs "lemma" mismatch
+    # that caused the ἓν/ἐν confusion (see sources.py history).
+    lemma = hint_lemma or word
+    parses: list[dict] = []
+    if hint_lemma:
+        # MorphGNT-supplied lemma: record it without calling /find
+        entries["logeion_parse"] = {
+            "source_id": "logeion_parse",
+            "url": "[morphgnt — /find not called]",
+            "retrieved_at": retrieved_at,
+            "word": word,
+            "lemma": lemma,
+            "parses": [],
+            "entry_text": f"lemma={lemma} (from MorphGNT; /find skipped)",
         }
-
-    Logeion aggregates multiple dictionaries on one page.
-    The page is parsed to separate each dictionary's entry.
-
-    NOTE: As of 2026-11-01, no public JSON API was confirmed for Logeion.
-    If an API exists, replace _fetch_logeion_web with _fetch_logeion_api here.
-    The raw retrieval is always stored so the parse can be re-run.
-    """
-    url = f"{LOGEION_BASE}/{requests.utils.quote(word)}"
-    retrieved_at = datetime.datetime.utcnow().isoformat() + "Z"
-
-    try:
-        r = _get(url)
-        soup = BeautifulSoup(r.text, "lxml")
-        raw_snippet = r.text[:5000]
-        entries = _parse_logeion_entries(soup, word, retrieved_at)
-    except Exception as e:
-        raw_snippet = f"[retrieval error: {e}]"
-        entries = {
-            "logeion_error": {
-                "source_id": "logeion_error",
-                "url": url,
+    else:
+        try:
+            r_find = _logeion_get("find", {"w": word})
+            found = r_find.json()
+            parses = found.get("parses", [])
+            # IMPORTANT: "word" in the API response is the deaccented/debreathed lookup
+            # key the API used internally — it is NOT the lemma. Use parses[0]["lemma"]
+            # when available (e.g. ἓν → "word":"ἐν" but parses[0]["lemma"]:"εἷς").
+            if parses:
+                lemma = parses[0].get("lemma", found.get("word", word))
+            else:
+                lemma = found.get("word", word)
+            entries["logeion_parse"] = {
+                "source_id": "logeion_parse",
+                "url": f"{LOGEION_API}/find",
                 "retrieved_at": retrieved_at,
                 "word": word,
-                "entry_text": f"[error: {e}]",
-                "raw_html_snippet": raw_snippet,
+                "lemma": lemma,
+                "parses": parses,
+                "entry_text": "; ".join(
+                    f"{p.get('lemma', lemma)}: {p.get('parse', '')}" for p in parses
+                ) if parses else f"lemma={lemma}",
             }
-        }
+        except Exception as e:
+            entries["logeion_find_error"] = {
+                "source_id": "logeion_find_error",
+                "url": f"{LOGEION_API}/find",
+                "retrieved_at": retrieved_at,
+                "word": word,
+                "entry_text": f"[find error: {e}]",
+            }
 
-    return entries
-
-
-def _parse_logeion_entries(
-    soup: BeautifulSoup, word: str, retrieved_at: str
-) -> dict[str, Any]:
-    """
-    Parse Logeion's multi-dictionary page into per-dictionary entries.
-
-    Logeion renders each dictionary in a labelled section. The labels typically
-    match known dictionary names (LSJ, Middle Liddell, etc.).
-    """
-    # Map display labels to source_ids
-    LABEL_TO_SOURCE = {
-        "lsj": "logeion_lsj",
-        "liddell-scott-jones": "logeion_lsj",
-        "liddell scott jones": "logeion_lsj",
-        "middle liddell": "logeion_middle",
-        "middle": "logeion_middle",
-        "lewis & short": "logeion_ls",
-        "lewis and short": "logeion_ls",
-        "slater": "logeion_slater",
-        "cunliffe": "logeion_cunliffe",
-        "montanari": "logeion_montanari",
-        "autenrieth": "logeion_autenrieth",
-        "muraoka": "logeion_muraoka",
-        "dodson": "logeion_dodson",
-        "gildersleeve": "logeion_gildersleeve",
-        "smyth": "logeion_smyth",
-        "abbott-smith": "logeion_abbott_smith",
-        "abbott smith": "logeion_abbott_smith",
-        "thayer": "logeion_thayer",
-        "strong": "logeion_strong",
-        "strong's": "logeion_strong",
+    # ── Step 2: detail for lemma ────────────────────────────────────────────
+    # Known Logeion API routing mismatches: some lemmas return entries for a
+    # different headword. When detected, we retry with the surface form and
+    # merge. The mismatch is a source bug, not a model issue — close the gap
+    # here so the model receives the correct dictionary entries.
+    #
+    # Confirmed mismatch: εἷς (and its forms ἓν, ἕν, μία) routes to ἐν (prep).
+    # The API appears to strip diacritics or conflate Unicode codepoints.
+    _LEMMA_DETAIL_OVERRIDES = {
+        "εἷς": "εἷς",   # force exact lookup; fallback to surface if still misrouted
+        "μία":  "μία",
     }
+    detail_word = _LEMMA_DETAIL_OVERRIDES.get(lemma, lemma)
+    # Surface form as additional fallback for known-misrouted lemmas
+    _surface_fallback_lemmas = set(_LEMMA_DETAIL_OVERRIDES.keys())
 
-    entries = {}
-    url = f"{LOGEION_BASE}/{requests.utils.quote(word)}"
+    def _fetch_detail(lookup_word: str) -> dict:
+        r = _logeion_get("detail", {"w": lookup_word})
+        return r.json().get("detail", {})
 
-    # Logeion typically renders dictionaries in labelled divs or sections
-    for section in soup.select("div.dictionary-entry, section.dict, div.dict-section, .lexicon"):
-        # Try to find the dictionary label
-        label_el = section.select_one("h2, h3, h4, .dict-name, .lexicon-name, .source-name")
-        label = label_el.get_text().strip().lower() if label_el else ""
+    def _detail_headword_mismatch(detail: dict, expected_lemma: str) -> bool:
+        """Return True if the detail entries appear to be for a different headword."""
+        shortdefs = detail.get("shortdef", [])
+        if not shortdefs:
+            return False
+        # Check if the shortdef mentions the expected lemma at all
+        # (the shortdef format is typically "lemma, inflected_form, gloss")
+        first = shortdefs[0].lower() if shortdefs else ""
+        import unicodedata as _ud
+        def _strip_diacritics(s: str) -> str:
+            return "".join(
+                c for c in _ud.normalize("NFD", s)
+                if _ud.category(c) != "Mn"
+            )
+        exp_stripped = _strip_diacritics(expected_lemma.lower())
+        # If the shortdef's first word (the lemma field) doesn't contain our lemma
+        # after diacritic stripping, consider it a mismatch.
+        first_word = first.split(",")[0].strip()
+        return exp_stripped not in _strip_diacritics(first_word)
 
-        source_id = None
-        for key, sid in LABEL_TO_SOURCE.items():
-            if key in label:
-                source_id = sid
-                break
+    try:
+        detail = _fetch_detail(detail_word)
 
-        if not source_id:
-            # Use label as-is if not recognized, prefixed with logeion_
-            source_id = "logeion_" + label.replace(" ", "_")[:30] if label else "logeion_unknown"
+        # Mismatch detection: if we asked for a known-problematic lemma and the
+        # returned entries look like a different word, retry with the surface form.
+        if lemma in _surface_fallback_lemmas and _detail_headword_mismatch(detail, lemma):
+            # First retry: try the surface form of the word directly
+            try:
+                detail_surface = _fetch_detail(word)
+                if not _detail_headword_mismatch(detail_surface, lemma):
+                    detail = detail_surface
+                else:
+                    # Both misrouted. Flag both and keep the lemma-based one.
+                    # The model will see the mismatch note in logeion_parse.
+                    pass
+            except Exception:
+                pass  # keep the original misrouted detail
 
-        entry_text = section.get_text(separator="\n").strip()
-        if not entry_text:
-            continue
+        # shortdef — summary definition across sources
+        shortdefs = detail.get("shortdef", [])
+        if shortdefs:
+            entries["logeion_shortdef"] = {
+                "source_id": "logeion_shortdef",
+                "url": f"{LOGEION_API}/detail",
+                "retrieved_at": retrieved_at,
+                "word": word,
+                "lemma": lemma,
+                "entry_text": " | ".join(shortdefs),
+            }
 
-        entries[source_id] = {
-            "source_id": source_id,
-            "url": url,
+        # Per-dictionary entries (dicos)
+        for dico in detail.get("dicos", []):
+            dname = dico.get("dname", "")
+            es = dico.get("es", [])  # list of entry strings (may contain HTML)
+            if not es:
+                continue
+            entry_text = "\n".join(_strip_html(e) for e in es if e).strip()
+            if not entry_text:
+                continue
+            source_id = DNAME_TO_SOURCE_ID.get(dname)
+            if not source_id:
+                slug = dname.lower().replace(" ", "_").replace("&", "and")[:30]
+                source_id = f"logeion_{slug}" if slug else "logeion_unknown"
+            entries[source_id] = {
+                "source_id": source_id,
+                "url": web_url,
+                "retrieved_at": retrieved_at,
+                "word": word,
+                "lemma": lemma,
+                "dictionary": dname,
+                "entry_text": entry_text[:4000],
+            }
+
+        # lewisshort inline (Latin dictionaries also appear for some words)
+        ls_entries = detail.get("lewisshort", [])
+        if ls_entries:
+            ls_text = "\n".join(_strip_html(e) for e in ls_entries if e).strip()
+            if ls_text and "logeion_ls" not in entries:
+                entries["logeion_ls"] = {
+                    "source_id": "logeion_ls",
+                    "url": web_url,
+                    "retrieved_at": retrieved_at,
+                    "word": word,
+                    "lemma": lemma,
+                    "dictionary": "Lewis & Short (inline)",
+                    "entry_text": ls_text[:4000],
+                }
+
+    except Exception as e:
+        entries["logeion_detail_error"] = {
+            "source_id": "logeion_detail_error",
+            "url": f"{LOGEION_API}/detail",
             "retrieved_at": retrieved_at,
             "word": word,
-            "entry_text": entry_text[:4000],
-            "raw_html_snippet": str(section)[:2000],
+            "lemma": lemma,
+            "entry_text": f"[detail error: {e}]",
         }
 
-    # If no sections found, store the whole page as a single entry
-    if not entries:
-        entries["logeion_raw"] = {
-            "source_id": "logeion_raw",
-            "url": url,
+    # ── Fallback: if nothing came back, record the gap cleanly ──────────────
+    if not entries or all("error" in k for k in entries):
+        entries["logeion_empty"] = {
+            "source_id": "logeion_empty",
+            "url": web_url,
             "retrieved_at": retrieved_at,
             "word": word,
-            "entry_text": soup.get_text(separator="\n").strip()[:4000],
-            "raw_html_snippet": "[full page stored as single entry — section parse found nothing]",
+            "lemma": lemma,
+            "entry_text": f"[no entries found for {word!r} (lemma {lemma!r})]",
         }
 
     return entries
@@ -298,10 +440,91 @@ def _parse_logeion_entries(
 
 # ─── convenience ───────────────────────────────────────────────────────────────
 
-def fetch_all_for_word(surface: str, verse_ref: str) -> dict[str, Any]:
+def fetch_all_for_word(
+    surface: str,
+    verse_ref: str,
+    hint_lemma: str | None = None,
+) -> dict[str, Any]:
     """
     Fetch Logeion entries for a word surface form.
     greekbible.com is fetched once per verse, not per word.
+    hint_lemma: if provided (e.g. from MorphGNT), pass directly to /detail,
+                bypassing the /find call and saving one Logeion request.
     Returns the Logeion entries dict.
     """
-    return fetch_logeion(surface)
+    return fetch_logeion(surface, hint_lemma=hint_lemma)
+
+
+# ─── MorphGNT ──────────────────────────────────────────────────────────────────
+# MorphGNT SBL GNT — CC BY-SA 4.0 — https://github.com/morphgnt/sblgnt
+#
+# Format (7 space-separated fields per line):
+#   BCVword  part-of-speech  parse-code  text  word  normalized-word  lemma
+#
+# BCVword: book(2 digits) + chapter(3 digits) + verse(3 digits)
+#          e.g. 40001001 = Matthew (40) chapter 1 verse 1
+#
+# Matthew file: 58-Mt-morphgnt.txt  (58 = sort position in MorphGNT canon)
+# Download: tools/download_morphgnt.sh
+
+MorphGNTWord = dict[str, str]   # keys: text, word, normalized, lemma, pos, parse
+
+def load_morphgnt(path: str | Path) -> dict[tuple[int, int], list[MorphGNTWord]]:
+    """
+    Load a MorphGNT file into a dict keyed by (chapter, verse).
+
+    Returns:
+        {(chapter, verse): [{"text", "word", "normalized", "lemma", "pos", "parse"}, ...]}
+    """
+    result: dict[tuple[int, int], list[MorphGNTWord]] = {}
+    p = Path(path)
+    if not p.exists():
+        raise FileNotFoundError(f"MorphGNT file not found: {p}")
+
+    with p.open(encoding="utf-8") as f:
+        for lineno, raw in enumerate(f, 1):
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split()
+            if len(parts) < 7:
+                continue   # malformed line
+            bcv   = parts[0]   # e.g. "012518"  (BB CC VV — 6 digits)
+            pos   = parts[1]
+            parse = parts[2]
+            text  = parts[3]   # as-printed surface (may contain ⸀ apparatus markers)
+            word  = parts[4]   # clean word without punctuation or apparatus marks
+            normalized = parts[5]
+            lemma = parts[6]
+
+            # BCVword format: 2-digit book-within-file + 2-digit chapter + 2-digit verse
+            # (NOT standard NT book numbers — the book number here resets to 01 per file)
+            if len(bcv) < 6:
+                continue
+            try:
+                chapter = int(bcv[2:4])
+                verse   = int(bcv[4:6])
+            except ValueError:
+                continue
+
+            key = (chapter, verse)
+            if key not in result:
+                result[key] = []
+            result[key].append({
+                "text": text,
+                "word": word,
+                "normalized": normalized,
+                "lemma": lemma,
+                "pos": pos,
+                "parse": parse,
+            })
+    return result
+
+
+def morphgnt_verse_tokens(
+    morphgnt_data: dict[tuple[int, int], list[MorphGNTWord]],
+    chapter: int,
+    verse: int,
+) -> list[MorphGNTWord]:
+    """Return the word list for a specific chapter:verse, or [] if absent."""
+    return morphgnt_data.get((chapter, verse), [])

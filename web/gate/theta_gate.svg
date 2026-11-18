@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" fill="none" aria-hidden="true">
+  <!-- Closed 00. Each leaf is theta_leaf.svg. The outer knuckles are the hinges. -->
+  <image href="theta_leaf.svg" x="4" y="0" width="200" height="240"/>
+  <image href="theta_leaf.svg" x="216" y="0" width="200" height="240"/>
+</svg>

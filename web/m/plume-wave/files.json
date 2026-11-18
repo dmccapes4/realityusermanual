@@ -1,0 +1,204 @@
+{
+  "id": "plume-wave",
+  "title": "Plume-Wave Routing in Intracellular Transport",
+  "author": "Dylan McCapes",
+  "target": "PLOS Computational Biology",
+  "received": "2026-03-09",
+  "station": "plume-wave",
+  "note": "Gattaca intake tree. Four simulations (P1\u2013P4), four predictions. ACS fallback track.",
+  "open": "files/SEQUENCE/Main_Manuscript_Plume_Wave_Intracellular_Transport.pdf",
+  "tree": [
+    {
+      "name": "ASSAY",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Supporting_Information.md",
+          "type": "text",
+          "url": "files/ASSAY/Supporting_Information.md",
+          "bytes": 3445
+        },
+        {
+          "name": "Supporting_Information.pdf",
+          "type": "pdf",
+          "url": "files/ASSAY/Supporting_Information.pdf",
+          "bytes": 33358
+        }
+      ]
+    },
+    {
+      "name": "INTAKE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Cover_Letter_PLOS.md",
+          "type": "text",
+          "url": "files/INTAKE/Cover_Letter_PLOS.md",
+          "bytes": 3168
+        },
+        {
+          "name": "Cover_Letter_PLOS.pdf",
+          "type": "pdf",
+          "url": "files/INTAKE/Cover_Letter_PLOS.pdf",
+          "bytes": 24114
+        },
+        {
+          "name": "Publication_Fee_Assistance_Supporting_Statement.pdf",
+          "type": "pdf",
+          "url": "files/INTAKE/Publication_Fee_Assistance_Supporting_Statement.pdf",
+          "bytes": 19336
+        },
+        {
+          "name": "README_SUBMISSION_PACKAGE.md",
+          "type": "text",
+          "url": "files/INTAKE/README_SUBMISSION_PACKAGE.md",
+          "bytes": 5512
+        }
+      ]
+    },
+    {
+      "name": "LINEAGE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "01_SOURCE_THEORY_PLUME_WAVE_ROUTING_BIOLOGICAL_SYSTEMS.md",
+          "type": "text",
+          "url": "files/LINEAGE/01_SOURCE_THEORY_PLUME_WAVE_ROUTING_BIOLOGICAL_SYSTEMS.md",
+          "bytes": 17233
+        },
+        {
+          "name": "02_SUPPORTING_INTRACELLULAR_TRAFFIC_JAM_RECEIPT.md",
+          "type": "text",
+          "url": "files/LINEAGE/02_SUPPORTING_INTRACELLULAR_TRAFFIC_JAM_RECEIPT.md",
+          "bytes": 5913
+        }
+      ]
+    },
+    {
+      "name": "PLATES",
+      "type": "dir",
+      "children": [
+        {
+          "name": "sim_p1_field_genesis_snapshots.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p1_field_genesis_snapshots.png",
+          "bytes": 84685
+        },
+        {
+          "name": "sim_p1_field_genesis_transition.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p1_field_genesis_transition.png",
+          "bytes": 131487
+        },
+        {
+          "name": "sim_p2_stochastic_capture_delivery.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p2_stochastic_capture_delivery.png",
+          "bytes": 92967
+        },
+        {
+          "name": "sim_p2_stochastic_capture_paths.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p2_stochastic_capture_paths.png",
+          "bytes": 2090280
+        },
+        {
+          "name": "sim_p3_superposition_accuracy.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p3_superposition_accuracy.png",
+          "bytes": 146937
+        },
+        {
+          "name": "sim_p3_superposition_interference.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p3_superposition_interference.png",
+          "bytes": 51457
+        },
+        {
+          "name": "sim_p4_wave_driver_comparison.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p4_wave_driver_comparison.png",
+          "bytes": 36582
+        },
+        {
+          "name": "sim_p4_wave_driver_rerouting.png",
+          "type": "image",
+          "url": "files/PLATES/sim_p4_wave_driver_rerouting.png",
+          "bytes": 128854
+        }
+      ]
+    },
+    {
+      "name": "SEQUENCE",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Main_Manuscript_Plume_Wave_Intracellular_Transport.md",
+          "type": "text",
+          "url": "files/SEQUENCE/Main_Manuscript_Plume_Wave_Intracellular_Transport.md",
+          "bytes": 38782
+        },
+        {
+          "name": "Main_Manuscript_Plume_Wave_Intracellular_Transport.pdf",
+          "type": "pdf",
+          "url": "files/SEQUENCE/Main_Manuscript_Plume_Wave_Intracellular_Transport.pdf",
+          "bytes": 80583
+        }
+      ]
+    },
+    {
+      "name": "SUPPLEMENT",
+      "type": "dir",
+      "children": [
+        {
+          "name": "sim_p1_field_genesis.py",
+          "type": "text",
+          "url": "files/SUPPLEMENT/sim_p1_field_genesis.py",
+          "bytes": 8602
+        },
+        {
+          "name": "sim_p2_stochastic_capture.py",
+          "type": "text",
+          "url": "files/SUPPLEMENT/sim_p2_stochastic_capture.py",
+          "bytes": 10345
+        },
+        {
+          "name": "sim_p3_superposition.py",
+          "type": "text",
+          "url": "files/SUPPLEMENT/sim_p3_superposition.py",
+          "bytes": 8740
+        },
+        {
+          "name": "sim_p4_wave_driver.py",
+          "type": "text",
+          "url": "files/SUPPLEMENT/sim_p4_wave_driver.py",
+          "bytes": 10240
+        },
+        {
+          "name": "Supplementary_P1_Field_Genesis.pdf",
+          "type": "pdf",
+          "url": "files/SUPPLEMENT/Supplementary_P1_Field_Genesis.pdf",
+          "bytes": 264435
+        },
+        {
+          "name": "Supplementary_P2_Stochastic_Capture.pdf",
+          "type": "pdf",
+          "url": "files/SUPPLEMENT/Supplementary_P2_Stochastic_Capture.pdf",
+          "bytes": 2015201
+        },
+        {
+          "name": "Supplementary_P3_Superposition.pdf",
+          "type": "pdf",
+          "url": "files/SUPPLEMENT/Supplementary_P3_Superposition.pdf",
+          "bytes": 248493
+        },
+        {
+          "name": "Supplementary_P4_Wave_Driver.pdf",
+          "type": "pdf",
+          "url": "files/SUPPLEMENT/Supplementary_P4_Wave_Driver.pdf",
+          "bytes": 213931
+        }
+      ]
+    }
+  ]
+}

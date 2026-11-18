@@ -1,0 +1,79 @@
+{
+  "spreads": [
+    {
+      "id": "bththk",
+      "kind": "title_gate",
+      "glyph": "B\u0398\u0398\u039a",
+      "html": "/book/leaves/bththk.html",
+      "right": {
+        "type": "void"
+      }
+    },
+    {
+      "id": "cover",
+      "kind": "cover",
+      "html": "/book/leaves/cover.html",
+      "right": {
+        "type": "cover",
+        "url": "/book/assets/cover.png",
+        "link": "https://sacredthebes.dylanmccapes.systems?hello-world"
+      }
+    },
+    {
+      "id": "000",
+      "title": "Velora",
+      "html": "/book/leaves/000.html",
+      "right": {
+        "type": "audio",
+        "label": "Narration",
+        "url": null
+      }
+    },
+    {
+      "id": "001",
+      "title": "Quenya",
+      "folio": 42,
+      "toc": false,
+      "html": "/book/leaves/001.html",
+      "right": {
+        "type": "sidereal_board"
+      }
+    },
+    {
+      "id": "rho-run",
+      "kind": "reversed_hallway",
+      "title": "rho (reversed)",
+      "source": "src/003_rho/rho_definition_words.py",
+      "html": "/book/leaves/rho_run.html",
+      "right": {
+        "type": "hallway_plaque"
+      }
+    },
+    {
+      "id": "how_tos",
+      "title": "How_tos",
+      "kind": "shelf_toc",
+      "html": "/book/leaves/how_tos.html",
+      "right": {
+        "type": "embed",
+        "url": "/book/embed/how_tos/"
+      }
+    },
+    {
+      "id": "manuscripts",
+      "title": "Manuscripts",
+      "kind": "shelf_toc",
+      "html": "/book/leaves/manuscripts.html",
+      "right": {
+        "type": "embed",
+        "url": "/book/embed/manuscripts/"
+      }
+    },
+    {
+      "id": "enter_phase2",
+      "kind": "cta",
+      "label": "Enter Phase 2",
+      "href": "/gate/"
+    }
+  ]
+}

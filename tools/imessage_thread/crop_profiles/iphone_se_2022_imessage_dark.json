@@ -1,0 +1,25 @@
+{
+  "_comment": "iPhone SE (2022) 750x1334, iMessage dark. thread_crop_px measured 2026-11-04 on justin_texts_amzn_202611: contact header pill ends y~246, composer bar line y~1197. Result 740x946 = IMG_1484.jpg (supplied pre-cropped).",
+  "device": "iPhone SE (2022)",
+  "screenshot_size_px": [750, 1334],
+  "theme": "imessage_dark",
+  "thread_crop_px": {
+    "left": 5,
+    "top": 248,
+    "right": 745,
+    "bottom": 1194
+  },
+  "thread_crop_size_px": [740, 946],
+  "header_crop_px": {
+    "left": 180,
+    "top": 140,
+    "right": 570,
+    "bottom": 248
+  },
+  "status_bar_crop_px": {
+    "left": 280,
+    "top": 0,
+    "right": 470,
+    "bottom": 44
+  }
+}
