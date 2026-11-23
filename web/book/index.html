@@ -3,27 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>REALITY_USER_MANUAL — book</title>
-<link rel="stylesheet" href="/book/book.css">
+<meta name="theme-color" content="#111016">
+<title>REALITY_USER_MANUAL — Pre-Phase 2</title>
+<link rel="stylesheet" href="/book/reader.css">
 </head>
 <body>
-<header class="book-bar">
-  <span class="mark">BΘΘΚ</span>
-  <span class="title" id="spread-title">…</span>
-  <button type="button" id="btn-prev">Prev</button>
-  <button type="button" id="btn-next">Next</button>
-  <a href="/gate/">Phase 2</a>
-</header>
-<main class="spread" id="spread">
-  <div class="gutter" aria-hidden="true"></div>
-  <section class="leaf left" aria-label="Left leaf">
-    <iframe id="left-frame" title="Left leaf HTML"></iframe>
+<div class="reader-shell">
+  <header class="reader-bar">
+    <a class="wordmark" href="/" aria-label="Return to the cover">
+      <span>BΘΘΚ</span>
+      <small>REALITY_USER_MANUAL</small>
+    </a>
+    <div class="chapter-status">
+      <span id="chapter-label">Pre-Phase 2</span>
+      <strong id="chapter-title">Loading…</strong>
+    </div>
+    <div class="reader-actions">
+      <button type="button" id="toc-toggle" aria-expanded="false" aria-controls="toc-panel">Contents</button>
+      <button type="button" id="previous-chapter" aria-label="Previous chapter">←</button>
+      <button type="button" id="next-chapter" aria-label="Next chapter">→</button>
+      <a href="/gate/">Phase 2</a>
+    </div>
+    <div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+  </header>
+
+  <aside class="toc-panel" id="toc-panel" aria-label="Table of contents">
+    <div class="toc-head">
+      <p>REALITY_USER_MANUAL</p>
+      <h2>Pre-Phase 2</h2>
+      <button type="button" id="toc-close" aria-label="Close contents">×</button>
+    </div>
+    <nav id="toc-list"></nav>
+  </aside>
+  <button class="toc-scrim" id="toc-scrim" type="button" tabindex="-1" aria-label="Close contents"></button>
+
+  <main class="book-stage">
+    <article class="chapter-page" id="chapter-page" tabindex="-1">
+      <header class="chapter-head">
+        <span class="chapter-kicker" id="page-label"></span>
+        <h1 id="page-title">Loading…</h1>
+        <p class="chapter-meta" id="page-meta"></p>
+      </header>
+      <div class="chapter-body" id="chapter-body"></div>
+      <footer class="chapter-foot">
+        <span id="page-source"></span>
+        <span id="page-number"></span>
+      </footer>
+    </article>
+    <nav class="page-turns" aria-label="Chapter navigation">
+      <button type="button" id="bottom-previous">← Previous</button>
+      <button type="button" id="bottom-next">Next →</button>
+    </nav>
+  </main>
+
+  <section class="narration" id="narration" aria-label="Chapter narration">
+    <button type="button" class="narration-play" id="narration-play" aria-label="Play narration">▶</button>
+    <div class="narration-copy">
+      <span>ELEVENLABS · THE NARRATOR</span>
+      <strong id="narration-title">Narration loading…</strong>
+    </div>
+    <span class="narration-time" id="narration-time">00:00 / 00:00</span>
+    <input id="narration-seek" type="range" min="0" max="1000" value="0" aria-label="Narration position">
+    <button type="button" class="narration-speed" id="narration-speed" aria-label="Narration speed">1×</button>
+    <label class="continue-label"><input type="checkbox" id="continue-reading"> continue</label>
+    <audio id="chapter-audio" preload="metadata"></audio>
   </section>
-  <section class="leaf right" aria-label="Right leaf">
-    <div id="right-screen" class="view-screen"></div>
-  </section>
-</main>
-<script src="/book/sidereal_board.js"></script>
-<script src="/book/book.js"></script>
+</div>
+<noscript>
+  <p class="noscript">This reader needs JavaScript to bind the manuscript chapters. The PDF remains available from the manuscript desk.</p>
+</noscript>
+<script src="/book/reader.js"></script>
 </body>
 </html>

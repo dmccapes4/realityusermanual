@@ -34,8 +34,7 @@ run "desks"         $PY "$REPO/tools/build_desks.py"
 run "listen desk"   $PY "$REPO/tools/build_listen_desk.py"
 run "phase 2 pages" $PY "$REPO/tools/build_phase2_page_web.py" -08 -09 -25 -26 -31 -35 -36
 run "book plate"    $PY "$REPO/tools/book_cover_plate.py"
-run "book leaves"   $PY "$REPO/tools/build_book_leaves.py"
-run "book shelves"  $PY "$REPO/tools/build_book_shelves.py"
+run "pre-phase book" $PY "$REPO/tools/build_prephase_book.py" build
 
 if (( ${#FAILURES[@]} > 0 )); then
   echo ""
